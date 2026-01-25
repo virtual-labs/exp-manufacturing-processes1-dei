@@ -2,38 +2,175 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Q1: What is the literal meaning of the Latin word 'Manu-factus' from which 'Manufacturing' is derived?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Made by machine",
+        "b": "Made by hand",
+        "c": "Made by computer",
+        "d": "Made by nature"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. While modern manufacturing uses machines, the origin is different.",
+        "b": "Correct. 'Manu' means hand and 'factus' means to make.",
+        "c": "Incorrect. This refers to modern CAM (Computer Aided Manufacturing).",
+        "d": "Incorrect. This refers to natural processes."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2: Which of the following provides the best protection for eyes against flying debris in a mechanical workshop?",
+      "answers": {
+        "a": "Sun glasses",
+        "b": "Reading glasses",
+        "c": "Safety goggles / Safety glasses",
+        "d": "Contact lenses"
+      },
+      "explanations": {
+        "a": "Incorrect. These only protect against UV rays.",
+        "b": "Incorrect. These offer no impact protection.",
+        "c": "Correct. These are impact-resistant and designed to protect against debris.",
+        "d": "Incorrect. These provide no mechanical protection."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q3: Which mechanical property allows a material to be drawn into thin wires without breaking?",
+      "answers": {
+        "a": "Malleability",
+        "b": "Hardness",
+        "c": "Brittleness",
+        "d": "Ductility"
+      },
+      "explanations": {
+        "a": "Incorrect. Malleability is the ability to be beaten into sheets.",
+        "b": "Incorrect. Hardness is resistance to scratching or indentation.",
+        "c": "Incorrect. Brittleness causes material to break without deformation.",
+        "d": "Correct. Ductility is the property that permits drawing into wires."
+      },
+      "correctAnswer": "d",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q4: Ferrous metals are those which definitely contain which element?",
+      "answers": {
+        "a": "Aluminium",
+        "b": "Copper",
+        "c": "Iron",
+        "d": "Zinc"
+      },
+      "explanations": {
+        "a": "Incorrect. This is a non-ferrous metal.",
+        "b": "Incorrect. This is a non-ferrous metal.",
+        "c": "Correct. Ferrous metals are iron-based.",
+        "d": "Incorrect. This is a non-ferrous metal."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5: On a Stress-Strain diagram, what does the 'Yield Point' signify?",
+      "answers": {
+        "a": "The point where fracture occurs",
+        "b": "The start of plastic (permanent) deformation",
+        "c": "The point of maximum stress",
+        "d": "The region of linear elasticity"
+      },
+      "explanations": {
+        "a": "Incorrect. That is the Breaking Point.",
+        "b": "Correct. Beyond this point, the material will not return to its original shape.",
+        "c": "Incorrect. That is the Ultimate Tensile Strength.",
+        "d": "Incorrect. That is the Proportional Limit."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6: Which production system is characterized by high volume and standardized products (e.g., automobiles)?",
+      "answers": {
+        "a": "Job shop production",
+        "b": "Batch production",
+        "c": "Mass production",
+        "d": "Project production"
+      },
+      "explanations": {
+        "a": "Incorrect. Job shop is for low volume, high variety.",
+        "b": "Incorrect. Batch is for moderate volume and variety.",
+        "c": "Correct. Mass production deals with large quantities of standardized goods.",
+        "d": "Incorrect. Project production is for one-off items like bridges."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q7: Which manufacturing process involves pouring molten metal into a mould cavity to solidify?",
+      "answers": {
+        "a": "Forming",
+        "b": "Machining",
+        "c": "Casting",
+        "d": "Welding"
+      },
+      "explanations": {
+        "a": "Incorrect. Forming involves plastic deformation.",
+        "b": "Incorrect. Machining involves material removal.",
+        "c": "Correct. Casting uses molten metal and moulds.",
+        "d": "Incorrect. Welding is a joining process."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q8: What is the main characteristic of a 'Brittle' material?",
+      "answers": {
+        "a": "It stretches significantly before breaking",
+        "b": "It breaks with little to no deformation",
+        "c": "It can be easily hammered into sheets",
+        "d": "It absorbs high impact energy"
+      },
+      "explanations": {
+        "a": "Incorrect. This describes a ductile material.",
+        "b": "Correct. Brittle materials (like glass or cast iron) snap without stretching.",
+        "c": "Incorrect. This describes a malleable material.",
+        "d": "Incorrect. This describes a tough material."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q9: Which class of tool is used to remove material from a workpiece by shear or abrasion?",
+      "answers": {
+        "a": "Cutting tool",
+        "b": "Holding tool",
+        "c": "Striking tool",
+        "d": "Measuring tool"
+      },
+      "explanations": {
+        "a": "Correct. Cutting tools (drills, lathe tools) remove material.",
+        "b": "Incorrect. These hold the work (vises).",
+        "c": "Incorrect. These deliver force (hammers).",
+        "d": "Incorrect. These quantify dimensions."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Q10: What does the '5 M's' of manufacturing include?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "Money, Management, Marketing, Machines, Material",
+        "b": "Material, Machinery, Men, Money, Methods",
+        "c": "Men, Mechanics, Motion, Material, Money",
+        "d": "Methods, Marketing, Men, Machines, Motion"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect.",
+        "b": "Correct. These are the inputs required for manufacturing.",
+        "c": "Incorrect.",
+        "d": "Incorrect."
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     }
   ]
+}
 }
