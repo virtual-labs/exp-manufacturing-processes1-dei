@@ -1,4 +1,4 @@
-# TENTATIVE SCHEDULE OF LECTURES
+
 **MEM-103: Manufacturing Processes – I** **Session:** July – December
 
 ---
