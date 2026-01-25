@@ -1,6 +1,6 @@
-# MEM-103 Manufacturing Processes-I
 
-**Welcome Student** | [Tentative Schedule of Lectures](TentativeSchedule.html) | [Lecture Notes](mem.html) | [MFVSL Home](../home.php)
+
+**Welcome Student** | [Tentative Schedule of Lectures](https://virtual-labs.github.io/exp-manufacturing-processes1-dei/procedure.html) | [Lecture Notes](https://virtual-labs.github.io/exp-manufacturing-processes1-dei/simulation.html) | [MFVSL Home](https://msvs-dei.vlabs.ac.in/)
 
 ---
 
