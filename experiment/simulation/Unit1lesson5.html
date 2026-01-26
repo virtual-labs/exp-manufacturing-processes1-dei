@@ -1,1 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Non-Ferrous Metals | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            display: block;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #555; margin-top: 20px; font-weight: bold; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        /* Custom List for Characteristics */
+        .char-list { list-style: none; padding: 0; }
+        .char-list li { margin-bottom: 10px; padding-left: 15px; border-left: 3px solid #ddd; }
+        .char-list b { color: var(--primary); }
+
+        /* Tables */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; text-align: center; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .metals-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            background: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .qa-block {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 6: Non-Ferrous Metals</h1>
+        <a href="MEM103/Unit1/Unit1Lesson6.pdf" target="_blank" class="download-link">📥 Lesson 6 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#nonFerrous">6.0 Non-Ferrous Metals</a>
+            <a href="#aluminum">6.1 Aluminum</a>
+            <a href="#copper">6.2 Copper</a>
+            <a href="#lead">6.3 Lead</a>
+            <a href="#cobalt">6.4 Cobalt</a>
+            <a href="#magnesium">6.5 Magnesium</a>
+            <a href="#titanium">6.6 Titanium</a>
+            <a href="#chromium">6.7 Chromium</a>
+            <a href="#manganese">6.8 Manganese</a>
+            <a href="#molybdenum">6.9 Molybdenum</a>
+            <a href="#nickel">6.10 Nickel</a>
+            <a href="#tin">6.11 Tin</a>
+            <a href="#tungsten">6.12 Tungsten</a>
+            <a href="#zinc">6.13 Zinc</a>
+            <a href="#bronze">6.14 Bronze</a>
+            <a href="#duralumin">6.15 Duralumin</a>
+            <a href="#brass">6.16 Brass</a>
+            <a href="#beryllium">6.17 Beryllium</a>
+            <a href="#zirconium">6.18 Zirconium</a>
+            <a href="#applications">6.19 Important Applications</a>
+            <a href="#effect">6.20 Alloying Effects</a>
+            <a href="#glance">6.21 Non-Ferrous at Glance</a>
+            <a href="#alloys">6.22 Nonferrous Alloys</a>
+            <a href="#properties">6.23 Mechanical Properties</a>
+        </div>
+    </div>
+
+    <section id="nonFerrous">
+        <h2>6.0 Non-Ferrous Metals</h2>
+        <p>The non-ferrous metals do not contain iron as their main constituent. These are more expensive in comparison to ferrous metals. Non-ferrous metals and alloys find practical applications because of corrosion resistant, high thermal conductivity, and high electrical conductivity, ease of fabrication. Following are the main non-ferrous metals.</p>
+        
+        <div class="metals-grid">
+            <div>1. Aluminum</div>
+            <div>2. Copper</div>
+            <div>3. Cobalt</div>
+            <div>4. Lead</div>
+            <div>5. Magnesium</div>
+            <div>6. Nickel</div>
+            <div>7. Tin</div>
+            <div>8. Titanium</div>
+            <div>9. Zinc</div>
+            <div>10. Chromium</div>
+            <div>11. Manganese</div>
+            <div>12. Tungsten</div>
+        </div>
+    </section>
+
+    <section id="aluminum">
+        <h2>6.1 Aluminum (Al)</h2>
+        <p>It is the richest mineral in the earth's crust. It does not appear in its pure form.</p>
+        
+        <h4>Manufacture</h4>
+        <p>Aluminum is derived from bauxite, a mineral mined from the earth. Two to three tonnes of bauxite are required to produce one tonne of alumina and two tonnes of alumina are required to produce one tonne of aluminium metal. The aluminium industry relies on the Bayer's process to produce alumina from bauxite.</p>
+        
+
+[Image of extraction of aluminum from bauxite]
+
+
+        <h4>Salient Characteristics</h4>
+        <ul class="char-list">
+            <li><b>Appearance:</b> Aluminum is light gray to silver in color, very bright when polished, dull when oxidized, and light in weight.</li>
+            <li><b>Strength-to-Weight Ratio:</b> Aluminum exhibits high strength-to-weight ratio i.e. it offers a unique combination of lightweight and high strength.</li>
+            <li><b>Capability:</b> It has a capability of being cast, forged, machined, formed, and welded. Aluminum sections can be joined by the use of adhesives, clips, bolts, rivets.</li>
+            <li><b>Lightweight:</b> Aluminum weighs less by volume than most other metals. It is about one-third the weight of iron, steel, copper, or brass.</li>
+            <li><b>Excellent Thermal Conductor:</b> It conducts heat better than other common metals.</li>
+            <li><b>Strong:</b> As temperatures fall, aluminum becomes stronger. Therefore, Cold-weather applications are particularly well served by aluminum.</li>
+            <li><b>Conducts Electricity:</b> Electrical conductivity of aluminum is twice as copper.</li>
+            <li><b>Nonmagnetic:</b> Aluminum is non-magnetic in nature, therefore, it is useful for high-voltage applications, as well as for electronics, especially where magnetic fields come into play or where magnetic devices are employed.</li>
+            <li><b>Resilient:</b> Aluminum combines strength with flexibility and can flex under loads or spring back from the shock of impact.</li>
+            <li><b>Reflective:</b> Highly reflective aluminum can be used to shield products or areas from light, radio waves, or infrared radiation.</li>
+            <li><b>Not Combustible:</b> Aluminum does not burn and, even at extremely high temperatures, does not produce toxic fumes.</li>
+            <li><b>Accepts a Variety of Common Finishes:</b> Aluminum can be finished with liquid paint, powder coatings, anodizing, or electroplating.</li>
+            <li><b>Sparks:</b> No sparks are given off from aluminum. It is appropriate for applications taking place in highly flammable environments or involving explosive materials. Aluminum does not turn red before melting.</li>
+            <li><b>Resists Corrosion:</b> Aluminum offers excellent corrosion resistance; it does not rust. Its own naturally occurring oxide film protects aluminum.</li>
+            <li><b>Fracture:</b> A fracture in rolled aluminum sections shows a smooth, bright structure and fracture in an aluminum casting shins a bright crystalline structure.</li>
+            <li><b>Torch test:</b> Aluminum does not turn red before melting. It holds its shape until almost molten, then collapses (hot shorts) suddenly. A heavy film of white oxide forms instantly on the molten surface.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol type="a">
+            <li>Aluminum is used as a de-oxidizer and alloying agent in the manufacture of steel.</li>
+            <li>Aircraft structures, Castings, Pistons, Pump housings, Kitchen utensils.</li>
+            <li>Due to its high electrical conductivity transmission lines are made of aluminum.</li>
+            <li>Heat exchangers or heat sinks are made using aluminum due its excellent thermal conducting property.</li>
+            <li>It is used in manufacture of paints in powder form.</li>
+            <li>Due to its light weight and high Strength-to-Weight ratio, finds applications in aerospace, high-rise construction, and automotive design.</li>
+            <li>Aluminum is used for cryogenic applications and in the extreme cold of outer space, as well as for aircraft and for construction in high latitudes as its strength increases under very cold temperatures.</li>
+        </ol>
+    </section>
+
+    <section id="copper">
+        <h2>6.2 Copper (Cu)</h2>
+        <p>The symbol for copper is Cu and comes from the Latin cuprum meaning from the island of Cyprus. It is an important engineering metal with wide applications. It is one of the most principal metals used to produce widely applied, significant engineering alloy's brass and bronze.</p>
+
+        <h4>Manufacture</h4>
+        <p>Copper is extracted from various ores. Generally it is recovered from sulphide ores by a dry extraction process in which the powdered and concentrated ore is roasted where necessary to drive off excess sulphur and smelted in a furnace to produce copper matte.</p>
+        
+
+        <h4>Salient Characteristics</h4>
+        <ul class="char-list">
+            <li><b>Appearance:</b> Copper is red in color when polished, and oxidizes to various shades of green.</li>
+            <li><b>Strength-to-Weight Ratio:</b> Copper and its alloys have relatively low strength-to-weight ratios and low strengths at elevated temperatures. Some copper alloys are also susceptible to stress-corrosion cracking unless they are stress relieved.</li>
+            <li><b>Capability:</b> Copper can be forged and cold worked. Pure copper is not suitable for welding. It has poor foundry properties due to large shrinkage.</li>
+            <li><b>Machinability:</b> Copper is very ductile and malleable metal. Its machinability is only fair i.e. very difficult to machine due to its high ductility.</li>
+            <li><b>Hot Short:</b> Some of the copper alloys are hot short; they become brittle at high temperatures, because some of the alloying elements form oxides and other compounds at the grain boundaries, embrittling the material.</li>
+            <li><b>Strength:</b> Copper alloys derive their strength from cold working.</li>
+            <li><b>Thermal Conductor:</b> Copper has excellent thermal conductivity among all commercial metals due to which it conducts heat rapidly.</li>
+            <li><b>Electrical Conductor:</b> Copper has good electrical conductivity among the commercial metals.</li>
+            <li><b>Corrosion resistance:</b> Copper has good resistance to corrosion under ordinary atmospheric conditions, in fresh and sea water which makes it very useful in the process industries.</li>
+            <li><b>Nonmagnetic:</b> Pure copper is nonmagnetic.</li>
+            <li><b>Sparks:</b> Copper gives off no sparks.</li>
+            <li><b>Fracture:</b> Copper presents a smooth surface when fractured, which is free from crystalline appearance.</li>
+            <li><b>Torch test:</b> Because copper conducts heat rapidly, a larger flame is required to produce fusion of copper than is needed for the same size piece of steel. Copper melts suddenly and solidifies instantly.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol type="a">
+            <li>The main use of pure copper is in the electrical industry due its excellent thermal conductivity and ductile in nature where it is made into wire or other conductors.</li>
+            <li>It is used in the manufacture of nonferrous alloys such as brass, bronze, and Monel metal.</li>
+            <li>Typical copper products are sheet roofing, cartridge cases, springs, heat exchangers, bushings, wire, bearings, statues, decorative objects.</li>
+        </ol>
+    </section>
+
+    <section id="lead">
+        <h2>6.3 Lead (Pb)</h2>
+        <p>The symbol for lead is Pb and comes after the plumbum, the root for the word plumber. Lead was probably one of the first metals to be produced by man. It falls in the category of low melting alloys due to its relatively low melting point. Lead is not found free in nature but it is obtained from Galena (lead sulphide).</p>
+
+        <h4>Manufacture</h4>
+        <p>The important lead minerals are galena (PbS), anglesite (PbSO<sub>4</sub>) and cerussite (PbCO<sub>3</sub>), respectively with 86%, 68% and 77% of lead. Generally lead is extracted from galena (lead sulphide). During extraction of lead initially different ores are separated using selective froth flotation technique.</p>
+
+        <h4>Salient Characteristics</h4>
+        <p>Lead is unique among common metals. It has little mechanical strength, virtually no elasticity and is extremely soft.</p>
+        <ul class="char-list">
+            <li><b>General:</b> Lead is a heavy, soft, malleable metal with low melting point, low tensile strength, and low creep strength.</li>
+            <li><b>Capabilities:</b> Lead can be cast, cold worked, welded, and machined.</li>
+            <li><b>Corrosion resistant:</b> It is resistant to corrosion, atmosphere, moisture, water, and to many acids.</li>
+            <li><b>Strong:</b> Lead has low strength with heavy weight.</li>
+            <li><b>Harmful:</b> Lead dust and fumes are very poisonous.</li>
+            <li><b>Appearance:</b> Lead is a bluish-white lustrous metal.</li>
+            <li><b>Electrical conductor:</b> Relatively poor conductor of electricity.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li><b>Lead-acid battery:</b> Biggest use of lead worldwide is for the lead-acid battery. The lead-acid battery consists of lead alloy pasted grids. The grids are made from a lead-antimony alloy (commonly containing from 0.75 - 5% antimony) together with minor additions of other elements.</li>
+            <li><b>Cable sheathing:</b> Because of it's excellent proven corrosion resistance when in contact with a wide range of industrial and marine environments, soils and chemicals, lead is used to provide a sheath on electric cables. And also provide insulation surrounding the conductors to protect users.</li>
+            <li><b>Building Construction:</b> Lead is used in building construction in both pipe and sheet form. Due to lead's corrosion resistant properties. Lead pipe are used for carriage of corrosive chemicals at chemical plants.</li>
+            <li><b>Chemical Compounds:</b> Many types of chemical compounds are produced from lead; among these are lead carbonate (paint pigment) and tetraethyl lead (antiknock gasoline).</li>
+            <li><b>Radiation Shields:</b> Lead is also used for X-ray protection.</li>
+            <li><b>Lead compounds:</b> Tetraethyl and tetramethyl lead (TEL and TML) are used as anti-knock additives in petrol as the most economic method of raising the "octane rating" to provide the grade of petrol needed for the efficient operation of internal combustion engines of high compression ratio.</li>
+        </ol>
+    </section>
+
+    <section id="cobalt">
+        <h2>6.4 Cobalt (Co)</h2>
+        <p>The metallic element cobalt is one of the transition elements, closely related to iron and nickel. These three elements are sometimes referred to as the iron family. Cobalt was identified and described in 1735 by Swedish chemist Georg Brandt.</p>
+
+        <h4>Salient Characteristics</h4>
+        <ul class="char-list">
+            <li><b>General:</b> Cobalt is a hard and easily magnetizable, white metal similar to nickel in appearance, but has a slightly bluish cast.</li>
+            <li><b>Capabilities:</b> Cobalt can be welded, machined (limited), and cold-drawn.</li>
+            <li><b>Limitations:</b> Welding high carbon cobalt steel often causes cracking. Cobalt must be machined with cemented carbide cutters.</li>
+            <li><b>Appearance:</b> Pure cobalt is silvery white with a reddish tone.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li>Cobalt is used chiefly in alloy steels for making high-speed, high-temperature, creep-resisting metal-cutting tools and cemented carbide tools, bits, and cutters.</li>
+            <li>Cobalt is also used to make permanent magnets for loudspeakers.</li>
+            <li>A radioisotope, cobalt-60 is prepared in a nuclear reactor by bombarding cobalt metal or cobalt oxide with slow neutrons. It has a half-life of 5.25 years. The Cobalt-60 emits beta particles and gamma rays is used in the treatment of cancer and in agricultural research.</li>
+            <li>In industry cobalt-60 is used to detect flaws in castings.</li>
+        </ol>
+    </section>
+
+    <section id="magnesium">
+        <h2>6.5 Magnesium (Mg)</h2>
+        <p>Magnesium as the lightest structural metal available is a white, machinable, corrosion resistant, high strength metal with a low melting point.</p>
+
+        <h4>Salient Characteristics</h4>
+        <ul class="char-list">
+            <li><b>Appearance:</b> Magnesium is white in color and resembles aluminum in appearance. The polished surface is silver-white, but quickly oxidizes to a grayish film.</li>
+            <li><b>Strength-to-weight ratio:</b> It is highly corrosion resistant and has a good strength-to-weight ratio, but is lighter in weight than aluminum.</li>
+            <li><b>Limitations:</b> Magnesium in fine chip form will ignite at low temperatures, 427<sup>o</sup>C to 649<sup>o</sup>C.</li>
+            <li><b>Fracture test:</b> Magnesium has a rough surface with a fine grain structure.</li>
+            <li><b>Torch test:</b> Magnesium oxidizes rapidly when heated in open air, producing an oxide film, which is insoluble in the liquid metal. A fire may result when magnesium is heated in the open atmosphere.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li>Magnesium is used as a deoxidizer for brass, bronze, nickel, and silver.</li>
+            <li>Because of its light weight, it is used in many weight-saving applications, particularly in the aircraft industry.</li>
+            <li>It is also used in the manufacture and use of fireworks for railroad flares and signals, and for military purposes.</li>
+            <li>Magnesium castings are used for engine housings, blowers, hose pieces, landing wheels, and certain parts of the fuselage of aircraft.</li>
+        </ol>
+    </section>
+
+    <section id="titanium">
+        <h2>6.6 Titanium (Ti)</h2>
+        <p>Titanium is used in many industrial applications because of its excellent corrosion resistance and superior strength-to-weight ratios. It has twice steels strength to density.</p>
+
+        <h4>Salient Characteristics</h4>
+        <ul class="char-list">
+            <li><b>Appearance:</b> Titanium is a soft, shiny, silvery-white metal burns in air and is the only element that burns in nitrogen. Titanium alloys look like steel.</li>
+            <li><b>Capabilities:</b> Titanium can be machined at low speeds and fast feeds; Can be spot-and seam-welded, and fusion welded using inert gas.</li>
+            <li><b>Welding:</b> Welding titanium is not difficult. Welding by means of the TIG process (Tungsten Electrode Inert Gas) using Argon gas shielding is most commonly used.</li>
+        </ul>
+
+        <h4>Limitations</h4>
+        <ul>
+            <li>Minor amounts of impurities cause titanium to become brittle.</li>
+            <li>Titanium has low impact strength, and low creep strength at high temperatures 427<sup>o</sup>.</li>
+            <li>It cannot be welded by any gas welding process because of its high attraction for oxygen. Oxidation causes this metal to become quite brittle.</li>
+        </ul>
+
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li>Its most important compound is titanium dioxide, which is used widely in welding electrode coatings.</li>
+            <li>It is used as a stabilizer in stainless steel so that carbon will not be separated during the welding operation.</li>
+            <li>Titanium is used in the manufacture of: Jet Engines, Bicycles, Piping Systems, Aircraft Frames, Artificial Hips & Knees, Automotive Components, Watches, Heart Valves, Pace Makers.</li>
+        </ol>
+    </section>
+
+    <section id="chromium">
+        <h2>6.7 Chromium (Cr)</h2>
+        <p>It takes its name from the Greek word for color-khroma. Chromium is a critical alloying ingredient for the production of steel, cast iron, and nonferrous alloys.</p>
+        
+        <h4>Salient Characteristics</h4>
+        <p>It is hard and brittle, corrosion resistant. Its principal functions as an alloy in steel making:</p>
+        <ol>
+            <li>Increases resistance to corrosion and oxidation</li>
+            <li>Increases hardenability</li>
+            <li>Adds some strength at high temperatures</li>
+            <li>Resists abrasion and wear (with high carbon).</li>
+        </ol>
+        
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li>It is used as an alloying agent in steel and cast iron (0.25 to 0.35 percent) and in nonferrous alloys.</li>
+            <li>It is used as a pigment to make mirrors.</li>
+            <li>Chromium is used as corrosion-resistant decorative plating agent.</li>
+        </ol>
+    </section>
+
+    <section id="manganese">
+        <h2>6.8 Manganese (Mn)</h2>
+        <p>Pure manganese has a relatively high tensile strength, but is very brittle. Manganese is used as an alloying agent in steel to deoxidize and desulfurize the metal. Medium-carbon manganese steels are used to make car axles and gears.</p>
+    </section>
+
+    <section id="molybdenum">
+        <h2>6.9 Molybdenum (Mo)</h2>
+        <p>Pure molybdenum has a high tensile strength and is very resistant to heat. It retains hardness and strength at high temperatures. Heating elements, switches, contacts, thermo-couplers, welding electrodes, and cathode ray tubes are made of molybdenum.</p>
+    </section>
+
+    <section id="nickel">
+        <h2>6.10 Nickel (Ni)</h2>
+        <p>Nickel is a hard, malleable, ductile metal. It retains high strength and toughness at high temperatures. Nickel is used in making alloys of both ferrous and nonferrous metal. Chemical and food processing equipment, electrical resistance heating elements, and parts that must withstand elevated temperatures are all produced from nickel-containing metal.</p>
+
+        <h3>Monel Metal</h3>
+        <p>Monel metal is a nickel alloy of silver-white color. Contains about 67.00 percent nickel, 29.00 to 80.00 percent copper, and small percentages of other elements. It has a very high resistance to corrosion and can be welded.</p>
+    </section>
+
+    <section id="tin">
+        <h2>6.11 Tin (Sn)</h2>
+        <p>Tin is a very soft, malleable, somewhat ductile, corrosion resistant metal having low tensile strength. The major application of tin is in coating steel. Tin readily forms alloys with other metals to create useful materials such as solders, bronzes, pewter, bearing alloys and fusible alloys.</p>
+    </section>
+
+    <section id="tungsten">
+        <h2>6.12 Tungsten (W)</h2>
+        <p>Tungsten is a hard, heavy, nonmagnetic metal that will melt at approximately 3400<sup>o</sup>C. Tungsten is used in making light bulb filaments, phonograph needles. It is also used as an alloying agent in non-consumable welding electrodes, armor plate, die and tool steels, and hard metal carbide cutting tools.</p>
+    </section>
+
+    <section id="zinc">
+        <h2>6.13 Zinc (Zn)</h2>
+        <p>Zinc is a crystalline metal with moderate strength and ductility, seldom used alone except as a coating.</p>
+
+        <h4>Salient Characteristics</h4>
+        <p>Zinc is a medium low strength metal having a very low melting point. It is easy to machine and can be soldered or welded.</p>
+
+        <h4>Important Engineering Applications</h4>
+        <ol>
+            <li><b>Galvanizing:</b> The largest use of zinc is galvanizing metal (dipping in molten zinc or electroplating). The automobile industry is the largest consumer of galvanized steel.</li>
+            <li><b>Alloying:</b> Zinc is used as an alloying element in producing brass and bronze.</li>
+            <li><b>Die-casting:</b> Because it has a relatively low melting point and is very fluid, zinc is easy to pour when melted. Typical parts: toys, carburetor bodies, instrument panels.</li>
+            <li><b>Batteries:</b> Rolled zinc metal is a basic component in dry-cell batteries.</li>
+        </ol>
+
+        <h4>Antimony</h4>
+        <p>Metallic element of nitrogen family. A bright silvery-white metal. With lead, it forms strong alloys, which are made into automobile storage batteries, bullets, and coverings for telephone cables.</p>
+    </section>
+
+    <section id="bronze">
+        <h2>6.14 Bronze</h2>
+        <p>Any alloy of copper and tin is called bronze. Bronze is a combination of 84% copper and 16% tin. It has high strength, is rust or corrosion resistant, has good machinability, and can be welded.</p>
+
+        <h3>Copper-nickel-zinc alloys (Nickel silver)</h3>
+        <p>Nickel is added to copper zinc alloys to lighten their color; the resultant alloys are called nickel silver.</p>
+
+        <h3>Copper-Nickel Alloys (Cupro-nickel)</h3>
+        <p>Alloys of copper and nickel. Because of their high resistance to corrosion, copper nickel alloys are used for saltwater piping systems.</p>
+    </section>
+
+    <section id="duralumin">
+        <h2>6.15 Duralumin & Other Alloys</h2>
+        <p>One of the first of the strong structural aluminum alloys developed is called Duralumin.</p>
+        
+        <div class="qa-block">
+            <b>Alclad:</b> A protective covering that consists of a thin sheet of pure aluminum rolled onto the surface of an aluminum alloy during manufacture.<br><br>
+            <b>Monel:</b> Alloy with 64-68% nickel, 30% copper. Harder than nickel or copper. Nuts, bolts, screws, and various fittings are made of Monel.<br><br>
+            <b>K-Monel:</b> Developed for greater strength and hardness than Monel. Comparable to heat-treated steel.<br><br>
+            <b>Inconel:</b> High-nickel alloy (78.5% Ni, 14% Cr, 6.5% Fe). Often used in exhaust systems of aircraft engines. Offers good resistance to corrosion and retains strength at high temperatures.
+        </div>
+    </section>
+
+    <section id="brass">
+        <h2>6.16 Brass</h2>
+        <p>Any alloy of copper and zinc is called brass. It has a low melting point and high heat conductivity.</p>
+
+        <h4>Kinds and Uses of Brass</h4>
+        <ol>
+            <li><b>White Brasses (<55% Cu):</b> Hard and brittle. Used for casting parts that endure sliding motion.</li>
+            <li><b>Alpha-Beta Brasses (55-63% Cu):</b> Very strong but can be readily worked while hot. Used in welding rods, condenser tubes, and valve stems.</li>
+            <li><b>Alpha Brasses (63-95% Cu):</b> More easily worked even when cold.
+                <ul>
+                    <li>High brass: radiators, springs.</li>
+                    <li>Cartridge brass: cartridges, tubes.</li>
+                    <li>Red brass: pipes, flexible hose.</li>
+                </ul>
+            </li>
+            <li><b>Special Brasses:</b>
+                <ul>
+                    <li>Aluminum brasses: Stronger and more corrosion resistant.</li>
+                    <li>Tin brasses (Admiralty/Naval): Resistance to seawater corrosion.</li>
+                    <li>Lead brass: Relatively soft, suited for machining.</li>
+                </ul>
+            </li>
+        </ol>
+    </section>
+
+    <section id="beryllium">
+        <h2>6.17 Beryllium</h2>
+        <p>Has low density (two-thirds that of aluminum) and high modulus per weight. Beryllium typically used in military-aircraft and space-shuttle brake systems, missile guidance systems, and satellite structures.</p>
+    </section>
+
+    <section id="zirconium">
+        <h2>6.18 Zirconium</h2>
+        <p>Provides resistance to HCl at all concentrations. Zirconium and its alloys are used as a construction material in the chemical-processing industry (heat exchangers, reactor vessels).</p>
+    </section>
+
+    <section id="applications">
+        <h2>6.19 Important Engineering Applications & Comparisons</h2>
+        
+        <h4>Order of Properties</h4>
+        <ul>
+            <li><b>LUSTER:</b> GOLD > SILVER > CHROMIUM > TIN > COPPER > ZINC > MAGNESIUM > ALUMINIUM > LEAD > IRON.</li>
+            <li><b>THERMAL CONDUCTIVITY:</b> SILVER > COPPER > GOLD > ALUMINIUM > MAGNESIUM > ZINC > CHROMIUM > IRON > TIN > LEAD.</li>
+            <li><b>ELECTRICAL CONDUCTIVITY:</b> SILVER > COPPER > GOLD > ALUMINIUM > MAGNESIUM > ZINC > IRON > TIN > CHROMIUM > LEAD.</li>
+            <li><b>DUCTILITY:</b> GOLD > SILVER > PLATINUM > IRON > COPPER > ALUMINIUM > ZINC > TIN > LEAD.</li>
+        </ul>
+    </section>
+
+    <section id="effect">
+        <h2>6.20 Effect of Non-Ferrous Metals on Alloying with Ferrous Metals</h2>
+        <div class="qa-block">
+            <p><b>Chromium:</b> Increases hardenability, corrosion resistance, and shock resistance.</p>
+            <p><b>Nickel:</b> Increases toughness, strength, and ductility; lowers hardening temperatures.</p>
+            <p><b>Manganese:</b> Produces greater toughness and wear resistance.</p>
+            <p><b>Molybdenum:</b> Increases hardenability and improves impact fatigue property.</p>
+            <p><b>Titanium:</b> Stabilizes stainless steel; resists intergranular corrosion.</p>
+            <p><b>Tungsten:</b> Retains hardness at high temperatures (tool steel).</p>
+        </div>
+
+        <h4>Distinction Tests</h4>
+        <ul>
+            <li><b>Titanium vs Steel:</b> Copper sulfate solution will coat steel with copper but will not react with titanium.</li>
+            <li><b>Monel vs Inconel:</b> Nitric acid turns blue-green on Monel, no reaction on Inconel.</li>
+            <li><b>Magnesium vs Aluminum:</b> Silver nitrate leaves a black deposit on magnesium, not on aluminum.</li>
+        </ul>
+    </section>
+
+    <section id="glance">
+        <h2>6.21 Non-Ferrous Metals at a Glance</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Composition</th>
+                    <th>Properties</th>
+                    <th>Uses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Aluminium</td>
+                    <td>Pure Metal</td>
+                    <td>Greyish-White, soft, malleable, conductive, corrosion resistant.</td>
+                    <td>Aircraft, boats, window frames, packaging, pistons.</td>
+                </tr>
+                <tr>
+                    <td>Aluminium alloys (Duralumin)</td>
+                    <td>Al + 4% Cu + 1% Mn</td>
+                    <td>Ductile, Malleable, Work Hardens.</td>
+                    <td>Aircraft and vehicle parts.</td>
+                </tr>
+                <tr>
+                    <td>Copper</td>
+                    <td>Pure metal</td>
+                    <td>Red, tough, ductile, High electrical conductor.</td>
+                    <td>Electrical wire, cables, pipes, PCBs, roofs.</td>
+                </tr>
+                <tr>
+                    <td>Brass</td>
+                    <td>65% Cu + 35% Zn</td>
+                    <td>Corrosive, yellow, harder than copper.</td>
+                    <td>Castings, ornaments, valves, forgings.</td>
+                </tr>
+                <tr>
+                    <td>Lead</td>
+                    <td>Pure metal</td>
+                    <td>Heaviest common metal. Soft, malleable.</td>
+                    <td>X-Ray protection, paints, roof coverings.</td>
+                </tr>
+                <tr>
+                    <td>Zinc</td>
+                    <td>Pure metal</td>
+                    <td>Bluish-white, easily worked.</td>
+                    <td>Galvanizing steel, making brass.</td>
+                </tr>
+                <tr>
+                    <td>Tin</td>
+                    <td>Pure metal</td>
+                    <td>White and soft, corrosion resistant.</td>
+                    <td>Tinplate, making bronze.</td>
+                </tr>
+                <tr>
+                    <td>Gilding metal</td>
+                    <td>85% Cu + 15% Zn</td>
+                    <td>Corrosion resistant, golden colour.</td>
+                    <td>Beaten metalwork, jewellery.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="alloys">
+        <h2>6.22 Some Nonferrous Alloys</h2>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>General Composition*</th>
+                    <th>Name of Alloy</th>
+                    <th>Special Qualities</th>
+                    <th>Typical Uses</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Co, W, Mo, Si, Cr</td><td>Stellite</td><td>Extreme hardness</td><td>Cutting tools</td></tr>
+                <tr><td>Cu, Zn</td><td>Brass</td><td>Easily shaped</td><td>Hardware</td></tr>
+                <tr><td>Cu, Be</td><td>Beryllium copper</td><td>Very hard, high strength</td><td>Nonsparking tools</td></tr>
+                <tr><td>Au, Pd</td><td>White gold</td><td>Color, durability</td><td>Jewelry</td></tr>
+                <tr><td>Pb, Sn</td><td>Plumber's solder</td><td>Low melting point</td><td>Sealing metal joints</td></tr>
+                <tr><td>Ni, Cu, Fe, Mn, Si</td><td>Monel metal</td><td>Corrosion resistance</td><td>Steam valves</td></tr>
+                <tr><td>Ni, Cr</td><td>Nichrome</td><td>Electrical resistance</td><td>Heating elements</td></tr>
+                <tr><td>Sn, Sb, Cu</td><td>Babbitt metal</td><td>Low friction</td><td>Bearings</td></tr>
+                <tr><td>W, Th</td><td>Tungsten filament</td><td>High melting point</td><td>Electronic filaments</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="properties">
+        <h2>6.23 Mechanical Properties of Materials</h2>
+        
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Material</th>
+                    <th>Young’s Modulus (GPa)</th>
+                    <th>Poisson Ratio</th>
+                    <th>Yield Stress (MPa)</th>
+                    <th>Ultimate Stress (MPa)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Aluminum</td><td>70</td><td>0.33</td><td>20</td><td>70</td></tr>
+                <tr><td>Brass</td><td>96-110</td><td>0.34</td><td>70-550</td><td>200-620</td></tr>
+                <tr><td>Bronze</td><td>96-120</td><td>0.34</td><td>82-690</td><td>200-830</td></tr>
+                <tr><td>Cast iron</td><td>83-170</td><td>0.20-0.30</td><td>120-190</td><td>69-480</td></tr>
+                <tr><td>Copper</td><td>110-120</td><td>0.33-0.36</td><td>330</td><td>380</td></tr>
+                <tr><td>Glass</td><td>48-83</td><td>0.20-0.27</td><td>-</td><td>70</td></tr>
+                <tr><td>Magnesium</td><td>41</td><td>0.35</td><td>20-70</td><td>100-170</td></tr>
+                <tr><td>Rubber</td><td>0.0007-0.004</td><td>0.45-0.50</td><td>1-7</td><td>7-20</td></tr>
+                <tr><td>Tool steel</td><td>190-210</td><td>0.27-0.30</td><td>520</td><td>900</td></tr>
+                <tr><td>Titanium</td><td>110</td><td>0.33</td><td>400</td><td>500</td></tr>
+                <tr><td>Tungsten</td><td>340-380</td><td>0.20</td><td>-</td><td>1400-4000</td></tr>
+                <tr><td>Wood</td><td>10-11</td><td>-</td><td>30-40</td><td>30-50</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson4.html" title="Body Protection Products">&laquo; Lecture 5</a>
+        <a href="Unit1lesson7.html" title="Ferrous Metals">Lecture 7 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
