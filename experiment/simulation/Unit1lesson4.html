@@ -1,1 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Body Protection Products | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc ul { list-style: none; padding: 0; }
+        .toc li { margin-bottom: 8px; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; margin-bottom: 25px; }
+
+        /* Product Card Styles */
+        .product-card {
+            display: flex;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .product-image {
+            flex: 0 0 180px; /* Fixed width for image container */
+            margin-right: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f9f9f9;
+            border-radius: 4px;
+            padding: 10px;
+        }
+
+        .product-image img {
+            max-width: 100%;
+            max-height: 180px;
+            object-fit: contain;
+        }
+
+        .product-details {
+            flex: 1;
+        }
+
+        .product-details h3 {
+            margin-top: 0;
+            color: var(--secondary);
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+        }
+
+        .product-details p {
+            margin: 0;
+            font-size: 0.95rem;
+            color: #555;
+        }
+
+        /* Responsive design for mobile */
+        @media (max-width: 768px) {
+            .product-card {
+                flex-direction: column;
+            }
+            .product-image {
+                margin-right: 0;
+                margin-bottom: 15px;
+                width: 100%;
+                flex: auto;
+            }
+            .download-link {
+                display: block;
+                margin-top: 10px;
+                text-align: center;
+            }
+            .lesson-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 5: Body Protection Products</h1>
+        <a href="MEM103/Unit1/Unit1Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 5 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Contents</h3>
+        <ul>
+            <li><a href="#body">1. Body Protection Products</a></li>
+            <li><a href="#general">2. General Safety Products</a></li>
+            <li><a href="#head">3. Head Fall Protection</a></li>
+        </ul>
+    </div>
+
+    
+
+[Image of personal protective equipment chart]
+
+
+    <section id="body">
+        <h2>1. Body Protection Products</h2>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/1.jpg" alt="Full Aluminized complete Body Suit">
+            </div>
+            <div class="product-details">
+                <h3>Full Aluminized complete Body Suit</h3>
+                <p>These suits are ideal for the persons working in nuclear plants, thermal power stations and other industries where chemicals & radiations can affect human body.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/2.jpg" alt="Rain Suit Duck Back">
+            </div>
+            <div class="product-details">
+                <h3>Rain Suit Duck Back</h3>
+                <p>These suits Cover the whole body & protect from harmful chemicals and radiations.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/3.jpg" alt="Bamboo Jacket Khaki">
+            </div>
+            <div class="product-details">
+                <h3>Bamboo Jacket Khaki</h3>
+                <p>Riots Control Jacket is made of Canvas Fabric With inbuilt Bamboo Sticks (Front & Back). It is used in protecting chest and backside of body.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/4.jpg" alt="Cover All Dangri">
+            </div>
+            <div class="product-details">
+                <h3>Cover All Dangri</h3>
+                <p>Suitable for work wears with multiple pockets.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/5.jpg" alt="Chemical Suit">
+            </div>
+            <div class="product-details">
+                <h3>Chemical Suit</h3>
+                <p>Heat resistance leather suite (paint & jacket) made of industrial use consisting of inner heat resistance lining, and protect from heat upto 200 degree centigrade.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/6.jpg" alt="Cooling Vest">
+            </div>
+            <div class="product-details">
+                <h3>Cooling Vest</h3>
+                <p>Ice melts at temperatures above 0<sup>o</sup>c but at the moment of transition from solid to liquid uses up to 50 times more energy compared to a rise of 1<sup>o</sup>c when an object already is in either liquid or solid condition. It is used to store energy, absorb excessive heat and to keep the body cool and comfortable.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/7.jpg" alt="Tychem-C">
+            </div>
+            <div class="product-details">
+                <h3>Tychem-C</h3>
+                <p>Pressure suit contain separate attachable hood with air sound muffling system. Hood has air supply system with sound muffling.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/8.jpg" alt="Aluminised Fire Proximity Suit">
+            </div>
+            <div class="product-details">
+                <h3>Aluminised Fire Proximity Suit</h3>
+                <p>Aluminized fire proximity suit.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/9.jpg" alt="Leather Apron">
+            </div>
+            <div class="product-details">
+                <h3>Leather Apron</h3>
+                <p>(No description provided in original text)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="general">
+        <h2>2. General Safety Products</h2>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/10.jpg" alt="Cylinder Trolley">
+            </div>
+            <div class="product-details">
+                <h3>Cylinder Trolley</h3>
+                <p>Cylinder trolley is used in carrying acetylene and oxygen gas cylinders and also is helpful in carrying normal accessories like cutting torches, gas hose pipes, pressure regulators and other required tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="head">
+        <h2>3. Head Fall Protection</h2>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/11.jpg" alt="Helmet with Ear Muff">
+            </div>
+            <div class="product-details">
+                <h3>Helmet with Ear Muff</h3>
+                <p>They are developed from fine technology and have features like high quality, lightweight, comfortable and simple uses. They also include ear defenders which can be used for a wide range of industrial applications.</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/12.jpg" alt="Ultra Helmet with Visor">
+            </div>
+            <div class="product-details">
+                <h3>Ultra Helmet with Visor</h3>
+                <p>(No description provided in original text)</p>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <div class="product-image">
+                <img src="images/mem/Unit3/Lesson5/13.jpg" alt="Chin Straps and Sweat Bands">
+            </div>
+            <div class="product-details">
+                <h3>Chin Straps and Sweat Bands</h3>
+                <p>(No description provided in original text)</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson3.html" title="General Shop Safety">&laquo; Lecture 4</a>
+        <a href="Unit1lesson6.html" title="Non-Ferrous Metals">Lecture 6 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
