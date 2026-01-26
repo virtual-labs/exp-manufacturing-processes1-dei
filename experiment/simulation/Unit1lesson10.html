@@ -1,1 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 11: Smart Materials | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-weight: 500; 
+            display: block; 
+            margin-bottom: 5px; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #555; margin-top: 20px; font-weight: bold; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 11: SMART MATERIALS</h1>
+        <a href="MEM103/Unit1/Unit1Lesson11.pdf" target="_blank" class="download-link">📥 Lesson 11 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <a href="#smart">11.1 Smart Materials</a>
+        <a href="#materials">11.2 Piezoelectric Materials</a>
+        <a href="#rheostatic">11.3 Electro-Rheostatic and Magneto-Rheostatic</a>
+        <a href="#shape">11.4 Shape Memory Alloys</a>
+    </div>
+
+    <section id="smart">
+        <h2>11.1 Smart Materials</h2>
+        <p>Smart material can be defined as material that can significantly change their mechanical properties (such as shape, stiffness, and viscosity), or their thermal, optical, or electromagnetic properties, in a predictable or controllable manner in response to their environment. Such materials have the ability to change shape or size simply by adding a little bit of heat, or to change from a liquid to solid almost instantly.</p>
+    </section>
+
+    <section id="materials">
+        <h2>11.2 Piezoelectric Materials</h2>
+        <p>When a piezoelectric material is deformed, it gives off a small but measurable electrical material it experiences a significant increase in size (up to a 4% change in volume). Piezoelectric materials are most widely used as sensors in different environments. They are often used to measure fluid compositions, fluid density, or the force of an impact. An example of a piezoelectric material in everyday life is the airbag sensor in your car. The material senses the force of an impact on the car and sends and electric charge deploying the airbag.</p>
+        
+    </section>
+
+    <section id="rheostatic">
+        <h2>11.3 Electro-Rheostatic and Magneto-Rheostatic</h2>
+        <p>Electro-rheostatic (ER) and magneto-rheostatic (MR) materials are fluids, which can experience a dramatic change in their viscosity. These fluids can change from a thick fluid (similar to motor oil) to nearly a solid substance within the span of a millisecond when exposed to a magnetic or electric field; the effect can be completely reversed just as quickly when the field is removed. MR fluids experience a viscosity change when exposed to a magnetic field, while ER fluids experience similar changes in an electric field. The most common form of MR fluid consists of tiny iron particles suspended in oil, while ER fluids can be as simple as milk chocolate or cornstarch and oil. MR fluids are being developed for use in car shocks, damping washing machine vibration, prosthetic limbs, exercise equipment, and surface polishing of machine parts. ER fluids have mainly been developed for use in clutches and valves, as well as engine mounts designed to reduce noise and vibration in vehicles.</p>
+        
+    </section>
+
+    <section id="shape">
+        <h2>11.4 Shape Memory Alloys (SMA)</h2>
+        <p>Shape memory alloys (SMA's) are metals, which exhibit two very unique properties, pseudo-elasticity, and the shape memory effect. The term shape memory refers to the ability of certain alloys (Ni - Ti, Cu - Al - Zn etc.) to undergo large strains, while recovering their initial configuration at the end of the deformation process spontaneously or by heating without any residual deformation.</p>
+        
+
+        <h3>11.4.1 Substitute for Steel:</h3>
+        <p>Fatigue behavior of CuZnAl-SMA's is comparable with steel. If larger diameter rods can be manufactured. It has a potential for use in civil engineering applications.</p>
+
+        <h3>11.4.2 Smart Concrete:</h3>
+        <p>A mere addition of 0.5% specially treated carbon fibers enables the increase of electrical conductivity of concrete. Putting a load on this concrete reduces the effectiveness of the contact between each fiber and the surrounding matrix and thus slightly reduces its conductivity. On removing the load the concrete regains its original conductivity. Because of this peculiar property the product is called "Smart Concrete". The concrete could serve both as a structural material as well as a sensor. The smart concrete could function as a traffic-sensing recorder when used as road pavements. It has got higher potential and could be exploited to make concrete reflective to radio waves and thus suitable for use in electromagnetic shielding. The smart concrete can be used to lay smart highways to guide self steering cars which at present follow tracks of buried magnets. The strain sensitive concrete might even be used to detect earthquakes.</p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson10.html" title="Ceramics">&laquo; Lecture 10</a>
+        <a href="Unit1lesson12.html" title="Wood Working">Lecture 12 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
