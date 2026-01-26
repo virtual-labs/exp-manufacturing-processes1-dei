@@ -1,1 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Ferrous Metals | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-weight: 500; 
+            display: block; 
+            margin-bottom: 5px; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #555; margin-top: 20px; font-weight: bold; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+        ul { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        /* Tables */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        /* QA Block for Classification section */
+        .qa-block {
+            background-color: #f0f4f8;
+            padding: 15px;
+            border-radius: 5px;
+            border-left: 4px solid var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .qa-block strong { color: var(--primary); }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 7: Ferrous Metals</h1>
+        <a href="MEM103/Unit1/Unit1Lesson7.pdf" target="_blank" class="download-link">📥 Lesson 7 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#introduction">7.0 Introduction</a>
+                <a href="#iron">7.1 Iron</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#iron" style="display:inline; font-size:0.85rem;">7.1.1 Properties of Iron</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#iron" style="display:inline; font-size:0.85rem;">7.1.2 Uses of Iron</a><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#iron" style="display:inline; font-size:0.85rem;">7.1.3 Manufacture of Iron</a>
+            </div>
+            <div>
+                <a href="#cast">7.2 Cast Iron</a>
+                <a href="#steel">7.3 Steel</a>
+                &nbsp;&nbsp;&nbsp;&nbsp;<a href="#steel" style="display:inline; font-size:0.85rem;">7.3.1 Applications of Carbon Steels</a><br>
+                <a href="#classification">7.4 Classification of Cast Iron</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>7.0 Introduction: Ferrous Metals</h2>
+        <p>Ferrous metals are metals that contain iron as the base metal. Almost all ferrous metals are magnetic. The basic ferrous metal form is pig iron.</p>
+    </section>
+
+    <section id="iron">
+        <h2>7.1 Iron</h2>
+        <p>Iron is a lustrous, ductile, malleable, silver-gray fusible element that is the cheapest and most used among all metals. It is known to exist in four distinct crystalline forms. In the Earth iron occurs mainly in iron-oxide ores. One of these ores magnetite (Fe<sub>3</sub>O<sub>4</sub>), named for its property of magnetism. Hematite (Fe<sub>2</sub>O<sub>3</sub>) is the most plentiful ore, but it contains less iron than magnetite. The various alloys of iron, after undergoing certain processes, are pig iron, gray cast iron, white iron, white cast iron, malleable cast iron, wrought iron, alloy steel, and carbon steel. Pig iron is used to produce steel.</p>
+
+        <h3>7.1.1 Properties of Iron</h3>
+        <ul>
+            <li>Boiling point: 2,750°C</li>
+            <li>Melting point: 1,535°C</li>
+            <li>Specific gravity: 7.874</li>
+        </ul>
+
+        <h3>7.1.2 Uses</h3>
+        <ul>
+            <li>Iron is the basic material used in making steel and cast iron.</li>
+            <li>An oxide of iron called Venetian red is used as a pigment in paint for bridges and railroad cars.</li>
+            <li>Iron compound called Prussian blue is a pigment, which is used as Laundry bluing and by architects and engineers for blueprints.</li>
+            <li>Iron cores are used in electromagnets for motors, telephones, and other equipment.</li>
+        </ul>
+
+        <h3>7.1.3 Manufacture of Iron</h3>
+        <h4>Blast furnace</h4>
+        <p>The blast furnace is used to produce cast iron or steel from iron oxides. The purpose of a blast furnace is to chemically reduce and physically convert iron oxides into liquid iron called "hot metal" (pig iron).</p>
+        
+        
+
+        <h4>Wrought iron</h4>
+        <p>Wrought iron is almost pure iron that has had most of its carbon removed. It is made from pig iron in a puddling furnace and has a carbon content of less than 0.08 percent.</p>
+
+        <p><b>Manufacture:</b> Wrought iron is manufactured from pig iron in a puddling furnace.<br>
+        <b>Characteristics:</b> Wrought iron is ductile and corrosion resistant. It becomes soft at white heat.<br>
+        <b>Uses:</b> Wrought iron is used for porch railings, fencing, farm implements, nails, barbed wire, chains, furniture, decorations bolts and nuts, chain, railway coupling, water and steam pipes.<br>
+        <b>Capabilities:</b> Wrought iron can be gas and arc welded, machined, forged, plated, and is easily formed.<br>
+        <b>Limitations:</b> Wrought iron has low hardness and low fatigue strength.</p>
+    </section>
+
+    <section id="cast">
+        <h2>7.2 Cast Iron</h2>
+        <p>Cast iron (CI) is a ferrous metal, an alloy of iron, carbon (2.1 to 4.5%) and silicon (3.5%). Cast iron is a hard and brittle material. Graphite (carbon) is present in cast iron in free form and it adds self-lubricating properties to cast iron. Cast iron has excellent vibration damping property. It is, therefore, extensively used for making machine beds and frames. Cast iron has good compressive strength, but is weak in tension. Different types of cast irons are used in engineering applications. A few of them are gray cast iron, malleable cast iron, spheroidal-graphite cast iron, etc., each having different composition and percentage of alloying elements.</p>
+        
+        <p><b>Gray cast iron</b> has good wear resistance and is used for castings of machine tool guideways, where continuous lubrication is not always possible. <br>
+        <b>Malleable cast iron</b> has more tensile, impact and fatigue strength than gray cast iron. Application of malleable cast iron includes parts for agricultural and textile machinery. <br>
+        <b>Spheroidal-graphite (SG) cast iron</b> achieves the strength, toughness and ductility of steel. SG cast iron is widely used in the manufacturing of crankshafts and connecting rods, gearbox housings etc.</p>
+
+        
+    </section>
+
+    <section id="steel">
+        <h2>7.3 Steel</h2>
+        <p>Steel is the most common engineering material used for a wide range of applications from utensils to machine parts to cutting tools. Steel is an alloy of iron and carbon. In addition, it may contain other alloying elements such as manganese, silicon, chromium and copper. Steels are classified based on the percentage of carbon present, into three groups viz. low carbon steel (0.05 to 0.3%C), medium carbon steel (0.3 to 0.7%C) and high carbon steel (0.7 to 1.5%C). The low carbon steel is also known as mild steel. Table gives a wide range of typical applications of carbon steels depending on its carbon content.</p>
+
+        <h3>7.3.1 Applications of Carbon Steels</h3>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Common Name</th>
+                    <th>Carbon %</th>
+                    <th>Applications</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"><b>Mild Steel (Low Carbon)</b></td>
+                    <td>0.05 - 0.125</td>
+                    <td>Thin sheets, tubes, wire etc.</td>
+                </tr>
+                <tr>
+                    <td>0.15 - 0.3</td>
+                    <td>Structural sections, boilers, general purpose applications etc.</td>
+                </tr>
+                <tr>
+                    <td rowspan="3"><b>Medium Carbon</b></td>
+                    <td>0.3 - 0.5</td>
+                    <td>Agriculture implements, wheel axles, tubes and wires etc.</td>
+                </tr>
+                <tr>
+                    <td>0.5 - 0.7</td>
+                    <td>Hammers and other hand tools, wheel rims, springs, dies etc.</td>
+                </tr>
+                <tr>
+                    <td>0.7 - 0.9</td>
+                    <td>Cutting blades, chisels, dies etc.</td>
+                </tr>
+                <tr>
+                    <td rowspan="2"><b>High Carbon</b></td>
+                    <td>0.9 - 1.1</td>
+                    <td>Wood working tools, dies, chisels, cutting tools, etc.</td>
+                </tr>
+                <tr>
+                    <td>1.1 - 1.5</td>
+                    <td>Metal cutting tools, razor blades, files, drills, gauges etc.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>One important feature of steel is that its properties can be easily controlled and manipulated. It can be made softer and ductile or it can be made more hard and brittle, using simple processes, depending on the end use for which steel is required.</p>
+    </section>
+
+    <section id="classification">
+        <h2>7.4 Classification of Cast Iron</h2>
+
+        <div class="qa-block">
+            <p><strong>On what factors the various irons are classified?</strong><br>
+            The various irons can be classified on the form of their graphite and the type of matrix structure in which it is embedded.</p>
+
+            <p><strong>In what form the carbon is present in steel and cast iron?</strong><br>
+            While carbon in ordinary steel exists as cementite (Fe<sub>3</sub>C), in cast iron it occurs in two forms: stable form-graphite and unstable form-cementite, analysed as combined carbon.</p>
+
+            <p><strong>Classify cast irons</strong><br>
+            The first classification of cast iron was based on its fracture. Two types of iron were initially recognised:
+            <ol>
+                <li><b>White iron:</b> Exhibits a white, crystalline fracture surface because fracture occurs along the iron carbide plates; it is the result of metastable solidification (Fe<sub>3</sub>C eutectic).</li>
+                <li><b>Gray iron:</b> Exhibits a gray fracture surface because fracture occurs along the graphite plates (flakes); it is the result of stable solidification (Gr eutectic).</li>
+            </ol>
+            </p>
+        </div>
+
+        <h3>Comprehensive Classification (Pearce Diagram)</h3>
+        <p>Classification of cast iron based on the form of graphite and the type of matrix structure in which it is embedded.</p>
+        
+        <div style="overflow-x: auto;">
+            <table class="styled-table" style="text-align: center;">
+                <tr>
+                    <th colspan="6">CAST IRON</th>
+                </tr>
+                <tr>
+                    <td colspan="4" style="background-color: #e8eaf6;"><b>Grey machinable iron</b></td>
+                    <td colspan="2" style="background-color: #ffe0b2;"><b>White, unmachinable iron (no graphite)</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><b>Flake Graphite</b></td>
+                    <td colspan="2"><b>Spheroidal Graphite</b></td>
+                    <td>Pearlitic</td>
+                    <td>Martensitic</td>
+                </tr>
+                <tr>
+                    <td>Ferritic</td>
+                    <td>Pearlitic</td>
+                    <td>Austenitic</td>
+                    <td>Martensitic</td>
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td colspan="3" style="background-color: #c8e6c9;"><b>Malleable iron (temper carbon graphite)</b></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td colspan="4"><b>Ferritic</b></td>
+                    <td colspan="2"><b>Pearlitic</b></td>
+                </tr>
+                <tr>
+                    <td colspan="2">Blackheart</td>
+                    <td colspan="2">Thin Whiteheart</td>
+                    <td>Whiteheart</td>
+                    <td>Special Malleable</td>
+                </tr>
+            </table>
+        </div>
+        <p style="text-align: center; font-size: 0.9rem; color: #666;"><b>Figure 1: Classification of Cast Iron (Pearce)</b></p>
+        
+        
+
+[Image of iron-carbon equilibrium diagram]
+
+
+        <div class="qa-block">
+            <p><strong>Differentiate between graphite and cementite.</strong><br>
+            Graphite is grey, soft, and occupies a large bulk, hence counteracting shrinkage; while cementite is intensely hard, with a density of the same order as iron.</p>
+
+            <p><strong>What are the factors that mainly influence the character of the carbon in ferrous metals?</strong></p>
+            <ol>
+                <li>The presence of nuclei of graphite and other substances.</li>
+                <li>The rate of cooling.</li>
+                <li>The chemical composition.</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson6.html" title="Non-Ferrous Metals">&laquo; Lecture 6</a>
+        <a href="Unit1lesson8.html" title="Heat Treatment">Lecture 8 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
