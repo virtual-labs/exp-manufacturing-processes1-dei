@@ -1,1 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 1: Casting Process | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; display: block; margin-bottom: 5px; }
+        .toc a:hover { text-decoration: underline; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #555; margin-top: 20px; font-weight: bold; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img, .image-container video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 1: CASTING PROCESS</h1>
+        <a href="MEM103/Unit3/Lesson1/Unit3Lesson1.pdf" target="_blank" class="download-link">📥 Lesson 1 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#objectives">1.0 Objectives</a>
+                <a href="#casting">1.1 Casting Process</a>
+                <a href="#sand">1.2 Sand Casting Process</a>
+                <a href="#terminology">1.3 Casting Terminology</a>
+            </div>
+            <div>
+                <a href="#gating">1.4 Gating System</a>
+                <a href="Unit3Simulations.php?MEM103/Unit3/Simulations/Casting.mp4">Casting Simulations</a>
+                <a href="Unit3lesson1scq.html">Self-check questions</a>
+                <a href="Unit3lesson1faq.html">Frequently asked questions</a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <p>The principle of casting is similar to process of ice making in a house. For making an ice cube, the water (liquid) is poured into a tray of desired shape (mould) and placed in fridge (i.e. cold environment, below 0<sup>o</sup>C). It can be observed that water (any liquid) will take the exact form or shape of the vessel (tray) that contains it. Further, when water (any liquid) is frozen (solidified), it will have the exact form or shape of the vessel (tray) that contains it. Therefore, consider the ice cube example and examine what is involved in "casting" of water. The water, a liquid at room temperature, is poured into a vessel (the ice cube tray) and then we solidify (freeze) the water in the freezer and we have made ice cubes. Each cube is the exact shape and size of the compartment that contained it. In this case the water is the material cast, the ice cube tray is the vessel or "mould" and the "fridge" solidifies the water by cooling or freezing it. The steps in casting process are: making a mould of a suitable material, melting the metal and heating it to a specific temperature, pouring it into the mould and allowing the metal to solidify and cool. After cooling, casting is removed from the mould.</p>
+    </section>
+
+    <section id="objectives">
+        <h2>1.0 Objectives</h2>
+        <p>After going through this lesson, you will be able to</p>
+        <ol>
+            <li>To understand the process of casting along with its application and advantages.</li>
+            <li>To understand the steps involved in casting</li>
+            <li>To be able to acquaint with casting terminology.</li>
+        </ol>
+    </section>
+
+    <section id="casting">
+        <h2>1.1 Casting Process</h2>
+        <p>It is a manufacturing process in which molten material is poured into a mould (or cavity) and allowed to freeze so as to take the shape of the mould. The term casting is used to denote both the product and the process. The section of the workshop where metal castings are produced is known as foundry or foundry shop.</p>
+        <p>Casting process is based on the property of liquids to take up the shape of the vessel into which they are poured. Molten metal when poured into a cavity of desired shape flows into every recess and corner of the cavity and fills the space. When this metal solidifies, it has the shape and size of the cavity and thus, in a single step, simple or complex shapes can be made from any metal that can be melted.</p>
+
+        <h3>1.1.1 Advantages of Casting Process</h3>
+        <p>Cast metal products and processes offer advantages unavailable from products made by other manufacturing techniques. The following are reasons that make casting process important in manufacturing industry.</p>
+        <ol>
+            <li>Cast components are net or near-net shape.</li>
+            <li>Almost all metals and alloys can be cast.</li>
+            <li>There are almost no restrictions on part weight or size.</li>
+            <li>Intricate parts can be produced as single cast components.</li>
+            <li>Castings can be manufactured to include complex interior cavities.</li>
+            <li>All the industry's products are fully recyclable.</li>
+        </ol>
+
+        <h3>1.1.2 Applications</h3>
+        <p>Cast parts range in various sizes and variety of shapes (such as the individual teeth on a zipper to an engine block of a heavy duty truck). Some of the examples of castings are cylinder blocks of airplane engine, piston rings, machine tool beds, water supply and sewer pipes, locomotive wheels, huge propellers etc. Figure 1.1 gives some cast parts.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/lesson2/Automobile.jpg" alt="Cast Parts in typical automobile">
+            <span class="image-caption">Fig. 1.1 Cast Parts in typical automobile</span>
+        </div>
+    </section>
+
+    <section id="sand">
+        <h2>1.2 Sand Casting Process</h2>
+        <p>The most universal method of making castings is by using sand moulds. Sand moulds are made by ramming sand in a metallic or wooden flask. Such a casting process is commonly referred to as <b>sand casting process</b>.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson2/Steps.jpg" alt="Production steps in a typical sand-casting process">
+            <span class="image-caption">Fig. 1.2 Production steps in a typical sand-casting process</span>
+        </div>
+
+        <p>The steps required for making metal castings using sand casting process are mentioned below and also depicted in Fig. 2.2:</p>
+        <p><b>Step 1 - Pattern making</b><br>
+        The first step in sand casting is pattern making. The pattern is a physical replica of the exterior of the casting with dimensional allocation for shrinkage and finishing used to make the mould. The cavity in the mould is prepared with the help of the pattern and is a replica of the casting required. It is constructed in such a way that it can be used for forming an impression in sand or other material used for making the mould. The pattern can be made from anything as long as it is robust enough to be handled during the mould making process. Patterns are usually made of wood, plastic, metal, or plaster. A pattern has to be made before making a mould.</p>
+
+        <p><b>Step 2 - Core making</b><br>
+        The next step in the process is core making. If the casting is to be hollow, additional patterns called cores are used to create these cavities in the finished product. Cores are pre-determined shaped mass of dry sand, which are placed into the mould before pouring the molten metal to create the interior contours of the casting. They are typically made of a sand mixture - sand combined with water and organic adhesives called binders- which is baked to form the core. This allows the cores to be strong yet collapsible, so they can be easily removed from the finished casting. Since cores are made in moulds, they require a pattern and mould, called a core box.</p>
+
+        <p><b>Step 3 - Moulding</b><br>
+        Moulding is the multi-step process in which moulds are created with the desired cavity in a suitable material, like sand, to pour the molten metal. The mould is made by packing some readily formed aggregate material, such as moulding sand, around the pattern. When the pattern is withdrawn, its imprint provides the mould cavity, which is ultimately filled with metal to become the casting. A mould is required to get the desired shape and size of the metal casting. Sand is a good refractory material for most of the metals and is mostly used for moulding.</p>
+
+        <p><b>Step 4 - Melting & Pouring</b><br>
+        Melting is the preparation of the molten metal for casting, and its conversion from a solid to a liquid state in a furnace. It is then transferred in a ladle to the moulding area of the foundry where it is poured into the moulds. After the metal has solidified, the moulds are vibrated to remove the sand from the casting, a process called shakeout. For melting of the metal during casting different types of furnaces are used. The type and size of the furnace may depend on the size of casting, quantity to be produced, production rate, and metal to be cast.</p>
+
+        <p><b>Step 5 - Cleaning</b><br>
+        Cleaning generally refers to the removal of all materials that are not part of the finished casting. Rough cleaning is the removal of the gating systems from the casting. Initial finishing removes any residual mould or core sand that remains on the piece after it is free of the mould. Trimming removes any unnecessary metal. In the last stages of finishing, the surface of the casting is cleaned for improved appearance.</p>
+    </section>
+
+    <section id="terminology">
+        <h2>1.3 Casting Terminology</h2>
+        <p>The Fig. 1.3 presents the cross-section of a typical two-part sand mould and incorporates many features of the casting process. The casting starts with the construction of a pattern, a duplicate of the final casting with allowances. The moulding material is then packed around the pattern, and the pattern is removed to produce a mould cavity. The term casting is used to describe both the process and the product when molten metal is poured and solidified in a mould.</p>
+
+        <p><b>Flask</b><br>
+        The flask is the box that contains the moulding aggregate.</p>
+
+        <p><b>Cope</b><br>
+        In a two-part mould, the cope is the top half of the pattern, flask, mould or core.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson2/CrossSection.jpg" alt="Mould Cross-section">
+            <video width="400" autoplay loop controls style="margin-top:10px;">
+                <source src="MEM103/Unit3/Simulations/Casting.mp4" type="video/mp4">
+            </video>
+            <span class="image-caption">Fig. 1.3 Cross-section of a typical two-part sand mould, presenting various mould components and terminology</span>
+        </div>
+
+        <p><b>Drag</b><br>
+        The drag is the bottom half of any of the pattern, flask, mould or core. A core is a sand shape that is inserted into the mould to produce internal features on a casting, such as holes or passages for water cooling.</p>
+
+        <p><b>Core Print</b><br>
+        A core print is the region added to the pattern, core, or mould that is used to locate and support the core within the mould. The mould material and the core then combine to form the mould cavity, the void into which the molten metal will be poured and solidified to produce the desired casting.</p>
+
+        <p><b>Parting Line</b><br>
+        The parting line or parting surface is the interface that separates the cope and drag halves of the mould, flask, or pattern, and the halves of a core during some core-making processes.</p>
+
+        <p><b>Draft</b><br>
+        The draft is the taper on a pattern or casting that permits it to be withdrawn from the mould. The mould or die used to produce casting cores is known as a core box.</p>
+
+        <p><b>Pouring cup</b><br>
+        The molten metal is not directly poured into the mould cavity because it may cause mould erosion. Molten metal is poured into a pouring basin, which acts as a reservoir from which it moves smoothly into the sprue.</p>
+
+        <p><b>Sprue</b><br>
+        Sprue helps in feeding metal to the runner, which in turn reaches the cavity through the gates. The sprue may have either straight or taper shape. In straight or parallel sprue, the metal contracts inwards and is pulled away from the sprue walls, as shown in Fig. 1.4. In a tapered sprue, the liquid metal flows down firmly in contact with walls and this reduces turbulence and eliminates sucking of gas or air from the mould. A tapered sprue is illustrated in Fig. 1.4.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson2/Sprue.jpg" alt="Straight and tapered sprue">
+            <span class="image-caption">Fig. 1.4 Straight and tapered sprue</span>
+        </div>
+
+        <p><b>Sprue base</b><br>
+        This is a reservoir for metal at the bottom of the sprue to reduce the momentum of the falling molten metal. The molten metal, as it moves down the sprue gains in velocity, some of which is lost in the sprue base well, and the mould erosion is reduced. This molten metal changes direction in the sprue base and flows into the runner in a more uniform way.</p>
+
+        <p><b>Riser</b><br>
+        The riser is designed to serve as a reservoir of metal which stays liquid longer than the casting and "feeds" liquid to fill any shrinkage cavities which tend to develop in the casting. If the metal does not appear in the riser, it signifies that either the metal is insufficient to fill the mould cavity or there is some abstraction to the metal flow between the sprue and riser.</p>
+
+        <p><b>Runner</b><br>
+        Runner is used to take the molten metal from the sprue base and distribute it to several gate passageways around the cavity.</p>
+
+        <p><b>Gate</b><br>
+        The gate is a channel, which connects runner with the mould cavity and through which molten metal flows to fill the mould cavity. In top gating, the molten material falls directly into the mould cavity through a height as shown in Fig. 1.5 (a).</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson2/DifferentGates.jpg" alt="Different types of gates">
+            <span class="image-caption">Fig. 1.5 Different types of gates</span>
+        </div>
+
+        <p>In bottom gating, shown in Fig. 1.5 (b), the molten material enters the mould cavity from the bottom and hence there is no problem of scouring and splashing. But, in case of bottom gating system since molten material enters from bottom, if freezing of molten metal takes place then it could choke off metal flow before mould is full. Bottom gating creates an unfavorable temperature gradient and makes it difficult to achieve directional solidification. Bottom gating is used for heavy castings. In parting gate the molten material enters the mould at the parting plane, as shown in Fig. 1.5 (c).</p>
+    </section>
+
+    <section id="gating">
+        <h2>1.4 Gating System</h2>
+        <p>Gating systems are necessary for the molten metal to flow into the mould cavity. The gating system is the network of channels used to deliver the molten metal from outside the mould into the mould cavity. The way in which the liquid metal enters the mould has a decided influence upon the quality and soundness of the casting, the different components of a gating system should be carefully designed and produced. Different components of a gating system are shown in Fig. 1.6.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson2/GatingSystem.jpg" alt="Components of gating system">
+            <span class="image-caption">Fig. 1.6 Components of gating system</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <span>&nbsp;</span>
+        <a href="Unit3lesson2.html" title="Casting Process: Pattern Making">Lecture 2 ➔</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a></p>
+</footer>
+
+</body>
+</html>
