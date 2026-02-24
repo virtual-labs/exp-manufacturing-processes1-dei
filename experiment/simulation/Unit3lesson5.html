@@ -1,1 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Rolling Processes | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc ul { list-style: none; padding-left: 20px; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+
+        .sector-box {
+            background: #fff;
+            border-left: 4px solid var(--primary);
+            padding: 10px 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        table.agenda-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        table.agenda-table th, table.agenda-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+
+        table.agenda-table th { background: var(--primary); color: white; }
+        
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            background: white;
+        }
+
+        .life-cycle-list {
+            background: #fdfdfd;
+            padding: 20px 40px;
+            border: 1px dashed var(--secondary);
+            border-radius: 8px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary);">Lesson 5: Rolling Processes</h1>
+        <a href="MEM103/Unit2/Unit2Lesson5.pdf" target="_blank" class="download-link">📥 Lesson 5 Download</a>
+    </div>
+
+    <div class="toc">
+        <ul>
+            <li><a href="#spinning">Metal Spinning</a></li>
+            <li><a href="#introduction">5.0 Introduction</a></li>
+            <li><a href="#operation">5.1 Rolling Operation</a></li>
+            <li><a href="#hot">5.2 Hot Rolling</a></li>
+            <li><a href="#cold">5.3 Cold Rolling</a></li>
+            <li><a href="#mills">5.4 Rolling Mills</a>
+                <ul>
+                    <li>5.4.1 Two High, Pull Over</li>
+                    <li>5.4.2 Two High, Reversing</li>
+                    <li>5.4.3 Three High</li>
+                    <li>5.4.4 Four High</li>
+                    <li>5.4.5 Continuous Mills</li>
+                    <li>5.4.6 Planetary Rolling Mill</li>
+                    <li>5.4.7 Universal Rolling Mill</li>
+                </ul>
+            </li>
+            <li><a href="#parameters">5.5 Rolling Parameters</a></li>
+            <li><a href="#thread">5.6 Thread Rolling</a></li>
+            <li><a href="#defects">5.7 Defects in Rolled Plates and Sheets</a></li>
+        </ul>
+    </div>
+
+    <section id="spinning">
+        <h2>Metal Spinning</h2>
+        <p>When dies are uneconomical to make for a forming operation because of small number of parts to be made, spinning could be a solution. Metal spinning is a term used to describe the forming of metal into seamless (jointless), axisymmetric shapes by a combination of rotational motion and force. Metal spinning typically involves the forming of axisymmetric components over a rotating mandrel using rigid tools or rollers.</p>
+        
+        <p>Figure 1 shows examples of products made from metal spinning. The range of components include:</p>
+        <ul>
+            <li>Bases, baskets, basins, and bowls</li>
+            <li>Bottoms for tanks, hoppers, and kettles</li>
+            <li>Canopies, caps, and canisters</li>
+            <li>Housings for blowers, fans, filters, and flywheels</li>
+            <li>Ladles, nozzles, orifices, and tank outlets</li>
+            <li>Pails, pans, and pontoons</li>
+            <li>Cones, covers, and cups</li>
+            <li>Cylinders and drums</li>
+            <li>Funnels and horns</li>
+            <li>Domes, hemispheres, and shells</li>
+            <li>Rings, spun tubing, and seamless shapes</li>
+            <li>Vents, venturis, and fan wheels</li>
+        </ul>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/1.jpg" alt="Various components produced by metal spinning">
+            <p><b>Figure 1: Various components produced by metal spinning</b></p>
+        </div>
+
+        <p>The equipment for metal spinning is based on lathe technology, with appropriate modifications for the components that are being formed. Typically, sheet performs flat sheet) are employed to allow relatively low forming stresses. Metal spinning can be used to cost-effectively produce single or a small number of parts out of expensive materials. In manual spinning, a circular blank of a flat sheet, or preform, is pressed against a rotating mandrel using a rigid tool. The mandrel is mounted on the lathe head stock and the live centre (tail stock) of lathe is used to hold the sheet metal in place. The spinning tool is moved either manually or hydraulically over the mandrel to form the component, as shown in Figure 2 & 3. The forming operation can be performed using several passes. Tools of different configurations can be used.</p>
+
+        <div class="image-container">
+            <div style="display:flex; justify-content:center; gap:20px; flex-wrap: wrap;">
+                <img src="images/mem/Unit2/Lesson6/2.jpg" style="max-width:45%" alt="Metal spinning process">
+                <img src="images/mem/Unit2/Lesson6/3.jpg" style="max-width:45%" alt="Spinning process">
+            </div>
+            <p><b>Figure 2: Metal spinning process, showing the deformation of a metal disk over a mandrel to form a cone | Figure 3: Spinning process to form sheet metal over a revolving mandrel</b></p>
+        </div>
+    </section>
+
+    <section id="introduction">
+        <h2>5.0 Introduction</h2>
+        <p>The process of shaping metals and alloys into semi-finished or finished condition by passing between rolls is known as rolling. This process involves the plastic deformation of the metal in which the thickness of the metal is reduced, while the length and width are increased. There are two types of rolling process, flat and profile (shape) rolling. In flat rolling the final shape of the product is either flat sheet (typically thickness less than 3 mm, also called "strip") or plate (typically thickness more than 3 mm). In profile rolling the final product may be a round rod or other shaped bar, such as a structural section (rails for railway lines, girders for bridges (I-beam), channel, joist, 90 degree angle section, etc). Rolling is the most used metal forming process and accounts for about 90 percent of all metal products produced by metal forming. Rolling is also classified according to the temperature of the metal rolled. If the temperature of the metal is above its recrystallization temperature, then the process is termed as hot rolling. If the temperature of the metal is below its recrystallization temperature, the process is termed as cold rolling.</p>
+        
+        <div class="sector-box">
+            <b>Typical characteristics of rolling:</b>
+            <ol>
+                <li>Production of flat parts at high speeds</li>
+                <li>Production of various structural shapes</li>
+                <li>High capital investment</li>
+                <li>Low to moderate labor cost</li>
+            </ol>
+        </div>
+    </section>
+
+    <section id="operation">
+        <h2>5.1 Rolling Operation</h2>
+        <p>The process of rolling consists of passing the ingot (the piece of metal to be rolled) through two rolls rotating in opposite directions at a uniform peripheral speed. The space between the rolls is adjusted to confirm to the desired thickness of the rolled section. The rolls, thus, squeeze the ingot and as it comes out of the rolls, its thickness or cross section is reduced and its width and length are increased. The rolling process is shown in Figure 5.1.</p>
+
+        <div class="image-container">
+            <div style="display:flex; justify-content:center; gap:20px; flex-wrap: wrap;">
+                <img src="images/mem/Unit2/Lesson6/4.jpg" style="max-width:45%" alt="Rolling process">
+                <img src="images/mem/Unit2/Lesson6/5.jpg" style="max-width:45%" alt="Pressure variation">
+            </div>
+            <p><b>Figure 5.1 Rolling process and deformation of grains in rolling | Figure 5.2 Pressure variation in rolling</b></p>
+        </div>
+
+        <p>The structural changes that occur in the material during the rolling process are shown in Figure 5.1. Because of squeezing, the grains are elongated in the direction of rolling and the velocity of material at exit is higher than that at the entry. After crossing the stress-zone, grains start refining in the case of hot rolling. In cold rolling, grains retain the shape acquired by them during rolling.</p>
+
+        <p>The rolls are in contact with the metal for a distance AB, as shown in Figure 5.1. The angle AOB subtended at the center of the roll by the arc AB is known as angle of contact or the angle of bite. It is the friction between the surfaces of the metal and the rolls, which provides the required grip of the rolls over the metal piece to draw the latter through them. The greater is the coefficient of friction more is the possible reduction. However, energy is dissipated in overcoming friction, so increasing friction means increasing forces and more power consumption. Furthermore, high friction could damage the surface of the rolled product. We therefore have to make a compromise. For obtaining low coefficients of friction, effective lubricants are used.</p>
+
+        <p>The pressure distribution in rolling process is shown in Figure 5.2. The pressure distribution is not uniform throughout, but varies as shown. It is seen from the figure that it is minimum at both ends and maximum at a point C somewhere in between A-B. From point A to point C the metal moves slower than the roll and from C to B, the metal moves faster than the roll.</p>
+
+        <div class="sector-box" style="border-left-color: var(--secondary); font-style: italic;">
+            <b>Note:</b> It can be argued at this point that even by simply stretching the material, we can reduce the thickness of the bar then why do we require rolling process? At the outset, the question seems to be meaningful, but a moment's thought will answer the question. Simply stretching the material will not cause uniform deformation of the material, also, when the material is stretched beyond its yield point, it may even cause the fracture of the material.
+        </div>
+
+        <p>Roll-work contact length is reduced with a lower roll radius, and this leads to lower forces, torque, and power. The four-high rolling mill uses two smaller diameter rolls to contact the work and two backing rolls behind them. Another roll configuration that allows smaller working rolls against the work is the cluster rolling mill.</p>
+
+        <p>Rolling is often the first process that is used to convert material into a finished wrought product. Thick starting stock (ingot) can be rolled into blooms, billets, or slabs or these shapes can be obtained directly from continuous casting Ingot. It is the initial product obtained by the casting of molten metal. It may be of circular, square or any other convenient cross-section.</p>
+
+        <div class="sector-box"><b>Bloom:</b> It is obtained by hot rolling of an ingot. It is the product of the first rolling down of the ingot. It is usually of square cross section with a cross-section area above 225 cm<sup>2</sup>.</div>
+        <div class="sector-box"><b>Billet:</b> The minimum cross sectional area of a billet is about 4 cm by 4 cm. However, in non-ferrous metallurgical terminology, a billet is any ingot which has been subjected to hot working by rolling, forging etc. or the term refers to a casting which is suitable for hot working.</div>
+        <div class="sector-box"><b>Slab:</b> A slab refers to a hot rolled ingot with a cross sectional area greater than 100 cm<sup>2</sup> and with a width at least twice the thickness.</div>
+        <div class="sector-box"><b>Plate and Sheet:</b> These are intermediate products obtained by rolling. The difference between a plate and a sheet is determined by the thickness of the product. In general, plate has a thickness greater than 6 mm and sheet has a thickness less than 6 mm.</div>
+        <div class="sector-box"><b>Sheet and Strip:</b> These are rolled products with a thickness less than 6 mm. Strip refers to the rolled product with a width less than 300 mm, while sheet refers to the product of width above 300 mm.</div>
+
+        <p>Rolling of blooms, slabs, billets, and plates is usually done at temperatures above the recrystallization temperature (hot rolling). Sheet and strip often are rolled cold in order to maintain close thickness tolerances.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/6.jpg" alt="Flow chart for various rolling processes">
+            <p><b>Figure 5.3:</b> Flow chart for various flat rolling and shape rolling processes. White hot steel ingots (continuous cast products) are passed through rolls which form the plastic steel into slab, billet, bloom and semi-finished steel shapes. (Picture courtesy: Degarmo's Manufacturing Process)</p>
+        </div>
+
+        <table class="agenda-table">
+            <thead>
+                <tr><th colspan="2">Flat rolling products at a glance</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><b>Bloom</b></td><td>First breakdown of ingot (cross sectional area > 225 cm<sup>2</sup>).</td></tr>
+                <tr><td><b>Billet</b></td><td>Reduction by hot rolling (cross sectional area > 4x4 cm<sup>2</sup>).</td></tr>
+                <tr><td><b>Slab</b></td><td>Hot rolled ingot (area > 100 cm<sup>2</sup>, width = 2 x thickness).</td></tr>
+                <tr><td><b>Plate</b></td><td>Thickness > 6 mm.</td></tr>
+                <tr><td><b>Sheet</b></td><td>Thickness < 6 mm and width > 300 mm.</td></tr>
+                <tr><td><b>Strip</b></td><td>Thickness < 6 mm and width < 300 mm.</td></tr>
+            </tbody>
+        </table>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/7.jpg" alt="Flat Rolling Products">
+            <p><b>Figure 5.4: Flat Rolling Products</b></p>
+        </div>
+    </section>
+
+    <section id="hot">
+        <h2>5.2 Hot Rolling</h2>
+        <p>The distinctive mark of hot rolling is not a crystallized structure, but the simultaneous occurrence of dislocation propagation and softening processes, with or without recrystallization during rolling. The dominant mechanism depends on temperature and grain size. In general, the recrystallized structure becomes finer with lower deformation temperature and faster cooling rates and material of superior properties are obtained by controlling the finishing temperature.</p>
+        <div class="life-cycle-list">
+            <b>Hot rolling offers several advantages:</b>
+            <ul>
+                <li>Flow stresses are low, hence forces and power requirements are relatively low.</li>
+                <li>Ductility is high; hence large deformations can be taken (in excess of 99% reduction).</li>
+                <li>Complex part shapes can be generated.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="cold">
+        <h2>5.3 Cold Rolling</h2>
+        <p>Cold rolling, in the everyday sense, means rolling at room temperature, although the work of deformation can raise temperatures to 100-200°C. Cold rolling usually follows hot rolling. A material subjected to cold rolling strain hardness considerably. Dislocation density increases, and when a tension test is performed on this strain-hardened material, a higher stress will be needed to initiate and maintain plastic deformation; thus, the yield stress increases. However, the ductility of the material drops because of the higher initial dislocation density. Similarly, strength coefficient rises and strain-hardening exponent drops. Crystals (grains) become elongated in the direction of major deformation.</p>
+        <div class="life-cycle-list">
+            <b>Cold rolling has several advantages:</b>
+            <ul>
+                <li>Absence of cooling and oxidation, tighter tolerances and better surface finish.</li>
+                <li>Thinner walls are possible.</li>
+                <li>Final properties can be closely controlled.</li>
+                <li>Lubrication is, in general, easier.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mills">
+        <h2>5.4 Rolling mills</h2>
+        <p>A rolling mill basically consists of rolls, bearings, a housing for containing these parts, and a drive (motor) for applying power to the rolls and controlling the speed.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/8.jpg" alt="Roll-pass sequences for I-Beam">
+            <p><b>Figure 5.5: Typical roll-pass sequences used in producing structural I-Beam shape</b></p>
+        </div>
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/9.jpg" alt="Roll-pass sequences for angle shape">
+            <p><b>Figure 5.6: Typical roll-pass sequences used in producing structural 90 degree angle shape</b></p>
+        </div>
+
+        <p>The arrangement of rolls at a rolling station is called a rolling mill. The common types include: Two high (pull over/reversing), Three high, Four high, Continuous, Planetary, and Universal mills.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/10.jpg" alt="Different types of rolling mills">
+            <p><b>Figure 5.7: Different types of rolling mills</b></p>
+        </div>
+
+        <div class="sector-box"><b>5.4.1 Two-high Rolling Mills:</b> Consists of two rolls between which the work is placed. Rolls rotate in one direction; work is returned over rolls for re-rolling.</div>
+        <div class="sector-box"><b>5.4.2 Two-high Reversing Mills:</b> Rotation direction can be reversed alternately. Rolling is done in both directions alternately.</div>
+        <div class="sector-box"><b>5.4.3 Three-high Rolling Mill:</b> Top/bottom rolls driven, middle roll rotates by friction. Two stages of rolling occur simultaneously through pairs.</div>
+        <div class="sector-box"><b>5.4.4 Four-high Rolling Mill:</b> Consists of two small working rolls and two large back-up rolls. Back-up rolls provide support and rigidity. Less power required due to less contact area.</div>
+        <div class="sector-box"><b>Cluster mills (Sendzimir):</b> Smaller working rolls backed by multiple larger rolls. Used for cold rolling thin sheets of high-strength metals.</div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/11.jpg" alt="Continuous rolling mill">
+            <p><b>Figure 5.8: Continuous rolling mill with four rolling mill stands</b></p>
+        </div>
+
+        <p><b>5.4.5 Continuous Rolling Mill:</b> Also known as tandem mill. High production using multiple stands. Velocities must be synchronized across stands as strip velocity increases with each reduction.</p>
+
+        <p><b>5.4.6 Planetary Rolling Mill:</b> Reduces slabs to coiled hot rolled strips in a single pass. Pair of heavy backing rolls surrounded by small planetary rolls equi-spaced on its periphery. Rolls revolve like planets around the sun. Action is similar to forging. Feed rolls introduce slab; planishing rolls improve finish.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/12.jpg" alt="Planetary rolling mill">
+            <p><b>Figure 5.9: Planetary rolling mill</b></p>
+        </div>
+
+        <p><b>5.4.7 Universal rolling mill:</b> Consists of horizontal rolls for rolling and vertical rolls for providing a perfect edge. Used for beams, I-sections, and plates requiring finished edges.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/13.jpg" alt="Universal rolling mill">
+            <p><b>Figure 5.10: Universal rolling mill</b></p>
+        </div>
+    </section>
+
+    <section id="parameters">
+        <h2>5.5 Rolling Parameters</h2>
+        <p>Let $l_1, b_1, t_1$ be initial and $l_2, b_2, t_2$ be final dimensions.</p>
+        <ul>
+            <li><b>Absolute draught (Draft)</b>: $\delta_t = t_1 - t_2$</li>
+            <li><b>Maximum draft</b>: $\delta_{max} = \mu^2R$ (where $\mu$ is friction coefficient, $R$ is roll radius)</li>
+            <li><b>Absolute elongation</b>: $\delta_1 = l_2 - l_1$</li>
+            <li><b>Absolute spread</b>: $\delta_b = b_2 - b_1$</li>
+            <li><b>Elongation coefficient</b>: Ratio of final length to initial length ($l_2/l_1$).</li>
+            <li><b>Angle of contact (α)</b>: Angle subtended at center by contact arc.</li>
+            <li><b>Coefficient of friction</b>: $\mu = \tan \alpha$.</li>
+        </ul>
+
+        <div class="sector-box">
+            <b>Problem Solution:</b> Maximum reduction for cold rolling 300 mm slab with $\mu = 0.09$ and roll diameter 700 mm ($R = 350$).<br>
+            $\delta_{max} = (0.09)^2 \times 350 = 2.835$ mm.<br>
+            For hot rolling with $\mu = 0.5$:<br>
+            $\delta_{max} = (0.5)^2 \times 350 = 87.5$ mm.
+        </div>
+    </section>
+
+    <section id="thread">
+        <h2>5.6 Thread Rolling</h2>
+        <p>Cold working process where a cylindrical workpiece is rotated between hard dies with negative thread contours. Part is rolled between stationary and reciprocating dies. Highly versatile for simultaneous threading, knurling, or rolling right/left hand threads.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/14.jpg" alt="Thread rolling">
+            <p><b>Figure 5.11: Thread rolling</b></p>
+        </div>
+    </section>
+
+    <section id="defects">
+        <h2>5.7 Defects in Rolled Plates and Sheets</h2>
+        <p>Defects can be surface (scale, rust, cracks) or internal. Caused by inclusions, impurities, or non-uniform deformation.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson6/15.jpg" alt="Defects in flat rolling">
+            <p><b>Figure 5.12: Defects in flat rolling</b></p>
+        </div>
+
+        <ul>
+            <li><b>Wavy edges</b>: Due to roll bending where strip is thinner at edges.</li>
+            <li><b>Zipper/Edge cracks</b>: Due to poor ductility at rolling temperature.</li>
+            <li><b>Alligatoring</b>: Complex fracture due to non-uniform deformation or ingot defects.</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit2lesson4.html" style="color: var(--accent); text-decoration: none;">&laquo; Lecture 4: Forging Equipments</a>
+        <a href="Unit2lesson6.html" style="color: var(--accent); text-decoration: none;">Lecture 6: Sheet Metal Working &raquo;</a>
+    </div>
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - Ajay Kant Upadhyay
+</footer>
+
+</body>
+</html>
