@@ -1,1 +1,502 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Special Casting Processes (Expendable) | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc, .supp-material {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .toc h3, .supp-material h3 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.1rem; 
+            border-bottom: 2px solid #c5cae9;
+            padding-bottom: 5px;
+        }
+
+        .toc a, .supp-material a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
+        
+        .toc a:hover, .supp-material a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; margin-bottom: 10px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 8px; }
+
+        /* Step Grids for Images */
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .step-item {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .step-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Note Blocks */
+        .note-block {
+            background-color: #fff8e1;
+            padding: 15px 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .note-block strong { font-style: normal; color: #d32f2f; }
+
+        /* Advantage/Disadvantage Lists */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .pros-cons > div {
+            background: #fcfcfc;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+        }
+
+        .pros-cons h4 { margin-top: 0; color: var(--primary); border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .toc-container { grid-template-columns: 1fr; }
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 7: Special Casting Processes (Expendable)</h1>
+        <a href="MEM103/Unit3/Lesson7/Unit3Lesson7.pdf" target="_blank" class="download-link">📥 Lesson 7 Download</a>
+    </div>
+
+    <div class="toc-container">
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <a href="#introduction">7.0 Introduction</a>
+                    <a href="#objectives">7.1 Objectives</a>
+                    <a href="#plaster">7.2 Plaster Mould Casting Process</a>
+                    <a href="#ceramic">7.3 Ceramic Mould Casting Process</a>
+                </div>
+                <div>
+                    <a href="#shell">7.4 Shell Moulding Casting Process</a>
+                    <a href="#expanded">7.5 Expanded Polystyrene Casting Process</a>
+                    <a href="#investment">7.6 Investment Casting Process (Lost Wax Process)</a>
+                </div>
+            </div>
+        </div>
+        <div class="supp-material">
+            <h3>Supplementary Material</h3>
+            <a href="Unit3lesson7faq.html">1. Frequently Asked Questions</a>
+            <a href="Unit3lesson7scq.html">2. Self-check questions</a>
+            <a href="Unit3lesson7tq.html">3. Terminal questions</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>7.0 Introduction</h2>
+        <p>Sand casting processes, which we have studied so far, find wide applications and give satisfactory results at lowest cost in many cases. The sand moulds are single use moulds as they are destroyed after the casting has been removed from the moulding box. It becomes, therefore, obvious that the use of a permanent mould would do a considerable saving in time and labour cost of mould making. In addition, sand casting process does not always produce good and consistent results and it cannot be used in situations when more accurate and precise castings are to be made. In these situations, special casting processes are used for making high precision castings.</p>
+    </section>
+
+    <section id="objectives">
+        <h2>7.1 Objectives</h2>
+        <ol>
+            <li>To understand the need of special casting process.</li>
+            <li>To gain knowledge about the various special casting process.</li>
+            <li>To able classify casting processes on the basis of mould (permanent / expendable) and pattern.</li>
+            <li>Able to select various special casting processes on the basis of different applications.</li>
+        </ol>
+
+        <p>Special casting processes have the following advantages over the sand casting processes:</p>
+        <ol>
+            <li>Greater dimensional accuracy,</li>
+            <li>Higher production rates,</li>
+            <li>Lower labour costs,</li>
+            <li>Better surface finishing,</li>
+            <li>Minimum need for further machining of castings,</li>
+            <li>Ability to produce extremely thin sections etc.</li>
+        </ol>
+        <p>However, special casting techniques are not preferred always owing to their high initial investment requirement. We discuss some of the widely used special casting processes.</p>
+    </section>
+
+    <section id="plaster">
+        <h2>7.2 Plaster Mould Casting Process</h2>
+        <p>Plaster mould casting process is also known as ceramic mould casting process. This process is used for casting objects of aluminium, lead, tin, magnesium, bronze alloys. In this process, moulds are prepared by pouring plaster (or gypsum, CaSO<sub>4</sub>-2H<sub>2</sub>O) around the pattern. Patterns for plaster mould casting process can be made from wood, metal, plastic etc (preferably brass match plate pattern). Wood patterns not generally used due to extended contact with water. Plaster mould casting process is illustrated in Figure 1.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson1/1.jpg" alt="Plaster Mould Casting Process">
+            <span class="image-caption">Figure 1: Plaster mould casting process</span>
+        </div>
+
+        <p>The process consists of preparing plaster slurry by mixing gypsum with silica flour, silica sand and water (see Figure 1(a)). When mixed with water, the gypsum re-crystallizes as it dehydrates, which causes the plaster to set by the interlocking of crystals. The slurry thus prepared is poured over the metal pattern kept in cope, as shown in Figure 1(b). Plaster slurry readily flows around pattern, capturing its fine details and good surface finish. The mould is slightly vibrated to ensure slurry filling all cavities. The initial setting requires few minutes (15 minutes) after the pouring of slurry and then the pattern is removed from the hardened slurry. The drag portion is also made in the same way. Cope and drag are dried in ovens at 120-260<sup>o</sup>C to remove moisture. While the mould halves are still hot from the drying oven, they are quickly assembled / clamped, Figure 1(c). Assembled mould is poured with molten metal immediately to minimize the absorption of moisture from the atmosphere. Castings, after solidification and cooling, are removed from the moulds with high-pressure water jet. Using this process dimensional accuracy of the order of 0.008-0.01 mm can be obtained. <b>Typical products made using plaster moulds include aircraft parts, gears, valves, ornaments etc.</b></p>
+        
+        
+
+        <div class="note-block">
+            <strong>Note:</strong> <i>Because plaster moulds have very low permeability, gases evolved during solidification of metal cannot escape easily. Therefore, the molten metal is poured either in vacuum or under pressure. Mould permeability is sometimes improved using foamed plaster containing trapped air bubbles. Plaster moulds have low thermal conductivity, the castings cool slowly and a more uniform grains structure of castings is obtained.</i>
+        </div>
+
+        <div class="pros-cons">
+            <div>
+                <h4>Advantages of plaster mould casting process:</h4>
+                <ol>
+                    <li>Good accuracy and surface finish.</li>
+                    <li>Capability to make thin cross sections.</li>
+                </ol>
+            </div>
+            <div>
+                <h4>Disadvantages of plaster mould casting process:</h4>
+                <ol>
+                    <li>Mould must be baked to remove moisture, which can cause problems in casting.</li>
+                    <li>Mould strength is lost if over-baked.</li>
+                    <li>Plaster moulds cannot stand high temperatures, so limited to lower melting point alloys.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="ceramic">
+        <h2>7.3 Ceramic Mould Casting Process</h2>
+        <p>The ceramic mold casting is a variation of plaster mold process, except that the mold material is a refractory slurry that can withstand higher temperatures than plaster. The slurry, comprising fine-grained zircon (Zr-SiO<sub>4</sub>), aluminium oxide, fused silica and some binding agent, is poured over the pattern (metallic or wooden) kept in a flask. After sometime, the set ceramic slurry facing is removed from the pattern and dried and baked. The mold (or ceramic facing) thus prepared is baked by fire clay to give strength to the mold (shaw process). Ceramic molds are used for casting cast steels, cast irons, and other high temperature alloys. Castings have very good finish and dimensional accuracy. Products of castings include dies for metal working, molds for plastic molding, cutters or impellers.</p>
+        
+        
+    </section>
+
+    <section id="shell">
+        <h2>7.4 Shell Moulding Casting Process</h2>
+        <p>Shell moulding process is also known as Croning process or C-process after the name of its inventor Johannes Croning. Shell moulding replaces conventional sand moulds by shell moulds made up of relatively thin (only 0.3 mm to 0.6 mm thick), rigid shells of approximately uniform wall thickness. Shell moulds are made up of mixture of dry silica sand and 3 to 10% phonemic (phenol-formaldehyde, thermosetting resin) resins that are formed into thin half mould shells, which are held with clamps or adhesive for pouring as shown in Figure 2(f).</p>
+        
+        <p>The different steps involved in shell moulding are shown in Figure 2 a-f.</p>
+
+        
+
+        <div class="step-grid">
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/2.jpg" alt="Step 1">
+                <span>a. Step - 1: a match plate or cope and drag metal pattern is heated and placed over a dump box containing sand mixed with thermosetting resin.</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/3.jpg" alt="Step 2">
+                <span>b. Step - 2: dump box is inverted so that sand and resin fall onto the hot pattern, causing a layer of the mixture to partially cure on the surface to form a hard shell.</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/4.jpg" alt="Step 3">
+                <span>c. Step - 3: dump box is repositioned so that loose uncured particles drop away.</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/5.jpg" alt="Step 4">
+                <span>d. Step - 4: sand shell is heated (175 to 370<sup>o</sup>C) in oven for several minutes to complete curing.</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/6.jpg" alt="Step 5">
+                <span>e. Step - 5: shell mould is stripped from the pattern.</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/7.jpg" alt="Step 6">
+                <span>f. Step - 6: two halves of the shell mould are assembled, supported by sand or metal shot in a flask, and molten metal pouring is accomplished and further the finished casting with sprue removed is obtained.</span>
+            </div>
+        </div>
+        <span class="image-caption" style="margin-bottom: 30px;">Figure 2: Steps in shell moulding casting process</span>
+
+        <p>The process consists of heating a metal pattern to 175 to 370<sup>o</sup>C and then metal pattern is turned face down and clamped over the open end of the dump box (Figure 2(a)). The dump box is filled with sand-resin mixture. Then the dump box is inverted, as in Figure 2(b), so that dry sand-resin mixture falls on the metal pattern. The sand resin-mixture when comes in contact with the heated pattern, it softens and fuses to form a soft and uniform shell on the surface of the pattern. Heat first causes resin to become sticky; then additional heat hardens it. This process is finished within 30 seconds. Now, the dump box is turned over (re-positioned) as in Figure 2 (c) and the excess sand resin mixture falls back leaving a shell adhering closely to the pattern. Pattern and shell are then heated in an oven at 300<sup>o</sup>C for one minute (Figure 2(d)). This curing makes the shell rigid when it can be stripped off by means of ejector pins mounted on the pattern. Further the shell is removed from the pattern by spraying with a silicon release agent to help easy removal through ejector pins as shown in Figure 2 (e). A complete mould is made in two or more pieces made in similar manner that are assembled together as in Figure 2(f). Now the molten metal is poured into the cavity. <b>Typical products manufactured by this proves are gears, bearing caps, bushings, cylinder heads, connecting rods, gear housings and other mechanical parts</b>.</p>
+
+        <div class="note-block">
+            <strong>Note:</strong> <i>It may be noted that the fine sand used in shell moulds has much lower permeability than the sand used in green-sand moulding. Also, the decomposition of shell-sand binder generates high volume of gas. Unless proper care is taken to vent out the entrapped gases and air, serious problems may arise in casting ferrous metals in shell moulds.</i>
+        </div>
+
+        <div class="pros-cons">
+            <div>
+                <h4>Advantages of shell moulding process:</h4>
+                <ol>
+                    <li>Smoother cavity surface permits easier flow of molten metal and better surface finish.</li>
+                    <li>Thin sections, sharp corners, small projections, which are not possible in green sand moulds, can be accommodated.</li>
+                    <li>Good dimensional accuracy - machining often not required</li>
+                    <li>Mould collapsibility minimizes cracks in casting</li>
+                    <li>Can be mechanized for mass production</li>
+                    <li>Floor space and sand quantity is reduced</li>
+                </ol>
+            </div>
+            <div>
+                <h4>Disadvantages of shell moulding process:</h4>
+                <ol>
+                    <li>High initial investment and more expensive metal pattern</li>
+                    <li>Difficult to justify for small quantities</li>
+                    <li>Limited to small sized castings only</li>
+                    <li>Recycling of sand is expensive</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="expanded">
+        <h2>7.5 Expanded Polystyrene Casting Process</h2>
+        <p>Also know as disposable pattern process, lost foam process, lost pattern process, evaporative foam process, and full mold process (as the mould does not have to be opened into cope and drag sections). The process uses a polystyrene pattern, which vaporizes upon contact with molten metal to form a cavity for the casting. The raw Expendable Polystyrene (EPS) beads are placed in a pre-heated aluminium die. The beads expand and take the shape of the die cavity. Beads are heated further to fuse and bond together to form the pattern. The pattern is later placed in a flask which is filled with sand and compacted around the pattern, Figure (a-c). With pattern in position in sand, molten metal is poured onto the pattern which immediately vaporizes the pattern, resulting into a mold cavity which gets filled by metal. Fine castings of ferrous and non-ferrous metals with complex shapes and good surface details are produced by this process. The process finds use in mass production of castings for automotive industry for casting aluminum engine blocks, manifolds, cylinder heads, etc.</p>
+
+        
+
+        <div class="note-block">
+            <strong>Note:</strong> <i>Molten metal is poured rather rapidly into the sprue, the polystyrene vaporizes and the metal fills the remaining cavity. The mold is poured fast enough to prevent combustion of polystyrene, with the resulting carbonaceous residue. The gases due to vaporization of the material are driven out through the permeable sand and vent holes.</i>
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson1/8.jpg" alt="EPS Step A">
+            <p>(a) pattern of polystyrene is coated with refractory compound</p>
+            
+            <div style="display: flex; gap: 20px; justify-content: center; margin-top: 20px;">
+                <div style="flex: 1;">
+                    <img src="images/mem/Unit3/Lesson1/9.jpg" alt="EPS Step B">
+                    <p>(b) polystyrene pattern is placed in mold box, and sand is compacted around the pattern</p>
+                </div>
+                <div style="flex: 1;">
+                    <img src="images/mem/Unit3/Lesson1/10.jpg" alt="EPS Step C">
+                    <p>(c) molten metal is poured into the portion of the pattern that forms the pouring cup and sprue. As the metal enters the mold, the polystyrene foam is vaporized ahead of the advancing liquid, thus the resulting mold cavity is filled.</p>
+                </div>
+            </div>
+            
+            <img src="images/mem/Unit3/Lesson1/11.jpg" alt="EPS final" style="margin-top: 20px;">
+            <span class="image-caption">Figure 3: Expanded Polystyrene Process</span>
+        </div>
+    </section>
+
+    <section id="investment">
+        <h2>7.6 Investment Casting Process (Lost Wax Process)</h2>
+        <p>"Investment" comes from a less familiar definition of "invest" - "to cover completely," which refers to coating of refractory material around wax pattern. A pattern made of wax is coated with a refractory material to make mold, after which wax is melted away prior to pouring molten metal. It is a precision casting process - capable of producing castings of high accuracy and intricate detail.</p>
+
+        <p><b>Steps involved in making a mold in Investment or Lost Wax casting process (Refer Figure (a-f)):</b></p>
+        <ol type="a">
+            <li>Making of an expendable wax pattern by injecting wax into a steel two part die or mold. Cast solidified wax pattern is removed by opening the die. The expendable wax pattern is rinsed in alcohol to remove grease and dirt.</li>
+            <li>Connecting together a number of cast wax patterns with previously cast wax gates and sprue (for metal flow in the molds) and thus preparing a tree with the aim of mass producing a stack of investment molds, followed by precoating of wax pattern tree with fine refractory material,</li>
+            <li>Preparing an investment mold (or molds) by investing (or dipping completely) the precoated wax pattern assembly into an investment material, which is a coarser and viscous refractory material fine slurry with some binder. Then, the pattern is taken out of the slurry and rotated and vibrated for compacting in order to produce a uniform coating, to fill inside corners and to drain out the excess slurry.</li>
+            <li>The coating thus produced on the expendable wax pattern after drying is called a precoat.</li>
+            <li>After the investment (precoat) has set around the wax tree, the investment mold thus formed is placed in inverted form in an oven maintained between 90 and 175<sup>o</sup>C to dry the investment and to melt out the wax pattern (or tree). Mold may be further heated between 650 and 1050<sup>o</sup>C to further dry the mold and to take out the wax completely from the investment mold and to bring the mold to the temperature at which it will receive the molten metal. Thus, most of the wax or plastic melts and flows out of the mould, leaving a cavity with the shape of the intended casting.</li>
+            <li>The hot mold is now ready to be poured immediately. The molten metal is poured in heated molds to produce an investment casting. The heated mould saves the liquid metal from acquiring the moisture and avoids high thermal gradient between the liquid metal and the mould. Finally, the adhered investment material is removed from the casting surface by sand-blasting or a tumbling operation.</li>
+        </ol>
+
+        
+
+        <div class="note-block">
+            <strong>Note:</strong><br/>
+            <i>1. A rather accurately dimensioned metal pattern is used. The dimensions of the pattern are calculated to compensate for the several size adjustments which take place in the process - in the die, in the wax, in the investment material, and, finally, in the casting material.<br/><br/>
+            2. The investment slurry is made of the following materials:<br/>
+            (i) For non-ferrous castings, plaster of Paris and other gypsum products <br/>
+            (ii) For steel castings, silica flour with binder such as ethyl silicate, sodium silicate and phosphoric acid <br/>
+            (iii) Fine-grained silica sand with binder. <br/>
+            (iv) The slurry sets around the pattern assembly.</i>
+        </div>
+
+        <div class="pros-cons">
+            <div>
+                <h4>Advantages of Investment Casting Process:</h4>
+                <ol>
+                    <li>Parts of great complexity and intricacy can be cast. Very thin sections of the order of 0.75 mm can be casted.</li>
+                    <li>Close dimensional control (of the order of &plusmn;0.08 mm) and good surface finish. Thus the process is capable of reproducing surface details and dimensions with precision. Especially for high melting point alloys and difficult to machine metals.</li>
+                    <li>The mould is made in a single piece, and consequently there is no parting line to leave out fins. This also adds to the dimensional accuracy of the casting.</li>
+                    <li>Additional machining is not normally required   this is a net shape process.</li>
+                    <li>Both ferrous and nonferrous alloys are cast by this process.</li>
+                    <li>Wax can usually be recovered for reuse.</li>
+                    <li>No complication arises when withdrawing a pattern from the mould.</li>
+                </ol>
+            </div>
+            <div>
+                <h4>Disadvantages of Investment Casting Process:</h4>
+                <ol>
+                    <li>Many processing steps are required</li>
+                    <li>Relatively expensive process</li>
+                    <li>The determination of the pattern dimensions is a tedious task and requires considerable experimentation. This makes the pattern in an investment casting very costly.</li>
+                </ol>
+            </div>
+        </div>
+
+        <p><b>Applications of Investment Casting Process:</b> Investment cast products include cast superalloys components for gas turbine and jet engine parts made of high temperature and high strength alloys that are made of hard-to-machine materials.</p>
+
+        <div class="step-grid">
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/12.jpg" alt="Investment step a">
+                <span>(a) wax patterns are produced</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/13.jpg" alt="Investment step b">
+                <span>(b) several patterns are attached to a sprue to form a pattern tree</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/14.jpg" alt="Investment step c">
+                <span>(c) the pattern tree is coated with a thin layer of refractory material</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/15.jpg" alt="Investment step d">
+                <span>(d) the full mold is formed by covering the coated tree with sufficient refractory material to make it rigid</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/16.jpg" alt="Investment step e">
+                <span>(e) the mold is held in an inverted position and heated to melt the wax and permit it to drip out of the cavity</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson1/17.jpg" alt="Investment step f">
+                <span>(f) the mold is preheated to a high temperature, the molten metal is poured, and it solidifies. Further the mold is broken away from the finished casting and the castings are separated from the sprue</span>
+            </div>
+        </div>
+        <span class="image-caption" style="text-align: center; margin-top: -10px;">Figure 4: Steps in Investment Casting Process</span>
+
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson6.html" title="Types of Pattern">&laquo; Lecture 6</a>
+        <a href="Unit3lesson8.html" title="Special Casting Processes (Permanent)">Lecture 8 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
