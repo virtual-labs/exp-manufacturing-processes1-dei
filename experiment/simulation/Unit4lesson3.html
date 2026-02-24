@@ -1,1 +1,357 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Operating conditions on Lathe | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .formula-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .formula-container img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        .equation-text {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: var(--indigo-light);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Example Problem Block */
+        .example-block {
+            background-color: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .example-block b {
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .solution-math {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 3: Operating conditions on Lathe</h1>
+        <a href="MEM103/Unit5/Unit5Lesson3.pdf" target="_blank" class="download-link">📥 Lesson 3 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#conditions">3.0 Operating Conditions</a>
+            <a href="#speed">3.1 Cutting Speed</a>
+            <a href="#feed">3.2 Feed</a>
+            <a href="#depth">3.3 Depth of Cut</a>
+            <a href="#mrr">3.4 Material Removal Rate (MRR)</a>
+            <a href="#time">3.5 Machining Time</a>
+        </div>
+    </div>
+
+    <section id="conditions">
+        <h2>3.0 Operating Conditions</h2>
+        <p>Here the term operating conditions or cutting conditions refers to speed, feed and depth of cut motions required for metal cutting. As we discussed earlier, the definition of these operating conditions is different for different machine tools. For example, in a lathe, the term speed refers to the speed of job and in case of drilling machine it refers to the speed of the tool. Hence, here we first explain how the speed, feed and depth of cut motions are provided in a lathe. Refer Figure 2 for the three motions.</p>
+        <p>Selection of cutting conditions is made with respect to the type of machining operation. Cutting conditions should be decided in the order depth of cut - feed - cutting speed.</p>
+    </section>
+
+    <section id="speed">
+        <h2>3.1 Cutting Speed</h2>
+        <p>In a lathe, for turning operation, cutting speed is the peripheral speed of the workpiece past the cutting tool. For a workpiece, say a circular bar of diameter D rotating at N revolutions per minute (rpm), the peripheral speed is given by</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson3/f1.jpg" alt="Formula for peripheral speed">
+        </div>
+        
+        <p>where the diameter of the job (D) is in mm and to get speed in m/min conversion factor of 1000 mm/m is used. The material moves pass the stationary cutting tool with this peripheral speed, as shown in Figure 1. Hence, the cutting speed is:</p>
+
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson3/f2.jpg" alt="Formula for cutting speed">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson3/1.jpg" alt="Cutting speed and peripheral speed of work piece in turning operation">
+            <span class="image-caption">Figure 1: Cutting speed and peripheral speed of work piece in turning operation</span>
+        </div>
+        
+        
+    </section>
+
+    <section id="feed">
+        <h2>3.2 Feed</h2>
+        <p>In lathe operations, the term 'feed' implies the distance the tool advances for each revolution of the work. Feed in turning is generally expressed in mm per turning revolution (mm-tr<sup>-1</sup>). For example, if the feed is specified as 2 mm/revolution, it implies that the tool moves a distance of 2 mm for every revolution of the job. The direction of feed is shown in Figure 2.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson3/2.jpg" alt="Three motions in turning and direction of feed & depth of cut during turning operation">
+            <span class="image-caption">Figure 2: Three motions in turning and direction of feed & depth of cut during turning operation</span>
+        </div>
+    </section>
+
+    <section id="depth">
+        <h2>3.3 Depth of cut</h2>
+        <p>The depth of cut is the perpendicular distance measured from the machined surface to the uncut (or previous cut) surface of the workpiece. For turning operations, the depth of cut is expressed as:</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson3/f3.jpg" alt="Formula for depth of cut">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)
+        </div>
+        
+        <p>where<br/>
+        D<sub>1</sub> = original diameter of the workpiece in mm<br/>
+        D<sub>2</sub> = final diameter of the workpiece in mm</p>
+
+        <p>In a turning operation if the depth of cut is 1 mm, then the diameter will be reduced by 2 mm. The values of speed, feed, depth of cut depends upon the type of workpiece material, tool material, type of surface finish required etc. In order to produce the desired dimension, the metal to be cut may be removed in two possible ways. Initially large amount of metal is removed to come closer to the desired final dimension without bothering about accuracy of dimension and surface finish. Only care to be taken is that the dimension is not reduced below the value. This type of metal cutting is called rough cutting or roughing operation. In roughing operations, depth of cut is made as large as possible (max depths are in the range of 6~10 mm) with respect to available machine tool, cutting tool strength, and other factors. Often, a series of roughing passes is required. Roughing operations must leave a thin layer of material (~0.5 mm on a side) required for the subsequent finishing operation.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson3/3.jpg" alt="Example of selection of roughing passes in a turning operation">
+            <span class="image-caption">Figure 3: Example of selection of roughing passes in a turning operation</span>
+        </div>
+
+        <p>A finishing cut or finishing operation obtains the final dimension to the desired accuracy and surface finish. In finishing cut, very small amount of material is removed. Normally, only one finishing cut is made while there can be more than one roughing cuts depending upon the amount of material to be removed and permissible depth of cut. Roughing operation requires stronger tools for faster material removal, while for finishing cut new or freshly sharpened tool is used. In roughing, large feed and large depth of cut are used and in finishing, small depth of cut and low feeds are used.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson3/4.jpg" alt="Finishing pass in a turning operation">
+            <span class="image-caption">Figure 4: Finishing pass in a turning operation</span>
+        </div>
+        
+        [Image comparing surface finish of roughing vs finishing cuts on a lathe]
+    </section>
+
+    <section id="mrr">
+        <h2>3.4 Material Removal Rate (MRR)</h2>
+        <p>The material removal rate is the volume of material removed per unit time. Volume of material removed is a function of speed, feed and depth of cut. Higher are the values of these, more the material removal rate.<br/>
+        If D represents the original diameter of the workpiece in mm, d represents the depth of cut in mm, f represents the feed in mm/rev, then material removed per revolution is the volume of chip whose length is &pi;D and whose cross section area is d x f. That is,</p>
+        
+        <div class="equation-text">
+            volume of material removed/revolution = &pi;D x d x f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)
+        </div>
+        
+        <p>Since job is making N revolutions per minute, the MRR in mm<sup>3</sup>/min is given by</p>
+        
+        <div class="equation-text">
+            MRR = &pi;D x d x f x N &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)
+        </div>
+        
+        <p>In terms of the cutting speed v in m/min, see Equation (1),</p>
+        
+        <div class="equation-text">
+            MRR = 1000 x v x d x f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)
+        </div>
+
+        <p>You can check the dimensional accuracy of these equations by substituting the units. For the Equation (4), (mm)(mm)(mm/rev)(rev/min) => mm<sup>3</sup>/min<br/>
+        and for Equation (5),  (mm/m)(m/min)(mm)(mm) => mm<sup>3</sup>/min.</p>
+        
+        
+    </section>
+
+    <section id="time">
+        <h2>3.5 Machining Time</h2>
+        <p>The time required to machine a component is called machining time. Machining time depends on size of the workpiece, amount of material to be removed and the operating conditions employed such as speed, feed and depth of cut.<br/>
+        Consider the speed of the job as N rpm, length of the job as L<sub>j</sub> mm and f as feed in mm/rev. The product of feed and speed f x N is the feed rate in mm/min. It gives the distance the tool moves (f x N) in mm in one minute. Hence, for a distance L<sub>j</sub>, the time required for one complete cut, t in minutes is given by</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson3/f4.jpg" alt="Formula for machining time">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)
+        </div>
+        
+        <p>Note that the above equation of time doesn't include setup time and the time required for tool approach and retraction.</p>
+    </section>
+
+    <div class="example-block">
+        <p><b>Example</b>: A 150 mm long 12 mm diameter stainless steel rod is to be reduced in diameter to 10 mm by turning on a lathe in one pass. The spindle rotates at 500 rpm, and the tool is traveling at an axial speed of 200 mm/min. Calculate the cutting speed, material removal rate and the time required for machining the steel rod.</p>
+        
+        <p><b>Solution</b>:</p>
+        <div class="solution-math">
+            Given data: L<sub>j</sub> = 150 mm, D<sub>1</sub> = 12 mm, D<sub>2</sub> = 10 mm, N = 500 rpm
+        </div>
+        
+        <p>Using Equation (1)</p>
+        <div class="solution-math">
+            v = p x 12 x 500 / 1000<br/>
+            = 18.85 m/min.<br/>
+            depth of cut = d = (12 - 10)/2 = 1 mm
+        </div>
+        
+        <p>feed rate = 200 mm/min,<br/>
+        we get the feed f in mm/rev by dividing feed rate by spindle rpm.<br/>
+        That is</p>
+        <div class="solution-math">
+            f = 200/500 = 0.4 mm/rev
+        </div>
+        
+        <p>From Equation (4),</p>
+        <div class="solution-math">
+            MRR = 3.142 x 12 x 0.4 x 1 x 500 = 7538.4 mm<sup>3</sup>/min
+        </div>
+        
+        <p>From Equation (6),</p>
+        <div class="solution-math">
+            t = 150/(0.4 x 500) = 0.75 min.
+        </div>
+    </div>
+
+    <div class="footer-nav">
+        <a href="Unit5lesson2.html" title="Metal Cutting & Cutting Tool for Lathe">&laquo; Lecture 2</a>
+        <a href="Unit5lesson4.html" title="Operations on Lathe">Lecture 4 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
