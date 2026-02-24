@@ -1,1 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Casting Process: Casting Defects | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc, .supp-material {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .toc h3, .supp-material h3 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.1rem; 
+        }
+
+        .toc a, .supp-material a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
+        
+        .toc a:hover, .supp-material a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Defect Section Styling */
+        .defect-block {
+            background-color: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .defect-block h4 {
+            color: #d32f2f;
+            margin-top: 0;
+            font-size: 1.2rem;
+            border-bottom: 1px dashed #ddd;
+            padding-bottom: 5px;
+        }
+
+        /* Image Display Grids */
+        .image-gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 15px;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: 6px;
+        }
+
+        .image-gallery img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            object-fit: contain;
+        }
+
+        /* Callout Blocks */
+        .objectives-block {
+            background-color: #fff8e1;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .toc-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 5: CASTING PROCESS: CASTING DEFECTS</h1>
+        <a href="MEM103/Unit3/Lesson5/Unit3Lesson5.pdf" target="_blank" class="download-link">📥 Lesson 5 Download</a>
+    </div>
+
+    <div class="toc-container">
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <a href="#objectives">5.0 Objectives</a>
+            <a href="#defects">5.1 Defects in sand casting</a>
+        </div>
+        <div class="supp-material">
+            <h3>Supplementary Material</h3>
+            <a href="Unit3lesson5scq.html">1. Self-check questions</a>
+            <a href="Unit3lesson5faq.html">2. Frequently asked questions</a>
+            <a href="Unit3lesson5tq.html">3. Terminal questions</a>
+            <a href="Unit3lesson5Assignment.html">4. Assignments</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>CASTING PROCESS: CASTING DEFECTS</h2>
+    </section>
+
+    <section id="objectives">
+        <h3>5.0 Objectives</h3>
+        <div class="objectives-block">
+            <p style="margin: 0;">After going through this lesson, you will be able to understand:<br/>
+            1. Various defects found in cast products.</p>
+        </div>
+    </section>
+
+    <section id="defects">
+        <h3>5.1 Defects in sand casting</h3>
+        <p>Several types of defects may occur in castings, considerably reducing the total output of castings besides increasing the cost of their production. Defective castings offer an ever-present problem to the foundry industry. A defect may be the result of a single clearly defined cause or of a combination of factors. It is therefore essential to understand defects and the causes behind these defects so that they may be minimized or eliminated. The common types of defects found in castings, their causes and remedies are discussed below.</p>
+
+        <div class="defect-block">
+            <h4>Blowholes</h4>
+            <p>Blowholes generally appear as smooth walled, round voids or cavities opened to the casting surface. Blowholes are caused by the entrapped bubbles of gas with smooth walls. Blowholes may occur in clusters or there may be one large smooth depression. Blowholes are caused due to excessive moisture in the moulding sand, low permeability of sand, hard ramming of sand or gas producing ingredients in the mould.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Blowholes.jpg" alt="Blowholes" style="width: 250px;">
+                <img src="images/mem/lesson6/Blowholes.jpg" alt="Blowholes" style="max-height: 200px;">
+                <img src="images/mem/lesson6/blowholes3.jpg" alt="Blowholes" style="max-height: 200px;">
+                <img src="images/mem/lesson6/blowholes4.jpg" alt="Blowholes" style="max-height: 200px;">
+                <img src="images/mem/lesson6/blowholes5.jpg" alt="Blowholes" style="max-height: 200px;">
+                <img src="images/mem/lesson6/blowholes2.jpg" alt="Blowholes" style="max-height: 200px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Scab</h4>
+            <p>Splattering during pouring forming solid globules. Redesign of pouring procedure or gating system is needed.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Scab.jpg" alt="Scab" style="width: 200px;">
+                <img src="images/mem/lesson6/Scab4.jpg" alt="Scab" style="max-height: 150px;">
+                <img src="images/mem/lesson6/Scab2.jpg" alt="Scab" style="max-height: 150px;">
+                <img src="images/mem/lesson6/Scab3.jpg" alt="Scab" style="max-height: 150px;">
+                <img src="images/mem/lesson6/Scab1.jpg" alt="Scab" style="max-height: 150px;">
+            </div>
+            
+        </div>
+
+        <div class="defect-block">
+            <h4>Misruns</h4>
+            <p>A misrun casting is one that remains incomplete due to the failure of metal to fill the entire mould cavity. This can happen when the section thickness of a casting is too thin or the metal temperature is too cold, so that the entire section is not filled during pouring before the metal solidifies. This defects is called a misrun.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Misruns.jpg" alt="Misruns" style="width: 200px;">
+                <img src="images/mem/lesson6/Misrun.jpg" alt="Misruns" style="max-height: 150px;">
+                <img src="images/mem/lesson6/Misrun2.jpg" alt="Misruns" style="max-height: 150px;">
+                <img src="images/mem/lesson6/Misrun3.jpg" alt="Misruns" style="max-height: 150px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Cold shuts</h4>
+            <p>When two streams of metal, which is too cold, meet in side the mould cavity and do not fuse together, the defect is known as cold shut. In cold shut, a discontinuity is formed due to the imperfect fusion of two streams of metal in the mould cavity and the defect may appear like a crack or seam with smooth rounded edges.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/ColdShut.jpg" alt="ColdShut" style="width: 250px;">
+                <img src="images/mem/lesson6/ColdShut.jpg" alt="ColdShut" style="max-height: 200px;">
+                <img src="images/mem/lesson6/ColdShut1.jpg" alt="ColdShut" style="max-height: 200px;">
+                <img src="images/mem/lesson6/ColdShut2.jpg" alt="ColdShut" style="max-height: 200px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Shrinkage defects</h4>
+            <p>When metals solidify, there is a volumetric shrinkage, and if adequate feeding does not compensate for the shrinkage, voids will occur inside the casting. It was discussed above and shown in Figure. This defect can be prevented by adequate feeding of molten metal and designing a gating system to enable directional solidification.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Shrinkage.jpg" alt="Shrinkage" style="width: 250px;">
+                <img src="images/mem/lesson6/Shrinkage.jpg" alt="Shrinkage" style="max-height: 200px;">
+                <img src="images/mem/lesson6/Shrinkage2.jpg" alt="Shrinkage" style="width: 200px;">
+            </div>
+            
+        </div>
+
+        <div class="defect-block">
+            <h4>Microporosity</h4>
+            <p>Network of small voids caused by localised solidification shrinkage. Caused by the freezing manner of the alloy.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Microporosity.jpg" alt="Microporosity" style="width: 300px;">
+                <img src="images/mem/lesson6/Microporosity.jpg" alt="Microporosity" style="width: 180px;">
+                <img src="images/mem/lesson6/Microporosity2.jpg" alt="Microporosity" style="max-height: 250px;">
+                <img src="images/mem/lesson6/Microporosity3.jpg" alt="Microporosity" style="width: 280px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Hot tears</h4>
+            <p>Hot tears are internal or external cracks or discontinuities on the casting surface. Hot tearing occurs at location with high stress because the casting cannot shrink freely during cooling, owing to constraints in various portions of the moulds and cores. Resolve by mould collapsing or removing from the mould immediately after freezing. Hot tears can also be due to hard ramming, too much shrinkage of metal during solidification etc. Exothermic (heat producing) compounds may be used (exothermic padding) to control cooling at critical sections to avoid hot tearing.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/HotTears.jpg" alt="HotTears" style="width: 650px;">
+                <img src="images/mem/lesson6/HotTears.jpg" alt="HotTears" style="height: 220px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Pin holes</h4>
+            <p>Pin holes are small gas cavities.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/PinHoles.jpg" alt="Pinholes" style="width: 325px;">
+                <img src="images/mem/lesson6/PinHoles1.jpg" alt="Pinholes" style="max-height: 225px;">
+                <img src="images/mem/lesson6/PinHoles2.jpg" alt="Pinholes" style="max-height: 225px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Sand wash</h4>
+            <p>Erosion of sand mould during pouring.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/SandWash.jpg" alt="SandWash" style="width: 285px;">
+                <img src="images/mem/lesson6/SandWash1.jpg" alt="SandWash" style="max-height: 250px;">
+                <img src="images/mem/lesson6/SandWash2.jpg" alt="SandWash" style="max-height: 250px;">
+                <img src="images/mem/lesson6/SandWash3.jpg" alt="SandWash" style="max-height: 250px;">
+                <img src="images/mem/lesson6/SandWash4.jpg" alt="SandWash" style="max-height: 250px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Penetration</h4>
+            <p>Penetration of molten metal into the sand. Harder packing of sand is needed.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/Penetration.jpg" alt="Penetration" style="width: 220px;">
+                <img src="images/mem/lesson6/Penetration.jpg" alt="Penetration" style="width: 220px;">
+                <img src="images/mem/lesson6/Penetration2.jpg" alt="Penetration" style="width: 200px;">
+                <img src="images/mem/lesson6/Penetration3.jpg" alt="Penetration" style="width: 200px;">
+            </div>
+            
+        </div>
+
+        <div class="defect-block">
+            <h4>Mould shift</h4>
+            <p>Shift of the cope relative to the drag.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/MouldShift.jpg" alt="MouldShift" style="width: 350px;">
+                <img src="images/mem/lesson6/MouldShift.jpg" alt="MouldShift" style="max-height: 180px;">
+                <img src="images/mem/lesson6/MouldShift2.jpg" alt="MouldShift" style="width: 185px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Core shift</h4>
+            <p>Shift of the core, usually vertical.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/CoreShift.jpg" alt="CoreShift" style="width: 385px;">
+                <img src="images/mem/lesson6/CoreShift.jpg" alt="CoreShift" style="width: 185px;">
+                <img src="images/mem/lesson6/CoreShift2.jpg" alt="CoreShift" style="width: 185px;">
+            </div>
+        </div>
+
+        <div class="defect-block">
+            <h4>Mould crack</h4>
+            <p>Mould strength insufficient, liquid metal form a fin of the final casting.</p>
+            
+            <div class="image-gallery">
+                <img src="images/mem/lesson5/MouldCrack.jpg" alt="MouldCrack" style="width: 275px;">
+            </div>
+        </div>
+
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson4.html" title="Casting Process: Cupola Furnace">&laquo; Lecture 4</a>
+        <a href="Unit3lesson6.html" title="Types of Pattern">Lecture 6 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
