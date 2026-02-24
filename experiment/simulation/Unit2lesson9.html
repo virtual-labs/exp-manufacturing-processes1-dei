@@ -1,1 +1,520 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 9: Types of Moulding Methods and Moulding Machines | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        /* TOC & Supplementary Material */
+        .toc-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc, .supp-material {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .toc h3, .supp-material h3 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.1rem; 
+            border-bottom: 2px solid #c5cae9;
+            padding-bottom: 5px;
+        }
+
+        .toc a, .supp-material a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
+        
+        .toc a:hover, .supp-material a:hover { text-decoration: underline; }
+
+        /* Typography */
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; margin-bottom: 10px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 8px; }
+
+        /* Images */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .flex-images {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            align-items: flex-end;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* Tables */
+        table.composition-table {
+            width: 350px;
+            margin: 15px auto;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        table.composition-table td {
+            border: 1px solid var(--border);
+            padding: 8px 15px;
+        }
+
+        table.composition-table tr:nth-child(even) { background-color: #f9f9f9; }
+
+        table.comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        table.comparison-table th, table.comparison-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            vertical-align: top;
+            text-align: left;
+        }
+
+        table.comparison-table th { background: var(--primary); color: white; width: 30%; }
+        table.comparison-table tr:nth-child(even) { background-color: #f4f6f9; }
+
+        /* Formula Box */
+        .formula-box {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px dashed var(--secondary);
+            margin: 15px 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Note Blocks */
+        .note-block {
+            background-color: #fff8e1;
+            padding: 15px 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .note-block strong { font-style: normal; color: #d32f2f; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .toc-container { grid-template-columns: 1fr; }
+            .flex-images { flex-direction: column; align-items: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 9: Types of Moulding Methods and Moulding Machines</h1>
+        <a href="MEM103/Unit3/Lesson9/Unit3Lesson9.pdf" target="_blank" class="download-link">📥 Lesson 9 Download</a>
+    </div>
+
+    <div class="toc-container">
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                <div>
+                    <a href="#Introduction">9.0 Introduction</a>
+                    <a href="#types">9.1 Types of Moulds</a>
+                    <div style="padding-left: 15px;">
+                        <a href="#types">- 9.1.1 Expendable Moulds</a>
+                        <a href="#types">- 9.1.2 Permanent Moulds</a>
+                        <a href="#types">- 9.1.3 Composite Moulds</a>
+                    </div>
+                    <a href="#methods">9.2 Moulding Methods</a>
+                    <a href="#materials">9.2.1 Materials used for Mould</a>
+                </div>
+                <div>
+                    <a href="#making">9.2.2 Methods used for Making Mould</a>
+                    <a href="#machines">9.3 Mould making Machines</a>
+                    <div style="padding-left: 15px;">
+                        <a href="#machines">- 9.3.1 Squeezing</a>
+                        <a href="#machines">- 9.3.2 Jolting</a>
+                        <a href="#machines">- 9.3.3 Sand Slinger</a>
+                    </div>
+                    <a href="#comparison">9.4 Comparison of Methods</a>
+                </div>
+            </div>
+        </div>
+        <div class="supp-material">
+            <h3>Supplementary Material</h3>
+            <a href="Unit3lesson9faq.html">1. Frequently Asked Questions</a>
+            <a href="Unit3lesson9scq.html">2. Self-check questions</a>
+            <a href="Unit3lesson9tq.html">3. Terminal questions</a>
+        </div>
+    </div>
+
+    <section id="Introduction">
+        <h2>9.0 Types of Moulding Methods and Moulding Machines</h2>
+        <p>Moulding is essentially the process of making a mould. It consists of preparing the moulding mixtures and then making the mould. The general procedure for preparing moulding sand mixtures for sand moulds has already been discussed in unit-1.</p>
+    </section>
+
+    <section id="types">
+        <h2>9.1 Types of Moulds</h2>
+        <p>Moulds are generally classified under following broad categories:<br/>
+        (a) Expendable moulds; (b) Permanent moulds; (c) Composite moulds</p>
+
+        <p><b>9.1.1 Expendable moulds</b>: These are made from refractory materials which are capable of withstanding high temperatures of molten metal, such as silica sand, gypsum plaster, ceramic or similar materials mixed with various types of binders. An expendable mould is used only once because after the casting has solidified, the mould has to be broken up to remove the casting. <b>Examples of expendable mould include: green-sand mould, dry-sand mould, CO<sub>2</sub> dried sand mould, shell moulds, plaster moulds, investment casting moulds, EPS. Please also refer lesson 1 special casting processes.</b></p>
+        
+        
+
+        <p><b>9.1.2 Permanent moulds</b>: Permanent moulds are metallic moulds which are capable of maintaining their strength and stability against high temperatures of molten metals. These are designed for easy removal of castings and without breaking (collapsing) the mould. A permanent mould is used repeatedly for producing a large number of castings. <b>Examples of permanent moulds include: die-casting moulds, pressure casting mould, centrifugal casting mould, continuous casting moulds. Please refer lesson 2, permanent mould casting processes.</b></p>
+
+        <p><b>9.1.3 Composite moulds</b>: Composite moulds are made of two or more different materials such as sand, graphite and metal. Such moulds are made to take best advantage of the special properties of various constituents of materials. These moulds have higher strength and better control on the rate of cooling of castings. Complex shaped turbine impellers are cast in composite shell moulds. Graphite and sand composite moulds are used for casting aluminium alloy torque converters.</p>
+    </section>
+
+    <section id="methods">
+        <h2>9.2 Moulding Methods</h2>
+        <p>A large number of prevalent moulding methods can be grouped in the following two categories according to:<br/>
+        (a) materials used for mould<br/>
+        (b) methods used for making mould.</p>
+    </section>
+
+    <section id="materials">
+        <h3>9.2.1 Moulding methods according to mould materials used</h3>
+        <p>Following are the common types moulding methods according to the mould materials used for preparing moulds:</p>
+
+        <p><b>1. Green-sand mould</b>: The term green-sand mould refers to the condition of a mould before pouring metal into it for casting and signifies that the mould is in the moist or damp condition (i.e, green condition) (2 to 8% water) when the metal is poured into the mould. The green-sand mould is made from a moulding mixture of silica sand, clay, additives and water. It is easy and fast to make as no baking of the mould is required before pouring metal. Therefore it is economical also. A green-sand mould mixture for casting cast iron may consist of the following constituents.</p>
+
+        <table class="composition-table">
+            <tbody>
+                <tr><td>River sand</td><td>50 to 60%</td></tr>
+                <tr><td>Clay</td><td>12 to 15%</td></tr>
+                <tr><td>Bentonite</td><td>2 to 15%</td></tr>
+                <tr><td>Coal dust</td><td>5 to 10%</td></tr>
+                <tr><td>Water</td><td>4 to 8%</td></tr>
+            </tbody>
+        </table>
+
+        <p><b>2. Dry-sand mould</b>: The term dry-sand mould also refers to the condition of a mould before pouring metal and signifies that the mould is completely dried by baking in an oven or furnace before the molten metal is poured into it for casting. The baking of mould is done to have more strength and a hardened and non-erodable mould face before pouring the molten metal into it. Baked moulds evolve less steam and gas during casting and therefore to get a good surface finish and dimensional accuracy on castings, dry-sand moulds are made from fine-grained sands. Dry-sand moulds are, however, costlier and hence used for large castings of steels and cast irons. A typical dry-sand mould mixture for casting cast iron may have the following composition.</p>
+
+        <table class="composition-table">
+            <tbody>
+                <tr><td>Floor sand</td><td>up to 50%</td></tr>
+                <tr><td>River sand (fine)</td><td>20 to 25%</td></tr>
+                <tr><td>Clay</td><td>5%</td></tr>
+                <tr><td>Saw dust or dung</td><td>5 to 10%</td></tr>
+                <tr><td>Water</td><td>up to 10% or more</td></tr>
+            </tbody>
+        </table>
+
+        <p><b>3. Skin-dried mould</b>: These are made from the green sand, and the mould surface or face is dried to a certain depth (12.5 to 25 mm) either by storing in hot air or by gas torches. The use of resin, linseed oil, molasses or corn flour as binder in the facing sand in these moulds gives a very hard surface to the mould after drying. These moulds are used for large castings of cast irons and steels.</p>
+
+        <p><b>4. Loam sand mould</b>: These moulds are used for extremely large castings which are symmetrical in shape. A rough skeleton of the mould is first made using bricks reinforced with iron plates (Figure-1). Loam sand is daubed over and plastered on the brick skeleton to make the mould face, which is later shaped to size and contour with a sweep pattern. A refractory facing is later given to the mould face and the mould dried to get a strong mould. A loam sand mortar is prepared using clay, coarse silica sand, chopped straws, manure and fire clay milled with water. Large size cylinders, kettles, gear blanks, etc. are made by loam sand moulding.</p>
+
+        
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/1.jpg" alt="Sample Loam Sand Mould">
+            <span class="image-caption">Figure 1: Sample Loam Sand Mould prepared using sweep pattern</span>
+        </div>
+
+        <p><b>5. Plaster mould</b>: A plaster mould is prepared by pouring out gypsum slurry, on a metallic (brass) match plate pattern (one side of pattern) (Figure - 2) and is allowed to set on the pattern (in about 15 minutes) The gypsum slurry comprises gypsum plaster, silica flour, silica sand and water. Similarly the other half of the mould is prepared by using the other side of the pattern. Both the mould halves are later dried at 120 to 260<sup>o</sup>C in the oven and the complete mould is finally prepared by clamping the two mould halves. These moulds are used for precision castings of aluminium, zinc, copper and magnesium base alloys. These moulds have low permeability and hence need special care for the escape of gases evolved during casting. <b>Please refer lesson 1, plaster moulding casting process.</b></p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/2.jpg" alt="Plaster mould preparation">
+            <span class="image-caption">Figure 2: Plaster mould preparation</span>
+        </div>
+
+        <p><b>6. Carbon dioxide hardened mould</b>: The carbon dioxide (CO<sub>2</sub>) process is essentially a sand moulding process where the sand-mix does not contain any oil, resin, or clay as the bonding agent. This eli-minates the use of driers and the heating cycle. The moulds are prepared from a clean and dry silica sand with 3 to 5% by weight of sodium silicate solution (an inorganic binder which is a viscous fluid), and moisture up to 3%. The sand particles get coated with a thin film of the binder. This sand-mix has a very high flowability to fill up corners and intricate contours. The sand is hardened by passing CO<sub>2</sub> for about one minute (Figure 3).</p>
+
+        <p>The sand mixture is packed around the pattern in a flask in the usual manner and gassing of carbon-di-oxide is done for 15 to 30 seconds before removing the pattern from the sand (Figure (a-b). The CO<sub>2</sub> reacts with sodium silicate, forming a weak acid that hydrolyzes the sodium silicate (Na<sub>2</sub>O, SiO<sub>2</sub>), which with water (in the mould) forms a silica jel, which is a cement-like material and binds the sand grains together giving strength and hardness to the mould.</p>
+
+        <div class="formula-box">
+            Na<sub>2</sub>SiO<sub>3</sub> + CO<sub>2</sub> + H<sub>2</sub>O &rarr; Na<sub>2</sub>CO<sub>3</sub> + SiO<sub>2</sub> + H<sub>2</sub>O (Silica jel)
+        </div>
+
+        
+
+        <p>CO<sub>2</sub> hardened moulds are used for casting both ferrous and non-ferrous metals and preferred for casting thin sections such as sharp corners and cooling fins on a heat exchanger.</p>
+
+        <p><b>Advantage Carbon dioxide hardened mould</b></p>
+        <ol>
+            <li>This process gives a firm mould wall with less wall movement.</li>
+            <li>CO<sub>2</sub> hardened moulds and cores can be stored for a longer period.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/3.jpg" alt="Methods of gassing a mould with carbon dioxide">
+            <span class="image-caption">Figure 3: Methods of gassing a mould with carbon dioxide</span>
+        </div>
+
+        <div class="note-block">
+            <strong>Note:</strong> <i>Wood flour, coal dust, pitch or graphite is added to mould sand mixture to increase collapsibility. The CO<sub>2</sub> hardened cores are also made in a similar way.</i>
+        </div>
+
+        <p><b>7. Permanent mould or metallic mould</b>: These moulds are called permanent moulds because of their very long working life and yield a large number of castings. These moulds are made of grey cast iron, steel, graphite and refractory metal alloys. Moulds are usually made in two halves which are joined together to form a complete mould, These moulds give higher dimensional accuracy, better surface finish and high production rate of castings generally weighing less than 25 kg. They also promote finer grain structure in the castings because of their faster cooling of the cast metal. The metallic moulds, however, provide a chilling effect on the casting surface rendering it hard. These moulds are generally used for casting nonferrous alloys with lower melting points. <b>Please refer lesson 2, permanent mould casting processes.</b></p>
+
+        <p><b>8. Shell moulds</b>: These moulds are prepared by pouring a mixture of sand and thermosetting resin over the heated surface of a metallic pattern, which results into the formation of a thin and rigid layer or shell of uniform thickness around the pattern, which, when separated from the pattern surface, forms one part of the shell mould and two such parts (or shells) are joined together to form the complete shell mould. The process of making a shell mould is discussed in <b>lesson 1, shell mould casting process</b>. The assembly of pattern is heated from 175 to 370<sup>o</sup>C and later sprayed with a silicon release agent to help easy removal of mould shell (to be made) from the pattern. The shell thickness is kept usually between 5 and 10 mm and is controlled by the time the pattern is in contact with the moulding mixture.</p>
+    </section>
+
+    <section id="making">
+        <h3>9.2.2 Moulding methods according to the method of making a mould</h3>
+        
+        <p><b>1. Open mould method</b>: In this method the entire mould is made in the foundry floor sand bed without using any top or cope mould box. The upper surface of the mould is thus open to atmosphere. Flat products like floor plates, grills, railings, weights, large flywheels and other products with flat top are cast by this method.</p>
+
+        <p><b>2. Floor moulding method</b>: In this method foundry floor sand bed is used as a drag. A two-piece pattern is used, half of it is fully embedded in the floor sand and its top face is levelled by compacting sand around the pattern. The upper half of the pattern is then placed over the sand-embedded pattern half and the assembly enclosed with a cope flask. Sand is filled in the cope flask. It is used for casting products which are very large in size.</p>
+
+        <p><b>3. Bench moulding</b>: Bench moulding is carried out on a working bench using small size flasks and hence the method is suitable for making small moulds (Figure 4a). The moulder works while standing. A wooden moulding board is always used to support the moulds filled with sand. When a number of moulds, one above the other, are made using small boxes and having a common sprue to feed metal the process is called stack moulding (Figure 4b).</p>
+
+        <div class="image-container">
+            <div class="flex-images">
+                <div>
+                    <img src="images/mem/Unit3/Lesson3/4.jpg" alt="Box bench moulding and Stack moulding">
+                </div>
+            </div>
+            <span class="image-caption">Figure: 4 (a) Box bench moulding &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(b) Stack moulding using 3 moulds and common sprue</span>
+        </div>
+
+        <p><b>4. Plate moulding</b>: It employs a metallic pattern consisting of a flat match plate with portions of a pattern permanently attached on both sides of the plate as shown in Figure 5 . The plate carries runners built in it and withdrawal of pattern is easy and quick as the plate (and pattern) overlaps the walls of the mould boxes. Moulds for several identical parts of small size can be made using a number of patterns. The match plate with pattern is clamped with mould boxes for moulding purpose.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/5.jpg" alt="Plate moulding">
+            <span class="image-caption">Figure 5: Plate moulding using match plate pattern used for making six castings in one go</span>
+        </div>
+
+        <p><b>5. Pit moulding</b>: Large castings that may not be accommodated in mould boxes are moulded in pits made by digging the floor in foundry. The pit is lined with bricks or concrete and the desired shape of the mould is given by using a pattern. The bottom of the pit carries a well-rammed layer of cinder to allow escaping of gases during casting. The cope flask is placed over the pit containing the pattern. The cope is filled with sand and compacted and later provision of pouring sprue and riser is made in the cope sand. After lifting the cope, the pattern is removed from the sand bed (housed in the pit) and the cope placed back in position on the pit to make the mould ready for pouring.</p>
+
+        <p><b>6. Flaskless moulding</b>: When properly bonded and high strength moulding sands (not less than 185 kPa in green state) are used and adequately rammed (ramming pressure up to 15 MPa) around the pattern, moulded sand mass acquires adequate strength to maintain the structure of mould. The process eliminates the need of moulding flasks. It is used for making gas stove grills, brass valve bodies, malleable iron pipe fittings.</p>
+
+        <p><b>7. Vacuum Moulding</b>: Uses sand mould held together by vacuum pressure rather than by a chemical binder. The term "vacuum" refers to mould making rather than casting operation itself. Developed in Japan around 1970.</p>
+
+        
+
+        <p><b>Advantages of Vacuum Moulding</b>:</p>
+        <ol>
+            <li>Easy recovery of the sand, since no binders</li>
+            <li>Sand does not require mechanical reconditioning done when binders are used</li>
+            <li>Since no water is mixed with sand, moisture-related defects are absent.</li>
+        </ol>
+
+        <p><b>Disadvantages Vacuum Moulding</b>:</p>
+        <ol>
+            <li>Slow process</li>
+            <li>Not readily adaptable to mechanization</li>
+        </ol>
+
+        <p><b>8. Machine moulding</b>: Hand moulding is a slow and laborious process and is suitable for large-sized castings which have to be produced in small numbers. Further manual moulding gives variable hardness to the rammed mould (Figure 6). For mass production of relatively small-sized parts, it is necessary to use machines for performing various moulding steps to obtain better quality moulds. The most important basic function performed by a moulding machine is the ramming or compaction of moulding sand.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/6.jpg" alt="Hand ramming process">
+            <span class="image-caption">Figure 6: Hand ramming process of mould preparation and corresponding hardness isoforms obtained within the moulding sand by this method. Un-uniform compactness and hardness throughout the mould</span>
+        </div>
+    </section>
+
+    <section id="machines">
+        <h2>9.3 Mould making Machines</h2>
+        <p>Mould making machines are basically of three types:</p>
+
+        <p><b>(i) Squeezing</b>: Squeeze moulding machine utilizes pneumatic pressure for ramming the sand in the mould. The pressure is applied through a platen or a squeeze head, as shown in Figure 7. The moulding flask is placed on the match plate pattern; it is then filled with moulding sand, and a squeeze platen which is attached to the machine is allowed to come on the top of moulding flask. The size of squeeze platen is slightly smaller than the inside dimension of the moulding flask. A uniform pressure is applied on the platen by either moving it down inside the flask or by moving the match plate-flask assembly upwards. The compactness of sand is highest at the surface of the plate while it reduces towards the pattern (Figure 7). In order to achieve almost uniform compactness of sand around the pattern, the squeeze plate may be provided with a diaphragm to obtain uniform sand compactness around the pattern [Figure 8]. Both parts of the mould can be formed at the same time if the depth is not too great. This type of machine is useful for small castings.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/7.jpg" alt="Squeezing process">
+            <span class="image-caption">Figure 7: Squeezing process of mould preparation and corresponding hardness isoforms obtained within the moulding sand by this method. Top layers are more compacted than lower layers</span>
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/8.jpg" alt="Flexible diaphragm squeezing process">
+            <span class="image-caption">Figure 8: Flexible diaphragm squeezing process of mould preparation. Uniform compactness is obtained along the contours of pattern</span>
+        </div>
+
+        <p><b>(ii) Jolting</b>: Jolt moulding machine provides jolts to the machine table. A match plate pattern is fitted to the machine table, on which a moulding flask is placed. Sand from a hopper fills the flask and the machine is started. The machine table (along with a pattern plate and sand-filled moulding flask) rises to a certain height and has a free fall onto the base of the machine. This jolting action forces the sand to get compacted into the mould. The lifting and falling action is repeated till the required mould hardness is achieved. The sand near the pattern gets greater compactness compared to sand in the top layers (Figure 9). This type of moulding machine is useful for ramming when pattern has many horizontal surfaces. The machine operation is quite noisy.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/9.jpg" alt="Jolting process">
+            <span class="image-caption">Figure 9: Jolting process of mould preparation and corresponding hardness isoforms obtained within the moulding sand by this method. Bottom layers are more compacted than top layers</span>
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/10.jpg" alt="Jolting Pattern Drawing machine">
+            <span class="image-caption">Figure 10: Jolting – Pattern Drawing machine (This figure is only for concept understanding.)</span>
+        </div>
+
+        <p><i>(a) Drag mould box is placed on the pattern plate forming part of rocker arm. The mould box is sand filled and compacted by jolting. Top of the drag mould is covered with a plate which is clamped to the mould.<br/>
+        (b) Mould is rolled over by 180&deg; with the help of rocker arm. The draw table rises up and the mould is placed on the draw table. Mould is dry. Vibrator raps the pattern as the draw table comes down slowly, separating the mould from the pattern.</i></p>
+
+        <p><b>(iii) Sand slinger</b>: Sand slinger is the moulding machine in which particles of moulding sand are thrown on the pattern with a certain velocity (up to 50 m/s). The prepared moulding sand is picked up by the elevator buckets from the sand bin and dropped on the belt conveyor (Figure 12). From there it is made to fall on the high-speed rotating impeller blades and a certain velocity is imparted to the particles. High speed particles are passed through a tube to be directed towards the pattern. In this way, the mould having uniform high hardness is prepared layer-wise with consistent packing and uniform ramming (Figure 11). Sand slinger can deliver large quantities of sand rapidly and are especially beneficial for ramming big moulds.</p>
+
+        
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/11.jpg" alt="Sand slinger process">
+            <span class="image-caption">Figure 11: Sand slinger process of mould preparation and corresponding hardness isoforms obtained within the moulding sand by this method. Uniform ramming is obtained from top to bottom</span>
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/12.jpg" alt="Sand Slinger conceptual">
+            <span class="image-caption">Figure 12: Sand Slinger (This figure is only for concept understanding.)</span>
+        </div>
+    </section>
+
+    <section id="comparison">
+        <h2>9.4 Comparison of various types of moulding methods</h2>
+        
+        <table class="comparison-table">
+            <tbody>
+                <tr>
+                    <th>Hand Ramming</th>
+                    <td>1. Variable hardness, Laborious and slow. <br/>2. Manual labour required. <br/>3. Initial cost low.</td>
+                </tr>
+                <tr>
+                    <th>Squeezing</th>
+                    <td>1. Top layers more compacted than lower layers. <br/>2. Best for shallow flasks and small patterns.</td>
+                </tr>
+                <tr>
+                    <th>Flexible diaphragm squeezing</th>
+                    <td>1. Uniform compactness along the pattern contour. <br/>2. Best for contoured pattern</td>
+                </tr>
+                <tr>
+                    <th>Jolt ramming</th>
+                    <td>1. Top layers less compacted than lower layers. <br/>2. Noisy. <br/>3. Best for horizontal surfaces</td>
+                </tr>
+                <tr>
+                    <th>Sand slinger</th>
+                    <td>1. Uniform ramming. <br/>2. Initial cost high. <br/>3. Fast operation.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson3/13.jpg" alt="Comparison of mould hardness variation">
+            <span class="image-caption">Figure 13: Comparison of mould hardness variation with flask depth for the three machine mould making methods</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson8.html" title="Special Casting Processes (Permanent)">&laquo; Lecture 8</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
