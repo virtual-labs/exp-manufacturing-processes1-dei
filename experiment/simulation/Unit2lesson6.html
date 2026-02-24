@@ -1,1 +1,598 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Types of Pattern | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 3px;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 8px; }
+
+        /* Image Display Grids */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Tables */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+            text-align: center;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+        }
+        
+        table.styled-table th[style*="text-align:left"], 
+        table.styled-table td[style*="text-align:left"] {
+            text-align: left;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+        
+        .table-caption {
+            font-weight: bold;
+            color: #555;
+            display: block;
+            text-align: center;
+            margin-top: 5px;
+            margin-bottom: 25px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 6: TYPES OF PATTERN</h1>
+        <a href="MEM103/Unit3/Unit3Lesson6.pdf" target="_blank" class="download-link">📥 Lesson 6 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#introduction">6.1 Introduction</a>
+                <a href="#pattern">6.2 Pattern Allowances</a>
+                <a href="#codes">6.3 Color Codes for patterns</a>
+                <a href="#design">6.4 Pattern Design Considerations</a>
+            </div>
+            <div>
+                <a href="#core">6.5 Core</a>
+                <a href="#types">6.6 Types of Cores</a>
+                <a href="#prints">6.7 Core Prints</a>
+                <a href="#boxes">6.8 Core Boxes</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>6.1 Introduction</h2>
+        <p>The types of pattern used for a specific application depends primarily on the number of castings required, the moulding or casting process to be used, the size of the pattern and the casting tolerances that are required.</p>
+
+        <p><b>The common types of pattern are listed and described below:</b></p>
+        <ol>
+            <li>Solid or Single piece Pattern</li>
+            <li>Split Pattern</li>
+            <li>Match Plate Pattern</li>
+            <li>Gated Pattern</li>
+            <li>Cope and Drag Pattern</li>
+            <li>Loose Piece Pattern</li>
+            <li>Skeleton Pattern</li>
+            <li>Sweep Pattern</li>
+            <li>Left hand and Right hand Pattern</li>
+            <li>Shell Pattern</li>
+            <li>Segmental Pattern</li>
+            <li>Follow Board Pattern</li>
+        </ol>
+
+        <h3>6.1.1 Solid or Single Piece Pattern</h3>
+        <p>A single or solid piece pattern is made with out joints, loose pieces or partings. It has usually one board surface that serves as a parting surface in the mould. This type of pattern is used for a limited number of castings because most of the moulding operations like providing runners and risers, withdrawal of pattern etc. is done by hand. Soil temper glands of steam engines are made by solid or single piece pattern.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/1.jpg" alt="Solid pattern 1" style="display:inline-block; margin-right:15px;">
+            <img src="images/mem/lesson7/2.jpg" alt="Solid pattern 2" style="display:inline-block;">
+            <span class="image-caption">Fig. 6.1 Single, solid pattern</span>
+        </div>
+
+        <h3>6.1.2 Split Pattern</h3>
+        <p>This type of pattern is used when the pattern if made is single piece will give rise to withdrawal difficulties from the mould. Split pattern consists of two pieces; one half of the pattern rests in the drag (lower part of the moulding box) and the other half in the cope (upper part of the moulding box).</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/3.jpg" alt="Split patterns">
+            <span class="image-caption">Fig. 6.2 Split patterns</span>
+        </div>
+        
+
+        <p>The split patterns are commonly used for the casting of steam valve bodies, small pulleys, wheels and cylinders etc.</p>
+
+        <h3>6.1.3 Match Plate Pattern</h3>
+        <p>It is split pattern in which the cope and drag portions are mounted on opposite side of a plate, called match plate, conforming to the parting line. The pattern, as well as the associated gating and rising system, is usually made separately and then mounted on match plate, but can be cast integrally with the plate. The size of the match plate corresponds to the size of the flask used to make the final mould. Multiple patterns of small parts can be mounted on a single match plate can often be shared by the multiple patterns on the match plate. Interlocking features can be added to the cope and drag sides of the match plate to ensure accurate alignment of the cope and drag mould halves after removal of the pattern.Match plate pattern are used for moderate to high volume production of small and medium size castings with considerable dimensional accuracy.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/4.jpg" alt="Match plate pattern 1">
+            <br/><br/>
+            <img src="images/mem/lesson7/5.jpg" alt="Match plate pattern 2">
+            <span class="image-caption">Fig. 6.3 Match plate pattern</span>
+        </div>
+        <p>Match plate pattern are used for moderate to high volume production of small and medium size castings with considerable dimensional accuracy.</p>
+
+        <h3>6.1.4 Gated Pattern</h3>
+        <p>The gated pattern is used for mass production. For small castings, multi cavity moulds are prepared i.e. single moulds carry a number of cavities. Each pattern may be provided with a gate pattern with it examples are Vice Handle, Nuts and bolts etc.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/6.jpg" alt="Gated patterns (a)">
+            <span>(a)</span>
+            <br/><br/>
+            <img src="images/mem/lesson7/7.jpg" alt="Gated patterns (b)">
+            <span>(b)</span>
+            <span class="image-caption">Fig. 6.4 Gated patterns</span>
+        </div>
+
+        <h3>6.1.5 Cope and Drag Pattern</h3>
+        <p>When large cavities are to be manufactured, the moulds are to be very heavy to handle. Separate pieces of pattern are made on a convenient joint line and mounted on boards with slots and holes provided with easier fittings. This arrangement helps the moulder to work on each piece separately. This ensures higher strength and durability.</p>
+
+        <h3>6.1.6 Loose Piece Pattern</h3>
+        <p>The loose piece pattern are needed when the casting is such that the pattern cannot be removed as one piece, even though the pattern is split and the parting line is made on more than one plane. In loose piece pattern the main pattern is removed first. Then the separate pieces which may have to be turned or moved before they can be taken out or removed.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/8.jpg" alt="Loose piece pattern">
+            <span class="image-caption">Fig. 6.5 Loose piece pattern</span>
+        </div>
+        [Image showing withdrawal sequence of a loose piece pattern from mold sand]
+
+        <h3>6.1.7 Skeleton Pattern</h3>
+        <p>For large castings pattern would require a considerable amount of timber for fully solid pattern. In such cases the pattern is made of wooden frame and rib construction so that it will form an exterior or interior outline of casting. This framework is known as skeleton. Skeleton patterns are generally employed for symmetrical castings. Castings, which are generally made by making skeleton pattern, are valve bodies, pipe bends, water pipes and boxes.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/9.jpg" alt="Skeleton pattern">
+            <span class="image-caption">Fig. 6.6 Skeleton pattern</span>
+        </div>
+
+        <h3>6.1.8 Sweep Pattern</h3>
+        <p>Uniform moulds and cores are shaped by sweep pattern. The sweep pattern consists of a wooden board having a shape corresponding to the shape of desired casting. It is arranged to rotate about a central axis. The sand is rammed and the board is made to rotate to get the desired shape mould. Sweep pattern is used for manufacturing of circular parts. This method is very economical since no actual pattern is needed and the pattern costs are kept at minimum by eliminating expensive pattern construction.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/10.jpg" alt="Sweep pattern">
+            <span class="image-caption">Fig. 6.7 Sweep pattern</span>
+        </div>
+
+        <h3>6.1.9 Left and Right Hand Pattern</h3>
+        <p>Some patterns are required to be made in pairs and when their form is such that they can not be reversed and they have the centers of hubs etc, opposite and in line, they must be made left and right hand separately.<br/>
+        A pair of left and right hand patterns is required in legs of paddle type sewing machine, legs for wood turning lathe and legs of garden benches etc.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/11.jpg" alt="Left and right pattern">
+            <span class="image-caption">Fig. 6.8 Left and right pattern</span>
+        </div>
+
+        <h3>6.1.10 Shell Pattern</h3>
+        <p>Shell pattern is generally used for pipe work. This pattern is made of metal and its involves its mounting on a plate with a parting at the centre line and both the parts being pinned to each other. The shell pattern is a hollow construction like a shell. The outside shape is used as a pattern to make the mould while the inside is used as a core box for making cores.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/12.jpg" alt="Shell pattern">
+            <span class="image-caption">Fig. 6.9 Shell pattern</span>
+        </div>
+
+        <h3>6.1.11 Segmental Pattern</h3>
+        <p>A segmental pattern resembles a sweep pattern in the sense that for getting the required shape, both employ a part of pattern and not the complete pattern. Both segmental and sweep patterns generate circular shapes. When a mould is to be made using this pattern, a vertical spindle is firmly fixed in the centre of lower moulding box. The mould bottom is rammed and swept level. The segmental pattern is fastened to the spindle. Moulding sand is rammed between the out side of the pattern and the flask and on the inside, except at the end of the pattern. After ramming one segment, next segment is rammed and so on until the entire perimeter of the mould is completed.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/13.jpg" alt="Segmental pattern">
+            <span class="image-caption">Fig. 6.10 Segmental pattern</span>
+        </div>
+
+        <h3>6.1.12 Follow Board Pattern</h3>
+        <p>Follow board is a wooden board and is used for supporting a pattern which is thin and which may give way and collapse under pressure when the sand above the pattern is being rammed. In some cases, the purpose of the follow board is not only to serve as a support to the thin pattern, but also forms an irregular parting line in the mould when the outlines of the pattern are irregular.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/14.jpg" alt="Follow board pattern">
+            <span class="image-caption">Fig. 6.11 Follow board pattern</span>
+        </div>
+    </section>
+
+    <section id="pattern">
+        <h2>6.2 Pattern Allowances</h2>
+        <p>Pattern is used to produce a casting of desired dimensions; it is not dimensionally identical to the casting. A number of allowances must be made on the pattern to ensure that the finished casting is dimensionally correct, to ensure that the pattern can be effectively removed from the mould. The following allowances are usually provided in a pattern.</p>
+
+        <h3>6.2.1 Shrinkage Allowance</h3>
+        <p>The various metals used for casting contract after solidification. It is the correction factor built into the pattern to compensate for the contraction of the metal casting as it solidifies and cools at room temperature. The pattern is intentionally made larger than the final desired casting dimensions to allow for solidification and cooling contraction of casting. The total contraction is volumetric, but usually expressed linearly.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/15.jpg" alt="Shrinkage Allowance">
+            <span class="image-caption">Fig. 6.12 Shrinkage Allowance</span>
+        </div>
+
+        <p><b>Table 6.1 Shows typical pattern shrinkage allowances for various casting materials</b></p>
+        
+        <table class="styled-table" style="max-width: 600px; margin: 0 auto 25px auto;">
+            <thead>
+                <tr>
+                    <th style="text-align:left">Material being cast</th>
+                    <th>Shrinkage allowance (mm/ meter)</th>
+                    <th>Approximate shrinkage, %</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td style="text-align:left">Gray cast iron</td><td>10.5</td><td>1.0</td></tr>
+                <tr><td style="text-align:left">Steel</td><td>20 to 21</td><td>1.6</td></tr>
+                <tr><td style="text-align:left">Brass</td><td>16</td><td>1.4</td></tr>
+                <tr><td style="text-align:left">Aluminium</td><td>16</td><td>1.3</td></tr>
+                <tr><td style="text-align:left">Magnesium</td><td>18</td><td>1.3</td></tr>
+                <tr><td style="text-align:left">Ductile cast iron</td><td>-</td><td>0.8</td></tr>
+            </tbody>
+        </table>
+        <span class="table-caption">Table 6.1 Typical pattern shrinkage allowances for various casting material</span>
+
+        <p>The contraction rule is a special scale that eliminates the need to compute the amount of the shrinkage allowance that must be provided on a given dimension. Each graduation on the shrink rule is proportionately longer than its conventional length. It is important to remember that pattern shrinkage allowances cannot be used to predictactual casting shrinkage. Other factors, such as casting shape, section thickness and mould rigidity significantly influence the actual change in dimensions as the casting solidifies and cools to room temperature.</p>
+
+        <h3>6.2.2 Draft Allowance</h3>
+        <p>Draft is taper allowed on the vertical faces of a pattern to permit its removal from the sand with out tearing the moulding walls. It may be represented in millimeters per meter on a side or degrees. The amount of taper varies with the type of patterns.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/16.jpg" alt="Draft Allowance">
+            <span class="image-caption">Fig. 6.13 Draft Allowance</span>
+        </div>
+
+        <p>The wooden patterns require more taper than metallic patterns because of greater frictional resistance of the wooden surfaces. The amount of draft also depends on the shape and size of casting, the moulding process used, the method of mould production and the condition of pattern. The draft angle of approximately 1.50 is often added to design dimensions. Interior surfaces usually require more draft than exterior surfaces.</p>
+
+        <h3>6.2.3 Machining Allowance</h3>
+        <p>It provides for sufficient excess metal on all cast surfaces that require machining. The required machine allowance depends on following factors:<br/>
+        (1) The size and shape of casting.<br/>
+        (2) The metal to be casted.<br/>
+        (3) Casting surface roughness and surface defect.<br/>
+        (4) Method of machining to be employed.<br/>
+        (5) The degree of finish required on the machined portion.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/17.jpg" alt="Machining Allowance" style="height: 250px; width: auto;">
+            <span class="image-caption">Fig. 6.14 Machining Allowance</span>
+        </div>
+
+        <p>Accurate patterns combined with automated moulding can often produce close tolerance casting with a minimum finish allowance that can reduce machining cost.</p>
+
+        <p><b>Table 6.2 shows suggested machining allowances.</b></p>
+        
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>Pattern size (mm)</th>
+                    <th>Allowance (mm) Bore</th>
+                    <th>Allowance (mm) Surface</th>
+                    <th>Allowance (mm) Cope side</th>
+                    <th>Material</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Upto152</td><td>3.2</td><td>2.4</td><td>4.8</td><td>Cast iron</td></tr>
+                <tr><td>152-305</td><td>3.2</td><td>3.2</td><td>6.4</td><td>Cast iron</td></tr>
+                <tr><td>305-510</td><td>4.8</td><td>4.0</td><td>6.4</td><td>Cast iron</td></tr>
+                <tr><td>510-915</td><td>6.4</td><td>4.8</td><td>6.4</td><td>Cast iron</td></tr>
+                <tr><td>915-1524</td><td>7.9</td><td>4.8</td><td>7.9</td><td>Cast iron</td></tr>
+                <tr><td>Upto 152</td><td>3.2</td><td>3.2</td><td>6.4</td><td>Cast steel</td></tr>
+                <tr><td>152-305</td><td>6.4</td><td>4.8</td><td>6.4</td><td>Cast steel</td></tr>
+                <tr><td>305-510</td><td>6.4</td><td>6.4</td><td>7.9</td><td>Cast steel</td></tr>
+                <tr><td>510-915</td><td>7.1</td><td>6.4</td><td>9.6</td><td>Cast steel</td></tr>
+                <tr><td>915-1524</td><td>7.9</td><td>6.4</td><td>12.7</td><td>Cast steel</td></tr>
+                <tr><td>Upto 7.6</td><td>1.6</td><td>1.6</td><td>1.6</td><td>Non ferrous alloys</td></tr>
+                <tr><td>76-152</td><td>2.4</td><td>1.6</td><td>2.4</td><td>Non ferrous alloys</td></tr>
+                <tr><td>152-305</td><td>2.4</td><td>1.6</td><td>3.2</td><td>Non ferrous alloys</td></tr>
+                <tr><td>305-510</td><td>3.2</td><td>2.4</td><td>3.2</td><td>Non ferrous alloys</td></tr>
+                <tr><td>510-915</td><td>3.2</td><td>3.2</td><td>4.0</td><td>Non ferrous alloys</td></tr>
+                <tr><td>915-1524</td><td>4.0</td><td>3.2</td><td>4.8</td><td>Non ferrous alloys</td></tr>
+            </tbody>
+        </table>
+        <span class="table-caption">Table 6.2 Machining allowances</span>
+
+        <h3>6.2.4 Distortion Allowance</h3>
+        <p>Certain cast shape, such as large flat plates and U shaped castings, sometimes distort when reproduced from straight or perfect patterns. This distortion is caused by the non-uniform contraction stresses during the solidification of irregularly shaped designs. Mechanically pressing or straighting normally corrects minor distortions. To eliminate this defect an opposite distortion is provided in the pattern, so that the effect is neutralized and the correct casting is obtained.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/18.jpg" alt="Distortion Allowance">
+            <span class="image-caption">Fig. 6.15 Distortion Allowance</span>
+        </div>
+
+        <h3>6.2.5 Rapping and Shaking Allowances</h3>
+        <p>This allowance is provided in the pattern to compensate for the rapping of mould because the pattern is to be rapped before removing it from mould. As a result of this the size of the mould cavity increases a negative allowance is provided in the pattern to compensate the same. Small and medium size casting, this allowance can be neglected. But in large casting this allowance is considered by making the pattern slightly smaller than the casting.</p>
+    </section>
+
+    <section id="codes">
+        <h2>6.3 Colour Codes for Patterns</h2>
+        <p>Pattern colour coding is provided:<br/>
+        (1) To identify the type of metal to be casted.<br/>
+        (2) To show the part to be machined.<br/>
+        (3) To identify loose pieces, core prints.<br/>
+        (4) To identify the main part of the pattern from the remaining part.<br/>
+        (5) To show the part to be left un machined.</p>
+
+        <p><b>Table 6.3 shows the American colour coding.</b></p>
+        
+        <table class="styled-table" style="max-width: 600px; margin: 0 auto 25px auto;">
+            <thead>
+                <tr>
+                    <th>S.No.</th>
+                    <th>Colour</th>
+                    <th>Part</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1.</td><td>Red</td><td>Cast surface to be machined</td></tr>
+                <tr><td>2.</td><td>Black</td><td>Cast surface to be left un machined</td></tr>
+                <tr><td>3.</td><td>Yellow strip on black back ground</td><td>Core prints for un machined openings</td></tr>
+                <tr><td>4.</td><td>Black strip on yellow background (diagonal)</td><td>Supports, stops offs</td></tr>
+                <tr><td>5.</td><td>Yellow</td><td>Core prints seat</td></tr>
+                <tr><td>6.</td><td>Red strips on yellow background</td><td>Loose pieces</td></tr>
+                <tr><td>7.</td><td>Clear or no colour</td><td>Parting surfaces</td></tr>
+            </tbody>
+        </table>
+        <span class="table-caption">Table 6.3 Pattern colours</span>
+    </section>
+
+    <section id="design">
+        <h2>6.4 Pattern Design Considerations</h2>
+        <p>A good pattern may produce a sound casting but a bad pattern will always result in poor castings. Following factors should be considered while designing a pattern:<br/>
+        (1) Pattern should be accurate as regard to its dimensions and possess a very good surface finish.<br/>
+        (2) Proper allowance should be provided in pattern.<br/>
+        (3) Sharp corners of pattern should be avoided.<br/>
+        (4) Core prints provided for the pattern should be of optimum in size.<br/>
+        (5) Changes made in the shape should be gradual, uniform and smooth.<br/>
+        (6) Proper material for making the pattern should be selected.<br/>
+        (7) The wall thickness and section should be kept uniform.<br/>
+        (8) Pattern made for expected repeat orders should be preserved and stored properly.</p>
+    </section>
+
+    <section id="core">
+        <h2>6.5 Core</h2>
+        <p>Core is defined as that portion of the mould, which forms the hollow interior of the casting or hole through the casting. Core can also be defined as a body of dry sand generally prepared separately in a core box, baked in an oven and used to form a cavity of desired shape.</p>
+
+        <div class="image-container">
+            <img src="images/mem/lesson7/19.jpg" alt="Core">
+            <span class="image-caption">Fig. 6.16 Core</span>
+        </div>
+
+        <p>The core should have sufficient strength and hardness in both green and dry states so that it may be able to support its own weight. The main characteristics required for a good core are the following:<br/>
+        (1) It should not carry any such constituents, which will give rise to excessive gases on coming in contact with the molten metal.<br/>
+        (2) It must be sufficiently permeable to allow the gases formed to escape easily.<br/>
+        (3) It should be highly refractory to withstand the high heat of the molten metal.<br/>
+        (4) It should be hard and strong enough to bear its own weight and the force of molten metal.</p>
+    </section>
+
+    <section id="types">
+        <h2>6.6 Types of Cores</h2>
+        <p>Following are the commonly used cores:</p>
+
+        <h3>6.6.1 Horizontal Core</h3>
+        <p>The horizontal cores are used in foundry work frequently. It is usually in a cylindrical form laid in the mould horizontally. Depending upon the shape of the cross section of the hole to be made in the casting, it may have any shape of its cross section. If it has a uniform cross section such that its one half remains in the cope and the remaining half in the drag. Horizontal core is commonly used for making through holes.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/20.jpg" alt="Horizontal core">
+            <span class="image-caption">Fig. 6.17 Horizontal core</span>
+        </div>
+
+        <h3>6.6.2 Vertical Core</h3>
+        <p>It is similar in shape to that of horizontal core. But placed in the mould with its axis vertical. The upper end of the core is placed in cope and the lower end is placed in the drag.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/21.jpg" alt="Vertical core">
+            <span class="image-caption">Fig. 6.18 Vertical core</span>
+        </div>
+
+        <h3>6.6.3 Balanced Core</h3>
+        <p>When the casting has opening only on one side and only one core print is available on the pattern a balanced core is used. It is a horizontal core and used to produce a blind hole along a horizontal axis in the casting. It is supported only one end, the other end remaining free in the cavity of the mould.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/22.jpg" alt="Balance core">
+            <span class="image-caption">Fig. 6.19 Balance core</span>
+        </div>
+
+        <h3>6.6.4 Wire Core</h3>
+        <p>It is used, when a hole is to be obtained in the casting either above or below the parting line. Wire core is also used when it is not possible to place the pattern in the mould such that the recess can be cored directly. One side of the core remains flush with the inner surface of the mould and the core acts as a stop off. Back surface of the core has sufficient taper for easy location.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/23.jpg" alt="Wire core">
+            <span class="image-caption">Fig. 6.20 Wire core</span>
+        </div>
+
+        <h3>6.6.5 Hanging Core</h3>
+        <p>If the core hangs from the cope and does not have any support at the bottom in the drag, it is known as hanging core. A hanging core may be supported on a seat made on the parting surface in the drag.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/24.jpg" alt="Hanging core">
+            <span class="image-caption">Fig. 6.21 Hanging core</span>
+        </div>
+    </section>
+
+    <section id="prints">
+        <h2>6.7 Core Prints</h2>
+        <p>Core prints are extra projections provided on the pattern. These form seats for cores in the mould. Core seats are provided to support all types of cores such as horizontal, vertical, balanced etc.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/25.jpg" alt="Core prints">
+            <span class="image-caption">Fig. 6.22 Core prints</span>
+        </div>
+    </section>
+
+    <section id="boxes">
+        <h2>6.8 Core Boxes</h2>
+        <p>Core boxes are used for producing cores. Following are the main types of core boxes:</p>
+
+        <h3>6.8.1 Half core box</h3>
+        <p>Half portion of the core is made in the core box at one time. Number of such half cores made backed and passed together to make full cores.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/26.jpg" alt="Half core box">
+            <span class="image-caption">Fig. 6.23 Half core box</span>
+        </div>
+
+        <h3>6.8.2 Dump Core Box or Slab Core Box</h3>
+        <p>It is employed for making rectangular, square, or trapezoidal cores. Construction wise it is similar to half core box.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/27.jpg" alt="Dump core box">
+            <span class="image-caption">Fig. 6.24 Dump core box</span>
+        </div>
+
+        <h3>6.8.3 Left and Right Hand Core Boxes</h3>
+        <p>These types of core boxes generally produce Pipe bends. Each box comprises of half of the pipe bend. The half of the pipe bends are rammed and baked and struck together to made full core.</p>
+
+        <h3>6.8.4 Split Core Box</h3>
+        <p>The two portions of split core box can be aligned and temporarily joined together with the help of dowels. A full core cavity is thus established. First the two halves are joined and the sand is rammed. The core box is then spilitted to remove the core.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/28.jpg" alt="Split core box">
+            <span class="image-caption">Fig. 6.25 Split core box</span>
+        </div>
+
+        <h3>6.8.5 Loose Piece Core Box</h3>
+        <p>It is used to prepare two halves of a core which may be neither identical in size nor in shape. It can be achieved by inserting loose pieces in the core box whenever required.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/29.jpg" alt="Loose piece core box">
+            <span class="image-caption">Fig. 6.26 Loose piece core box</span>
+        </div>
+
+        <h3>6.8.6 Strickle Core Box</h3>
+        <p>It is used for producing irregular surfaces. The strickle board removes additional sand. It is made of wood.</p>
+        <div class="image-container">
+            <img src="images/mem/lesson7/30.jpg" alt="Strickle core box">
+            <span class="image-caption">Fig. 6.27 Strickle core box</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson5.html" title="Casting Process: Casting Defects">&laquo; Lecture 5</a>
+        <a href="Unit3lesson7.html" title="Special Casting Processes (Expendable)">Lecture 7 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
