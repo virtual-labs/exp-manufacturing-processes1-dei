@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson 4: Resistance Welding | MEM-103</title>
+    <title>Lesson 4: Operations on Lathe | MEM-103</title>
     <style>
         :root {
             --primary: #2c3e50;
@@ -33,7 +32,7 @@
         }
 
         .container {
-            max-width: 1000px;
+            max-width: 1100px;
             margin: 20px auto;
             background: var(--white);
             padding: 40px;
@@ -85,7 +84,7 @@
 
         h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
         h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
-        h4 { color: #444; margin-top: 20px; font-weight: bold; font-size: 1.05rem; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
         
         p { margin-bottom: 15px; text-align: justify; }
         ul, ol { margin-bottom: 15px; padding-left: 30px; }
@@ -145,7 +144,6 @@
             padding: 10px;
             border-radius: 4px;
             margin: 15px 0;
-            font-weight: bold;
         }
 
         .image-caption {
@@ -156,18 +154,19 @@
             font-size: 0.9rem;
         }
 
-        /* Callout / Note blocks */
-        .note-block {
-            background-color: #fff3cd;
-            color: #856404;
-            padding: 15px 20px;
-            border-left: 4px solid #ffc107;
-            border-radius: 4px;
-            margin: 20px 0;
+        /* Example Problem Block */
+        .example-block {
+            background-color: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
-        .note-block b {
-            color: #856404;
+        .example-block b {
+            color: var(--primary);
+            font-size: 1.05rem;
         }
 
         .footer-nav {
@@ -199,222 +198,223 @@
 
 <div class="container">
     <div class="lesson-header">
-        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: Resistance Welding</h1>
-        <a href="MEM103/Unit4/Unit4Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: Operations on Lathe</h1>
+        <a href="MEM103/Unit5/Unit5Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
     </div>
 
     <div class="toc">
         <h3>Table of Contents</h3>
         <div class="toc-grid">
-            <a href="#introduction">4.0 Introduction</a>
-            <a href="#elements">4.1 Principal Elements of Resistance Welding Machines</a>
-            <a href="#characteristics">4.2 Characteristics of Resistance Welding</a>
-            <a href="#types">4.3 Types of Resistance Welding</a>
+            <a href="#operations">4.1 Operations on Lathe</a>
             <div style="padding-left: 15px;">
-                <a href="#types">4.3.1 Spot Welding</a>
-                <a href="#types">4.3.2 Seam Welding</a>
-                <a href="#types">4.3.3 Projection Welding</a>
+                <a href="#operations">4.1.1 Turning</a>
+                <a href="#operations">4.1.2 Facing</a>
+                <a href="#operations">4.1.3 Knurling</a>
+                <a href="#operations">4.1.4 Grooving</a>
+                <a href="#operations">4.1.5 Parting</a>
+                <a href="#operations">4.1.6 Chamfering</a>
+                <a href="#operations">4.1.7 Eccentric Turning</a>
+                <a href="#operations">4.1.8 Taper Turning</a>
+                <div style="padding-left: 15px;">
+                    <a href="#operations">4.1.8.1 Taper Turning using form tool</a>
+                    <a href="#operations">4.1.8.2 Taper Turning by swiveling the compound rest</a>
+                    <a href="#operations">4.1.8.3 Off-set tail stock</a>
+                </div>
+                <a href="#operations">4.1.9 Drilling</a>
+                <a href="#operations">4.1.10 Thread Cutting</a>
             </div>
+            <a href="#process">4.2 Process Sequence</a>
         </div>
     </div>
 
-    <section id="introduction">
-        <h2>4.0 Introduction</h2>
-        <p>In resistance welding, coalescence is produced by localized heat generated through a resistance to the flow of electric current through the two members to be joined. This is accomplished by clamping two or more sheets of metal between copper electrodes and then passing an electrical current through them. The assembly heats up, and forging pressure is applied by the clamping setup through the electrodes. No fluxes or filler metals are used.</p>
+    <section id="operations">
+        <h2>4.1 Operations on Lathe</h2>
+        <p>Though lathe is used for producing cylindrical jobs, with special accessories and attachments, it can be used for machining of non-cylindrical jobs. The different operations that can be done on cylindrical job include turning, facing, knurling,grooving, form turning, parting, chamfering, eccentric turning, taper turning, taper turning and drilling. These operations are described briefly in the following sections.</p>
 
         <div class="image-container">
-            <img src="images/mem/Unit4/Lesson4/1.jpg" alt="The basic resistance welding circuit">
-            <span class="image-caption">Figure 1: The basic resistance welding circuit</span>
-            <br><br>
-            <img src="images/mem/Unit4/Lesson4/2.jpg" alt="The desired temperature distribution across the electrodes and workpieces during resistance welding">
-            <span class="image-caption">Figure 2: The desired temperature distribution across the electrodes and workpieces during resistance welding</span>
+            <img src="images/mem/Unit5/Lesson4/1.jpg" alt="Various operations that can be performed on lathe">
+            <span class="image-caption">Figure 1: Various operations that can be performed on lathe</span>
         </div>
-        
 
-        <p>Concept of resistance welding can be explained in following manner. High current at a low voltage flows through the circuit and is in accordance with Ohm's law that is given by:</p>
+        <h3>4.1.1 Turning</h3>
+        <p>Turning is a machining process to produce parts round in shape by a single point tool on lathes. The tool is fed either linearly in the direction parallel or perpendicular to the axis of rotation of the workpiece. The primary motion of cutting in turning is therotation of the workpiece, and the secondary motion of cutting is the feed motion. The operation in Figure-1 is the turning operation. This operation is used to reduce the diameter of a part to a desired dimension for the desired length of job. The resultingmachined surface is cylindrical. The reduction in diameter of the job depends upon the depth of cut chosen. For example, if the depth of cut is 2 mm it will reduce the job diameter by 4 mm. The tool used for the turning operation is called turning tool.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="margin: 0; display: inline-grid;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/2.jpg" alt="Turning operation diagram"></div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/3.jpg" alt="Turning operation photo"></div>
+            </div>
+            <span class="image-caption">Figure 2: Turning operation</span>
+        </div>
+
+        <h3>4.1.2 Facing</h3>
+        <p>Facing is the operation of machining the end or face of the job. Facing is used for reducing the length of the workpiece by machining or cutting the end face of workpiece. Facing operation is carried out by using a turning tool. The operationinvolves feeding the tool perpendicular to the axis of rotation of the workpiece from outer surface to centre. Note that in case of facing operation, the length of tool travel is equal to half the diameter of the job. The depth of cut is along the axis of the job.The facing operation is shown in Figure 3. Facing produces a flat surface.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/4.jpg" alt="Facing operation diagram">
+            <span class="image-caption">Figure 3: Facing operation</span>
+        </div>
+
+        <h3>4.1.3 Knurling</h3>
+        <p>This is not a machining operation at all, because it does not involve material removal. Instead, it is a metal forming operation used to produce a regular crosshatched pattern in the work surface. It is done on certain components for effective gripping toprevent it from slipping while handling it, example is thumbscrews, etc. The knurling process is shown in Figure 3. The knurling tool consists of a set of hardened steel rollers in a holder with the teeth cut on their surface in a definitepattern. The tool is held rigidly on the tool post and the rollers are pressed against the revolving workpiece to squeeze the metal against the multiple edges. The speed used during knurling should be very low and plenty of lubricant should be used.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="margin: 0; display: inline-grid;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/5.jpg" alt="Knurling operation diagram"></div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/6.jpg" alt="Knurling pattern"></div>
+            </div>
+            <span class="image-caption">Figure 4: The knurling operation</span>
+        </div>
+
+        <h3>4.1.4 Grooving</h3>
+        <p>Grooving or groove cutting is the process of producing a narrow groove on the surface of a cylindrical job. The diameter of the workpiece is reduced slightly from the surface over a narrow width. The process of grooving is shown in Figure 5. The job isrevolved at slow speed and a grooving tool is fed straight into the work by rotating the cross slide screw. Note that this is the depth of cut given to the tool. There is no feed in the grooving operation.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/7.jpg" alt="Grooving operations diagram">
+            <span class="image-caption">Figure 5: Grooving operations</span>
+        </div>
+
+        <p>Depending on the shape of the tool, it is possible to have square, round, beveled or any other shape grooves. In grooving operation, the shape of the tool is reproduced on the workpiece; hence, this process is also known as form turning operation.</p>
+
+        <h3>4.1.5 Parting</h3>
+        <p>As the name itself indicates, parting is the operation of cutting a workpiece into two.The operation is carried out with a tool called parting tool. The parting operation is shown in Figure 6. For parting operations, the workpiece is rotated at a low speed and the parting tool is fed in a direction normal to the axis of rotation of the job. Ample amount of feed should be employed to provide a continuous chip. If slow feed is used, the tool will not cut continuously but will ride on the surface for a revolution ortwo, and then bite in suddenly. This phenomenon is known as hogging, and is undesirable. Since, high feed rates are used, to compensate for the heat generated during the operation an abundant supply of coolant should be used.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/8.jpg" alt="Parting operation diagram">
+            <span class="image-caption">Figure: 6</span>
+        </div>
+
+        <h3>4.1.6 Chamfering</h3>
+        <p>Chamfering is the operation of beveling the sharp ends of a workpiece to avoid any injuries to the persons using the finished product. Chamfering is similar to form turning and is done with a chamfering toolthat has its cutting edge at the desired chamfer angle, usually 45<sup>o</sup>. Chamfer is provided for better look, to enable nut to start freely on threaded workpiece, to remove burrs as well as to protect the end of the workpiece from being damaged.</p>
+
+        <h3>4.1.7 Eccentric Turning</h3>
+        <p>If the turning operation is carried out at certain distance away from the centre of the workpiece, it is called eccentric turning. Figure 7 shows the turning of a typical component, which is eccentric. For eccentric turning operation, job is held in a four-jaw chuck.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/9.jpg" alt="Eccentric turning diagram">
+            <span class="image-caption">Figure 7: Eccentric turning</span>
+        </div>
+
+        <h3>4.1.8 Taper Turning</h3>
+        <p>A tapered job is one whose diameter decreases or increases gradually so that it assumes a conical shape. A tapered job is shown in Figure 8. Given major and minodiameters of the taper and its length, taper angle can be found. From the geometry of the figure 8 the taper angle &alpha; can be found by using the simple geometric relationship:</p>
         
         <div class="formula-container">
-            <img src="images/mem/Unit4/Lesson4/f.jpg" alt="Ohm's Law Formula">
+            <img src="images/mem/Unit5/Lesson4/f1.jpg" alt="Formula for taper angle">
         </div>
 
-        <p>Where, I is the current in amperes, E is the voltage in volts, and R is the resistance of the material in ohms.<br>
-        The total energy is expressed by the formula:</p>
-        
-        <div class="equation-text">H = I &times; E &times; T</div>
-        
-        <p>Where, H is heat energy, T is the time in seconds during which current flows in the circuit.<br>
-        Combining above two equations gives:</p>
-        
-        <div class="equation-text">H = I<sup>2</sup> &times; R &times; T</div>
-        
-        <p>For practical reasons a factor, which relates to heat losses should be included; therefore, the actual resistance welding formula is:</p>
-        
-        <div class="equation-text">H = I<sup>2</sup> &times; R &times; T &times; K</div>
-        
-        <p>Where, I is current squared in amperes, R is the resistance of the work in ohms, T is the time of current flow in seconds, and K represents the heat losses through radiation and conduction.</p>
-
-        <div class="note-block">
-            <p><b>Note</b>: <i>From the above formulation it can be concluded that welding heat is proportional to the square of the welding current. If the current is doubled, the heat generated is quadrupled. Welding heat is proportional to the total time of current flow, thus, if current is doubled, the time can be reduced considerably. The welding heat generated is directly proportional to the resistance and is related to the material being welded and the pressure applied.</i></p>
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/10.jpg" alt="A tapered job showing taper angle">
+            <span class="image-caption">Figure 8: A tapered job showing taper angle</span>
         </div>
+        
+        <p>where &alpha; is angle of taper, D<sub>1</sub> is larger diameter in mm; D2 is smaller diameter in mm, and L is length of taper in mm. The conicity K of a taper is defined as:</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson4/f2.jpg" alt="Formula for conicity">
+        </div>
+
+        <p>Accurate external tapers can be machined on a lathe by several methods viz.<br>
+        1. Using a form tool,<br>
+        2. Swivelling compound rest,<br>
+        3. Off-Set Tail Stock, and<br>
+        4. Simultaneous longitudinal and cross feeds.</p>
+
+        <h4>4.1.8.1 Taper turning using a form tool</h4>
+        <p>The form tool has a straight cutting edge set at the desired taper angle. Form tool is a replica of the taper to be produced i.e. the angle between the straight cutting edge and the rotational axis of the job equals taper angel a or one half the included angle of the taper. The tool is fed against arotating job. The shape of the tool is reproduced on the workpiece. This method is limited only for short length tapers. Figure 9 shows taper turning using a form tool.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/11.jpg" alt="Taper production using form tool">
+            <span class="image-caption">Figure 9: Taper production using form tool</span>
+        </div>
+
+        <h4>4.1.8.2 Taper turning by swivelling the compound rest</h4>
+        <p>The compound rest has a circular base graduated in degrees, which can be swivelled at any angle. While turning a taper, the base of compound rest is swivelled through an angle equal to taper angle. The tool is then fed by hand. This method can be used for producing short and steep tapers. Figure 10 shows the taper turning by swivelling the compound rest.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/12.jpg" alt="Taper production by swiveling the compound rest">
+            <span class="image-caption">Figure 10: Taper production by swiveling the compound rest</span>
+        </div>
+
+        <h4>4.1.8.3 Off-Set Tail Stock</h4>
+        <p>In this method the normal rotating part of the lathe still drives the workpiece (mounted between centres), but the centre at the tailstock is offset towards/away from the cutting tool. Then, as the cutting tool passes over, thepart is cut in a conical shape. This method is limited to small tapers over long lengths. The tailstock offset h is defined by:</p>
+        <div class="equation-text">h = L sin&alpha;</div>
+        <p>where, L is the length of workpiece, and &alpha; is the half of the taper angle.</p>
+        <div class="equation-text">or<br>h = [(D-d)/2]*(L/l)</div>
+        <p>Where, D is major diameter, d is minor diameter, L is total length of job, l is tapered length of job.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/13.jpg" alt="Taper turning by offsetting tailstock diagram">
+            <span class="image-caption">Figure 10(a) : taper turning by offsetting tailstock</span>
+        </div>
+
+        <h3>4.1.9 Drilling</h3>
+        <p>Drilling is the operation of production of holes in a workpiece. Figure 11 shows how drilling operation is performed on a lathe.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/14.jpg" alt="Drilling operation on a lathe diagram">
+            <span class="image-caption">Figure 11: Drilling operation on a lathe</span>
+        </div>
+
+        <p>While doing the drilling operation on a lathe, the workpiece is held in a chuck or on a faceplate. The drill (the cutting tool) is held in the tailstock and is positioned near the workpiece by moving the tailstock along the guideways. The tool is fed against theworkpiece (the feed motion) by rotating the handle of the tailstock in clockwise direction,. Once the hole is drilled, the tool is withdrawn by rotating the tailstock handle in the anti clockwise direction. It should be noted that in drilling on lathe the job is rotating while the tool remains stationary.</p>
+        
+        
+
+        <h3>4.1.10 Thread Cutting</h3>
+        <p>Thread cutting is the operation of producing a helical groove of specific shape on a cylindrical surface. Figure 12 shows the setup of a lathe for thread cutting. Thread cutting operation is done using a single point tool called thread cutting tool. Threads are cut using lathes by advancing the cutting tool at a feed exactly equal to thethread pitch. For producing threads of pitch p mm, the tool must travel a distance equal to p mm as the workpiece makes one complete rotation. The single-point cutting tool cuts in a helical band, which is actually a thread. In FPS system, threads are specified as threads per inch or TPI. For example, if a workpiece is having fourthreads per inch then the pitch of the thread is equal to &frac14; inch. The definite relative rotary and linear motion between the workpiece and tool is achieved by locking or engaging the carriage with the lead screw through a screw and nut mechanism and fixing a gear ratio between the head stock spindle and lead screw. This is done by using change gear mechanism or a gearbox between the spindle and lead screw.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/15.jpg" alt="Lathe set up for thread cutting operation diagram">
+            <span class="image-caption">Figure 12: Lathe set up for thread cutting operation</span>
+            <br><br>
+            <img src="images/mem/Unit5/Lesson4/16.jpg" alt="Thread cutting operation close up">
+            <span class="image-caption">Figure 12a: Thread cutting operation</span>
+        </div>
+
+        <p>To cut the threads the tool is brought to the start of the workpiece and a small depth of cut is given to the tool using cross slide. The carriage is engaged with the lead screw, the cut is made on the entire surface and at the end of workpiece, carriage isdisengaged. The tool is pulled out of the job and brought back to starting position. The process is repeated until the full depth threads are obtained. The helix is restarted at the same location each time if multiple passes are required to cut theentire depth of thread. The tool point must be ground so that it has the same profile as the thread to be cut.</p>
     </section>
 
-    <section id="elements">
-        <h2>4.1 Principal Elements of Resistance Welding Machines</h2>
-        <p>A resistance-welding machine has three principal elements:</p>
+    <section id="process">
+        <h2>4.2 Process Sequence</h2>
+        <p>The process sequence implies the order in which the operations are to be carried out to complete the machining of a job. This is like, to wear the shoes, you have to wear the socks first. This sequence to be adopted depends upon the operations to be performed on theworkpiece. This is illustrated with an example. Imagine that you are asked to produce the component shown in Figure 13 from the stock (raw material) of size 30 mm diameter and 45 mm length.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/17.jpg" alt="Component to be produced example">
+            <span class="image-caption">Figure 13: Component to be produced</span>
+        </div>
+
+        <p>To produce this component, one has to do turning to get desired diameter of 20 mm (reduce from 30 mm to 20 mm), do facing to reduce length from 45 mm to 40 mm and do knurling for the 15 mm length.<br>
+        A possible sequence for the component could be (1) turning, (2) facing, and (3) knurling. It is also possible to produce the component by first facing, then turning and knurling in the last. Another sequence is also possible, but the knurling cannot be done first. It is obvious thatthere can exist more than one possible sequence for producing the same component. The general steps when turning external workpart hold in a chuck should follow the next sequence,</p>
         <ol>
-            <li>An electrical circuit with a welding transformer and a current regulator, and a secondary circuit, including the electrodes that conduct the welding current to the work.</li>
-            <li>A mechanical system consisting of a machine frame and associated mechanisms to hold the work and apply the welding force.</li>
-            <li>The control equipment (timing devices) to initiate the time and duration of the current flow. This equipment may also control the current magnitude, as well as the sequence and the time of other parts of the welding cycle.</li>
+            <li>First rough cuts are applied on all surfaces, starting with the cylindrical surfaces (largest diameters first) and then proceeding with all faces;</li>
+            <li>Special operations such as knurling and grooving (if any) are applied;</li>
+            <li>Diameters are finished first, then the faces.</li>
+            <li>External threads (if any) are cut.</li>
         </ol>
-    </section>
 
-    <section id="characteristics">
-        <h2>4.2 Characteristics of Resistance Welding</h2>
-        <ul>
-            <li>a. No filler material or flux is used.</li>
-            <li>b. It uses non-consumable, low resistance copper alloy electrodes.</li>
-            <li>c. Both heat and pressure are utilized.</li>
-            <li>d. Pressure applied initially to hold the work piece.</li>
-            <li>e. Pressure increased when the proper temperature has been obtained.</li>
-            <li>f. Process control can be mechanized / computerized for mass production.</li>
-            <li>g. The magnitude of the current in resistance welding may be as high as 10,0000A but the voltage is in the range of 0.5V to 10V.</li>
-        </ul>
-
-        <h4>Resistance welding process depends on following three factors</h4>
-        <ul>
-            <li>a. Amount of current that passes through the two members to be joined.</li>
-            <li>b. The pressure that the electrodes transfer to the two members to be joined.</li>
-            <li>c. The time the current flows through the two members to be joined.</li>
-        </ul>
-
-        <h4>Advantages resistance welding process</h4>
-        <ul>
-            <li>a. Welds made by this process are made very quickly as resistance welding operations are automatic.</li>
-            <li>b. Produce a high volume of work at high speeds.</li>
-            <li>c. Does not require filler materials.</li>
-            <li>d. There are no limitations on welding position.</li>
-            <li>e. This process works well with robotics.</li>
-        </ul>
-
-        <h4>Disadvantages resistance welding process</h4>
-        <ul>
-            <li>a. Difficulties may be encountered when welding certain metals in thicker sections. Some metals require heat treatment after welding for satisfactory mechanical properties.</li>
-            <li>b. Metals that have a lower resistivity but a higher thermal conductivity will be slightly more difficult to weld.</li>
-            <li>c. The process requires special fixtures and automatic handling equipment.</li>
-        </ul>
-
-        <h4>Applications of resistance welding process</h4>
-        <ul>
-            <li>a. The automotive industry is the major user of the resistance welding processes, followed by the appliance industry.</li>
-            <li>b. Resistance welding is used by many industries manufacturing a variety of products made of thinner gauge metals.</li>
-            <li>c. Resistance welding is also used in the steel industry for manufacturing pipe, tubing and smaller structural sections.</li>
-            <li>d. Resistance welding is used primarily in the mass production industries where long production runs and consistent conditions can be maintained.</li>
-        </ul>
-    </section>
-
-    <section id="types">
-        <h2>4.3 Types of resistance welding</h2>
-
-        <h3>4.3.1 Spot welding</h3>
-        <p>In spot welding, the tips of the two solid cylindrical electrodes are placed on either side of the lap joint of two sheet metals to be joined, and a high current is passed across the point of contact. The heat generated at the point of contact will melt the metals locally at the point of contact. After the current is switched off, the melt is allowed to solidify under the pressure applied by the electrode tip forming the joint, which creates a small circular weld. Spot welding is primarily used for joining parts that normally upto 3 mm thickness. Spot-weld diameters range from 3mm to 12.5mm in diameter. The current ranges from 3000A to 40,000A.</p>
-
-        
-        <div class="image-container">
-            <img src="images/mem/Unit4/Lesson4/3.jpg" alt="Spot welding setup" style="max-width: 600px;">
-            <span class="image-caption">Figure 3: Spot welding setup</span>
-            <br><br>
-            <img src="images/mem/Unit4/Lesson4/4.jpg" alt="Sample shapes joined by spot welding setup">
-            <span class="image-caption">Figure 4: Sample shapes joined by spot welding setup</span>
+        <div class="example-block">
+            <p><b>Example</b>: Write the process sequence to be used for manufacturing the component shown in Figure 14 from raw material of 175 mm length and 60 mm diameter.</p>
+            
+            <div class="image-container" style="background: transparent; border: none; padding: 0; box-shadow: none;">
+                <img src="images/mem/Unit5/Lesson4/18.jpg" alt="Figure for Example">
+                <span class="image-caption">Figure 14: Figure for Example</span>
+            </div>
+            
+            <p><b>Solution</b>: To write the process sequence, first list the operations to be performed. The raw material is having size of 175 mm length and 60 mm diameter. The component shown in Figure-14 is having major diameter of 50 mm, step diameter of 40 mm, groove of 20 mm andthreading for a length of 50 mm. The total length of job is 160 mm. Hence, the list of operations to be carried out on the job are turning, facing, thread cutting, grooving and step turning.</p>
+            <p>A possible sequence for producing the component would be:</p>
+            <ol>
+                <li>Turning (reducing completely to 50 mm)</li>
+                <li>Facing (to reduce the length to 160 mm)</li>
+                <li>Step turning (reducing from 50 mm to 40 mm for a length of 110 mm)</li>
+                <li>Grooving and</li>
+                <li>Thread cutting</li>
+            </ol>
+            <p>Here it is assumed that facing is done on only one side of the workpiece.</p>
         </div>
-
-        <h4>Advantages of spot welding</h4>
-        <ul>
-            <li>High speed process and capable of automation for mass production of sheet metal assemblies</li>
-            <li>Process can be incorporated in assembly line</li>
-            <li>Needs less skill</li>
-            <li>Less warping and distortion in welded parts</li>
-            <li>Welded products are uniform</li>
-        </ul>
-
-        <h4>Disadvantages of spot welding</h4>
-        <ul>
-            <li>Parts once spot welded can not be disassembled</li>
-            <li>Setup is quite costly</li>
-            <li>Spot welds have less tensile strength</li>
-            <li>High power requirement</li>
-        </ul>
-
-        <h4>Applications of spot welding</h4>
-        <p>Spot welding is especially useful in fabricating sheet metal parts especially in automobile and aircraft industry.</p>
-
-        <h3>4.3.2 Seam welding</h3>
-        <p>In seam welding the cylindrical electrodes of spot welding are replaced by electrode wheels. The process is shown in Figure below. The metals to be welded are drawn between the rollers. The resulting weld is a series of overlapping spot welds made progressively along a joint. With a continuous AC power supply, the electrically conducting electrode wheels produce continuous of the two parts whenever the current reaches sufficiently high level in the ac cycle, resulting spot welds at regular intervals.</p>
-
-        
-        <div class="image-container">
-            <img src="images/mem/Unit4/Lesson4/5.jpg" alt="Seam welding setup">
-            <span class="image-caption">Figure 5: Seam welding setup</span>
-            <br><br>
-            <img src="images/mem/Unit4/Lesson4/6.jpg" alt="Fabrication of tube from sheet metal by seam welding">
-            <span class="image-caption">Figures 6: Fabrication of tube from sheet metal by seam welding</span>
-        </div>
-
-        <h4>Characteristics of seam welding</h4>
-        <ul>
-            <li>A series of overlapping spot welds.</li>
-            <li>High frequency current heats the adjoining surfaces of metal workpieces.</li>
-            <li>Heated surfaces pressed together to form a welded joint</li>
-            <li>Used extensively in producing pipes</li>
-        </ul>
-
-        <h4>Advantages of seam welding</h4>
-        <ul>
-            <li>Gas tight joints can be obtained</li>
-            <li>A single weld or multiple parallel seams can be produced.</li>
-            <li>Needs no edge preparation</li>
-        </ul>
-
-        <h4>Disadvantages of seam welding</h4>
-        <ul>
-            <li>Seam welding can only be performed along a straight or uniformly curved line.</li>
-            <li>Thickness of more then 3 mm is difficult to weld.</li>
-            <li>Strength of seam welded lap joints is lower than those of fusion welded butt joints.</li>
-        </ul>
-
-        <h4>Application of seam welding</h4>
-        <p>Lapped and flanged joints in cans, buckets, tanks, mufflers, exhaust systems, drip-mouldings on car body shells are commonly welded by this process.</p>
-
-        <h3>4.3.3 Projection welding</h3>
-        <p>In this process coalescence is produced by the heat obtained from resistance to the flow of electric current through the workpieces, which are held together under pressure by electrodes. The resulting welds are localized at predetermined points by the design of the parts to be welded. This localization is usually accomplished by projections, embossments, or intersections.</p>
-
-        
-        <div class="image-container">
-            <img src="images/mem/Unit4/Lesson4/7.jpg" alt="Projection Welding">
-            <span class="image-caption">Figure 7: Projection Welding</span>
-        </div>
-
-        <h4>Advantages of projection welding</h4>
-        <ul>
-            <li>Number of weld can be made simultaneously in one cycle</li>
-            <li>A better heat balance can be obtained by this process.</li>
-            <li>Less chance of shrinkage and distortion around the weld zone</li>
-            <li>Less overlap and closer weld spacing are possible.</li>
-            <li>Projection welds can be made in thick work pieces which can not be accomplished by spot welding</li>
-        </ul>
-
-        <h4>Disadvantages of projection welding</h4>
-        <ul>
-            <li>Needs precise alignment of the welding dies to equalize the electrode force and welding current</li>
-            <li>For multiple wells higher capacity equipment is needed.</li>
-        </ul>
-
-        <h4>Applications of projection welding</h4>
-        <p>Projection welding is carried for steel radiator coupling elements, brake shoes, tin-plate tank handles.</p>
     </section>
 
     <div class="footer-nav">
-        <a href="Unit4lesson3.html" title="Electric Arc Welding Process">&laquo; Lecture 3</a>
-        <a href="Unit4lesson5.html" title="Welding Defects">Lecture 5 &raquo;</a>
+        <a href="Unit5lesson3.html" title="Operating conditions on Lathe">&laquo; Lecture 3</a>
+        <a href="Unit5lesson5.html" title="Work-Holding devices used on Lathe">Lecture 5 &raquo;</a>
     </div>
 
 </div>
