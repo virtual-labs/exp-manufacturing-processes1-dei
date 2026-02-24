@@ -1,1 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Casting Process: Cupola Furnace | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc, .supp-material {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .toc h3, .supp-material h3 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.1rem; 
+        }
+
+        .toc a, .supp-material a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
+        
+        .toc a:hover, .supp-material a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        
+        /* Media Containers */
+        .media-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .media-container img, .media-container video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .media-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Callout Blocks */
+        .objectives-block {
+            background-color: #fff8e1;
+            padding: 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .toc-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: CASTING PROCESS: CUPOLA FURNACE</h1>
+        <a href="MEM103/Unit3/Lesson4/Unit3Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
+    </div>
+
+    <div class="toc-container">
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <a href="#objectives">4.0 Objectives</a>
+            <a href="#furnace">4.1 Cupola Furnace</a>
+        </div>
+        <div class="supp-material">
+            <h3>Supplementary Material</h3>
+            <a href="Unit3lesson4tq.html">1. Terminal questions</a>
+            <a href="Unit3lesson4References.html">2. References</a>
+            <a href="Unit3lesson4Glossary.html">3. Glossary</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>CASTING PROCESS: CUPOLA FURNACE</h2>
+        <p>Before pouring the metal into the mould, the metal to be cast has to be in the molten state. This is done by melting the metal in a furnace. Varieties of furnaces are available for melting the material such as cupola furnace, pit furnace, open-hearth furnace. The selection of a particular type of furnace depends upon the amount and type of material to be melted. For example, cupola furnace is used for melting cast iron, open-hearth furnace is used for melting steel.</p>
+    </section>
+
+    <section id="objectives">
+        <h2>4.0 Objectives</h2>
+        <div class="objectives-block">
+            <p style="margin: 0;">After going through this lesson, you will be able to understand:<br/>
+            1. Working of cupola furnace.</p>
+        </div>
+    </section>
+
+    <section id="furnace">
+        <h2>4.1 Cupola Furnace</h2>
+        <p>A cupola furnace is shown Fig. 4.1. Cupola furnace is basically refractory lined vertical vessel of steel, which is employed for the melting of cast iron. In ferrous foundries cupola is considered as a cheap furnace for melting cast iron and it produces constantly high quality molten metal. Its excellent features are its high thermal efficiency, low operating cost, its versatility and ease of operation.</p>
+
+        <div class="media-container">
+            <video width="600" height="340" autoplay loop controls>
+                <source src="MEM103/Unit3/Simulations/CupolaFurnace.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <p>For igniting the cupola, soft and dry pieces of wood are placed on sand bed. Fire is ignited after placing coke over the wooden pieces. Once fire is ignited, the cupola is 'charged' from the charging door. Charging cupola implies adding alternate layers of metal, coke and flux. The amount of coke (fuel) used depends upon quantity of metal to be melted and the quality of fuel available. This ratio of metal to coke is known as melting ratio and it usually varies from 4:1 to 12:1. Air necessary for combustion enters from the tuyers.</p>
+        
+        
+
+        <p>Once the cupola is fully charged, it is left for about 30 minutes to 1 hour for pre heating the charge. This period is known as soaking period. At the end of soaking period, air blast is turned on, that is, air is blown in. The temperature resulting from combustion becomes fairly high to melt the metal charge. After a certain period of time, molten metal starts collecting at tapping hole. Flux in the form of limestone or sodium carbonate, which is added during charging of cupola helps in the formation of slag to remove impurities and retards oxidation of iron. After enough molten metal has collected, first the slag hole is opened and is collected in a separate container and disposed off. The molten metal collected at the tap hole is collected intermittently in a ladle by opening the tap hole. There from the molten metal is poured into moulds ready for pouring.</p>
+
+        <div class="media-container">
+            <img src="images/mem/lesson5/CupolaFurnace.jpg" width="800" height="800" alt="Cupola furnace">
+            <span class="media-caption">Fig. 4.1 Cupola furnace</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson3.html" title="Casting Process: Moulding">&laquo; Lecture 3</a>
+        <a href="Unit3lesson5.html" title="Casting Process: Casting Defects">Lecture 5 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
