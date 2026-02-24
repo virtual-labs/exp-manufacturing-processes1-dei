@@ -1,1 +1,231 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Safety Practices in Welding Process | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 3px;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Safety List Styling */
+        .safety-list {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        .safety-list li {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--secondary);
+            padding: 15px;
+            margin-bottom: 15px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        /* Image Display Grids */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 6: Safety Practices in Welding Process</h1>
+        <a href="MEM103/Unit4/Unit4Lesson6.pdf" target="_blank" class="download-link">📥 Lesson 6 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#electric">6.1 Safety Practices during Electric arc Welding</a>
+            <a href="#gas">6.2 Safety Practices during Oxy-Acetylene gas Welding</a>
+        </div>
+    </div>
+
+    <section id="electric">
+        <h2>6.1 Safety Practices during Electric arc Welding</h2>
+        
+        
+
+        <ul class="safety-list">
+            <li>a. Exposure of the naked skin to the heat and light radiation from an electric arc should be avoided. The radiation from the arc includes infrared and ultra-violet light.</li>
+            <li>b. Screens or welding curtains must be used to protect bystanders from electric arc flashes.</li>
+            <li>c. Goggles do not give adequate protection from the arc. A hand-held shield that covers the head, face, neck, wrist and hands should be used. Where both hands are needed a head shield should be used, together with gauntlets to protect the hands and wrists.</li>
+            <li>d. Both head shields and hand-held shields must be fitted with a filter of the correct density for the power rating in use.</li>
+            <li>e. Protective clothing should give cover from the throat to the knees.</li>
+            <li>f. Power leads must be kept clear of hazards - sharp edges, hot metal, etc. Wheeled traffic must not be allowed to pass over them.</li>
+            <li>g. Welding return leads must be securely connected by bolting or clamping to prevent contact resistance.</li>
+            <li>h. Special care with fume extraction must be taken when using shielding gases in a confined space. Argon and nitrogen tend to puddle and displace the oxygen.</li>
+            <li>i. Work in progress or newly finished work, left unattended, should be clearly marked "HOT" with the date and time of writing added.</li>
+        </ul>
+        
+        
+
+    </section>
+
+    <section id="gas">
+        <h2>6.2 Safety Practices during Oxy-Acetylene gas Welding</h2>
+        
+        
+
+        <ul class="safety-list">
+            <li>a. Cylinders must be handled with care. Acetylene is liable to form shock-sensitive explosive acetylides with copper and silver salts (as well as with the metals) and certain other metals. The pressure in any piped acetylene system must not exceed 0.621 bar, 62 kPaabove atmospheric pressure. A heavy blow on an acetylene cylinder can ignite the contents as a result of adiabatic compression, and the cylinder may subsequently explode unless action is taken immediately. Those responsible for the use of acetylene should be acquainted with the emergency routine to be followed.</li>
+            <li>b. Cylinders must be used in an upright position and secured to prevent them falling or being knocked over.</li>
+            <li>c. When turning on a cylinder, the valve should be opened very slowly.</li>
+            <li>d. Care must be taken to ensure that there are no gas leaks.</li>
+            <li>e. Heat sources must never be allowed near the cylinders.</li>
+            <li>f. Oil or grease must not be allowed to come into contact with the cylinder valves or fittings, especially on oxygen cylinders.</li>
+            <li>g. Hoses must be kept in good condition. Wheeled traffic must not be allowed to pass over them. They should be kept away from sharp edges and hot metal.</li>
+            <li>h. Flashback arrestors should be fitted both at the blowpipe end and the gauge end of both hoses.</li>
+            <li>i. Cylinder valves must be closed when not in use, and hoses drained of any remaining gas.</li>
+            <li>j. Appropriate goggles, fitted with the correct filter glass, must be worn.</li>
+            <li>k. Suitable clothing and gloves or gauntlets should be worn where practicable.</li>
+        </ul>
+
+        
+
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson5.html" title="Welding Defects">&laquo; Lecture 5</a>
+        <a href="Unit4lesson7.html" title="Flash Welding & Percussion Welding">Lecture 7 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
