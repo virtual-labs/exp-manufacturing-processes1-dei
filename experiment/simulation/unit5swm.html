@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Processes-I | Welding Simulations</title>
+    <style>
+        /* Modernized Clean Layout */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden; /* Prevents double scrollbars */
+        }
+
+        /* Left Sidebar Styling */
+        .sidebar {
+            width: 320px;
+            background-color: #fcfcfc;
+            border-right: 1px solid #ececec;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            color: #333;
+            font-size: 22px;
+            margin-bottom: 25px;
+            border-bottom: 3px solid #ff0066;
+            padding-bottom: 10px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #ff0066;
+            text-transform: uppercase;
+            font-size: 13px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .sim-link {
+            text-decoration: none;
+            color: #555;
+            font-size: 14px;
+            padding: 10px 12px;
+            margin-bottom: 5px;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            display: block;
+            border-left: 3px solid transparent;
+        }
+
+        .sim-link:hover {
+            background-color: #fff0f5;
+            color: #ff0066;
+            border-left: 3px solid #ff0066;
+        }
+
+        /* Right Side - Big Video Area */
+        .simulation-viewport {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 1100px; /* Increased size */
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-info {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .video-info h2 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 10px;
+            right: 20px;
+            font-size: 11px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>WELDING SIMULATIONS</h1>
+
+        <div class="category-title">Gas Welding</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/Plates.mp4', 'Preparing joints for welding')">Preparing joints</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/TackSteelPlates.mp4', 'Tack Weld')">Tack Weld</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/JointPositioned.mp4', 'Positioning of joint and tacking')">Positioning of joint</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/SlowlyWeld.mp4', 'Welding along the joint')">Welding along the joint</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/Preparation.mp4', 'Preparing the Cylinders')">Preparing Cylinders</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/AcetyleneOn.mp4', 'Acetylene slowly turned on')">Acetylene On</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/TurnOffOxygen.mp4', 'Turning off the oxygen')">Turn off Oxygen</a>
+
+        <div class="category-title">Arc Welding</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/ArcWelding.mp4', 'Arc Welding-1')">Arc Welding-1</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/AC.mp4', 'AC Arc Welding')">AC Arc Welding</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/DCNegative.mp4', 'DC Arc Welding - Negative')">DC Arc - Negative</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/DCPositive.mp4', 'DC Arc Welding - Positive')">DC Arc - Positive</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/1.mp4', 'DC Arc Welding - Straight Polarity')">Straight Polarity</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/2.mp4', 'DC Arc Welding - Reverse Polarity')">Reverse Polarity</a>
+
+        <div class="category-title">Resistance Welding</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/ResistanceWelding.mp4', 'Resistance Welding Overview')">Resistance Overview</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/Projection.mp4', 'Resistance Welding - Projection')">Projection Welding</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/SeamWelding.mp4', 'Resistance Welding - Seam')">Seam Welding</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="loadVideo('MEM103/Unit4/Simulations/SpotWelding.mp4', 'Resistance Welding - Spot')">Spot Welding</a>
+    </div>
+
+    <div class="simulation-viewport">
+        <div class="video-container">
+            <video id="simVideo" controls autoplay loop muted>
+                <source id="videoSrc" src="MEM103/Unit4/Simulations/Projection.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="video-info">
+            <h2 id="videoTitle">Resistance Welding - Projection</h2>
+        </div>
+        
+        <footer>
+            &copy; DEI - Ajay Kant Upadhyay
+        </footer>
+    </div>
+
+    <script>
+        function loadVideo(filePath, title) {
+            const video = document.getElementById('simVideo');
+            const source = document.getElementById('videoSrc');
+            const titleElement = document.getElementById('videoTitle');
+
+            // Set new video details
+            source.src = filePath;
+            titleElement.innerText = title;
+
+            // Reload and play automatically
+            video.load();
+            video.play().catch(error => {
+                console.log("Auto-play was prevented by the browser. Interaction required.");
+            });
+        }
+    </script>
+</body>
+</html>
