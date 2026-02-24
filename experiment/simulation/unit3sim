@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEM-103 | Metal Forming Simulations</title>
+    <style>
+        /* Modernized Layout for Metal Forming */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* Sidebar - Fixed on the Left */
+        .sidebar {
+            width: 340px;
+            background-color: #fdfdfd;
+            border-right: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #e67e22; /* Industrial Orange for Metal Forming */
+            padding-bottom: 10px;
+            text-transform: uppercase;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #d35400;
+            text-transform: uppercase;
+            font-size: 11px;
+            margin-top: 18px;
+            margin-bottom: 8px;
+            letter-spacing: 1.2px;
+        }
+
+        .sim-link {
+            text-decoration: none;
+            color: #444;
+            font-size: 14px;
+            padding: 9px 12px;
+            margin-bottom: 3px;
+            border-radius: 5px;
+            transition: all 0.2s ease;
+            display: block;
+        }
+
+        .sim-link:hover {
+            background-color: #fff5eb;
+            color: #e67e22;
+            padding-left: 18px;
+        }
+
+        /* Main Viewport for Large Video */
+        .viewport {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 40px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-box {
+            width: 100%;
+            max-width: 1150px; /* Enhanced size */
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.1);
+            border-radius: 15px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .video-caption h2 {
+            margin: 0;
+            font-size: 28px;
+            color: #333;
+            font-weight: 300;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            font-size: 11px;
+            color: #bbb;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>METAL FORMING</h1>
+
+        <div class="category-title">Forging Operations</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Upsetting.mp4', 'Upsetting')">Upsetting</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Forging.mp4', 'Forging')">General Forging</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/OpenDieForging.mp4', 'Open Die Forging')">Open Die Forging</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/ClosedDieForging.mp4', 'Closed Die Forging')">Closed Die Forging</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/ImpressinDieForging.mp4', 'Impression Die Forging')">Impression Die Forging</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/GrainStructureForging.mp4', 'Grain Structure Forging')">Grain Structure Analysis</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Conrod.mp4', 'Connecting Rod Forging')">Connecting Rod</a>
+
+        <div class="category-title">Rolling Operations</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/HotRolling.mp4', 'Hot Rolling')">Hot Rolling</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/ColdRolling.mp4', 'Cold Rolling')">Cold Rolling</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/ABAQUSRolling.mp4', 'ABAQUS Rolling Analysis')">ABAQUS Simulation</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/RingRolling.mp4', 'Ring Rolling')">Ring Rolling</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/SeamlessRolledRingForging.mp4', 'Seamless Rolled Ring Forging')">Seamless Ring Forging</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/SteelMakingRolling.mp4', 'Steel Making & Rolling')">Steel Making Rolling</a>
+
+        <div class="category-title">Extrusion & Drawing</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Extrusion.mp4', 'Extrusion')">Extrusion</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Extrusion_3D.mp4', 'Extrusion 3D')">Extrusion 3D</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="updatePlayer('MEM103/Unit2/Simulations/Drawing.mp4', 'Drawing Operation')">Drawing</a>
+    </div>
+
+    <div class="viewport">
+        <div class="video-box">
+            <video id="metalPlayer" controls autoplay loop muted>
+                <source id="metalSource" src="MEM103/Unit2/Simulations/Upsetting.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="video-caption">
+            <h2 id="metalTitle">Upsetting</h2>
+        </div>
+        
+        <footer>
+            &copy; MEM103 - Dayalbagh Educational Institute - Ajay Kant Upadhyay
+        </footer>
+    </div>
+
+    <script>
+        function updatePlayer(file, title) {
+            const video = document.getElementById('metalPlayer');
+            const source = document.getElementById('metalSource');
+            const caption = document.getElementById('metalTitle');
+
+            source.src = file;
+            caption.innerText = title;
+
+            video.load();
+            video.play().catch(error => {
+                console.log("Playback interaction required or file not found.");
+            });
+        }
+    </script>
+</body>
+</html>
