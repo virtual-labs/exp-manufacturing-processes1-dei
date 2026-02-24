@@ -1,1 +1,551 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 8: Special Casting Processes (Permanent) | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1050px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .toc, .supp-material {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+        }
+
+        .toc h3, .supp-material h3 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.1rem; 
+            border-bottom: 2px solid #c5cae9;
+            padding-bottom: 5px;
+        }
+
+        .toc a, .supp-material a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 5px;
+        }
+        
+        .toc a:hover, .supp-material a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; margin-bottom: 10px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 8px; }
+
+        /* Step Grids for Images */
+        .step-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .step-item {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .step-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: var(--primary);
+            font-size: 1rem;
+            text-align: center;
+        }
+
+        /* Note Blocks */
+        .note-block {
+            background-color: #fff8e1;
+            padding: 15px 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        .note-block strong { font-style: normal; color: #d32f2f; }
+
+        /* Advantage/Disadvantage Lists */
+        .pros-cons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .pros-cons > div {
+            background: #fcfcfc;
+            padding: 15px;
+            border: 1px solid #eee;
+            border-radius: 6px;
+        }
+
+        .pros-cons h4 { margin-top: 0; color: var(--primary); border-bottom: 1px solid #ddd; padding-bottom: 5px; }
+
+        /* Tables */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .toc-container { grid-template-columns: 1fr; }
+            .pros-cons { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 8: Special Casting Processes (Permanent)</h1>
+        <a href="MEM103/Unit3/Lesson8/Unit3Lesson8.pdf" target="_blank" class="download-link">📥 Lesson 8 Download</a>
+    </div>
+
+    <div class="toc-container">
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <a href="#permanent">8.1 Permanent Mould Casting Processes</a>
+            <a href="#basic">8.2 Basic Permanent Mould casting process (also known as gravity die casting)</a>
+            <a href="#die">8.3 Die-Casting Process</a>
+            <a href="#centrifugal">8.4 Centrifugal Casting Process</a>
+            <a href="#slush">8.5 Slush Casting</a>
+            <a href="#continuous">8.6 Continuous Casting</a>
+        </div>
+        <div class="supp-material">
+            <h3>Supplementary Material</h3>
+            <a href="Unit3lesson8faq.html">1. Frequently Asked Questions</a>
+            <a href="Unit3lesson8scq.html">2. Self-check questions</a>
+            <a href="Unit3lesson8tq.html">3. Terminal questions</a>
+        </div>
+    </div>
+
+    <section id="permanent">
+        <h2>8.1 Permanent Mould Casting Processes</h2>
+        <p>Economic disadvantage of expendable mould casting is that a new mould is required for every casting. The basic difference between sand casting and permanent mould casting is the use of metal (or permanent) mould, that is, the mould is not destroyed as in case of sand casting process and the same mould can be reused many times after cleaning for producing another casting.</p>
+
+        <p><b>The processes include:</b></p>
+        <ol>
+            <li>Basic permanent mould casting (Gravity Die Casting)</li>
+            <li>Pressure Die casting</li>
+            <li>Centrifugal casting.</li>
+        </ol>
+    </section>
+
+    <section id="basic">
+        <h2>8.2 Basic Permanent Mould Casting Process (also known as Gravity Die Casting)</h2>
+        <p>In permanent mould casting process, permanent moulds are used and the castings are made by pouring molten metal into the mould under the force of gravity. The process is normally used for cast iron and, occasionally, for a nonferrous casting. The permanent moulds are made from highly refractory materials (due to the very high pouring temperatures) or metal (steel or cast iron)and given a refractory coating. The mould is provided with fins on its outer surface for efficient air-cooling. The inner surface of the mould cavity is sprayed with an oil-carbon-silica mixture before each pouring. Typically, permanent moulds constructed of two parts, similar to cope and drag as in case of sand casting and designed for easy, precise opening and closing. Permanent mould castings usually have better mechanical properties than sand castings because solidification is more rapid. Permanent mould casting process ensures product of good quality, uniform mechanical properties and better surface finish. Metal moulds usually are made of high-alloy iron or steel and have a production life of up to 1,20,000 or more castings. Typical products made by this process includekitchenware, automobile pistons, pump bodies, and certain castings for aircraft and missiles. A typical permanent mould is shown in Figure 1 (a-d).</p>
+
+        
+
+        <div class="step-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="step-item" style="grid-column: span 2;">
+                <img src="images/mem/Unit3/Lesson2/1.jpg" alt="Step a">
+                <span><b>(a)</b> permanent two piece mould is preheated and coated with silicon spray</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson2/2.jpg" alt="Step b">
+                <span><b>(b)</b> cores (if used) are inserted and mould is closed</span>
+            </div>
+            <div class="step-item">
+                <img src="images/mem/Unit3/Lesson2/3.jpg" alt="Step c">
+                <span><b>(c)</b> molten metal is poured into the mould, where it solidifies</span>
+            </div>
+            <div class="step-item" style="grid-column: span 2;">
+                <img src="images/mem/Unit3/Lesson2/4.jpg" alt="Step d">
+                <span><b>(d)</b> Movable mould half section is moved back and the casting is obtained</span>
+            </div>
+        </div>
+        <span class="image-caption" style="margin-bottom: 30px;">Figure 1: Steps in typical Permanent Mould Casting</span>
+
+        <h4>8.2.1 Steps involved in Permanent Mould Casting Process</h4>
+        <ol>
+            <li>The mould is preheated to 120-250<sup>o</sup>C and a refractory wash or mould coating is brushed or sprayed onto those surfaces of that will be in direct contact with the molten metal alloy.</li>
+            <li>Cores, if required, are inserted, and the mould is closed.</li>
+            <li>The molten metal alloy is poured into the mould through the gating system.</li>
+            <li>The casting is allowed to solidify, after solidification, the mould is opened and cores and other loose mould members are withdrawn and the casting is removed from the mould.</li>
+            <li>The conventional foundry practice is followed for trimming of gates and risers from the castings.</li>
+        </ol>
+
+        <div class="pros-cons">
+            <div>
+                <h4>8.2.2 Advantages of Permanent Mould Casting Process</h4>
+                <ol>
+                    <li>More rapid solidification caused by the cold metal mould results in castings finer grain structure, so castings with better strength.</li>
+                    <li>Cast surfaces in permanent mould casting are generally smoother with better surface finish than sand castings and closer dimensional tolerances can be maintained. Eliminating some secondary finishing or polishing operations.</li>
+                    <li>They do not ordinarily contain entrapped gases because no gasses are evolved (as in case of sand castings).</li>
+                    <li>This process can be automated.</li>
+                </ol>
+            </div>
+            <div>
+                <h4>8.2.3 Limitations of Permanent Mould Casting Process</h4>
+                <ol>
+                    <li>Generally limited to metals of lower melting point.</li>
+                    <li>Simpler part geometries compared to sand casting because of need to open the mould.</li>
+                    <li>High cost of mould process is best suited to high volume production.</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="die">
+        <h2>8.3 Die-Casting Process</h2>
+        <p>Die-casting is the process of making castings by using permanent moulds called die. (You should not confuse the term die used here with the die used in forging, extrusion and drawing processes.) This process is used for casting a low melting temperature material, e.g., aluminium and zinc alloys. The die used for diecastingsis very much similar to mould. Designed to hold and accurately close two mould halves and keep them closed while liquid metal is forced into cavity. Die-casting is similar to permanent mould casting except that the metal is injected into the mould under high pressure of 10-210 MPa instead being fed bygravity. Pressure is maintained during solidification, then mould is opened and part is removed. Use of high pressure to force metal into die cavity is what distinguishes this from other permanent mould processes. This result in a more uniform structure, good surface finish and good dimensional accuracy. For manyparts, post-machining can be totally eliminated, or very light machining may be required to bring dimensions to size. The process, when applied to a plastic casting, is called injection moulding.</p>
+
+        <p><b>Die casting process can be classified into two types viz.</b></p>
+        <ol>
+            <li>Hot chamber die-casting process, and</li>
+            <li>Cold chamber die-casting process</li>
+        </ol>
+
+        <h3>8.3.1 Hot Chamber Die-Casting Process</h3>
+        <p>The hot chamber die-casting process is shown in Figure 2 . When the piston is in the extreme left position, molten material in the hot chamber around the cylinder fills the cylinder (Figure 2 (a)).</p>
+
+        
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson2/5.jpg" alt="Hot chamber cycle a">
+            <p><b>(a) Cycle in hot-chamber casting - with die closed and plunger withdrawn, molten metal flows into the cylinder</b></p>
+            
+            <img src="images/mem/Unit3/Lesson2/6.jpg" alt="Hot chamber cycle b" style="margin-top: 20px;">
+            <p><b>(b) Cycle in hot-chamber pressure die casting - piston forces metal in cylinder to flow into die (mould), maintaining pressure during cooling and solidification</b></p>
+            
+            <img src="images/mem/Unit3/Lesson2/7.jpg" alt="Hot chamber cycle c" style="margin-top: 20px;">
+            <p><b>(c) Cycle in hot chamber pressure die casting - piston is withdrawn back, movable die slides forward, casted product is ejected out by ejector pins</b></p>
+            
+            <span class="image-caption">Figure 2: Hot chamber Pressure Die-casting process</span>
+        </div>
+
+        <p>As the piston moves forward, the die cavity is filled under pressure (Figure 2 (b)). The metal is solidified quickly and casting is removed from the die. This is very fast process with up to 1000 cycles/hour are possible. The process is suitable for low melting temperature materials, i.e. zinc, tin, lead, and magnesium.</p>
+
+        <h3>8.3.2 Cold chamber Die-Casting</h3>
+        <p>The setup for cold chamber die-casting is shown in Figure 3. The process is very much similar to hot chamber die casting method. The molten material is fed into the cold cylinder chamber from where it is forced into the die cavity under pressure. Cold chamber die casting method is generally slower than hot chamber die casting method as pouring of molten metal is separate step.</p>
+
+        
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson2/8.jpg" alt="Cold chamber cycle a">
+            <p><b>(a) Cycle in cold-chamber casting - with die (mould) closed and piston withdrawn, molten metal is poured into the chamber/ cylinder</b></p>
+            
+            <img src="images/mem/Unit3/Lesson2/9.jpg" alt="Cold chamber cycle b" style="margin-top: 20px;">
+            <p><b>(b) Cycle in cold-chamber casting - piston forces metal to flow into die (mould), maintaining pressure during cooling and solidification</b></p>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px;">
+                <img src="images/mem/Unit3/Lesson2/10.jpg" alt="Cold chamber cycle c">
+                <img src="images/mem/Unit3/Lesson2/11.jpg" alt="Cold chamber cycle part" style="width: auto;">
+            </div>
+            <span class="image-caption">Figure 3: Cold chamber die-casting process</span>
+        </div>
+
+        <p><b>Cold chamber die-casting differs from hot chamber die casting process in the following respects:</b></p>
+        <ol>
+            <li>Melting unit is not an integral part of the cold chamber die casting machine. Molten metal is brought and poured into the die-casting machine with the help of ladles (Figure3 (a)).</li>
+            <li>Molten metal poured into the chamber of cold chamber die casting machine is at lower temperature as compared to hot chamber die casting machine.</li>
+            <li>Pressure requirements in case of cold chamber die casting machine is higher than that of hot chamber die casting machine.</li>
+        </ol>
+
+        <div class="note-block">
+            <strong>Note:</strong> <i>Moulds for Die Casting. Mould usually made of tool steel, mould steel, etc. Tungsten and molybdenum (good refractory qualities) used to die cast steel and cast iron. Ejector pins required to remove part from die when it opens. Lubricants must be sprayed into cavities to prevent sticking.</i>
+        </div>
+
+        <div class="pros-cons">
+            <div>
+                <h4>8.3.3 Advantages of Die Casting Process in general</h4>
+                <ol>
+                    <li>Economical for large production quantities</li>
+                    <li>Good accuracy and surface finish</li>
+                    <li>Thin sections are possible, as the liquid metal is forced into the die with high external pressure.</li>
+                    <li>Rapid cooling provides small grain size and good strength to casting</li>
+                </ol>
+            </div>
+            <div>
+                <h4>8.3.4 Disadvantages of Die Casting Process in general</h4>
+                <ol>
+                    <li>Generally limited to metals with low metal points</li>
+                    <li>Part geometry must allow removal from die</li>
+                </ol>
+            </div>
+        </div>
+    </section>
+
+    <section id="centrifugal">
+        <h2>8.4 Centrifugal Casting Process</h2>
+        <p>A family of casting processes in which the mould is rotated at high speed so centrifugal force distributes molten metal to outer regions of die cavity. When a body rotates about an axis a centrifugal force is created, this centrifugal force is used in getting the shape of the final casting. Typical centrifugal casting equipment is shown in Figure 8. In centrifugal casting, a permanent metal mouldrevolves at very high speeds in a horizontal, vertical or inclined position and the molten metal is poured. The poured molten metal is thrown on the walls of the mould cavity by centrifugal force. Centrifugal force is utilized to distribute liquid metal over the inner surfaces (walls) of the mould. The metal solidifies in the form of a hollow cylinder. Centrifugal castings can be made in almost any requiredlength, thickness and diameter. The cylinder wall thickness is controlled by the amount of liquid metal poured. The centrifugal force of this process keeps the casting hollow, eliminating the need for cores. Using centrifugal casting process it is possible to produce castings of good quality, dimensional accuracy and external surface detail. Typical examples of the products manufactured bythis process include pipes, gun barrels, bushings, flywheel, pressure vessels.</p>
+
+        <div class="note-block">
+            <strong>Note:</strong><br/>
+            <i>1. For producing a hollow part, the axis of rotation is placed at the centre of the desired casting.<br/>
+            2. The speed of rotation is maintained high so as to produce a centripetal acceleration of the order of 60g to 15g.<br/>
+            3. The centrifuge action segregates the less dense nonmetallic inclusions near the centre of rotation. It should be noted that the casting of hollow parts needs no core in this process.<br/>
+            4. Solid parts can also be cast by this process by placing the entire mould cavity on one side of the axis of rotation.</i>
+        </div>
+
+        <h4>8.4.1 Advantages of Centrifugal Casting Process</h4>
+        <ol>
+            <li>The castings, produced by this method, are very dense.</li>
+            <li>By having several mould cavities, more than one casting can be made simultaneously.</li>
+            <li>Hollow sections can be obtained without using Cores.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson2/12.jpg" alt="Horizontal Centrifugal casting">
+            <p><b>(a) Setup for Horizontal or True Centrifugal casting process</b></p>
+            
+            <img src="images/mem/Unit3/Lesson2/13.jpg" alt="Casted pipe" style="width: auto;">
+            <p><b>(b) Casted Pipe obtained from true centrifugal casting process (axi-symmetric and fully hollow)</b></p>
+            
+            <div style="display: flex; justify-content: center; gap: 20px; align-items: flex-end; margin-top: 20px;">
+                <img src="images/mem/Unit3/Lesson2/14.jpg" alt="Inclined centrifugal pouring">
+                <img src="images/mem/Unit3/Lesson2/15.jpg" alt="Inclined centrifugal solidified">
+            </div>
+            <p><b>(c) Inclined Centrifugal Casting Process (i) Metal is being poured into the rotating mould and metal is getting slashed along the walls (ii) Metal solidified along the walls providing the hollow casting</b></p>
+            
+            <img src="images/mem/Unit3/Lesson2/16.jpg" alt="Semi and Centrifuge casting" style="margin-top: 20px;">
+            <p><b>(d) Different shapes that can be obtained from various centrifugal casting process, (i) semi centrifugal casting process and (ii) Centrifuge Casting Process</b></p>
+            
+            <span class="image-caption">Figure 4: Centrifugal casting process</span>
+        </div>
+
+        <p>Depending on the method of feeding metal in to mould and location of mould with respect to axis of mould rotation, centrifugal casting process can be classified into following categories:</p>
+        
+        <p>(i) <b>True Centrifugal Casting</b> (Figure 4 (a)) - The axis of rotation of the mould and that of the casting is same and horizontal. The casting produced is always centrally hollow and is made exclusively under the effect of centrifugal force.<br/>
+        <b>Items produced by this process are: Cast iron pipes, tubes, bushings, rings.</b></p>
+
+        <p>(ii) <b>Semi-Centrifugal Casting</b> (Figure 4 (d-(i))) - The component cast is usually large and has rotational symmetry as in case of pulleys, flywheels, discs. Casting is done in a mould rotating about its vertical axis. The castings made by this method need not be centrally hollow.<br/>
+        <b>Items produced by this process are: pulleys and wheels.</b></p>
+
+        <p>(iii) <b>Centrifuge casting</b> (Figure 4 (d (ii))) - In this case, the combined axis of rotation of the moulds (or the table carrying moulds) does not coincide with the axis of rotation of individual mould as the moulds are situated at a distance from the central axis of the mould table. In this process, a number of moulds areplaced around a vertical central sprue for feeding metal and are all connected to this central sprue. The table carrying moulds is rotated about the vertical axis of the sprue. The molten metal in the central sprue is fed to all the moulds under the effect of centrifugal force generated due to the rotation of the mould table. Theprocess of centrifuging or pressure casting is applied to the casting of nonsymmetrical objects such as <b>brackets, bearing caps</b>.</p>
+        
+        
+    </section>
+
+    <section id="slush">
+        <h2>8.5 Slush Casting</h2>
+        <p>Slush Casting is a special type of permanent mould casting, where the molten metal is not allowed to completely solidify. A slush casting is produced by pouring the liquid material into an open-top permanent mould, after the desired wall thickness is obtained, the mould is inverted therefore, not yet solidified moltenmetal is drained out (Figure-5). This is useful for making shell-like ornamental objects from low melting point metals such as zinc, tin or lead alloys, for example, candlesticks, lamps, lamp base, toys, statues, masks. Low-meltingpoint metals such as lead, zinc, and tin are used. The exterior appearance isimportant, but the strength and interior geometry of the casting are minor considerations.</p>
+
+        <div class="image-container">
+            <div style="display: flex; justify-content: center; gap: 20px;">
+                <img src="images/mem/Unit3/Lesson2/17.jpg" alt="Slush step 1" style="width: auto;">
+                <img src="images/mem/Unit3/Lesson2/18.jpg" alt="Slush step 2" style="width: auto;">
+                <img src="images/mem/Unit3/Lesson2/19.jpg" alt="Slush step 3" style="width: auto;">
+            </div>
+            <span class="image-caption">Figure 5: Images depicting steps in Slush Casting Process</span>
+        </div>
+    </section>
+
+    <section id="continuous">
+        <h2>8.6 Continuous Casting</h2>
+        <p>Continuous casting process can be used for producing castings of large length with a uniform cross-section. In this process continuous pouring of molten metal into a horizontal or vertical mould (pouring die) opened at both ends, cooling it there rapidly till metal solidifies and removing the solidified product in acontinuous form from the other end of the mould (Figure 6). Cooling jacket are made, sometimes, integral with the furnace. It also incorporates an integrated valve to stop the metal flow into the mould when desired. The molten metal flows into the mould from below the metal surface so that impurities are not included init. As it flows down it is cooled rapidly by quick dissipation of heat by the circulating water in the jacket around the metal mould. Withdrawing rolls below the mould help in pulling down the solidified casting at a controlled speed. A saw is fitted to cut the casting into desired lengths. The shapes that can be producedby this process include square, rectangular, hexagonal etc. The process is used now-a-days to produce blooms, billets, slabs and tubings of very long lengths directly from molten metal in steel plants replacing the traditional casting of ingots in separate moulds and later convert them into blooms or billets. The process ofcontinuous casting is largely used for casting steel, brass, copper, bronze, aluminium, grey cast iron and alloy cast iron.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson2/20.jpg" alt="Continuous Casting Process">
+            <span class="image-caption">Figure 6: Continuous Casting Process</span>
+        </div>
+        
+
+        <h3 style="text-align: center; margin-top: 40px;">Summary of casting processes</h3>
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th style="text-align:left;">Process</th>
+                    <th>Advantages</th>
+                    <th>Limitations</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th style="text-align:left;">Sand</th>
+                    <td>Almost any metal can be cast; no limit to part size, shape, or weight; low tooling cost.</td>
+                    <td>Some finishing required; relatively coarse surface finish; wide tolerances.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Shell mould</th>
+                    <td>Good dimensional accuracy and surface finish; high production rate.</td>
+                    <td>Part size limited; expensive pattern and equipment.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Evaporative pattern</th>
+                    <td>Most metal can be cast, with no limit to size; complex part shapes.</td>
+                    <td>Patterns have low strength and can be costly for low quantities</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Plaster mould</th>
+                    <td>Intricate part shapes; good dimensional accuracy and surface finish; low porosity.</td>
+                    <td>Limited to non-ferrous metals; limited part size and volume for production; mould making time relatively long.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Ceramic mould</th>
+                    <td>Intricate part shapes; close tolerance parts; good surface finish.</td>
+                    <td>Limited part size.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Investment</th>
+                    <td>Intricate part shapes; excellent surface finish; almost any metal can be cast.</td>
+                    <td>Part size limited; expensive pattern, moulds and labour.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Permanent mould</th>
+                    <td>Good surface finish and; dimensional accuracy; low porosity; high production rate.</td>
+                    <td>High mould cost; limited part shape and complexity; not suitable for high melting point metals.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Die</th>
+                    <td>Excellent dimensional accuracy and surface finish; high production rate.</td>
+                    <td>High die cost; limited part size; generally limited to non-ferrous metals; long lead time.</td>
+                </tr>
+                <tr>
+                    <th style="text-align:left;">Centrifugal</th>
+                    <td>Large cylindrical or tubular parts with good quality; high production rate.</td>
+                    <td>Expensive equipments; limited part shape.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson7.html" title="Special Casting Processes (Expendable)">&laquo; Lecture 7</a>
+        <a href="Unit3lesson9.html" title="Types of Moulding Methods and Moulding Machines">Lecture 9 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
