@@ -1,1 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: Forging Process | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
 
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin: 5px 0;
+        }
+
+        .toc ul { list-style: none; padding-left: 20px; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+
+        .info-box {
+            background: #fff;
+            border-left: 4px solid var(--primary);
+            padding: 15px 20px;
+            margin: 15px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        table.data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+        }
+
+        table.data-table th, table.data-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+        }
+
+        table.data-table th { background: var(--primary); color: white; }
+
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            margin: 10px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+        
+        .math-style { font-style: italic; font-family: "Times New Roman", Times, serif; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary);">Lesson 2: Forging Process</h1>
+        <a href="MEM103/Unit2/Unit2Lesson2.pdf" target="_blank" class="download-link">📥 Lesson 2 Download</a>
+    </div>
+
+    <div class="toc">
+        <a href="#introduction">2.0 Introduction</a>
+        <a href="#applications">2.1 Applications of Forging</a>
+        <a href="#metals">2.2 Metals and Forging Temperatures</a>
+        <a href="#measurement">2.3 Measurement of Temperatures</a>
+        <a href="#classification">2.4 Classification of Forging</a>
+        <ul>
+            <li><a href="#open-die">2.4.1 Open Die Forging</a></li>
+            <li><a href="#closed-die">2.4.2 Closed Die Forging</a></li>
+        </ul>
+        <a href="#operations">2.5 Forging Operations</a>
+        <a href="#force">2.6 Force Application Methods</a>
+        <a href="#miscellaneous">2.7 Miscellaneous Processes</a>
+        <a href="#dies">2.8 Dies used for Forging</a>
+        <a href="#lubricants">2.9 Lubricants</a>
+        <a href="#defects">2.10 Defects in Forging</a>
+    </div>
+
+    <section id="introduction">
+        <h2>2.0 Introduction</h2>
+        <p>The importance of metals in modern technology is due, in large part, to the ease with which they may be formed into useful shapes such as tubes, rods, and sheets. Useful shapes may be generated in two basic ways:</p>
+        <div class="info-box">
+            1. <b>Plastic deformation processes</b> in which the volume and mass of metal are conserved and the metal is displaced from one location to another.<br>
+            2. <b>Metal removal or machining processes</b> in which material is removed in order to give it the required shape.
+        </div>
+        <p>Forging is the working of metal into a useful shape by hammering or pressing. Various useful shapes are obtained by compressive forces that are applied on workpiece through various dies and tools. The compressive forces for forging are derived either from the impact of a hammer or from the pressure exerted by a large mechanical press. Metals in forging are deformed plastically at room temperature (cold forging) as well as at higher temperature (hot forging).</p>
+        <p>The ability to cold forge depends on ductility and malleability, whereas hot forgeability depends on the 'range of plasticity' at high temperatures. The forged components are called <b>forgings</b>.</p>
+    </section>
+
+    <section id="applications">
+        <h2>2.1 Applications of Forging</h2>
+        <p>Common products include: Box-end wrenches, riveting shells for boilers, bolts, nuts, hooks, crankshafts, connecting rods, axles, and aircraft landing gear cylinders. Unlike rolling (which produces continuous sheets/strips), forging produces <b>discrete parts</b>.</p>
+        <div class="image-container">
+                        <p><b>Figure 1</b>: Typical products made from forging operations.</p>
+        </div>
+        <p>Forging refines the grain structure and improves physical properties. Controlled development of <b>grain flow lines</b> increases overall toughness and decreases susceptibility to fatigue and corrosion.</p>
+    </section>
+
+    <section id="metals">
+        <h2>2.2 Metals and their forging temperatures</h2>
+        <p>The degree to which a metal can be forged depends on its composition and structure. Low and medium carbon steels are readily forged, while cast iron is not forgeable because its crystalline structure breaks when heated and beaten.</p>
+        <table class="data-table">
+            <thead>
+                <tr><th>Material</th><th>Temperature Range (°C)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mild steel</td><td>815-1250</td></tr>
+                <tr><td>High carbon steel</td><td>760-1130</td></tr>
+                <tr><td>Aluminum alloys</td><td>370-480</td></tr>
+                <tr><td>Copper alloys</td><td>550-900</td></tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="classification">
+        <h2>2.4 Classification of Forging</h2>
+        <h3 id="open-die">2.4.1 Open Die Forging</h3>
+        <p>Carried out between two flat dies or dies of simple shape. It is flexible but not suitable for large scale production. The resulting shape depends heavily on the <b>skill of the operator</b>.</p>
+        <div class="info-box">
+            <b>Forging Force (F):</b> $F = Y_f \pi r^2 (1 + \frac{2\mu r}{3h})$ <br>
+            Where $\sigma_f$ is flow stress, $\mu$ is coefficient of friction, $d$ and $h$ are diameter and height.
+        </div>
+
+        <h3 id="closed-die">2.4.2 Closed Die Forging (Impression Die)</h3>
+        <p>Workpiece is deformed under high pressure between two die halves containing impressions of the final shape. Excess metal is squeezed out to form <b>flash</b>, which is later trimmed.</p>
+    </section>
+
+    <section id="operations">
+        <h2>2.5 Forging Operations</h2>
+        <p>Most forgings are obtained in multiple steps: <b>Upsetting, Cogging, Edging, Fullering, Blocking, and Finishing.</b></p>
+        <div class="image-container">
+                        <p><b>Figure 26</b>: Steps followed in forging of Connecting Rod.</p>
+        </div>
+    </section>
+
+    <section id="defects">
+        <h2>2.10 Defects in Forging</h2>
+        <ul>
+            <li><b>Cold Shut or Fold:</b> Discontinuity produced when two surfaces fold against each other without welding.</li>
+            <li><b>Mismatched Forgings:</b> Caused by mis-alignment between top and bottom dies.</li>
+            <li><b>Internal Cracking:</b> Due to secondary tensile stresses.</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson1.html" style="color: var(--secondary);">&laquo; Lecture 1</a>
+        <a href="Unit3lesson3.html" style="color: var(--accent);">Lecture 3 &raquo;</a>
+    </div>
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - Ajay Kant Upadhyay
+</footer>
+
+</body>
+</html>
