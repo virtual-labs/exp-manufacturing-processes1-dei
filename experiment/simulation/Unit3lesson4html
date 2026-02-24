@@ -289,8 +289,8 @@
     </section>
 
     <div class="footer-nav">
-        <a href="Unit2lesson3.html" style="color: var(--accent); text-decoration: none;">&laquo; Lecture 3: Smithy</a>
-        <a href="Unit2lesson5.html" style="color: var(--accent); text-decoration: none;">Lecture 5: Rolling &raquo;</a>
+        <a href="Unit3lesson3.html" style="color: var(--accent); text-decoration: none;">&laquo; Lecture 3: Smithy</a>
+        <a href="Unit3lesson5.html" style="color: var(--accent); text-decoration: none;">Lecture 5: Rolling &raquo;</a>
     </div>
 </div>
 
