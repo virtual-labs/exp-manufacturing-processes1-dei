@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MEM-103 | Casting Simulations</title>
     <style>
-        /* Modernized Layout for Casting Unit */
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             background-color: #ffffff;
@@ -15,11 +14,11 @@
             overflow: hidden; 
         }
 
-        /* Sidebar - Fixed on the Left */
+        /* Sidebar Styling */
         .sidebar {
-            width: 350px;
-            background-color: #f8f9f9;
-            border-right: 1px solid #e0e0e0;
+            width: 360px;
+            background-color: #f8fafa;
+            border-right: 1px solid #e1e8e8;
             display: flex;
             flex-direction: column;
             padding: 20px;
@@ -28,21 +27,21 @@
 
         .sidebar h1 {
             color: #2c3e50;
-            font-size: 20px;
+            font-size: 18px;
             margin-bottom: 20px;
-            border-bottom: 3px solid #16a085; /* Teal for Casting */
+            border-bottom: 3px solid #16a085; /* Teal theme for Casting */
             padding-bottom: 10px;
             text-transform: uppercase;
         }
 
-        .category-title {
+        .category-header {
             font-weight: bold;
             color: #16a085;
-            text-transform: uppercase;
             font-size: 11px;
-            margin-top: 18px;
+            margin-top: 15px;
             margin-bottom: 8px;
             letter-spacing: 1px;
+            text-transform: uppercase;
         }
 
         .sim-link {
@@ -54,16 +53,17 @@
             border-radius: 4px;
             transition: all 0.2s ease;
             display: block;
-            line-height: 1.4;
+            border-left: 3px solid transparent;
         }
 
         .sim-link:hover {
             background-color: #e8f6f3;
             color: #16a085;
-            padding-left: 18px;
+            border-left: 3px solid #16a085;
+            padding-left: 15px;
         }
 
-        /* Main Viewport for Video */
+        /* Video Area */
         .viewport {
             flex: 1;
             display: flex;
@@ -76,9 +76,9 @@
 
         .video-box {
             width: 100%;
-            max-width: 1100px;
+            max-width: 1050px;
             aspect-ratio: 16 / 9;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
             border-radius: 12px;
             overflow: hidden;
             background-color: #000;
@@ -90,12 +90,12 @@
             display: block;
         }
 
-        .video-caption {
+        .caption {
             margin-top: 20px;
             text-align: center;
         }
 
-        .video-caption h2 {
+        .caption h2 {
             margin: 0;
             font-size: 24px;
             color: #333;
@@ -104,8 +104,8 @@
 
         footer {
             position: absolute;
-            bottom: 10px;
-            right: 20px;
+            bottom: 15px;
+            right: 25px;
             font-size: 11px;
             color: #999;
         }
@@ -114,62 +114,76 @@
 <body>
 
     <div class="sidebar">
-        <h1>CASTING SIMULATIONS</h1>
+        <h1>Casting Simulations</h1>
 
-        <div class="category-title">General Casting</div>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/Casting.mp4', 'Casting Simulation-1')">Simulation-1 (Mold Section)</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/CastingSimulation1.mp4', 'Casting Simulation-2')">Simulation-2</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/SandCasting.mp4', 'Sand Casting Simulation')">Sand Casting</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit2/Simulations/FoundrySandMolding.mp4', 'Foundry Sand Molding')">Foundry Sand Molding</a>
+        <div class="category-header">General Simulations</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/Casting.mp4', 'Casting Simulation 1 (Mold Section)')">Casting Simulation 1</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation1.mp4', 'Casting Simulation 2')">Casting Simulation 2</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation2.mp4', 'Casting Simulation 3')">Casting Simulation 3</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation3.mp4', 'Casting Simulation 4')">Casting Simulation 4</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation4.mp4', 'Casting Simulation 5')">Casting Simulation 5</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation5.mp4', 'Casting Simulation 6')">Casting Simulation 6</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation6.mp4', 'Casting Simulation 7')">Casting Simulation 7</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation7.mp4', 'Casting Simulation 8')">Casting Simulation 8</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation8.mp4', 'Casting Simulation 9')">Casting Simulation 9</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation9.mp4', 'Casting Simulation 10')">Casting Simulation 10</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CastingSimulation10.mp4', 'Casting Simulation 11')">Casting Simulation 11</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/SandCasting.mp4', 'Sand Casting Simulation')">Casting Simulation 12</a>
 
-        <div class="category-title">Furnace & Patterns</div>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/CupolaFurnace.mp4', 'Cupola Furnace')">Cupola Furnace</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/PatternDraft.mp4', 'Pattern with Draft')">Pattern with Draft</a>
+        <div class="category-header">Foundry & Patterns</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit2/Simulations/FoundrySandMolding.mp4', 'Foundry Sand Molding')">Foundry Sand Molding</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CupolaFurnace.mp4', 'Cupola Furnace')">Cupola Furnace</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/PatternDraft.mp4', 'Pattern with Draft')">Pattern with Draft</a>
 
-        <div class="category-title">Gating Systems</div>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/GatingSystem.mp4', 'Gating System Overview')">Gating System Overview</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/PressurizedGating.mp4', 'Pressurized Gating System')">Pressurized System</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/UnPressuredGating.mp4', 'Un-Pressurized Gating System')">Un-Pressurized System</a>
+        <div class="category-header">Gating Systems</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/GatingSystem.mp4', 'Gating System')">Gating System</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/PressurizedGating.mp4', 'Pressurized Gating System')">Pressurized Gating</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/UnPressuredGating.mp4', 'Un-Pressurized Gating System')">Un-Pressurized Gating</a>
 
-        <div class="category-title">Die Casting</div>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/PressureDieCasting.mp4', 'Pressure Die Casting')">Pressure Die Casting</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/PressureDieHot.mp4', 'Hot Chamber Die Casting')">Hot Chamber Casting</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/PressureDieCold.mp4', 'Cold Chamber Die Casting')">Cold Chamber Casting</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/GravityDie.mp4', 'Gravity Die Casting')">Gravity Die Casting</a>
+        <div class="category-header">Die Casting</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/PressureDieCasting.mp4', 'Pressure Die Casting')">Pressure Die Casting</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/PressureDieHot.mp4', 'Hot Chamber Die Casting')">Die Casting (Hot Chamber)</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/PressureDieCold.mp4', 'Cold Chamber Die Casting')">Die Casting (Cold Chamber)</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/HighPressure1.mp4', 'High Pressure Die Casting 1')">High Pressure 1</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/HighPressure2.mp4', 'High Pressure Die Casting 2')">High Pressure 2</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/HighPressure3.mp4', 'High Pressure Die Casting 3')">High Pressure 3</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/GravityDie.mp4', 'Gravity Die Casting 1')">Gravity Die Casting 1</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/GravitySteel.mp4', 'Gravity Die Casting 2')">Gravity Die Casting 2</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/GravityPressurized.mp4', 'Gravity Die with Pressurized Gating')">Gravity Pressurized</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/GravityNonPressurized.mp4', 'Gravity Die with Non-Pressurized Gating')">Gravity Non-Pressurized</a>
 
-        <div class="category-title">Centrifugal & Investment</div>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/CentrifugalCasting.mp4', 'Centrifugal Casting')">Centrifugal Casting</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/Investment.mp4', 'Investment Casting-1')">Investment (Lost-Wax) 1</a>
-        <a href="javascript:void(0)" class="sim-link" onclick="playVid('MEM103/Unit3/Simulations/LostWaxTurbine.mp4', 'Turbine House Casting')">Lost-Wax Turbine House</a>
+        <div class="category-header">Centrifugal & Investment</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CentrifugalCasting.mp4', 'Centrifugal Casting Overview')">Centrifugal Casting</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CentrifugalHorizontal.mp4', 'Horizontal Centrifugal Casting')">Centrifugal Horizontal</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/CentrifugalVertical.mp4', 'Vertical Centrifugal Casting')">Centrifugal Vertical</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/Investment.mp4', 'Investment Casting (Lost-Wax) 1')">Investment Casting 1</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/LostWaxCasting.mp4', 'Investment Casting (Lost-Wax) 2')">Investment Casting 2</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="play('MEM103/Unit3/Simulations/LostWaxTurbine.mp4', 'Investment Casting: Turbine House')">Lost-Wax Turbine</a>
     </div>
 
     <div class="viewport">
         <div class="video-box">
-            <video id="castPlayer" controls autoplay loop muted>
-                <source id="castSource" src="MEM103/Unit3/Simulations/Casting.mp4" type="video/mp4">
-                Your browser does not support HTML5 video.
+            <video id="vPlayer" controls autoplay loop muted>
+                <source id="vSource" src="MEM103/Unit3/Simulations/SandCasting.mp4" type="video/mp4">
             </video>
         </div>
-        <div class="video-caption">
-            <h2 id="castTitle">Casting Simulation-1</h2>
+        <div class="caption">
+            <h2 id="vTitle">Sand Casting Simulation</h2>
         </div>
         
-        <footer>
-            &copy; MEM103 - Dayalbagh Educational Institute - Ajay Kant Upadhyay
-        </footer>
+        <footer>&copy; MEM103 - Dayalbagh Educational Institute</footer>
     </div>
 
     <script>
-        function playVid(path, title) {
-            const video = document.getElementById('castPlayer');
-            const source = document.getElementById('castSource');
-            const caption = document.getElementById('castTitle');
+        function play(file, title) {
+            const video = document.getElementById('vPlayer');
+            const source = document.getElementById('vSource');
+            const caption = document.getElementById('vTitle');
 
-            source.src = path;
+            source.src = file;
             caption.innerText = title;
-
             video.load();
-            video.play().catch(e => console.log("User interaction required for playback."));
+            video.play();
         }
     </script>
 </body>
