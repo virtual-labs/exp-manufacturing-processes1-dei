@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Work-Holding devices used on Lathe | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Image Grids */
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-grid-item {
+            text-align: center;
+        }
+
+        .image-grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 5: Work-Holding devices used on Lathe</h1>
+        <a href="MEM103/Unit5/Unit5Lesson5.pdf" target="_blank" class="download-link">📥 Lesson 5 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#introduction">5.0 Introduction</a>
+            <a href="#chucks">5.1 Chucks</a>
+            <div style="padding-left: 15px;">
+                <a href="#chucks">5.1.1 Three Jaw Chuck</a>
+                <a href="#chucks">5.1.2 Four Jaw Chuck (Independent Chuck)</a>
+            </div>
+            <a href="#centres">5.2 Centres</a>
+            <a href="#faceplates">5.3 Faceplates</a>
+            <a href="#rests">5.4 Rests</a>
+            <div style="padding-left: 15px;">
+                <a href="#rests">5.4.1 Steady Rest</a>
+                <a href="#rests">5.4.2 Follower Rest</a>
+            </div>
+            <a href="#mandrels">5.5 Mandrels</a>
+            <a href="#dogs">5.6 Lathe Dogs</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>5.0 Work-Holding on Lathe</h2>
+        <p>On any machine tool, to carry out the machining process in an efficient manner, both the workpiece and tool must be held rigidly. This is accomplished by using jigs and fixtures. Fixtures hold the workpieces in the correct position with respect to cutter during the operation while jigs hold and guide the tool to the correct position on the workpiece. To machine a workpiece in the lathe it is necessary to secure it in somemanner to the end of the spindle, the only true requirement being that the workpiece is held in such a way as to resist deflection by the cutting forces. Work holding devices in a lathe are used either for holding the workpiece or for supporting the workpiece during machining. Few of the widely used work holding devices are explained below.</p>
+    </section>
+
+    <section id="chucks">
+        <h2>5.1 Chucks</h2>
+        <p>A chuck is a device, which is used for holding and rotating the job of shorter length during machining. A chuck is usually equipped with three or four jaws and accordingly they are classified as three-jaw chucks and four-jaw chucks. These are shown in figure below.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson5/1.jpg" alt="Different types of chucks">
+            <span class="image-caption">Figure 1: Different types of chucks</span>
+        </div>
+
+        <h3>5.1.1 Three-jaw chuck</h3>
+        <p>In a three-jaw chuck all the jaws are made to slide simultaneously by an equal amount within the slots provided on the body by rotating any one of the three pinions with the help of a handle. Figure 1(a) shows a three-jaw chuck. This is also known as a self-centering or a universal chuck. This chuck is suitable for holding round or hexagonal and other similar shaped workpieces. The gripping force of the 3-jaw chuck is less than that of the 4-jaw chuck.</p>
+        
+        
+
+        <h3>5.1.2 Four-jaw chuck</h3>
+        <p>The 4-jaw chuck is a very versatile work holding device, able to hold cylindrical as well as odd-shaped parts for machining. A four-jaw chuck is shown in Figure 1(b). In a four-jaw chuck, the jaws can be moved and adjusted independent of each other. The jaws are individually reversible to best match the shape of the workpiece. Hence, this is also known as independent jaw chuck. It can be also used for machining eccentrics by offsetting the workpiece. Its grip is more powerful than that of the 3-jaw chuck and gives better adjustment as you have control over each individual jaw.</p>
+    </section>
+
+    <section id="centres">
+        <h2>5.2 Centres</h2>
+        <p>When the length of job large and if it cannot be conveniently held in a chuck, the workpiece can be held and rotated between the headstock centre (the live centre) and the tail stock centre (the dead centre). Turning between the centres is the classic way of machining the barstock with maximum accuracy. The work can be mountedand dismounted from the lathe quickly and without loosing setup accuracy. The centre holes on workpiece mate with the points of the lathe centres. Figure 2 shows the job held between the centres.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson5/2.jpg" alt="Job being held between centres">
+            <span class="image-caption">Figure 2: Job being held between centres</span>
+        </div>
+    </section>
+
+    <section id="faceplates">
+        <h2>5.3 Faceplates</h2>
+        <p>Workpieces that cannot be accommodated in a chuck or between centres because they are asymmetrical or have a complex shape can be bolted to the faceplate either directly or indirectly via an angle plate. Bolts, clamps and dogs are used with the faceplate to hold the workpiece. Figure 3 shows a faceplate. The faceplate is directly mounted on the lathe spindle.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson5/3.jpg" alt="A face plate">
+            <span class="image-caption">Figure 3: A face plate</span>
+        </div>
+        
+    </section>
+
+    <section id="rests">
+        <h2>5.4 Rests</h2>
+        <p>A rest is used for providing additional support to long workpiece when it is machined between centres or held in a chuck. If thin and long workpieces are not supported during machining, then there is a possibility that it may bend due to self-weight or due to the cutting forces exerted by the cutting tool on the workpiece. Two types of rests are in common use; these are the steady (or fixed) and follower (or traveling) rest.The two types of rests are shown in Figure 4.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson5/4.jpg" alt="Different types of rests">
+            
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin-top: 10px;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><b>(a) Steady rest</b></div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><b>(b) Follower rest</b></div>
+            </div>
+            <span class="image-caption">Figure 4: Different types of rests</span>
+        </div>
+
+        <h3>5.4.1 Steady rest</h3>
+        <p>The steady rest is shown in Figure 4(a). This has three jaws, two on the lower base and one on the upper frame. These jaws can be adjusted radially by rotating individual screws to accommodate workpieces of different diameters. These jaws act as bearing to the workpiece surface. The steady rest is clamped to the bed at the desired position, that is, where support is necessary. Depending on the length and weight of the workpiece more than one steady rest can also be used.</p>
+
+        <h3>5.4.2 Follower rest</h3>
+        <p>The follower rest is shown in Figure 4(b). This rest is similar to steady rest but is bolted to the back end of the carriage. Unlike steady rest, which is stationary, the follower rest moves along with the carriage. The follower rest consists of a 'C' like casting having two adjustable jaws to support the workpiece.</p>
+    </section>
+
+    <section id="mandrels">
+        <h2>5.5 Mandrels</h2>
+        <p>A workpiece having a large hole in it like a pipe cannot be held firmly in a chuck, because of its reduced strength. In such cases, mandrels are used to hold the workpieces from inside. A mandrel holding a workpiece is shown in Figure 5. During machining, mandrel is held between centres and the workpiece is then machined similar to machining between centres.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson5/5.jpg" alt="A mandrel holding a hollow workpiece">
+            <span class="image-caption">Figure 5: A mandrel holding a hollow workpiece</span>
+        </div>
+        
+    </section>
+
+    <section id="dogs">
+        <h2>5.6 Lathe Dogs</h2>
+        <p>Lathe dogs are clamping devices used for holding workpiece or mandrels for turning between centres. Lathe dogs are shown in Figure 6. The part to be held is inserted in the v-shaped hole and then firmly secured in position by means of the screw. These lathe dogs can hold the workpiece of only certain range of diameters. In case of large or small size, chucks or faceplates are or other work holding devices are used.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr 1fr; gap: 10px; margin: 0;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;">
+                    <img src="images/mem/Unit5/Lesson5/6.jpg" alt="Lathe dog 1">
+                </div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;">
+                    <img src="images/mem/Unit5/Lesson5/7.jpg" alt="Lathe dog 2">
+                </div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;">
+                    <img src="images/mem/Unit5/Lesson5/8.jpg" alt="Lathe dog 3">
+                </div>
+            </div>
+            <span class="image-caption">Figure 6: Lathe dogs</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson4.html" title="Operations on Lathe">&laquo; Lecture 4</a>
+        <a href="Unit4lesson6.html" title="Shaping, Planing & Slotting Operations">Lecture 6 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

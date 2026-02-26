@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2: Metal Cutting & Cutting Tool for Lathe | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        /* Image Display Grids */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .image-grid-item {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .image-grid-item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Callout blocks for important concepts */
+        .concept-block {
+            background-color: #f0f4f8;
+            padding: 15px 20px;
+            border-left: 4px solid var(--secondary);
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 2: Metal Cutting & Cutting Tool for Lathe</h1>
+        <a href="MEM103/Unit5/Unit5Lesson2.pdf" target="_blank" class="download-link">📥 Lesson 2 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#introduction">2.0 Introduction</a>
+            <a href="#deformation">2.1 Plastic deformation in Metal cutting</a>
+            <a href="#cutting">2.2 Types of cutting</a>
+            <div style="padding-left: 15px;">
+                <a href="#cutting">2.2.1 Orthogonal cutting</a>
+                <a href="#cutting">2.2.2 Oblique cutting</a>
+            </div>
+            <a href="#tools">2.3 Types of cutting tools</a>
+            <div style="padding-left: 15px;">
+                <a href="#tools">2.3.1 Single-point cutting tool</a>
+                <a href="#tools">2.3.2 Multipoint cutting tool</a>
+            </div>
+            <a href="#conditions">2.4 Cutting conditions</a>
+            <a href="#machinability">2.5 Machinability</a>
+            <a href="#terminology">2.6 Cutting tool terminology</a>
+            <a href="#shapes">2.7 Shapes of standard cutting tool</a>
+            <a href="#properties">2.8 Properties of Cutting Tools</a>
+            <a href="#materials">2.9 Cutting tool Materials</a>
+            <a href="#effect">2.10 Effect of alloying elements</a>
+            <a href="#speed">2.11 High speed steel (HSS) toolbits</a>
+            <a href="#wear">2.12 Types of wear observed in cutting tools</a>
+            <a href="#formation">2.13 Chip Formation</a>
+            <a href="#fluids">2.14 Cutting Fluids</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>2.0 Introduction</h2>
+        <p>The process in which a thin layer of excess metal (chip) is removed by a wedge-shaped single-point or multipoint cutting tool with defined geometry from a work piece, through a process of extensive plastic deformation.</p>
+
+        <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/1.jpg" alt="Turning operation close-up">
+                <p style="font-size: 0.9rem; text-align: left;">Close-up view of a turning operation in which a thin layer of metal (chip) is removed from the work surface of a rotating work piece by a cutting tool. The newly generated surface is referred to as a machined surface. Cutting process requires both primary and feed motions.</p>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/2.jpg" alt="Metal cutting terminology">
+                <p style="font-size: 0.9rem; text-align: left;">Schematics of metal cutting process showing the basic terminology. Two basic angles in cutting tool shown for plate machining with fixed tool and moving plate.</p>
+            </div>
+        </div>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 20px;">Figure: 1</div>
+        
+    </section>
+
+    <section id="deformation">
+        <h2>2.1 Plastic deformation in Metal cutting</h2>
+        <p>The cutting itself is a process of extensive plastic deformation to form a chip that is removed afterward. The basic mechanism of chip formation is essentially the same for all machining operations. Assuming that the cutting action is continuous, we can develop so-called continuous model of cutting process shown in the figure:</p>
+
+        <div class="image-grid" style="grid-template-columns: repeat(3, 1fr);">
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/3.jpg" alt="Chip formation deformations">
+                <p style="font-size: 0.85rem; text-align: left;">Chip formation in metal cutting is accompanied by substantial shear and frictional deformations in the shear plane and along the tool face.</p>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/4.jpg" alt="2-d cutting process parameters">
+                <p style="font-size: 0.85rem; text-align: left;">2-d cutting process, d and w are the thickness (depth) of cut and width (feed) of cut respectively, c is the chip thickness, a is the tool rake angle, and F is the shear plane angle</p>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/5.jpg" alt="Positive and negative rake angles">
+                <p style="font-size: 0.85rem; text-align: left;">Cutting with positive and negative rake angles. Note the change in the shear plane angle and chip thickness shown by broken line.</p>
+            </div>
+        </div>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 20px;">Figure: 2</div>
+        [Image showing shear zone and plastic deformation in metal cutting]
+    </section>
+
+    <section id="cutting">
+        <h2>2.2 Types of cutting</h2>
+        <p>Depending on whether the stress and deformation in cutting occur in a plane (2-d case) or in the space (3-d case), we consider two principle types of cutting:</p>
+
+        <div class="concept-block">
+            <h3>2.2.1 Orthogonal cutting</h3>
+            <p>The cutting edge is straight and is set in a position that is perpendicular to the direction of primary motion. This allows us to deal with stresses and strains that act in a plane.</p>
+            
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="image-grid-item"><img src="images/mem/Unit5/Lesson2/6.jpg" alt="Orthogonal cutting view 1"></div>
+                <div class="image-grid-item"><img src="images/mem/Unit5/Lesson2/7.jpg" alt="Orthogonal cutting view 2"></div>
+            </div>
+            <div style="text-align:center; font-size: 0.9rem; color:#555;">Orthogonal cutting with a cutting tool set normally to the direction of primary motion</div>
+        </div>
+
+        <div class="concept-block">
+            <h3>2.2.2 Oblique cutting</h3>
+            <p>The cutting edge is set at an angle (the tool cutting edge inclination λs). This is the case of three-dimensional stress and strain conditions.</p>
+            
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
+                <div class="image-grid-item"><img src="images/mem/Unit5/Lesson2/8.jpg" alt="Oblique cutting view 1"></div>
+                <div class="image-grid-item"><img src="images/mem/Unit5/Lesson2/9.jpg" alt="Oblique cutting view 2"></div>
+            </div>
+            <div style="text-align:center; font-size: 0.9rem; color:#555;">Oblique cutting with a cutting tool set at the tool cutting edge inclination angle λs to the direction of primary motion.</div>
+        </div>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 20px;">Figure: 3</div>
+    </section>
+
+    <section id="tools">
+        <h2>2.3 Types of cutting tools</h2>
+        <p>Cutting tools are most important components in machining process and the efficiency of operation depends on the performance of tools. According to the number of active cutting edges engaged in cutting, we distinguish again two types of cutting:</p>
+
+        <div class="image-grid" style="grid-template-columns: 1fr 1fr;">
+            <div class="image-grid-item">
+                <h3>2.3.1 Single-point cutting tool</h3>
+                <p>Has only one major cutting edge. Examples: turning, shaping, boring.</p>
+                <img src="images/mem/Unit5/Lesson2/10.jpg" alt="Single point cutting tool">
+                <span class="image-caption">Single point cutting tool</span>
+            </div>
+            <div class="image-grid-item">
+                <h3>2.3.2 Multipoint cutting tool</h3>
+                <p>Has more than one major cutting edge. Examples: drilling, milling, broaching, reaming. Abrasive machining is by definition a process of multipoint cutting.</p>
+                <img src="images/mem/Unit5/Lesson2/11.jpg" alt="Multipoint cutting tool for milling">
+                <span class="image-caption">Multipoint cutting tool for milling</span>
+            </div>
+        </div>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 20px;">Figure: 4</div>
+    </section>
+
+    <section id="conditions">
+        <h2>2.4 Cutting conditions</h2>
+        <p>Each machining operation is characterized by cutting conditions, which comprises a set of three elements:</p>
+        
+        <ul>
+            <li><b>Cutting velocity (V)</b>: the traveling velocity of the tool relative to the work piece (speed difference between the cutting tool and the surface of the work piece). It is measured in m/s or m/min.</li>
+            <li><b>Depth of cut (d)</b>: the axial projection of the length of the active cutting tool edge, measured in mm. In orthogonal cutting it is equal to the actual width of cut.</li>
+            <li><b>Feed (f)</b>: the relative velocity of the tool at which it is advanced along the workpiece in order to process the entire surface of the work piece. In orthogonal cutting it is equal to the thickness of and is measured in mm/revolution in turning, or mm/min in milling and drilling. Feed rate units depend on the motion of the tool and workpiece; when the workpiece rotates (e.g., in turning and boring), the units are almost always distance per spindle revolution [mm/rev]). When the workpiece does not rotate (e.g., in milling), the units are typically distance per time [mm/min]).</li>
+        </ul>
+    </section>
+
+    <section id="machinability">
+        <h2>2.5 Machinability</h2>
+        <p>Machinability is a term indicating how the work material responds to the cutting process. In the most general case good machinability means that material is cut with good surface finish, long tool life, low force and power requirements, and low cost.</p>
+    </section>
+
+    <section id="terminology">
+        <h2>2.6 Cutting tool terminology</h2>
+        <p>Most of the cutting tools have three angles, i.e. rake angle, clearance angle and setting angle. A general purpose hand chisel is shown in the figure below with all these three angles. These angles are provided to make the process of cutting easier in terms of reduced friction between work and the tool, easy disposal of cut material (chip), reduced cutting forces, low wear and more tool life.</p>
+        
+        <p>The standard terminology is shown in the following figure. For single point cutting tools, the most important angles are the rake angles, end relief angle and side relief angle.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/12.jpg" alt="Oblique view of tool from cutting edge">
+            <span class="image-caption">Oblique view of tool from cutting edge: Standard terminology to describe the geometry of single-point cutting tool</span>
+            
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin-top: 20px;">
+                <div class="image-grid-item" style="grid-column: span 2; display: flex; justify-content: center; align-items: center; flex-direction: column;">
+                    <img src="images/mem/Unit5/Lesson2/13.jpg" alt="Top view" style="max-width: 50%;">
+                    <b>Top view</b>
+                </div>
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit5/Lesson2/14.jpg" alt="Side view">
+                    <b>Side view</b>
+                </div>
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit5/Lesson2/15.jpg" alt="Side shank view or front view">
+                    <b>Side shank view or front view</b>
+                </div>
+            </div>
+            <span class="image-caption">Standard terminology to describe the geometry of single-point cutting tool: (a) 3-D views of single point cutting tool. Figure: 5</span>
+        </div>
+        
+
+        <p>The actual geometry varies with the type of work to be done.</p>
+
+        <ul>
+            <li><b>Cutting edge</b>: The cutting edge is the part of the tool bit that actually cuts into the work piece, located behind the nose and adjacent to the side and face.</li>
+            <li><b>Shank</b>: The shank is the main body of the tool bit. Shank is held in tool holder.</li>
+            <li><b>Nose</b>: Tip of cutting tool formed by junction of cutting edge and front face. The nose radius is the rounded end of the tool bit. Finishing of process depends on nose radius.</li>
+            <li><b>Face</b>: The face is the top surface of the tool bit upon which the chips slide as they separate from the work piece.</li>
+            <li><b>Flank</b>: The flank of the tool is the surface just below and adjacent to the cutting edge.</li>
+            <li><b>Base</b>: The base is the bottom surface of the tool bit, which usually is ground flat during tool bit manufacturing.</li>
+            <li><b>Heel</b>: The heel is the portion of the tool bit base immediately below and supporting the face.</li>
+            <li><b>Point</b>: End of tool that has been ground for cutting purposes.</li>
+        </ul>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/16.jpg" alt="Sample shape and dimensions of lathe single point cutting tool">
+            <span class="image-caption">Figure 6: Sample shape and dimensions of lathe single point cutting tool</span>
+        </div>
+
+        <p><b>Side rake angle</b>: If viewed behind the tool down the length of the toolholder, it is the angle formed by the face of the tool and the centerline of the workpiece. A positive side rake angle tilts the tool face down toward the floor, and a negative angle tilts the face up and toward the workpiece.</p>
+
+        <div class="concept-block">
+            <b>Note:</b><br>
+            <b>Negative angle</b>: If the cutting edge of the tool is ahead of the perpendicular, the angle is, by definition, negative.<br>
+            <b>Positive angle</b>: If the leading edge of the blade is behind the perpendicular, the angle is by definition, positive.
+        </div>
+
+        <div class="image-grid" style="grid-template-columns: repeat(4, 1fr);">
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/17.jpg" alt="Positive side rake angle">
+                <span style="font-size: 0.85rem;">Positive side rake angle</span>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/18.jpg" alt="Negative side rake angle">
+                <span style="font-size: 0.85rem;">Negative side rake angle</span>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/19.jpg" alt="Positive back rake angle">
+                <span style="font-size: 0.85rem;">Positive back rake angle (top face slopes downward away from point)</span>
+            </div>
+            <div class="image-grid-item">
+                <img src="images/mem/Unit5/Lesson2/20.jpg" alt="Negative back rake angle">
+                <span style="font-size: 0.85rem;">Negative back rake angle (top face slopes upward away from point)</span>
+            </div>
+        </div>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 20px;">Figure: 7</div>
+
+        <p><b>Back rake angle</b>: If viewed from the side facing the end of the workpiece, it is the angle formed by the face of the tool and a line parallel to the floor. A positive back rake angle tilts the tool face back, and a negative angle tilts it forward and up.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/21.jpg" alt="Back rake angle">
+            <span class="image-caption">Figure: 8</span>
+        </div>
+
+        <ul>
+            <li><b>End cutting edge angle</b>: If viewed from above looking down on the cutting tool, it is the angle formed by the end flank of the tool and a line parallel to the workpiece centerline. Increasing the end cutting edge angle tilts the far end of the cutting edge away from the workpiece.</li>
+            <li><b>End relief angle</b>: If viewed from the side facing the end of the workpiece, it is the angle formed by the end flank of the tool and a vertical line down to the floor. Increasing the end relief angle tilts the end flank away from the workpiece.</li>
+            <li><b>Side cutting edge angle</b>: If viewed from above looking down on the cutting tool, it is the angle formed by the side flank of the tool and a line perpendicular to the workpiece centerline. A positive side cutting edge angle moves the side flank into the cut, and a negative angle moves the side flank out of the cut.</li>
+            <li><b>Side relief angle</b>: If viewed behind the tool down the length of the toolholder, it is the angle formed by the side flank of the tool and a vertical line down to the floor. Increasing the side relief angle tilts the side flank away from the workpiece. Permits side of tool to advance into work.</li>
+            <li><b>Angle of keenness</b>: Formed by side rake and side clearance.</li>
+        </ul>
+
+        <h4>Functions of rake angle</h4>
+        <ol>
+            <li>The strength of the cutting tool depends on rake angle.</li>
+            <li>Allows the chip being cut to flow out.</li>
+            <li>Changing the rake changes the power used in cutting and the heat generated.</li>
+            <li>Positive (large) rake may be used for soft ductile materials. Positive rake angles improve the cutting operation with regard to forces and deflection; however, a high positive rake angle may result in early failure of the cutting edge. Positive rake angles are generally used in lower-strength materials. It reduces friction and heat. Allows chip to flow freely along chip tool interface.</li>
+            <li>Negative (or small) rake may be used for higher-strength, hard, brittle materials. It has more cross sectional area for resisting the cutting forces. Strength of the tool is maximum when rake angle is negative.</li>
+            <li>Back rake usually controls the direction of chip flow and is of less importance than the side rake.</li>
+        </ol>
+
+        <h4>Functions of side cutting angle</h4>
+        <ol>
+            <li>The side cutting-edge angle influences the length of chip contact and the true feed.</li>
+            <li>Small end cutting-edge angles may create excessive force normal to the workpiece.</li>
+            <li>The greater the angle, the more tool deflection and weakens the tool point.</li>
+            <li>The smaller the angle, the bigger the chip and more the tool will wear.</li>
+        </ol>
+
+        <h4>Functions of clearance angle</h4>
+        <ol>
+            <li>The purpose of relief angles is to avoid interference and rubbing between the workpiece and tool flank surfaces, i.e. it ensures only the cutting edge of the tool touches the work</li>
+            <li>Too much clearance angle weakens the tool and causes chatter</li>
+            <li>In general, they should be small for high-strength materials and larger for softer materials.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/29.jpg" alt="Cutting tool in action">
+            <span class="image-caption">Figure 9: Cutting tool in action. Effect of clearance and relief angles can be observed</span>
+        </div>
+
+        <h4>Functions of nose radius</h4>
+        <ol>
+            <li>The purpose of the nose radius is to give a smooth surface finish and to obtain longer tool life by increasing the strength of the cutting edge.</li>
+            <li>A large nose radius gives a stronger tool and may be used for roughing cuts; however, large radii may lead to tool chatter and more power requirement.</li>
+            <li>The nose radius should be tangent to the cutting-edge angles.</li>
+            <li>A small nose radius reduces forces and is therefore preferred on thin or slender workpieces.</li>
+        </ol>
+
+        <h4>Factors for choosing type and rake angle for cutting tool</h4>
+        <ol>
+            <li>Hardness of metal to be cut</li>
+            <li>Type of cutting operation, i.e. continuous or interrupted</li>
+            <li>Material and shape of cutting tool</li>
+            <li>Strength of cutting edge</li>
+        </ol>
+    </section>
+
+    <section id="shapes">
+        <h2>2.7 Shapes of standard cutting tool</h2>
+        <p>With respect to direction of feed, single point cutting tools may be classified as either left hand or right hand, depending on their cutting edge on the specified side and will cut when moved from left to right or right to left.</p>
+
+        <p>In <b>right hand cutting tool</b> the side cutting edge is on the side of the thumb when the right hand is placed on the tool with the hand fingers pointing towards the tool nose. Right hand tool cuts from right to left.</p>
+
+        <p>In <b>left hand cutting tool</b> the side cutting edge is on the thumb side when the left hand is placed on the tool. Left hand cutting tools are designed to cut best when traveling from left to right.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/22.jpg" alt="Cutting tool shape 1" style="display:inline; margin: 5px;">
+            <img src="images/mem/Unit5/Lesson2/23.jpg" alt="Cutting tool shape 2" style="display:inline; margin: 5px;">
+            <br>
+            <img src="images/mem/Unit5/Lesson2/24.jpg" alt="Cutting tool shape 3" style="margin-top: 10px;">
+            <span class="image-caption">Lathe tools are usually shaped by the machinist using a grinding wheel<br>Figure: 10</span>
+        </div>
+
+        <p>Facing tools are ground to provide clearance with a center.</p>
+        <p>Roughing tools have a small side relief angle to leave more material to support the cutting edge during deep cuts.</p>
+        <p>Finishing tools have a more rounded nose to provide a finer finish. They have no back or side rake to permit cutting in either direction.</p>
+    </section>
+
+    <section id="properties">
+        <h2>2.8 Properties of Cutting Tools</h2>
+        <p>A wide variety of cutting-tool materials are available. The selection of a proper material depends on such factors as the cutting operation involved, the machine to be used, the work piece material, production requirements, cost, and surface finish and accuracy desired.</p>
+
+        <p>Cutting tools are subjected to abrasion, high temperature and contact stresses. Therefore, major qualities (properties) required in a cutting tool are (See Table 1):</p>
+        <ol>
+            <li>hard</li>
+            <li>hot hardness, ability of cutting tool to maintain sharp cutting edge even when turns red because of high heat during cutting</li>
+            <li>resistance to mechanical impact and thermal shock,</li>
+            <li>wear resistance, and</li>
+            <li>chemical stability and inertness to the workpiece material being machined.</li>
+            <li>Shaped so edge can penetrate work</li>
+        </ol>
+    </section>
+
+    <section id="materials">
+        <h2>2.9 Cutting tool Materials</h2>
+        <p>Lathe toolbits generally made of five materials</p>
+        <ol type="a">
+            <li>High-speed steel</li>
+            <li>Cast alloys (such as stellite)</li>
+            <li>Cemented carbides</li>
+            <li>Ceramics</li>
+            <li>Cermets</li>
+            <li>More exotic finding wide use</li>
+            <li>Borazon and polycrystalline diamond</li>
+        </ol>
+    </section>
+
+    <section id="effect">
+        <h2>2.10 Effect of alloying elements</h2>
+        <p>Understanding the different types of tool steels requires knowledge of the role of different alloying elements. These elements are added to:</p>
+        <ol>
+            <li>obtain greater hardness and wear resistance,</li>
+            <li>obtain greater impact toughness,</li>
+            <li>impart hot hardness to the steel such that its hardness is maintained at high cutting temperatures, and</li>
+            <li>decrease distortion and warpage during heat treating.</li>
+        </ol>
+    </section>
+
+    <section id="speed">
+        <h2>2.11 High speed steel (HSS) toolbits</h2>
+        <ol type="a">
+            <li>May contain combinations of tungsten, chromium, vanadium, molybdenum, cobalt</li>
+            <li>Can take heavy cuts, withstand shock and maintain sharp cutting edge under red heat</li>
+            <li>Generally two types (general purpose)
+                <ul>
+                    <li>Molybdenum-base (Group M)</li>
+                    <li>Tungsten-base (Group T)</li>
+                </ul>
+            </li>
+        </ol>
+        <p>Cobalt added if more red hardness desired</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/25.jpg" alt="Characteristics of Cutting-Tool Materials">
+            <span class="image-caption">Figure 11: Characteristics of Cutting-Tool Materials</span>
+        </div>
+    </section>
+
+    <section id="wear">
+        <h2>2.12 Types of wear observed in cutting tools</h2>
+        <p><b>Crater wear</b>: consists of a concave section on the tool face formed by the action of the chip sliding on the surface.</p>
+        <p><b>Flank wear</b>: occurs on the tool flank as a result of friction between the machined surface of the workpiece and the tool flank.</p>
+        <p><b>Corner wear (nose wear)</b>: occurs on the tool corner. Can be considered as a part of the wear land and respectively flank wear since there is no distinguished boundary between the corner wear and flank wear land.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/26.jpg" alt="Types of wear observed in cutting tools">
+            <span class="image-caption">Figure 12: Types of wear observed in cutting tools</span>
+        </div>
+        
+    </section>
+
+    <section id="formation">
+        <h2>2.13 Chip Formation</h2>
+        <p><b>There are three types of chips that are commonly produced in cutting</b></p>
+        <ol type="i">
+            <li>discontinuous chips</li>
+            <li>continuous chips</li>
+            <li>continuous chips with built up edge</li>
+        </ol>
+
+        <p><b>A discontinuous chip comes off as small chunks or particles. When we get this chip it may indicate</b></p>
+        <ol>
+            <li>brittle work material</li>
+            <li>small or negative rake angles</li>
+            <li>coarse feeds and low speeds</li>
+        </ol>
+
+        <p><b>A continuous chip looks like a long ribbon with a smooth shining surface. This chip type may indicate</b></p>
+        <ol>
+            <li>ductile work materials</li>
+            <li>large positive rake angles</li>
+            <li>fine feeds and high speeds</li>
+        </ol>
+
+        <p>Continuous chips with a built up edge still look like a long ribbon, but the surface is no longer smooth and shining.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/27.jpg" alt="Types of chips">
+            <span class="image-caption">Figure: 13</span>
+        </div>
+        
+
+        <p><b>Discontinuous chips are generally desired because they</b>:</p>
+        <ol>
+            <li>are less dangerous for the operator</li>
+            <li>do not cause damage to workpiece surface and machine tool</li>
+            <li>can be easily removed from the work zone</li>
+            <li>can be easily handled and disposed after machining.</li>
+        </ol>
+
+        <p><b>There are three principle methods to produce the favourable discontinuous chip</b>:</p>
+        <ol type="i">
+            <li>proper selection of cutting conditions</li>
+            <li>use of chip breakers</li>
+            <li>change in the work material properties</li>
+        </ol>
+    </section>
+
+    <section id="fluids">
+        <h2>2.14 Cutting Fluids</h2>
+        <p>Cutting fluids, frequently referred to as lubricants or coolants, comprise those liquids and gases which are applied to the cutting zone in order to facilitate the cutting operation. A cutting fluid is used:</p>
+        <ol>
+            <li>to keep the tool cool and prevent it from being heated to a temperature at which the hardness and resistance to abrasion are reduced;</li>
+            <li>to keep the workpiece cool, thus preventing it from being machined in a warped shape to inaccurate final dimensions;</li>
+            <li>through lubrication to reduce friction and power consumption, wear on the tool, and generation of heat;</li>
+            <li>to provide a good finish on the workpiece;</li>
+            <li>to aid in providing a satisfactory chip formation;</li>
+            <li>to wash away the chips (this is particularly desirable in deep-hole drilling, hacksawing, milling, and grinding); and</li>
+            <li>to prevent corrosion of the workpiece and machine tool.</li>
+        </ol>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson2/28.jpg" alt="Application of cutting fluid during machining">
+            <span class="image-caption">Figure 14: Application of cutting fluid during machining</span>
+        </div>
+        [Image showing application of cutting fluid during turning operation]
+
+        <p><b>Classification of cutting fluids</b><br>
+        Cutting fluids may be classified as follows:<br>
+        (1) emulsions,<br>
+        (2) oils, and<br>
+        (3) solutions (semisynthetics and synthetics).</p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson1.html" title="Lathe">&laquo; Lecture 1</a>
+        <a href="Unit4lesson3.html" title="Operating conditions on Lathe">Lecture 3 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
+

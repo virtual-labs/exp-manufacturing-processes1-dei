@@ -1,0 +1,512 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 6: Shaping, Planing & Slotting Operations | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .formula-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 4px;
+            border: 1px dashed var(--border);
+        }
+
+        .formula-container img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        .equation-text {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: var(--indigo-light);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Example Problem Block */
+        .example-block {
+            background-color: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .example-block b {
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .solution-math {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+
+        /* QA Section */
+        .qa-section {
+            margin-top: 40px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+        }
+
+        .qa-section ol { padding-left: 20px; }
+        .qa-section li { margin-bottom: 10px; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 6: Shaping, Planing & Slotting Operations</h1>
+        <a href="MEM103/Unit5/Unit5Lesson6.pdf" target="_blank" class="download-link">📥 Lesson 6 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#introduction">6.0 Introduction</a>
+            <a href="#shaper">6.1 Shaper</a>
+            <a href="#shaping">6.2 Shaping operation</a>
+            <a href="#conditions">6.3 Operating Conditions in shaping Machine</a>
+            <div style="padding-left: 15px;">
+                <a href="#conditions">6.3.1 Cutting speed</a>
+                <a href="#conditions">6.3.2 Feed</a>
+                <a href="#conditions">6.3.3 Depth of cut</a>
+                <a href="#conditions">6.3.4 Machining time</a>
+                <a href="#conditions">6.3.5 Material removal rate</a>
+            </div>
+            <a href="#planer">6.4 Planer</a>
+            <a href="#operation">6.5 Planing operation</a>
+            <a href="#operating">6.6 Operating Conditions in Planers</a>
+            <div style="padding-left: 15px;">
+                <a href="#operating">6.6.1 Cutting speed</a>
+                <a href="#operating">6.6.2 Feed</a>
+                <a href="#operating">6.6.3 Depth of cut</a>
+            </div>
+            <a href="#size">6.7 Size of shaper and planer</a>
+            <a href="#difference">6.8 Difference between shaper and planer</a>
+            <a href="#machine">6.9 Slotting Machine</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>6.0 Shaping, Planing & Slotting operations</h2>
+        <p>In the lessons 1-5, we have studied about rotary type of machine tool i.e. during the process of cutting the job rotates (as in case of lathe) and the tool is stationary. In this lesson, we are going to study about production of flat (or plane) surfaces using reciprocating type of machine tools. In these types of machines, either the tool or the workpiece will be reciprocating while the other is held stationary.Shaping, planing and slotting are process that can be defined as the process of removing metal from a surface in horizontal, vertical and inclined position to produce a flat or plane surface, slots, grooves etc. by means of a relative reciprocating motion between the tool and workpiece. (Figure-1)</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/1.jpg" alt="Process of producing a flat surface">
+            <span class="image-caption">Figure 1: Process of producing a flat surface</span>
+        </div>
+
+        <p>Planing, shaping and slotting are similar operations, which differ in the kinematics of the process. Planing is a machining operation in which the primary cutting motion is performed by the workpiece and feed motion is imparted to the cutting tool. In shaping and slotting, the primary motion is performed by the tool, and feed by the workpiece. The tool reciprocateshorizontally in shaping and vertically in slotting. The cutting is intermittent in all the three processes because in the relative reciprocating motion the tool cuts only in the forwardworking (or cutting) stroke followed by the idle-return stroke. Typical components manufactured on shapers and planers are shown in Figure 2.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/2.jpg" alt="Typical components manufactured by shaping process">
+            <span class="image-caption">Figure 2: Typical components manufactured by shaping process</span>
+        </div>
+    </section>
+
+    <section id="shaper">
+        <h2>6.1 Shaper</h2>
+        <p>Shaper is designed for machining flat surfaces on small sized jobs. If the size of the job is large then planing is used. In a shaper the workpiece is held stationary during cutting, while the tool reciprocates horizontally. The feed and depth of cut are, normally, provided by moving the work. Such a shaper is called a horizontal shaper. A typical horizontal shaper with its main parts is shown in Figure 3.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/3.jpg" alt="A horizontal shaper showing its main parts">
+            <span class="image-caption">Figure 3: A horizontal shaper showing its main parts and the relationship of the crank rpm Ns to the cutting velocity V</span>
+        </div>
+
+        <p>A horizontal shaper consists of a base and frame that support a horizontal ram. The column of the shaper houses the drive mechanisms for the ram and the table. The ram is given a reciprocating motion equal to the length of the stroke. The ram carries the toolhead at its front end and travels in guideways to give straight line reciprocating motion of the tool. The toolhead holds the cutting tool. The toolhead at the end of the ram can be swiveled throughdesired angle and is provided with a slide to move the tool to provide depth of cut or manual feed motion to the tool. The tool is held in a tool holder also called tool post, which is similar to the lathe tool post. The tool holder is fixed to the ram with a clapper box, which is pivoted at the upper end such that it flips up (or lifts up) on the return stroke, lifting the tool so that thetool does not dig into the workpiece. The worktable is supported on a crossrail in the front of the column of shaper and can be moved vertically and horizontally. The table moves across the column on crossrails to give the horizontal motion to the job and moves along the column, by the elevating screw, to give the vertical motion to the job.</p>
+        
+        
+    </section>
+
+    <section id="shaping">
+        <h2>6.2 Shaping Operation</h2>
+        <p>The workpiece is mounted on the table and length of stroke of the ram is adjusted based on the length of the workpiece. The reciprocating single point tool is mounted such that it cuts the metal when the ram (or tool) is moving out of the column till the end of stroke is reached. This is known as the cutting stroke. At the end of stroke ram stops moving forward and startsmoving back into the column. During the return of tool, the wrong side of the sharp edge (flank) comes in contact with the workpiece and cannot do the cutting. This stroke is called return stroke. At the end of return stroke, the cycle starts again.</p>
+
+        <p>Shapers are provided by a quick return mechanism, figure 3b, for driving the ram, which makes the return stroke is made faster, that is, ram is made to travel at faster speed during return stroke. This means per cycle of ram more time would be spent in cutting and less time in idle stroke. The cutting action in a shaper is shown in Figure 4(a).</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/4.jpg" alt="The cutting action and functioning of clapper box in a shaper" style="max-width: 900px;">
+            <span class="image-caption">Figure 4: The cutting action and functioning of clapper box in a shaper. Also various tools positions are shown various machined surfaces to be obtained</span>
+        </div>
+
+        <p>The toolhead of a shaper or planer has a slide, which has a clapper box and a tool holder. The toolhead and the tool holder both can be swiveled independently to any desired angle for machining horizontal, vertical and inclined surfaces. The clapper box is provided to avoid the rubbing of the tool with the workpiece surface during the return stroke. The clapper box makes it possible for the tool to lift up from the workpiece surface and deflect away from the workpiece surface, as shown in Figure 4(b).</p>
+    </section>
+
+    <section id="conditions">
+        <h2>6.3 Operating conditions in shaping machine</h2>
+        
+        <h3>6.3.1 Cutting Speed</h3>
+        <p>Cutting speed on shapers is defined as the average linear speed of the tool during the cutting stroke in m/min, which depends on the number of ram strokes (or ram cycles) per minute and the length of the stroke. A ratio of return stroke to cutting stroke time of 2:3 implies that the tool is working three-fifths of the time and the return stroke takes two-fifths of the time. This return-to-cutting time ratio m is a machine constant. The cutting speed v is determined by using the formula:</p>
+
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson6/f1.jpg" alt="Formula for cutting speed"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+        </div>
+
+        <p>where<br/>
+        N = the number of double strokes or cycles of the ram/min (one double or full stroke comprises of one cutting and one return stroke),<br/>
+        L = Length of the ram stroke, in mm,<br/>
+        m = return stroke time/cutting stroke time.</p>
+
+        <p>The ram at each end of the stroke has to come to rest (zero speed) and start moving again. It takes finite time (and distance) to attain the desired cutting speed. The distance required to attain the speed (and come to rest) is called clearance. Clearance, job length and stroke length are shown in Figure 5. The clearance is a must in shaping and allied processes unlike approach and overtravel in other metal cutting processes. Hence, for a job of length L<sub>j</sub> a stroke length of L is used with clearance c on both sides of job, where</p>
+        
+        <div class="equation-text">L = L<sub>j</sub> + 2 x c &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)</div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/5.jpg" alt="Length of stroke and length of workpiece">
+            <span class="image-caption">Figure 5: Length of stroke and length of workpiece</span>
+        </div>
+
+        <h3>6.3.2 Feed</h3>
+        <p>Feed f is the relative motion of the workpiece in a direction perpendicular to the axis of reciprocation of the ram. In shaper, feed is given to the workpiece. Feed is expressed in mm/double stroke or simply mm/stroke because no cutting is done in return stroke.</p>
+
+        <h3>6.3.3 Depth of Cut</h3>
+        <p>Depth of cut d is the thickness of the material removed in one cut, in mm. Depth of cut may be given by the toolhead slide or by lifting the table.</p>
+
+        <h3>6.3.4 Machining time</h3>
+        <p>From the cutting speed, we can find that the time required to complete one double stroke is given by</p>
+
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson6/f2.jpg" alt="Formula for machining time"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)
+        </div>
+
+        <p>With a feed of f mm/double stroke, number of double strokes required to machine a surface of width w will be</p>
+        
+        <div class="equation-text">N<sub>s</sub> = w/f &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(4)</div>
+
+        <p>Hence, total time for machining the surface will be</p>
+        
+        <div class="equation-text">T = L x w x (1+m) / (1000 x v x f) min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(5)</div>
+
+        <p>or, in terms of ram strokes N, the time for machining surface is given by</p>
+        
+        <div class="equation-text">T = w / (f x N) min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(6)</div>
+
+        <h3>6.3.5 Material Removal Rate</h3>
+        <p>Material removal rate (MRR) in a shaping machine is given by the formula</p>
+        
+        <div class="equation-text">MRR = f x d x N x L(1+ m) mm<sup>3</sup> /min &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(7)</div>
+        
+        <p>where d is depth of cut in mm; f in mm/stroke; N in strokes/min; and L is length of stroke in mm.</p>
+    </section>
+
+    <section id="planer">
+        <h2>6.4 Planer</h2>
+        <p>The planer (Figure 6) is a machine tool produces flat surfaces in horizontal, vertical or inclined surfaces. In planers the workpiece reciprocates past one or more stationary single point cutting tools. Planers are meant for machining large size workpieces, which cannot be machined by shaping machines. In addition to machining large parts, it is also possible tomount many small parts in line on the table of planer and machine them simultaneously. Planer consists of a large bed on which a table slides back and forth. Two vertical housings are located near the center of the bed. The horizontal crossrail is supported on the vertical housings. Both the crossrails and each of the housings are equipped with guideways so thatsliding motion may be obtained in both the vertical and horizontal directions. Since the crossrail is supported at both the ends this type of planer is rigid in construction. This permits double housing planers to take heavy cuts. In most cases, two toolheads are mounted on thehorizontal crossrail and one on each of the vertical housings. Toolheads may be swiveled so that angular cuts can be made. The tools can be fed in the workpiece manually or operated by power.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/6.jpg" alt="A double housing planer 1" style="display:inline; margin-right: 10px;">
+            <img src="images/mem/Unit5/Lesson6/7.jpg" alt="A double housing planer 2" style="display:inline;">
+            <span class="image-caption">Figure 6: A double housing planer</span>
+        </div>
+    </section>
+
+    <section id="operation">
+        <h2>6.5 Planing Operation</h2>
+        <p>The workpiece is clamped onto a planer table with the help of special bolts that fit in the Tslots of the table, and provide a means for positioning and securely holding the workpiece. he table rides over V-grooves on the bed of the planer and is accurately guided as it travels back and forth. Cutting tools are securely held in toolheads mounted on the housing and canbe moved vertically or horizontally from side to side. The toolheads are also mounted on a horizontal cross rail that can be moved up and down. Use of multiple toolheads permits simultaneous machining of more than one surface of the workpiece and increases productivity.</p>
+    </section>
+
+    <section id="operating">
+        <h2>6.6 Operating conditions in planers</h2>
+        <p><b>6.6.1 Cutting speed</b>: Similar to a shaper, the cutting speed in planing is the average linear speed of the table during the cutting stroke in m/min because in planers the tablereciprocates. Formula for calculating the cutting speed is the same as that used in case of shaping machines except that N refers to the table strokes per minute and L is length of table stroke.</p>
+        <p><b>6.6.2 Feed</b>: The feed in a planing machine is the distance the tool travels at the beginning of each cutting stroke and is expressed in mm/double stroke.</p>
+        <p><b>6.6.3 Depth of cut</b>: It is the thickness of metal removed in one cut, and is measured by the perpendicular distance between the machined and non-machined surfaces and is expressed in mm.<br/>
+        The machining time and MRR in planing operations can be calculated by using the formula given by Equations (5), (6) and (7), with changed meanings of terminology discussed. If multipletools cut a workpiece simultaneously, the total cutting time will not cumulate but MRR of each tool should be added to get total MRR.</p>
+    </section>
+
+    <section id="size">
+        <h2>6.7 Size of shaper and planer</h2>
+        <p>The size of the shaper or planer is specified by the maximum length of the stroke. Because the maximum length of the stroke determines the maximum size (length) of the surface, which can be, machined on the shaper or planer. The normal maximum stroke length of shaper is 800 mm.</p>
+        <p>For planers, the size is also specified by the size of the largest rectangular solid that can be machined on the planer. The width of the largest solid is limited by the distance between the two housings and the maximum height is determined by the distance between top of the table and the cross rail in its uppermost position.</p>
+    </section>
+
+    <section id="difference">
+        <h2>6.8 Difference between shaper and planer</h2>
+        <p>Shapers and planers are meant for producing flat surfaces and there is overlap in their application. They differ greatly in construction and in the method of operation. Following are the main differences between shaper and planer.</p>
+        <ol>
+            <li>In a planer, the workpiece is mounted on table, which reciprocates while the tool is held stationary. In a shaper, the tool reciprocates and the workpiece is stationary.</li>
+            <li>Planers are machines designed for holding big workpieces, which are too big for a shaper. Many small workpieces can be machined on a planer by clamping them together on the planer table, whereas shapers are intended for processing small workpieces one by one.</li>
+            <li>Cutting and return speed of a planer are almost uniform throughout the stroke. But, in the shaping machine the speed varies throughout the length of the stroke.</li>
+            <li>Planers are heavier, rigid, larger and costlier compared to shaper.</li>
+            <li>Planers are used for mass production of small size components whereas shapers are used for batch or job shop production.</li>
+        </ol>
+    </section>
+
+    <section id="machine">
+        <h2>6.9 Slotting Machine</h2>
+        <p>Slotting machine (slotter) (Figure 7) is like a vertical shaping machine. Slotting machine is usually used for cutting internal flat surfaces such as keyways in the holes of pulleys, gears etc. It can also be used for machining small internal cylindrical surfaces.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson6/8.jpg" alt="Slotting machine and a slot produced">
+            <span class="image-caption">Figure 7: Slotting machine and a slot produced by slotting machine</span>
+        </div>
+
+        <p>The slotting machine consists of a bed, which is rigidly built to take up all the cutting forces, a vertical column whose front face has guide ways for the reciprocatory ram. The workpiece is mounted over the table, which can be moved in horizontal plane by two perpendicular cross slides. The ram supports toolhead to which tool is attached. Machining of the workpiece inslotting machine is very much similar to that of shaping machine except for the difference that the tool reciprocates in vertical direction. By combining cross, longitudinal and rotary feed movements of the table even complex contours can be machined. The size and operating conditions of the slotting machine is defined in the same way as that of shaping and planing machines.</p>
+        
+        
+
+        <div class="example-block">
+            <p><b>Example 1</b>: Find the machining time required for maching the surface 600 x 800 mm, on a shaping machine. Assume, cutting speed as 8 m/min. The return to cutting time ratio is 1:4, and the feed is 2 mm/double stroke. The clearance at each end is 70 mm.</p>
+            <p><b>Solution</b>:<br/>
+            Given data: </p>
+            <div class="solution-math">
+                L<sub>j</sub> = 600 mm, w = 800 mm, v = 8 m/min., m = &frac14;,<br/>
+                f = 2 mm/stroke, and c = 70 mm.
+            </div>
+            <p>Given clearance at each end is 75 mm; hence, length of stroke will be, from Equation (2)</p>
+            <div class="solution-math">L = 600 + 2 x 70 = 740 mm</div>
+            <p>Substituting all the values in Equation (5), we get</p>
+            <div class="solution-math">
+                T = 740 x 800 x (1 + 0.25) / (1000 x 8 x 2)<br/>
+                = 46.25 minutes
+            </div>
+            <p>Note that in the above computation of machining time on shaper it is assumed that the shaper can operate at any desired number of strokes per minute, even fractional values. On actual shapers, normally, only finite and integer values of strokes per minute will be available. In such a situation, we should first calculate the required strokes per minute according to specified maximum cutting speed and than use the nearest (lower) strokes per minute available to compute machining time. This is illustrated in next example.</p>
+        </div>
+
+        <div class="example-block">
+            <p><b>Example 2</b>: Estimate the time required to machine a cast iron surface 250 mm long and 150 mm wide on a shaper with cutting-to-return ratio of 3/2. Use a cutting speed of 21 m/min, a feed of 2 mm/stroke and a clearance of 25 mm. The available ram strokes on the shaper are: 28, 40, 60 and 90 strokes/min. Also, determine MRR assuming depth of cut as 4 mm.</p>
+            <p><b>Solution</b>:<br/>
+            Given data:</p>
+            <div class="solution-math">
+                L<sub>j</sub> = 250 mm, f = 2 mm/double stroke, w = 150 mm,<br/>
+                c = 25 mm, v = 21 m/min, d = 4 mm
+            </div>
+            <p>The cutting-to-return ratio of 3/2 gives m = 2/3<br/>
+            Given clearance is 25 mm, hence,</p>
+            <div class="solution-math">L = 250 + 2 x 25 = 300 mm.</div>
+            <p>We know that (Equation (1))</p>
+            <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+                <img src="images/mem/Unit5/Lesson6/f3.jpg" alt="Formula for calculating N">
+            </div>
+            <p>From the above equation, we find number of double strokes N per minute required as</p>
+            <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+                <img src="images/mem/Unit5/Lesson6/f4.jpg" alt="Calculation for N">
+            </div>
+            <p>Nearest available ram strokes is 40 strokes/min. Since calculated value is more than 40, this is chosen. Normally, we should not exceed the specified cutting speed, as it will affect the tool life adversely. Hence, select N = 40 strokes/min.<br/>
+            With a chosen value of N, we cannot use Equation (5) for time calculation. Hence, substituting all the values in Equation (6), we get</p>
+            <div class="solution-math">
+                t<sub>s</sub> = 150 / (40 x 2)<br/>
+                = 1.88 minutes
+            </div>
+            <p>From Equation (7), we calculate the MRR as</p>
+            <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+                <img src="images/mem/Unit5/Lesson6/f5.jpg" alt="Calculation for MRR">
+            </div>
+        </div>
+
+        <div class="example-block">
+            <p><b>Example 3</b>: It is required to machine a keyway on 1000 parts as shown in Figure 8 by using shaping machine. Calculate the total machining cost. Use the following data.<br/>
+            Cutting speed = 8 m/min,<br/>
+            Return to cutting time ratio as 1:2,<br/>
+            Feed = 3 mm/double stroke,<br/>
+            Clearance at each end = 20 mm,<br/>
+            Maximum depth of cut = 2 mm,<br/>
+            Machining cost = Rs. 500/hr.<br/>
+            Neglect time for setup, moving, waiting and material handling.</p>
+            
+            <div class="image-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+                <img src="images/mem/Unit5/Lesson6/9.jpg" alt="Figure for example 3">
+                <span class="image-caption">Figure 8: Figure for example 3</span>
+            </div>
+            
+            <p><b>Solution</b>:<br/>
+            Given L<sub>j</sub> = 80 mm, c = 20 mm, w = 10 mm, v = 8 m/min,</p>
+            <div class="solution-math">
+                f = 3 mm/double stroke, m = 0.5<br/>
+                Length of stroke = L = 80 + 2 x 20 = 120 mm.<br/>
+                Time required for shaping, T = L x w (1 + m) / (1000 x v x f)<br/>
+                =120 x 10 x (1 + 0.5) / (1000 x 8 x 3)<br/>
+                = 0.075 minute
+            </div>
+            <p>It is given that maximum depth of cut possible is 2 mm. Depth of keyway is 5 mm.<br/>
+            Hence, total number of passes required will be 3.<br/>
+            Hence, time for one workpiece = 0.075 x 3 = 0.225 min.<br/>
+            Time for manufacturing 1000 workpiece = 0.225 x 1000 = 225 min.<br/>
+            Cost of machining = (500 x 225)/60 = Rs. 1875/-</p>
+        </div>
+
+        <div class="qa-section">
+            <h3>REVIEW QUESTIONS</h3>
+            <ol>
+                <li>What type of surfaces can be produced on shaper and planer?</li>
+                <li>How is the feed obtained on a shaper? On a planer? And on a Slotter?</li>
+                <li>For what type of work vertical shapers are used.</li>
+                <li>Would you recommend the use of carbide tools on shapers or planers? Justify your answer.</li>
+                <li>While machining inclined surface on a shaping machine, what happens if the clapper box is swiveled in the direction of workpiece?</li>
+                <li>Is it true that tools used in shaper, planer and slotter be more tough as compared to lathe tools? If so why?</li>
+                <li>It is required to do the mass production of small size flat workpieces. Suggest a suitable machine tool and justify your answer.</li>
+                <li>What is unique about planing machine when compared to shaping machine?</li>
+                <li>Explain how T-slots are machined?</li>
+                <li>What is the purpose of employing approach and overtravel distance in shaping and planing operations?</li>
+                <li>Is it possible to give feed to the table in vertical direction in shaping machine? Justify your answer.</li>
+                <li>Can we use shapers and planers for mass production? Justify your answer.</li>
+                <li>Explain why it is difficult to produce curved surfaces using shaping machine.</li>
+                <li>What advantages a double housing planers have when compared to open housing planers.</li>
+                <li>What are the differences in planing and shaping operations and their applications?</li>
+                <li>How do you specify the size of a shaping, planing and slotting machines?</li>
+                <li>Can we use turning tool for carrying out operations on shaping and planning machines?</li>
+                <li>In a shaper work, the length of the stroke is 200 mm, the number of double strokes/min is 30 and the ratio of return time to cutting time is 2:3. Find the cutting speed.<br/>
+                [Ans.: 10 m/min]</li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson5.html" title="Work-Holding devices used on Lathe">&laquo; Lecture 5</a>
+        <a href="Unit4lesson7.html" title="Drilling">Lecture 7 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

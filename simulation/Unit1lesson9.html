@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 10: CERAMICS | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Table Styling */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.95rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 10: CERAMICS</h1>
+        <a href="MEM103/Unit1/Unit1Lesson10.pdf" target="_blank" class="download-link">📥 Lesson 10 Download</a>
+    </div>
+
+    <div class="image-container">
+        <img src="images/mem/Unit1/Ceramics.jpg" alt="Ceramics">
+        <span class="image-caption">Figure 1: Ceramics</span>
+    </div>
+
+    <p>Ceramics are materials that are composed of inorganic substances. Ceramics is a refractory, inorganic, and nonmetallic material. Traditional ceramics include clay products, silicate glass and cement; while advanced ceramics consist of carbides (SiC), pure oxides (Al<sub>2</sub>O<sub>3</sub>), nitrides (Si<sub>3</sub>N<sub>4</sub>), non-silicate glasses and many others.</p>
+
+    
+
+    <div style="max-width: 500px; margin: 0 auto;">
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th scope="col">Ceramic Compound</th>
+                    <th scope="col">Melting Point <sup>o</sup>C</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Magnesium Oxide</td>
+                    <td>2798<sup>o</sup></td>
+                </tr>
+                <tr>
+                    <td>Aluminum Oxide</td>
+                    <td>2050<sup>o</sup></td>
+                </tr>
+                <tr>
+                    <td>Silicon Dioxide</td>
+                    <td>1715<sup>o</sup></td>
+                </tr>
+                <tr>
+                    <td>Silicon Nitride</td>
+                    <td>1900<sup>o</sup></td>
+                </tr>
+                <tr>
+                    <td>Silicon Carbide</td>
+                    <td>2500<sup>o</sup></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <h3>Applications of Ceramics</h3>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th width="160">Product Area</th>
+                <th>Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><b>Aerospace</b></td>
+                <td>space shuttle tiles, thermal barriers, high temperature glass windows, fuel cells</td>
+            </tr>
+            <tr>
+                <td><b>Consumer Uses</b></td>
+                <td>glassware, windows, pottery, magnets, dinnerware, ceramic tiles, lenses, home electronics, microwave transducers</td>
+            </tr>
+            <tr>
+                <td><b>Automotive</b></td>
+                <td>catalytic converters, ceramic filters, airbag sensors, ceramic rotors, valves, spark plugs, pressure sensors, thermistors, vibration sensors, oxygen sensors, safety glass windshields, piston rings</td>
+            </tr>
+            <tr>
+                <td><b>Medical (Bioceramics)</b></td>
+                <td>orthopedic joint replacement, prosthesis, dental restoration, bone implants</td>
+            </tr>
+            <tr>
+                <td><b>Military</b></td>
+                <td>structural components for ground, air and naval vehicles, missiles, sensors</td>
+            </tr>
+            <tr>
+                <td><b>Computers</b></td>
+                <td>insulators, resistors, superconductors, capacitors, ferroelectric components, microelectronic packaging</td>
+            </tr>
+            <tr>
+                <td><b>Other Industries</b></td>
+                <td>bricks, cement, membranes and filters, lab equipment</td>
+            </tr>
+            <tr>
+                <td><b>Communications</b></td>
+                <td>fiber optic/<strong>laser</strong> communications, TV and radio components, microphones</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <p>One of the most interesting high-temperature applications of ceramic materials is their use on the space shuttle. Almost the entire exterior of the shuttle is covered with ceramic tiles made from high purity amorphous silica fibers. Those exposed to the highest temperatures have an added layer of high-emittance glass. These tiles can tolerate temperatures up to 1480<sup>o</sup> C for a limited amount of time. Some of the high temperatures experienced by the shuttle during entry and ascent are shown in Figure 2.</p>
+
+    
+
+    <div class="image-container">
+        <img src="images/mem/Unit1/SpaceShuttle.jpg" alt="Space Shuttle's ascent and descent temperatures">
+        <span class="image-caption">Figure 2: Space Shuttle's ascent and descent temperatures</span>
+    </div>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson9.html" title="Plastics">&laquo; Lecture 9</a>
+        <a href="Unit1lesson11.html" title="Smart Materials">Lecture 11 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

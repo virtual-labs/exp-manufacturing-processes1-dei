@@ -1,0 +1,431 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 5: Welding Defects | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 4px;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Image Display Grids */
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Defect Detail Blocks */
+        .defect-section {
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 20px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .defect-section h2 { margin-top: 0; padding-top: 0; }
+
+        .cause-cure-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .cause-box {
+            background-color: #fff3e0;
+            padding: 15px;
+            border-left: 4px solid #ff9800;
+            border-radius: 4px;
+        }
+
+        .cure-box {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            border-radius: 4px;
+        }
+
+        .cause-box h4, .cure-box h4 { margin-top: 0; color: #333; }
+        
+        .cause-box p, .cure-box p { margin-bottom: 5px; font-size: 0.95rem; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        @media (max-width: 768px) {
+            .cause-cure-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 5: Welding Defects</h1>
+        <a href="MEM103/Unit4/Unit4Lesson5.pdf" target="_blank" class="download-link">📥 Lesson 5 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#defects">5.0 Welding Defects</a>
+            <a href="#undercut">5.1 Undercut</a>
+            <a href="#fusion">5.2 Lack of Fusion</a>
+            <a href="#slag">5.3 Slag Inclusions</a>
+            <a href="#profile">5.4 Incorrect Profile</a>
+            <a href="#penetration">5.5 Incomplete Penetration</a>
+            <a href="#cracks">5.6 Cracks</a>
+            <a href="#porosity">5.7 Porosity</a>
+            <a href="#distortions">5.8 Distortions</a>
+        </div>
+    </div>
+
+    <section id="defects">
+        <h2>5.0 Welding Defects</h2>
+        <p>Weld defects can contribute towards the failure of a complete plant.</p>
+    </section>
+
+    <section id="undercut" class="defect-section">
+        <h2>5.1 Undercut</h2>
+        <p>Undercut is the term given to a sharp narrow groove along the toe of the weld due to the rubbing action of the arc removing the metal and not replacing it with weld metal. It reduces strength but more importantly it provides a notch into the heat affected area of the joint that will act as a stress raiser and possible point of crack initiation.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/1a.jpg" alt="Undercut defect cross section" style="max-width: 600px; display: inline-block; margin-right: 10px;">
+            <img src="images/mem/Unit4/Lesson5/1b.jpg" alt="Undercut defect top view" style="display: inline-block;">
+            <span class="image-caption">Figure 1: Undercut welding defect</span>
+        </div>
+        
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Causes</h4>
+                <p>a. Excessive welding current.</p>
+                <p>b. Improper manipulation of electrode, i.e. fast travel speed, incorrect weaving technique and incorrect electrode angles.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cures</h4>
+                <p>a. Use a moderate welding current and do not try to travel too rapidly.</p>
+                <p>b. Excessive weaving will cause under cut.</p>
+                <p>c. If an electrode is held too near the vertical plane when making a horizontal fillet weld, under cut will be obtained on the vertical plate.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="fusion" class="defect-section">
+        <h2>5.2 Lack of Fusion</h2>
+        <p>In this defect, weld metal lies adjacent to unfused base metal, i.e., the two sections are not welded together. This is usually associated with the opposite situation that causes undercut in that too much molten metal is flowing within the joint area without sufficient direct arc action on the base metal beneath.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/2a.jpg" alt="Lack of fusion defect 1" style="display: inline-block; margin-right: 10px;">
+            <img src="images/mem/Unit4/Lesson5/2b.jpg" alt="Lack of fusion defect 2" style="display: inline-block;">
+            <span class="image-caption">Figure 2: Lack of fusion welding defect</span>
+        </div>
+        
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Causes</h4>
+                <p>a. Failure to raise the temperature of base metal to the melting point.</p>
+                <p>b. Failure to dissolve during welding the oxides and other foreign material present on the surfaces with which the deposited metal should fuse.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cures</h4>
+                <p>a. Keep the surfaces to be welded clean from foreign materials</p>
+                <p>b. Using proper welding technique</p>
+                <p>c. Use a moderate welding current and do not try to travel too rapidly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="slag" class="defect-section">
+        <h2>5.3 Slag Inclusions</h2>
+        <p>Slag may be associated with undercut, incomplete penetration and lack of fusion in addition to its presence within a bead. Slag inclusions not only reduce cross sectional area strength of the joint but may serve as an initiation point for serious cracking, particularly in the harder steels.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/3.jpg" alt="Slag inclusion welding defect">
+            <span class="image-caption">Figure 3: Slag inclusion welding defect</span>
+        </div>
+        [Image showing trapped slag in a multi-pass V-groove weld]
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Cause</h4>
+                <p>a. Excessive weaving and the use of too large an electrode in a narrow groove and too low amperage can also cause slag pockets.</p>
+                <p>b. Insufficient cleaning out of slag along an undercut toe of a multipass weld and incorrect electrode manipulation leave pockets of slag.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cure</h4>
+                <p>a. Cleaning out of slag along an undercut toe.</p>
+                <p>b. Proper electrode.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="profile" class="defect-section">
+        <h2>5.4 Incorrect Profile</h2>
+        <p>Excessive concavity results in insufficient throat thickness in relation to the nominated weld size. Excessive convexity results in poor weld contour which in multilayer welds can give rise to slag inclusions while in the finished weld it provides a poor stress pattern and a local notch effect at the toe of the weld. This efect is one not only relating to appearance but also to overall strength of the joint.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/4.jpg" alt="Incorrect weld profile">
+            <span class="image-caption">Figure 4: Incorrect weld profile</span>
+        </div>
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Cause</h4>
+                <p>a. Excessive concavity, which is due to excessive current and longer arc</p>
+                <p>b. Excessive convexity is due to insufficient current and by using improper welding technique.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cure</h4>
+                <p>Selection of correct size and type of electrode with correct current and electrode manipulation will not give these defects.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="penetration" class="defect-section">
+        <h2>5.5 Incomplete Penetration</h2>
+        <p>Joints must be prepared to permit full and proper access to the electrode and weld metal so as to achieve the full throat thickness of the weld. A butt weld or fillet weld where the weld metal does not penetrate to the root resulting in insufficient throat thickness suffers from incomplete penetration and reduced joint strength.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/5.jpg" alt="Incomplete penetration welding defect">
+            <span class="image-caption">Figure 5: Incomplete penetration welding defect</span>
+        </div>
+        
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Cause</h4>
+                <p>a. Improper preparation of joint</p>
+                <p>b. Use of too large an electrode.</p>
+                <p>c. Insufficient welding current.</p>
+                <p>d. Too fast a welding speed.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cure</h4>
+                <p>a. Be sure to allow the proper free space at the bottom of a weld.</p>
+                <p>b. Use small diameter electrodes in a narrow welding groove.</p>
+                <p>c. Use sufficient welding current to obtain proper penetration. Do not weld too rapidly.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cracks" class="defect-section">
+        <h2>5.6 Cracks</h2>
+        <p>Cracks can occur in both the base metal and the weld metal as a result of welding.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/6a.jpg" alt="Cracks developed during welding 1" style="display: inline-block; margin-right: 10px;">
+            <img src="images/mem/Unit4/Lesson5/6b.jpg" alt="Cracks developed during welding 2" style="display: inline-block;">
+            <span class="image-caption">Figure 6: Cracks developed during welding</span>
+        </div>
+        [Image showing longitudinal and transverse cracking in a weld]
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Causes</h4>
+                <p>a. Joint too rigid.</p>
+                <p>b. Improper welding procedure.</p>
+                <p>c. Improper preparation of joints</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cures</h4>
+                <p>a. Do not use too small a weld between heavy plates. Increase the size of welds.</p>
+                <p>b. Do not make welds in stringer beads. Make weld full size in short section 8 to 10 in. long.</p>
+                <p>c. Welding sequence should be such as to leave ends free to move as long as possible.</p>
+                <p>d. Prepare joints with a uniform and proper free space. In other cases a shrink or press fit may be required.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="porosity" class="defect-section">
+        <h2>5.7 Porosity</h2>
+        <p>Porous welds may arise as a result of coating breakdown due to excessive current, excessive moisture pickup by the electrode and impurities absorbed from the base metal. Using wet electrodes is bad practice.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/7a.jpg" alt="Porosity welding defect 1" style="display: inline-block; margin-right: 10px;">
+            <img src="images/mem/Unit4/Lesson5/7b.jpg" alt="Porosity welding defect 2" style="display: inline-block;">
+            <span class="image-caption">Figure 7: Porosity welding defect</span>
+        </div>
+        
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Causes</h4>
+                <p>a. Improper properties of electrodes.</p>
+                <p>b. Not sufficient pudding time to allow entrapped gas to escape.</p>
+                <p>c. Poor base metal.</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cures</h4>
+                <p>a. Puddling keeps weld metal molten longer and often insures sounder welds.</p>
+                <p>b. A weld made of a series of a strong beads is apt to contain minute pinholes. Weaving will often eliminate this trouble.</p>
+                <p>c. Do not use excessive welding currents.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="distortions" class="defect-section">
+        <h2>5.8 Distortion</h2>
+        <p>Residual stresses in weldments produce distortion and may be the cause of premature failure in weldments. Distortion is caused when the heated weld region contracts non-uniformly, causing shrinkage in one part of the weld to exert eccentric forces on the weld cross section.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson5/8a.jpg" alt="Distortion 1" style="display: inline-block; margin-right: 10px;">
+            <img src="images/mem/Unit4/Lesson5/8b.jpg" alt="Distortion 2" style="display: inline-block;">
+            <span class="image-caption">Figure 8: Distortion</span>
+        </div>
+
+        <div class="cause-cure-grid">
+            <div class="cause-box">
+                <h4>Causes</h4>
+                <p>a. Non uniform heating of parts during welding cause them to distort before welding is finished. Final welding of parts in distorted position prevents the maintenance of proper dimensions.</p>
+                <p>b. Improper welding sequence</p>
+            </div>
+            <div class="cure-box">
+                <h4>Cures</h4>
+                <p>a. Properly clamp or tack parts to resist shrinkage.</p>
+                <p>b. Distribute welding to prevent excessive local heating. Preheating desirable in some heavy structures.</p>
+                <p>c. Study structure and develop a definite sequence of welding</p>
+                <p>d. Hammering of weld metal is a compressive action that will help balance out the tensile pull of a contracting weld.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit5lesson4.html" title="Resistance Welding">&laquo; Lecture 4</a>
+        <a href="Unit5lesson6.html" title="Safety Practices in Welding Process">Lecture 6 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

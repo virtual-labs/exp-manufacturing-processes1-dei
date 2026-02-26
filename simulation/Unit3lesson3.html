@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Smithy (Hand Forging) | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc a {
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .toc ul { list-style: none; padding-left: 20px; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; }
+
+        .sector-box {
+            background: #fff;
+            border-left: 4px solid var(--primary);
+            padding: 10px 20px;
+            margin: 10px 0;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 40px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid var(--border);
+            background: white;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary);">Lesson 3: Smithy (Hand Forging)</h1>
+        <a href="MEM103/Unit2/Unit2Lesson3.pdf" target="_blank" class="download-link">📥 Lesson 3 Download</a>
+    </div>
+
+    <div class="toc">
+        <strong>Contents</strong>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#equipments">3.1 Equipments of a Smithy Shop</a></li>
+            <li><a href="#types">3.2 Types of Iron Working Tools</a></li>
+            <li><a href="#operations">3.3 Smithy Operations</a></li>
+            <li><a href="#jigs">3.4 Bending Jigs</a></li>
+            <li><a href="#care">3.5 Use and Care of Smithy Tools</a></li>
+            <li><a href="#safety">3.6 Safety Precautions</a></li>
+        </ul>
+    </div>
+
+    <section id="introduction">
+        <h2>Introduction</h2>
+        <p>Forging is also referred as smithy when the shaping of small jobs is carried out at small scale by manual hammering and heating the workpiece in an open fire or hearth.</p>
+    </section>
+
+    <section id="equipments">
+        <h2>3.1 Equipments of a Smithy Shop</h2>
+        <p>The equipments for a smithy shop are relatively simple as the production of good quality work depends on the skill of the worker.</p>
+        
+        <div class="sector-box">
+            <b>Core Equipments:</b>
+            <ol>
+                <li>Hearth or fire</li>
+                <li>Blower</li>
+                <li>Blacksmith's Anvil</li>
+                <li>Bick Iron</li>
+                <li>Blacksmith's Swage block</li>
+                <li>One steam or pressure hammer</li>
+                <li>Trough of water</li>
+            </ol>
+        </div>
+
+        <h3>Hearth or fire</h3>
+        <p>The metal to be worked is heated in a hearth in which the coke fire is lit by means of air admitted through the tuyere (nozzle) under a slight pressure by means of a blower. A trough of water is kept alongside for cooling the tools.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson4/1.jpg" alt="Blacksmith Hearth">
+            <p><b>Figure 1: Hearth or fire and accessories (shovel and vent wire)</b></p>
+        </div>
+
+        <h3>Blacksmith's anvils</h3>
+        <p>Purpose of blacksmith's anvil is to provide a working surface for supporting the metal when it is being forged, shaped and punched for holes. It features a flat face, a horn for forming curved shapes, a pritchet hole for punching/bending small rods, and a hardie hole for holding square shanks of various fittings.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson4/4.jpg" alt="Blacksmith Anvil">
+            <p><b>Figure 2: Anvil</b></p>
+        </div>
+
+        <h3>Bick Iron and Swage Block</h3>
+        <p>A bick iron is a type of small anvil specifically used for working on small jobs. The swage block facilitates the shaping, sizing, and smoothing of round, square, and hexagon sections from the rough bar of metal.</p>
+        
+        <div class="image-container">
+            <div style="display:flex; justify-content:center; gap:20px; flex-wrap: wrap;">
+                <img src="images/mem/Unit2/Lesson4/5.jpg" style="max-width:45%" alt="Bick Iron">
+                <img src="images/mem/Unit2/Lesson4/6.jpg" style="max-width:45%" alt="Swage Block">
+            </div>
+            <p><b>Figure 3: Bick iron | Figure 4: Swage block</b></p>
+        </div>
+    </section>
+
+    <section id="types">
+        <h2>3.2 Types of iron working tools</h2>
+        <p>Tools used in a smithy shop are classified by function: Striking, Holding, Cutting, Punching/Drilling, Forming/Finishing, and Measuring/Testing.</p>
+        
+        <h3>3.2.1 Striking tools</h3>
+        <p>Striking tools are used to hammer the work directly or indirectly. Types include Double faced, Straight peen, Cross peen, Ball peen, and Smith's hammers. The handle length is usually 35 to 40 cm.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson4/7.jpg" alt="Sledge Hammer" style="width:150px">
+            <img src="images/mem/Unit2/Lesson4/11.jpg" alt="Smith Hammer" style="width:150px">
+            <p><b>Figure 5: Striking tools</b></p>
+        </div>
+
+        <h3>3.2.2 Holding tools</h3>
+        <p>Tongs are used to grip the hot or cold workpiece firmly. Types include Flat, Hollow bit (for square/round), Square clip, Angle, Link, and Pick-up tongs. Lengths vary from 45 to 65 cm.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/Unit2/Lesson4/12.jpg" alt="Holding Tongs">
+            <p><b>Figure 6: Holding tools</b></p>
+        </div>
+
+        <h3>3.2.4 Cutting tools</h3>
+        <p>Used for cutting and marking work. Hot chisels (30°) are used for hot metal, while cold chisels (60°) are used for cold working. Anvil cutters (Hardies) fit into the square hole of the anvil.</p>
+
+        <h3>3.2.6 Forming and finishing tools</h3>
+        <ul>
+            <li><b>Swages:</b> Top and bottom tools used for forming shapes like round or hexagonal.</li>
+            <li><b>Fullers:</b> Used for necking and drawing down a forging to a smaller size.</li>
+            <li><b>Flatter:</b> Used for smoothing and finishing flat surfaces.</li>
+            <li><b>Set Hammer:</b> Used for setting down metal to form square corners.</li>
+        </ul>
+    </section>
+
+    <section id="operations">
+        <h2>3.3 Smithy operations</h2>
+        <div class="sector-box">
+            <b>3.3.1 Upsetting:</b> Increasing the thickness of a section at the expense of its length. Used for bolt and rivet heads.
+        </div>
+        <div class="sector-box">
+            <b>3.3.2 Drawing down:</b> Increasing the length of a piece while reducing its width or thickness.
+        </div>
+        <div class="sector-box">
+            <b>3.3.6 Bending:</b> Bending work to various angles over the anvil beak or horn. Inner sides are upset while outer sides are drawn down.
+        </div>
+        <div class="sector-box">
+            <b>3.3.7 Forge Welding:</b> Joining separately forged pieces by heating them to white heat and hammering them into one solid piece.
+        </div>
+        <div class="sector-box">
+            <b>3.3.8 Punching and drifting:</b> Punching creates holes in hot plastic state; drifting widens and smooths the punched hole to exact size.
+        </div>
+    </section>
+
+    <section id="care">
+        <h2>3.5 Use and care of Smithy Tools</h2>
+        <ol>
+            <li>The top face and horn of the anvil must be kept smooth and clean.</li>
+            <li>Flatters, fullers, and swages must be kept properly ground and shaped.</li>
+            <li>Cover tools and the anvil with a thin film of oil after use to prevent rusting.</li>
+        </ol>
+    </section>
+
+    <section id="safety">
+        <h2>3.6 Safety Precautions</h2>
+        <ul>
+            <li>Use extreme care to prevent metal chips and hot sparks from causing injury or fires.</li>
+            <li>Wear goggles to protect eyes, especially during shaping and cutting operations.</li>
+        </ul>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit3lesson2.html" style="color: var(--accent); text-decoration: none;">&laquo; Lecture 2: Forging Process</a>
+        <a href="Unit3lesson4.html" style="color: var(--accent); text-decoration: none;">Lecture 4: Forging Equipments &raquo;</a>
+    </div>
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - Ajay Kant Upadhyay
+</footer>
+
+</body>
+</html>

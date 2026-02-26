@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manufacturing Processes-I | DEI</title>
+    <link rel="shortcut icon" type="image/x-icon" href="images/icon.ico">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--bg-light);
+            padding-bottom: 15px;
+            margin-bottom: 25px;
+        }
+
+        .welcome-msg {
+            color: var(--accent);
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--secondary);
+            margin-left: 20px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .unit-section {
+            margin-bottom: 40px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .unit-header {
+            background: var(--bg-light);
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .unit-content {
+            display: flex;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        .lessons-list {
+            flex: 1;
+        }
+
+        .lesson-item {
+            padding: 8px 0;
+            border-bottom: 1px dotted var(--border);
+        }
+
+        .lesson-item:last-child { border-bottom: none; }
+
+        .lesson-item a {
+            text-decoration: none;
+            color: var(--secondary);
+        }
+
+        .lesson-item b { color: #555; margin-right: 10px; }
+
+        .visual-aid {
+            width: 360px;
+            text-align: right;
+        }
+
+        .visual-aid img {
+            border-radius: 5px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            max-width: 100%;
+        }
+
+        .supplementary {
+            background: #f0f4f8;
+            padding: 15px 20px;
+            font-size: 0.9rem;
+        }
+
+        .supplementary h4 { margin-top: 0; color: var(--primary); }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+        }
+
+        footer a { color: var(--secondary); text-decoration: none; }
+
+        @media (max-width: 768px) {
+            .unit-content { flex-direction: column; }
+            .visual-aid { width: 100%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+<header id="header">
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="nav-bar">
+        <div class="welcome-msg">Welcome Student</div>
+        <div class="nav-links">
+            <a href="https://virtual-labs.github.io/exp-bench-work-dei/">Bench Work</a>
+            <a href="https://virtual-labs.github.io/exp-manufacturing-processes1-dei/">MEM103 Home</a>
+            <a href="https://msvs-dei.vlabs.ac.in/home.php">MFVSL Home</a>
+        </div>
+    </div>
+
+    <a href="MEM103/QB_MEM_103.pdf" target="_blank" class="download-btn">📥 Download MEM-103 QUESTION BANK</a>
+
+    <div class="unit-section">
+        <div class="unit-header">UNIT 1: Introduction to Manufacturing</div>
+        <div class="unit-content">
+            <div class="lessons-list">
+                <div class="lesson-item"><b>LESSON 1</b> <a href="Unit1lesson0.html">Socio Economic Sustainability</a></div>
+                <div class="lesson-item"><b>LESSON 2</b> <a href="Unit1lesson1.html">Overview of Manufacturing</a></div>
+                <div class="lesson-item"><b>LESSON 3</b> <a href="Unit1lesson2.html">Properties of Materials</a></div>
+                <div class="lesson-item"><b>LESSON 4</b> <a href="Unit1lesson3.html">General Shop Safety</a></div>
+                <div class="lesson-item"><b>LESSON 5</b> <a href="Unit1lesson4.html">Body Protection Products</a></div>
+                <div class="lesson-item"><b>LESSON 6</b> <a href="Unit1lesson5.html">Non-Ferrous Metals</a></div>
+                <div class="lesson-item"><b>LESSON 7</b> <a href="Unit1lesson6.html">Ferrous Metals</a></div>
+                <div class="lesson-item"><b>LESSON 8</b> <a href="Unit1lesson7.html">Heat Treatment</a></div>
+                <div class="lesson-item"><b>LESSON 9</b> <a href="Unit1lesson8.html">Plastics</a></div>
+                <div class="lesson-item"><b>LESSON 10</b> <a href="Unit1lesson9.html">Ceramics</a></div>
+                <div class="lesson-item"><b>LESSON 11</b> <a href="Unit1lesson10.html">Smart Materials</a></div>
+                <div class="lesson-item"><b>LESSON 12</b> <a href="Unit1lesson11.html">Wood Working</a></div>
+                <div class="lesson-item"><b>LESSON 13</b> <a href="Unit1lesson12.html">Wood Working Operations</a></div>
+            </div>
+        </div>
+        <div class="supplementary">
+            <h4>Supplementary Material</h4>
+            1. <a href="MEM103/Unit1/Unit1HistoricalMilestones.pdf" target="_blank">Historical Milestones in Evolution of Manufacturing</a><br>
+            2. <a href="MEM103/Unit1/Unit1ShapesMethods.pdf" target="_blank">Shapes and common Methods of Production</a><br>
+            3. <a href="MEM103/Unit1/Unit1ProblemSheet.pdf" target="_blank">Problems Sheet: Mechanical Properties of Materials</a>
+        </div>
+    </div>
+
+    <div class="unit-section">
+        <div class="unit-header">UNIT 2: Solidification Processes</div>
+        <div class="unit-content">
+            <div class="lessons-list">
+                <div class="lesson-item"><b>LESSON 1</b> <a href="Unit2lesson1.html">Casting Process</a></div>
+                <div class="lesson-item"><b>LESSON 2</b> <a href="Unit2lesson2.html">Casting Process: Pattern Making</a></div>
+                <div class="lesson-item"><b>LESSON 3</b> <a href="Unit2lesson3.html">Casting Process: Moulding</a></div>
+                <div class="lesson-item"><b>LESSON 4</b> <a href="Unit2lesson4.html">Casting Process: Cupola Furnace</a></div>
+                <div class="lesson-item"><b>LESSON 5</b> <a href="Unit2lesson5.html">Casting Process: Casting Defects</a></div>
+                <div class="lesson-item"><b>LESSON 6</b> <a href="Unit2lesson6.html">Types of Pattern</a></div>
+                <div class="lesson-item"><b>LESSON 7</b> <a href="Unit2lesson7.html">Special Casting Processes (Expendable)</a></div>
+                <div class="lesson-item"><b>LESSON 8</b> <a href="Unit2lesson8.html">Special Casting Processes (Permanent)</a></div>
+                <div class="lesson-item"><b>LESSON 9</b> <a href="Unit2lesson9.html">Types of Moulding Methods and Moulding Machines</a></div>
+            </div>
+            <div class="visual-aid">
+                <img src="images/mem/Unit3/Casting.gif" alt="Casting Process Animation">
+            </div>
+        </div>
+        <div class="supplementary">
+            <h4>Supplementary Material</h4>
+            1. <a href="unit2sim.html">Casting Simulations</a><br>
+            2. <a href="MEM103/Unit3/Unit3ProblemSheet.pdf" target="_blank">Problems Sheet</a>
+        </div>
+    </div>
+
+    <div class="unit-section">
+        <div class="unit-header">UNIT 3: Deformation Processes</div>
+        <div class="unit-content">
+            <div class="lessons-list">
+                <div class="lesson-item"><b>LESSON 1</b> <a href="Unit3lesson1.html">Metal Forming Processes</a></div>
+                <div class="lesson-item"><b>LESSON 2</b> <a href="Unit3lesson2.html">Forging Process</a></div>
+                <div class="lesson-item"><b>LESSON 3</b> <a href="Unit3lesson3.html">Smithy (Hand Forging)</a></div>
+                <div class="lesson-item"><b>LESSON 4</b> <a href="Unit3lesson4.html">Forging Equipments</a></div>
+                <div class="lesson-item"><b>LESSON 5</b> <a href="Unit3lesson5.html">Rolling Processes</a></div>
+                <div class="lesson-item"><b>LESSON 6</b> <a href="Unit3lesson6.html">Sheet Metal Working</a></div>
+            </div>
+            <div class="visual-aid">
+                <img src="images/mem/Unit2/Upsetting.gif" alt="Upsetting Process Animation">
+            </div>
+        </div>
+        <div class="supplementary">
+            <h4>Supplementary Material</h4>
+            1. <a href="unit3sim.html">Metal Forming Simulations</a><br>
+            2. <a href="MEM103/Unit2/Unit2ProblemSheet.pdf" target="_blank">Problems Sheet</a>
+        </div>
+    </div>
+
+    <div class="unit-section">
+        <div class="unit-header">UNIT 4: Material-removal Processes</div>
+        <div class="unit-content">
+            <div class="lessons-list">
+                <div class="lesson-item"><b>LESSON 1</b> <a href="Unit4lesson1.html">Lathe</a></div>
+                <div class="lesson-item"><b>LESSON 2</b> <a href="Unit4lesson2.html">Metal Cutting & Cutting Tool for Lathe</a></div>
+                <div class="lesson-item"><b>LESSON 3</b> <a href="Unit4lesson3.html">Operating conditions on Lathe</a></div>
+                <div class="lesson-item"><b>LESSON 4</b> <a href="Unit4lesson4.html">Operations on Lathe</a></div>
+                <div class="lesson-item"><b>LESSON 5</b> <a href="Unit4lesson5.html">Work-Holding devices used on Lathe</a></div>
+                <div class="lesson-item"><b>LESSON 6</b> <a href="Unit4lesson6.html">Shaping, Planing & Slotting Operations</a></div>
+                <div class="lesson-item"><b>LESSON 7</b> <a href="Unit4lesson7.html">Drilling</a></div>
+            </div>
+            <div class="visual-aid">
+                <img src="images/mem/Unit5/LatheTurning.gif" alt="Lathe Turning Animation">
+            </div>
+        </div>
+        <div class="supplementary">
+            <h4>Supplementary Material</h4>
+            1. <a href="unit4sim.html">Machining Simulations</a>
+        </div>
+    </div>
+
+    <div class="unit-section">
+        <div class="unit-header">UNIT 5: Joining and Additive Manufacturing Processes</div>
+        <div class="unit-content">
+            <div class="lessons-list">
+                <div class="lesson-item"><b>LESSON 1</b> <a href="Unit5lesson1.html">Welding</a></div>
+                <div class="lesson-item"><b>LESSON 2</b> <a href="Unit5lesson2.html">Gas Welding or Oxyfuel Gas Welding (OFW)</a></div>
+                <div class="lesson-item"><b>LESSON 3</b> <a href="Unit5lesson3.html">Electric Arc Welding Process</a></div>
+                <div class="lesson-item"><b>LESSON 4</b> <a href="Unit5lesson4.html">Resistance Welding</a></div>
+                <div class="lesson-item"><b>LESSON 5</b> <a href="Unit5lesson5.html">Welding Defects</a></div>
+                <div class="lesson-item"><b>LESSON 6</b> <a href="Unit5lesson6.html">Safety Practices in Welding Process</a></div>
+                <div class="lesson-item"><b>LESSON 7</b> <a href="Unit5lesson7.html">Flash Welding & Percussion Welding</a></div>
+            </div>
+            <div class="visual-aid">
+                <img src="images/mem/Unit4/Welding.gif" alt="Welding Process Animation">
+            </div>
+        </div>
+        <div class="supplementary">
+            <h4>Supplementary Material</h4>
+            1. <a href="unit5swm.html">Special Welding Simulations</a><br>
+            2. <a href="MEM103/Unit4/Unit4faq.pdf" target="_blank">Frequently Asked Questions</a><br>
+            3. <a href="MEM103/Unit4/Unit4tq.pdf" target="_blank">Terminal Questions</a>
+        </div>
+    </div>
+
+    <div style="text-align: right; padding: 20px;">
+        <a href="#header" style="color: var(--primary); font-weight: bold; text-decoration: none;">▲ Back to Top</a>
+    </div>
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-38541839-1']);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+<script src="../assets/js/iframeResize.js"></script>
+        
+        </body>
+</html>

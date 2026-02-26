@@ -1,0 +1,366 @@
+<!--<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEM-103 | Machining Simulations</title>
+    <style>
+        /* Modernized Layout for Machining Simulations */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* Sidebar - Fixed on the Left */
+        .sidebar {
+            width: 340px;
+            background-color: #fcfcfc;
+            border-right: 1px solid #ececec;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #0066cc; /* Blue theme for Machining */
+            padding-bottom: 10px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #0066cc;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .sim-link {
+            text-decoration: none;
+            color: #444;
+            font-size: 13.5px;
+            padding: 8px 12px;
+            margin-bottom: 3px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .sim-link:hover {
+            background-color: #eef6ff;
+            color: #0066cc;
+            transform: translateX(5px);
+        }
+
+        /* Main Viewport for Video */
+        .viewport {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-box {
+            width: 100%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .video-caption h2 {
+            margin: 0;
+            font-size: 26px;
+            color: #222;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            font-size: 11px;
+            color: #aaa;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>MACHINING SIMULATIONS</h1>
+
+        <div class="category-title">Lathe Operations</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/Lathe.mp4', 'Lathe Machine')">Lathe Machine</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheOverview1.mp4', 'Lathe Overview - I')">Lathe Overview I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheOverview2.mp4', 'Lathe Overview - II')">Lathe Overview II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTurning1.mp4', 'Lathe Turning')">Turning Operation</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFacing1.mp4', 'Lathe Facing')">Facing Operation</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTaperTurning.mp4', 'Lathe Taper Turning')">Taper Turning</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheChamfering.mp4', 'Lathe Chamfering')">Chamfering</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheDrilling1.mp4', 'Lathe Drilling Operation')">Drilling on Lathe</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheKnurling1.mp4', 'Lathe Knurling')">Knurling Operation</a>
+
+        <div class="category-title">Feed & Controls</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheCuttingTool.mp4', 'Checking Centre of Cutting Tool')">Checking Tool Centre</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFeedControl.mp4', 'Automatic Tool Feed Control')">Auto Feed Control</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTraversing.mp4', 'Automatic Traversing')">Auto Traversing</a>
+        
+        <div class="category-title">Internal Mechanisms</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheHeadstock.mp4', 'Lathe Headstock Inside View')">Headstock Inside View</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTailstock.mp4', 'Lathe Tailstock Centre')">Tailstock Centre</a>
+
+        <div class="category-title">Shaper Machine</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/ShaperOperation1.mp4', 'Shaper Operation - I')">Shaper Operation I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/ShaperOperation2.mp4', 'Shaper Operation - II')">Shaper Operation II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/Quick_Return_Mechanism.mp4', 'Quick Return Mechanism')">Quick Return Mechanism</a>
+    </div>
+
+    <div class="viewport">
+        <div class="video-box">
+            <video id="player" controls autoplay loop muted>
+                <source id="videoSource" src="MEM103/Unit5/Simulations/Lathe.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="video-caption">
+            <h2 id="captionText">Lathe Machine</h2>
+        </div>
+        
+        <footer>
+            &copy; MEM103 - Dayalbagh Educational Institute - Ajay Kant Upadhyay
+        </footer>
+    </div>
+
+    <script>
+        function swapVid(file, title) {
+            const vid = document.getElementById('player');
+            const src = document.getElementById('videoSource');
+            const caption = document.getElementById('captionText');
+
+            src.src = file;
+            caption.innerText = title;
+
+            vid.load();
+            vid.play().catch(e => console.log("Autoplay blocked or video not found."));
+        }
+    </script>
+</body>
+</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MEM-103 | Machining Simulations</title>
+    <style>
+        /* Modernized Layout for Machining Simulations */
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden; 
+        }
+
+        /* Sidebar - Fixed on the Left */
+        .sidebar {
+            width: 340px;
+            background-color: #fcfcfc;
+            border-right: 1px solid #ececec;
+            display: flex;
+            flex-direction: column;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h1 {
+            color: #333;
+            font-size: 20px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #0066cc; /* Blue theme for Machining */
+            padding-bottom: 10px;
+        }
+
+        .category-title {
+            font-weight: bold;
+            color: #0066cc;
+            text-transform: uppercase;
+            font-size: 12px;
+            margin-top: 15px;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .sim-link {
+            text-decoration: none;
+            color: #444;
+            font-size: 13.5px;
+            padding: 8px 12px;
+            margin-bottom: 3px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            display: block;
+            line-height: 1.4;
+        }
+
+        .sim-link:hover {
+            background-color: #eef6ff;
+            color: #0066cc;
+            transform: translateX(5px);
+        }
+
+        /* Main Viewport for Video */
+        .viewport {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background-color: #ffffff;
+            padding: 30px;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .video-box {
+            width: 100%;
+            max-width: 1100px;
+            aspect-ratio: 16 / 9;
+            box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+            border-radius: 12px;
+            overflow: hidden;
+            background-color: #000;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .video-caption {
+            margin-top: 25px;
+            text-align: center;
+        }
+
+        .video-caption h2 {
+            margin: 0;
+            font-size: 26px;
+            color: #222;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 15px;
+            right: 25px;
+            font-size: 12px;
+            color: #aaa;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h1>MACHINING SIMULATIONS</h1>
+
+        <div class="category-title">Lathe Operations</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/Lathe.mp4', 'Lathe Machine')">Lathe Machine</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheOverview1.mp4', 'Lathe Overview - I')">Overview I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheOverview2.mp4', 'Lathe Overview - II')">Overview II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTurning1.mp4', 'Lathe Turning')">Turning I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTurning2.mp4', 'Lathe Turning Operation')">Turning II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFacing1.mp4', 'Lathe Facing - I')">Facing I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFacing2.mp4', 'Lathe Facing - II')">Facing II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFacingTop.mp4', 'Lathe Facing View From Top')">Facing (Top View)</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTaperTurning.mp4', 'Lathe Taper Turning')">Taper Turning</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTaperturningTop.mp4', 'Lathe Taper Turning View From Top')">Taper Turning (Top View)</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheChamfering.mp4', 'Lathe Chamfering')">Chamfering</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheDrilling1.mp4', 'Lathe Drilling Operation - I')">Drilling I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheDrilling2.mp4', 'Lathe Drilling Operation - II')">Drilling II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheKnurling1.mp4', 'Lathe Knurling Operation - I')">Knurling I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheKnurling2.mp4', 'Lathe Knurling Operation - II')">Knurling II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheKnurling3.mp4', 'Lathe Knurling Operation - III')">Knurling III</a>
+
+        <div class="category-title">Feed & Controls</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheCuttingTool.mp4', 'Lathe Checking Centre of Cutting Tool')">Checking Tool Centre</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFeedControl.mp4', 'Lathe Automatic Tool Feed Control')">Auto Feed Control</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheFeedTurning.mp4', 'Lathe Automatic Feed Turning')">Auto Feed Turning</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTraversing.mp4', 'Lathe Turning Automating Traversing')">Auto Traversing</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheToolTraverse.mp4', 'Lathe Automatic Tool Traverse')">Auto Tool Traverse</a>
+
+        <div class="category-title">Internal Mechanisms</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheHeadstock.mp4', 'Lathe Headstock Inside View')">Headstock Inside View</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/LatheTailstock.mp4', 'Lathe Tailstock Centre')">Tailstock Centre</a>
+
+        <div class="category-title">Shaper Machine</div>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/ShaperOperation1.mp4', 'Shaper Operation - I')">Shaper Operation I</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/ShaperOperation2.mp4', 'Shaper Operation - II')">Shaper Operation II</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/ShaperOperation3.mp4', 'Shaper Operation - III')">Shaper Operation III</a>
+        <a href="javascript:void(0)" class="sim-link" onclick="swapVid('MEM103/Unit5/Simulations/Quick_Return_Mechanism.mp4', 'Quick Return Mechanism')">Quick Return Mechanism</a>
+    </div>
+
+    <div class="viewport">
+        <div class="video-box">
+            <video id="player" controls autoplay loop muted>
+                <source id="videoSource" src="MEM103/Unit5/Simulations/Lathe.mp4" type="video/mp4">
+                Your browser does not support HTML5 video.
+            </video>
+        </div>
+        <div class="video-caption">
+            <h2 id="captionText">Lathe Machine</h2>
+        </div>
+        
+        <footer>
+            &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - Ajay Kant Upadhyay
+        </footer>
+    </div>
+
+    <script>
+        function swapVid(file, title) {
+            const vid = document.getElementById('player');
+            const src = document.getElementById('videoSource');
+            const caption = document.getElementById('captionText');
+
+            src.src = file;
+            caption.innerText = title;
+
+            vid.load();
+            vid.play().catch(e => console.log("Autoplay blocked or video not found."));
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: Electric Arc Welding Process | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+            margin-bottom: 3px;
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 8px; }
+
+        /* Image Display Grids */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            margin-bottom: 10px;
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-grid-item {
+            text-align: center;
+            background: white;
+            padding: 15px;
+            border-radius: 6px;
+            border: 1px solid var(--border);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .image-grid-item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Formula Box */
+        .formula-box {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: #fff;
+            padding: 15px;
+            border-radius: 4px;
+            border: 1px dashed var(--secondary);
+            margin: 15px 0;
+        }
+
+        /* Tables */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; text-align: center;}
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 3: Electric Arc Welding Process</h1>
+        <a href="MEM103/Unit4/Unit4Lesson3.pdf" target="_blank" class="download-link">📥 Lesson 3 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#introduction">3.0 Introduction</a>
+                <a href="#welding">3.1 Arc Welding</a>
+                <a href="#mechanics">3.2 Mechanics of Arc</a>
+                <a href="#polarity">3.3 Polarity in Welding</a>
+                <div style="padding-left: 15px;">
+                    <a href="#polarity">3.3.1 Straight Polarity (DCSP)</a>
+                    <a href="#polarity">3.3.2 Reverse Polarity (DCRP)</a>
+                </div>
+            </div>
+            <div>
+                <a href="#alternating">3.4 Alternating Current Welding</a>
+                <a href="#electrodes">3.5 Arc Welding Electrodes</a>
+                <a href="#equipment">3.6 Arc Welding Equipments</a>
+                <div style="padding-left: 15px;">
+                    <a href="#equipment">3.6.1 Arc Welding Machines (Power Source)</a>
+                    <a href="#equipment">3.6.2 AC Metal-Arc Welding Machines</a>
+                    <a href="#equipment">3.6.3 DC Arc Welding Machines</a>
+                    <a href="#equipment">3.6.4 Miscellaneous Equipments</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>3.0 Introduction</h2>
+        <p>In electrical arc welding circuit there are three factors: current (flow of electricity), pressure (force required to cause the current to flow) and resistance (force required to regulate the flow of current).</p>
+        
+        <p><b>Current (I)</b> is a rate of flow and is measured by the amount of electricity that flows through a wire in one second. The term ampere denotes the amount of current per second that flows in a circuit.</p>
+        
+        <p><b>Pressure</b> is the force that causes a current to flow. The measure of electrical pressure is the volt (E). The voltage between two points in an electrical circuit is called the difference in potential. This force or potential is called electromotive force or EMF. The difference of potential or voltage causes current to flow in an electrical circuit.</p>
+        
+        <p><b>Resistance</b> is the restriction to current flow in an electrical circuit. Every component in the circuit, including the conductor, has some resistance to current flow. Resistance (R) depends on the material, the cross-sectional area, and the temperature of the conductor. The unit of electrical resistance is ohm. It is designated by the letter.</p>
+        
+        <p>From welding point of view, voltage is important as sufficient "pressure" is required to make the current flow through a circuit. In any circuit of a given resistance, it is the current which primarily determines the amount of heat generated.</p>
+
+        <h3>AC and DC</h3>
+        <p><b>In Direct Current (DC)</b>, current flows in the one direction constantly throughout the circuit. One side of the power source is nominated as the positive (+) pole and the other as the negative (-) pole. An automotive battery or dry cell gives DC.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/1.jpg" alt="AC and DC">
+            <span class="image-caption">Figure 1: AC and DC</span>
+        </div>
+
+        <p><b>In Alternating Current (AC)</b>, current periodically reverses its direction along the conductor, i.e., one fraction of a second the right-hand terminal is "negative", the next fraction of a second it is "positive". In 50 Hertz AC current, the current is changing direction of flow 100 times a second.</p>
+    </section>
+
+    <section id="welding">
+        <h2>3.1 Arc Welding</h2>
+        <p>In arc welding process the heat required for welding is obtained through electrical energy. In arc welding processes, an electric arc is used to heat base metals and a consumable filler rod. Welding begins when an electric arc is struck between the tip of the electrode and the base metal to be weld. The intense heat (temperatures above 6000<sup>o</sup>C) of the arc melts the tip of the electrode and the surface of the work beneath the arc. Small globules of molten metal form on the tip of the electrode, then transfer through the arc stream into the molten weld pool. In this manner, filler metal is deposited as the electrode is progressively consumed. The arc is moved over the work at an appropriate arc length and travel speed, melting and fusing a portion of the base metal and adding filler metal as the arc progresses.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/2.jpg" alt="Arc welding process">
+            <b>Arc welding process</b>
+            <br/><br/>
+            <img src="images/mem/Unit4/Lesson3/3.jpg" alt="Arc welding process setup">
+            <b>Arc welding process setup</b>
+            <span class="image-caption">Figure: 2</span>
+        </div>
+
+        <p>The power source in arc welding process is called a welding machine or welder. This power source is used to create a high potential between an electrode (guided by the welder) and a base metal.</p>
+
+        <h4>Advantages of arc welding process</h4>
+        <ol>
+            <li>It is a versatile, simple and flexible joining process.</li>
+            <li>Equipment is simple and of low initial cost.</li>
+            <li>Used by small welding shop, home mechanic, farmer, but also extensive application in industrial fabrication, structural steel erection, weldment manufacture.</li>
+        </ol>
+
+        <h4>Disadvantages of arc welding process</h4>
+        <p>The main problem that arises in arc welding is contamination of the metal with elements in the atmosphere (O, H, N). There can also be problems with surfaces that are not clean.</p>
+    </section>
+
+    <section id="mechanics">
+        <h2>3.2 Mechanics of Arc</h2>
+        <p>An electric arc is formed when an electric current passes between two electrodes separated by a short distance from each other. The electrode and base metal are connected to the electric supply, one to the positive pole and one to the negative pole. The arc is started by momentarily touching the electrode on to the base metal and then withdrawing it to about 3 to 4 mm from the base metal.When the electrode touches the metal workpiece, current flows, and as it is withdrawn from the metal workpiece the current continues to flow in the form of a 'spark' across the very small gap first formed. This causes the air gap to become ionized and as a result the current is able to flow across the gap, even when it is quite wide, in the form of an arc. When alternating current is used, heat is developed equally at metal workpiece and welding electrode, since the electrode and base metal are changing polarity at the frequency of the supply. The greater the volts drop across the arc the greater the energy liberated in heat for a given current.</p>
+
+        <p><b>Arc energy</b> is usually expressed in kilo-Joules per millimeter length of the weld (kJ/mm) and</p>
+        
+        <div class="formula-box">
+            <b>Arc energy (kJ/mm) = (arc voltage x welding current) / welding speed (mm/s) x 100</b>
+        </div>
+
+        <p><b>Penetration</b> - Penetration is the depth from the surface of the work to the bottom of the molten metal.</p>
+
+        <p><b>Length of arc</b> - It is the distance between the tip of the electrode and the base metal upon which the melted globules of electrode metal are deposited. The length of the arc is proportional to the voltage across the arc. If the arc length is increased beyond a certain point, the arc will suddenly go out. If a higher current is used, a longer arc can be maintained.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/4.jpg" alt="Arc length and Arc column">
+            <span class="image-caption">Figure 3: Arc length and Arc column with reference to base metal and electrode</span>
+        </div>
+
+        <p><b>Arc column</b> - Arc column is that portion which is in between anode and cathode drop regions. It consists of radiating mixture of electrons and highly excited neutral atoms and molecules. The arc column is normally round in cross section.</p>
+
+        <h4>Electron theory of arc column</h4>
+        <p>When an electric arc is struck between two electrodes, flow of electrons takes place from cathode (electrode) to anode (base metal). However, the mass of the electrons is very small, they travel with very high velocities, and when they strike the surface of the base metal, kinetic energy acquired by these electrons is converted into heat energy. At the same time the positively charged ionstraveling from anode to cathode give protecting shield to the flowing electrons as shown in Figure below.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/5.jpg" alt="Electron theory of arc column">
+            <span class="image-caption">Figure 4: Electron theory of arc column</span>
+        </div>
+
+        <p>Approximately 50% of the electrical energy put into the arc system comes out in the form of heat energy. Approximately two-thirds of the energy released in the arc column system is always at the anode or the positive pole. This is true in all dc systems. When an ac power supply is used, the heat in the arc column is generally equalized between the anode and the cathode areas.</p>
+
+        <p><b>Arc crater</b> - In arc welding pool of molten metal at end of rod called crater is obtained by the pressure of expanding gases from the electrode tip. This causes the molten metal to flow back into the weld bead.</p>
+
+        <p><b>Arc stability</b> - Arc is stable if it is uniform and steady. A good weld bead and a defect free weld is the product of a stable arc.</p>
+
+        <h4>Factors affecting arc stability</h4>
+        <ol type="a">
+            <li>Suitable matching of arc and power source characteristics.</li>
+            <li>Continuous and proper emission of electrons from the electrode and the thermal ionization in the arc column.</li>
+            <li>Arc length and arc current.</li>
+            <li>Electrode geometry.</li>
+            <li>Use of arc stabilizing material in the coating of the electrode.</li>
+            <li>Skill of the operator.</li>
+        </ol>
+
+        <p><b>Arc blow</b> - Arc blow is the deflection of an electric arc from its normal path due to magnetic forces. Arc blow and is experienced when using currents above 200A or below 40A. AC welding has less trouble with arc blow since the magnetic field due to the arc stream is constantly alternating in direction at the frequency of the supply.</p>
+
+        <h4>Initiating an arc</h4>
+        <p>To establish a stable arc during arc welding, turn on the welding machine, the operator should briefly touch the electrode tip to the base metal by moving down, across and up, and quickly raise it to a distance of 3mm to 4mm between electrode and base metal.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/6.jpg" alt="Procedure for initiating an arc">
+            <span class="image-caption">Figure 5: Procedure for initiating an arc</span>
+        </div>
+
+        <h4>Metal transfer in arc welding process from the tip of the electrode</h4>
+        <p>When an arc is struck between the electrode and plate, the heat generated forms a molten pool in the base metal and the electrode begins to melt away, the metal being transferred from the electrode to the base metal. The metal is transferred in the form of drops or globules and these globules vary in size according to the current and type of electrode covering. The force, which causes the transfer, is due to: (1) its own weight, (2) the electro magnetic forces, (3) gas entrainment, (4) magneto dynamic forces producing movement, (5) surface tension. The globule is finally necked off by the magnetic pinch effect.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/7.jpg" alt="Metal transfer in the form drops">
+            <span class="image-caption">Figure 6: Metal transfer in the form drops (globules), elongate with a neck connecting them to the electrode, the neck gets reduced in size until it breaks and finally the drop is projected in the molten pool</span>
+        </div>
+        
+    </section>
+
+    <section id="polarity">
+        <h2>3.3 Polarity in welding (Applicable to DC arc welding only)</h2>
+        <p>In DC welding, the welding current circuit may be either straight polarity (DCSP) or reverse polarity (DCRP). It has been observed that while welding with direct current, about 60% to 75% of heat produced in the arc is collected on the positive pole and rest on negative pole, i.e., for both current polarities the greatest part of the heating effect occurs at the positive side of the arc. Therefore, for thick jobs DCSP and for thin jobs and sheets DCRP is preferred.</p>
+
+        <h3>3.3.1 Straight polarity (DCSP)</h3>
+        <p>In DCSP, the welding machine connections are electrode negative and workpiece positive. Electron flow is from electrode to workpiece. DCSP welding will produce a wide, relatively shallow weld. In general, straight polarity is used with all mild steel, bare, or light coated electrodes.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/8.jpg" alt="Circuit for DC straight polarity arc welding">
+            <span class="image-caption">Figure 7: Circuit for DC straight polarity arc welding</span>
+        </div>
+
+        <h3>3.3.2 Reverse polarity (DCRP)</h3>
+        <p>In DCRP, the welding machine connections are electrode positive and workpiece negative. Electron flow is from workpiece to electrode. DCRP requires a larger diameter electrode than does DCSP. DCRP welding gives a narrow, deep weld. Reverse polarity is used in the welding of non-ferrous metals such as aluminum, bronze, monel, and nickel.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/9.jpg" alt="Circuit for DC reverse polarity arc welding">
+            <span class="image-caption">Figure 8: Circuit for DC reverse polarity arc welding</span>
+        </div>
+    </section>
+
+    <section id="alternating">
+        <h2>3.4 Alternating Current Welding</h2>
+        <p>In AC there is no polarity because current keeps on changing its direction of flow from one polarity to another. AC weldingis a combination of DCRP and DCSP welding. This can be best explained by showing the three current waves visually. In AC welding half of each complete alternating current (AC) cycle is DCSP, the other half is DCRP.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/10.jpg" alt="Effect of polarity on weld shape">
+            <span class="image-caption">Figure 9: Effect of polarity on weld shape</span>
+        </div>
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th>AC arc welding</th>
+                    <th>DC arc welding</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>AC arc welding machine has no rotating parts</td>
+                    <td>DC arc welding machine has rotating parts such as motors and generators.</td>
+                </tr>
+                <tr>
+                    <td>Transformer costs less.</td>
+                    <td>Initial cost of generator type of set up is high.</td>
+                </tr>
+                <tr>
+                    <td>Maintenance of setup is less</td>
+                    <td>Maintenance of setup is high.</td>
+                </tr>
+                <tr>
+                    <td>Generation of heat is equal on both the poles.</td>
+                    <td>Generation of heat is different at both the poles i.e. 75% of heat is generated at positive pole and 25% heat is generated at negative pole.</td>
+                </tr>
+                <tr>
+                    <td>The problem of arc blow does not exist in AC arc welding process, as it is very easy to control.</td>
+                    <td>The problem of arc blow is severe and is not easily controlled.</td>
+                </tr>
+                <tr>
+                    <td>Bare electrodes can not be used and only coated electrodes are used effectively.</td>
+                    <td>All types of electrodes, bare or coated, can be used with DC.</td>
+                </tr>
+                <tr>
+                    <td>Usually ferrous metals are welded by AC and not the non-ferrous ones.</td>
+                    <td>All types of metals are joined with DC arc welding.</td>
+                </tr>
+                <tr>
+                    <td>Arc is never stable</td>
+                    <td>Arc is more stable.</td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="text-align:center; font-weight:bold; color:#555; margin-bottom: 30px;">Table: Comparison between AC and DC Arc welding</div>
+    </section>
+
+    <section id="electrodes">
+        <h2>3.5 Arc welding electrodes</h2>
+        <p>In electric arc welding, the term electrode refers to the component that conducts the current from the electrode holder to the metal being welded. It progressively melts away due to the heat of an electric arc held between it and the base metal. The arc welding electrode combines a central current carrying "core wire" (filler rod) and a flux coating. Arc welding electrodes are available in various diameters and lengths, depending on the base metal thickness and requirements of the welded joint.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/11.jpg" alt="Arc welding electrode">
+            <span class="image-caption">Figure 10: Arc welding electrode</span>
+        </div>
+
+        <p>Electrodes are classified into two groups: consumable and nonconsumable.</p>
+        
+        <p><b>Consumable electrodes</b> not only provide a path for the current but they also supply filler metal to the joint. An example is the electrode used in shielded metal arc welding.</p>
+
+        <p><b>Non-consumable electrodes</b> are only used as a conductor for the electrical current, such as tungsten electrode and carbon electrode. The filler metal for processes using non-consumable electrodes are hand fed consumable welding rod.</p>
+
+        <p><b>Electrode Size</b> - Electrode size is nominated by diameter of core wire. Electrodes are available from 2.0mm to 6mm diameter. Size determines the amperage used and so the heat input into the job. For bigger the joint, bigger electrode is desirable.</p>
+
+        <p><b>Electrode efficiency</b> - The efficiency of an electrode is the mass of metal actually deposited compared with the mass of that portion of the electrode consumed. It can be expressed as a percentage thus:</p>
+
+        <div class="formula-box">
+            <b>Efficiency % = Mass of metal deposited x 100 / mass of metal of the electrode consumed</b>
+        </div>
+
+        <h4>Functions of coating on the electrode</h4>
+        <ol type="a">
+            <li>It provides a gaseous shield to exclude the air from the arc areas and so reduce the tendency to oxidation of the molten metal.</li>
+            <li>It produces a slag, which assists in the protection of the molten metal.</li>
+            <li>It provides a vehicle for adding alloying elements into the weld metal, over and above those elements normally available within the core wire.</li>
+            <li>It can include arc stabilizing elements which permit smooth stable arc characteristics, even on low voltage AC welding power.</li>
+        </ol>
+
+        <h4>Electrodes are classified in five main groupings:</h4>
+        <p><b>Rutile (titanium dioxide)</b> - It is a general purpose electrode. Gives arc stability and low spatter.</p>
+        <p><b>Basic (calcium carbonate and fluoride)</b> - Moisture resistant flux coating, low spatter, good arc striking. Used on carbon steels giving excellent mechanical properties and low crack risk.</p>
+        <p><b>Cellulosic (cellulose)</b> - Deeply penetrating all positions electrodes provides light slag covering, used mainly for high speed welding of pipe.</p>
+        <p><b>Iron powder</b> - Added to coating/flux to produce deep penetrating welds and good arc striking characteristics. Used mainly for structural steels.</p>
+        <p><b>Surfacing and non-ferrous alloy type</b> - Nickel type electrodes for welding of cast iron, giving an imaginably deposit. Used for building up of worn surfaces and providing a wear resistant finish.</p>
+    </section>
+
+    <section id="equipment">
+        <h2>3.6 Arc welding equipments</h2>
+        
+        <p><b>3.6.1 Arc welding machines (power source)</b> - Arc welding machine also known as arc welder is an electrical machine capable of supplying current of sufficient magnitude to provide satisfactory welding heat at a safe voltage capable of sustaining the arc.</p>
+
+        <p><b>3.6.2 AC arc welding machines</b> are based on a transformer, which is a static electrical machine that can convert AC power from high voltage low amperage (as in the mains) to low voltage high amperage power (as used in welding).</p>
+        
+
+        <p><b>3.6.3 DC arc welding machines</b> are either DC rotary generators driven by an AC electric motor or alternatively use an AC transformer with a rectifier attachment which is an electrical "one-way flow valve" permitting the AC welding current to only flow in one direction, thus achieving a DC effect.</p>
+
+        <h3>3.6.4 Miscellaneous arc welding equipments</h3>
+        
+        <p><b>Electrode holder</b> - An electrode holder is an insulated clamping device for holding the electrode at any desired angle during the electric arc welding firmly process. The electrode holder is connected to the power source.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson3/12.jpg" alt="Arc welding electrode holder">
+            <span class="image-caption">Figure 11: Arc welding electrode holder</span>
+        </div>
+
+        <p><b>Cables</b> - Two welding cables of sufficient current carrying capacity with heavy insulation are used in electric arc welding process.</p>
+
+        <p><b>Earth clamp</b> - It gives connection of earthing cable with the base metal through the metallic welding table on which the base metal is placed.</p>
+
+        <p><b>Chipping hammer and wire brush</b> - A chipping hammer is required to loosen scale, oxides and slag. A wire brush is used to clean each weld bead before further welding.</p>
+
+        <p><b>Welding table</b> - A welding table should be of all-steel construction. A container for electrodes with an insulated hook to hold the electrode holder when not in use should be provided.</p>
+
+        <p><b>Goggles</b> - During all electric arc welding processes, operators must wear safety goggles to protect their eyes from weld spatter.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit4/Lesson3/13.jpg" alt="Goggles">
+                    <br><b>Goggles</b>
+                </div>
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit4/Lesson3/14.jpg" alt="Chipping hammer and wire brush">
+                    <br><b>Chipping hammer and wire brush</b>
+                </div>
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit4/Lesson3/15.jpg" alt="Shield">
+                    <br><b>Shield</b>
+                </div>
+            </div>
+            <div class="image-grid" style="grid-template-columns: 1fr 1fr; margin-top: 0;">
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit4/Lesson3/16.jpg" alt="Apron">
+                    <br><b>Apron</b>
+                </div>
+                <div class="image-grid-item">
+                    <img src="images/mem/Unit4/Lesson3/17.jpg" alt="Gloves">
+                    <br><b>Gloves</b>
+                </div>
+            </div>
+            <span class="image-caption">Figure 12: Miscellaneous arc welding equipments</span>
+        </div>
+
+        <p><b>Hand-held shield</b> - Welder needs a hand-held shield to protect his eyes and face from harmful light and particles of hot metal.</p>
+
+        <p><b>Apron</b> - It is made of heat resistant chrome leather, is used to protect the operator from sparks and heat.</p>
+
+        <p><b>Gloves</b> - Gloves are also made of chrome leather and are used to protect the hands of welder from the spark and spatter of the arc.</p>
+        
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit5lesson2.html" title="Gas Welding or Oxyfuel Gas Welding (OFW)">&laquo; Lecture 2</a>
+        <a href="Unit5lesson4.html" title="Resistance Welding">Lecture 4 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
