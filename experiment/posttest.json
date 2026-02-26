@@ -2,38 +2,174 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Q1: In sand casting, what is the purpose of the 'Pattern'?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "To melt the metal",
+        "b": "To create the cavity in the mould",
+        "c": "To finish the surface",
+        "d": "To join two metal pieces"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. Furnaces melt metal.",
+        "b": "Correct. The pattern is a replica of the object used to make the mould cavity.",
+        "c": "Incorrect. This is a finishing operation.",
+        "d": "Incorrect. This is welding."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q2: Which casting defect is caused by trapped gas bubbles inside the casting?",
+      "answers": {
+        "a": "Misrun",
+        "b": "Cold shut",
+        "c": "Blowholes",
+        "d": "Mold shift"
+      },
+      "explanations": {
+        "a": "Incorrect. Misrun is incomplete filling.",
+        "b": "Incorrect. Cold shut is improper fusion of two streams.",
+        "c": "Correct. Blowholes are cavities caused by entrapped gas or steam.",
+        "d": "Incorrect. Mold shift is a misalignment defect."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q3: Which forging operation involves increasing the diameter of a workpiece while reducing its length?",
+      "answers": {
+        "a": "Drawing down",
+        "b": "Upsetting",
+        "c": "Punching",
+        "d": "Bending"
+      },
+      "explanations": {
+        "a": "Incorrect. Drawing down increases length and reduces diameter.",
+        "b": "Correct. Upsetting compresses the length to increase thickness.",
+        "c": "Incorrect. Punching makes holes.",
+        "d": "Incorrect. Bending changes the angle, not the cross-section."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q4: In a lathe machine, which operation produces a flat surface at the end of the workpiece?",
+      "answers": {
+        "a": "Turning",
+        "b": "Knurling",
+        "c": "Facing",
+        "d": "Thread cutting"
+      },
+      "explanations": {
+        "a": "Incorrect. Turning reduces the diameter.",
+        "b": "Incorrect. Knurling creates a grip pattern.",
+        "c": "Correct. Facing cuts perpendicular to the axis to flatten the end.",
+        "d": "Incorrect. This produces threads."
+      },
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q5: What is the primary function of 'Flux' in electric arc welding?",
+      "answers": {
+        "a": "To conduct electricity",
+        "b": "To cool the weld",
+        "c": "To protect the molten pool from atmospheric oxidation",
+        "d": "To increase the melting point"
+      },
+      "explanations": {
+        "a": "Incorrect. The electrode core conducts electricity.",
+        "b": "Incorrect. Cooling is not the primary function.",
+        "c": "Correct. Flux generates gas/slag to shield the hot metal from oxygen/nitrogen.",
+        "d": "Incorrect."
+      },
+      "correctAnswer": "c",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q6: Which heat treatment process is primarily used to soften steel and improve machinability?",
+      "answers": {
+        "a": "Quenching",
+        "b": "Annealing",
+        "c": "Hardening",
+        "d": "Carburizing"
+      },
+      "explanations": {
+        "a": "Incorrect. Quenching hardens steel.",
+        "b": "Correct. Annealing involves slow cooling to relieve stress and soften the metal.",
+        "c": "Incorrect. Hardening makes the metal brittle.",
+        "d": "Incorrect. Carburizing adds carbon to the surface."
+      },
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q7: Which machining process uses a multi-point rotating cutter to remove material by feeding the workpiece against it?",
+      "answers": {
+        "a": "Milling",
+        "b": "Turning",
+        "c": "Shaping",
+        "d": "Drilling"
+      },
+      "explanations": {
+        "a": "Correct. Milling uses a rotating cutter and movable table.",
+        "b": "Incorrect. Turning rotates the workpiece.",
+        "c": "Incorrect. Shaping uses a reciprocating single-point tool.",
+        "d": "Incorrect. Drilling is primarily for hole making."
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Q8: In Additive Manufacturing (3D Printing), how is the object created?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "By removing material from a block",
+        "b": "By adding material layer-by-layer",
+        "c": "By forging a hot billet",
+        "d": "By pouring metal into a sand mould"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "Incorrect. This is Subtractive Manufacturing.",
+        "b": "Correct. AM builds objects layer by layer.",
+        "c": "Incorrect. This is Forming.",
+        "d": "Incorrect. This is Casting."
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Q9: What is the 'Shrinkage Allowance' on a pattern used for?",
+      "answers": {
+        "a": "To compensate for machining removal",
+        "b": "To allow easy removal of pattern from sand",
+        "c": "To compensate for metal contraction during cooling",
+        "d": "To improve surface finish"
+      },
+      "explanations": {
+        "a": "Incorrect. That is Machining Allowance.",
+        "b": "Incorrect. That is Draft Allowance.",
+        "c": "Correct. Metals shrink when cooling; the pattern must be slightly larger.",
+        "d": "Incorrect."
       },
       "correctAnswer": "c",
-      "difficulty": "beginner"
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "Q10: Which type of welding uses a non-consumable tungsten electrode?",
+      "answers": {
+        "a": "MIG Welding",
+        "b": "TIG Welding (GTAW)",
+        "c": "Stick Welding (SMAW)",
+        "d": "Oxy-Acetylene Welding"
+      },
+      "explanations": {
+        "a": "Incorrect. MIG uses a consumable wire.",
+        "b": "Correct. TIG stands for Tungsten Inert Gas.",
+        "c": "Incorrect. Stick welding uses consumable rods.",
+        "d": "Incorrect. This uses gas flame."
+      },
+      "correctAnswer": "b",
+      "difficulty": "advanced"
     }
   ]
 }

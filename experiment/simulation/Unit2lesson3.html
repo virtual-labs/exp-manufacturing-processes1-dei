@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 3: CASTING PROCESS: MOULDING | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; display: block; margin-bottom: 5px; }
+        .toc a:hover { text-decoration: underline; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #555; margin-top: 20px; font-weight: bold; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a {
+            color: var(--secondary);
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 3: CASTING PROCESS: MOULDING</h1>
+        <a href="MEM103/Unit3/Lesson3/Unit3Lesson3.pdf" target="_blank" class="download-link">📥 Lesson 3 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#objectives">3.0 Objectives</a>
+                <a href="#moulding">3.1 Moulding Sand</a>
+                <a href="#properties">3.2 Properties of Moulding Sand</a>
+                <a href="#types">3.3 Types of Moulds</a>
+            </div>
+            <div>
+                <a href="#tools">3.4 Moulding Tools</a>
+                <a href="#procedure">3.5 Procedure for making a Mould</a>
+                <a href="#core">3.6 Core</a>
+                <a href="Unit3lesson3scq.html">Self-check questions</a>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <p>The mould is made by packing some readily formed aggregate material, such as moulding sand, around the pattern. When the pattern is withdrawn, its imprint provides the mould cavity, which is ultimately filled with metal to become the casting. A mould is required to get the desired shape and size of the metal casting. Sand is a good refractory material for most of the metals and is mostly used for moulding.</p>
+    </section>
+
+    <section id="objectives">
+        <h2>3.0 Objectives</h2>
+        <p>After going through this lesson, you will be able to understand:</p>
+        <ol>
+            <li>Function of moulding in casting process.</li>
+            <li>Types of moulding sand and characteristics of sand used for moulding.</li>
+            <li>Moulding tools and procedure for making a mould.</li>
+        </ol>
+    </section>
+
+    <section id="moulding">
+        <h2>3.1 Moulding Sand</h2>
+        <p>Sand is the principle material used in foundry for making moulds. The principle ingredients of moulding sands are: silica sand grains, clay, moisture and special additives. Moulding sand possesses the following properties for making moulds: High fusion temperature and Good thermal stability. Moulding sands are classified into two categories viz.,</p>
+
+        <p><b><i>Natural moulding sand</i></b><br>
+        Moulding sand available in nature is called natural moulding sand Natural moulding sands are taken from riverbeds or are dug from pits. Natural moulding sands are also obtained by crushing and milling soft yellow sandstone, rocks etc.</p>
+
+        <p><b><i>Artificial or synthetic moulding sand</i></b><br>
+        The moulding sand prepared artificially, is known as artificial or synthetic moulding sand. Synthetic sands or artificial sands can be prepared in foundry shop by crushing sandstone and then washing and grading these to yield a sand grade of required shape and grain distribution. Synthetic sands are more expensive than natural sands.</p>
+
+        <p>Further moulding sands can be classified according to their use, composition into number of varieties. The desired strength and bonding property of these sands is developed by additive material. Also this addition allows greater flexibility in the properties such as permeability, dry strength of sand which can be easily designed as per requirement. The common moulding sands are described in sections below.</p>
+
+        <h4>3.1.1 Green sand</h4>
+        <p>The name 'green sand' implies 'damp' or un-dried sand, as the mould made from this sand is used immediately to pour the molten metal. It consists of silica sand with 18-30% clay and 4-8% water. Clay and water furnish the bond for green sand. Green sand retains the shape given to it and is collected from natural resources. The moulds using this sand are called as 'green sand moulds'. It has the advantage of maintaining moisture content for a long time.</p>
+
+        <h4>3.1.2 Dry sand</h4>
+        <p>Green sand that has been dried or baked after the mould preparation is called dry sand. Dry sand yields porosity absent castings, as there is no moisture. These are suitable for large size castings, say, heavier than 500 kg.</p>
+
+        <h4>3.1.3 Loam sand</h4>
+        <p>When clay and silica are mixed in equal proportions (50 - 50) with little or no special additives, it is called loam sand. It is used for loam moulding.</p>
+
+        <h4>3.1.4 Parting sand</h4>
+        <p>Parting sand is free from clay and is dry. Parting sand is used to keep the green sand from sticking to the pattern and to allow the sand on the parting surface of the flasks to separate without fitting tightly. This permits easy withdrawal of the pattern after ramming.</p>
+
+        <h4>3.1.5 Core sand</h4>
+        <p>Sand used for making cores is called core sand. Core sand is made of core oil, which is composed of linseed oil, resin, and other binding materials, is mixed with silica sand. Core sand should be stronger than the moulding sand.</p>
+    </section>
+
+    <section id="properties">
+        <h2>3.2 Properties of Moulding Sand</h2>
+        <p>Moulding sand must possess the following properties to produce good moulds and castings.</p>
+
+        <p><b>Refractoriness</b><br>
+        Moulding sand must not fuse when it comes in contact with molten metal. As the mould should withstand the molten metal temperature while it is poured, the moulding sand should have sufficient refractoriness. Without sufficient refractoriness, the sand partially fuses with the molten metal giving rise to very rough sand-fused casting surface and causing rejection. For example, sand used for steel castings should have to withstand high pouring temperatures of above 1400<sup>o</sup>C.</p>
+
+        <p><b>Cohesiveness or strength</b><br>
+        The ability of sand particles to stick together determines the cohesiveness or strength of sand. The moulding sand, when combined with a suitable binder, should develop adequate cohesion among its grains to be able to form and stay as mould. Moulding sand should be capable of withstanding the compressive and erosive force exerted by molten metal while filling mould cavity.</p>
+
+        <p><b>Collapsibility</b><br>
+        After solidification of the molten metal, the casting is required to be removed from the mould. If the moulding sand is easily collapsible, free contraction of the metal as well as easy removal of the casting is possible. If the sand is not collapsible, it will strongly stick to the casting, becoming very hard to separate after the metal is solidified, resulting in high cost of finishing.</p>
+
+        <p><b>Adhesiveness</b><br>
+        The sand particles stick to the mould box surfaces by the property called adhesiveness. This property helps the sand to retain the mould cavity and stay in the box.</p>
+
+        <p><b>Flowability</b><br>
+        The capacity of moulding sand to flow to different corners and voids on pattern without much special effort is an important requirement of moulding sand. This property of the sand is known as flowability. This property is more significant in machine moulding.</p>
+
+        <p><b>Chemical resistivity</b><br>
+        The sand used for moulding should be inert and should not react chemically with the metal/alloy being poured into it. Special care has to be taken while preparing moulding sand for casting reactive metals like magnesium and titanium alloys.</p>
+
+        <p><b>Permeability</b><br>
+        The property of the sand to allow easy flow of gases and moisture through it is called permeability. Molten metals poured into mould cause evolution of gases due to their reaction with moulding elements such as binders, additives and water. Even a small amount of water added to moulding sand can evolve a lot of steam in few seconds while molten metal is filling in the mould.</p>
+    </section>
+
+    <section id="types">
+        <h2>3.3 Types of Moulds</h2>
+        <p>Depending upon the raw material used for preparing the mould, moulds may be classified as:</p>
+        <ul>
+            <li><b>Green sand mould:</b> Moulds made up of green sand. Permits easy patching and finishing. Used for small and medium castings.</li>
+            <li><b>Dry sand mould:</b> Made using green sand which is then dried to remove moisture. Used for large castings.</li>
+            <li><b>Loam mould:</b> Built with bricks or iron parts and plastered with loam sand. Used for large castings.</li>
+            <li><b>Metal moulds:</b> Used for die casting, permanent mould casting and centrifugal casting processes.</li>
+        </ul>
+    </section>
+
+    <section id="tools">
+        <h2>3.4 Moulding Tools</h2>
+        <p>In a foundry shop, many different tools and equipment are used for making moulds. Some of the important tools used are described below:</p>
+        
+        <p><b>Shovel:</b> Used for mixing and filling moulding sand into the flask.<br>
+        <b>Riddle:</b> Used for removing foreign materials from the sand.</p>
+
+        <div class="image-container">
+            
+            <img src="images/mem/lesson4/MouldingTolls.jpg" alt="Moulding tools used in foundry">
+            <span class="image-caption">Fig. 3.1 Moulding tools used in foundry</span>
+        </div>
+
+        <p><b>Rammer:</b> Used for packing or ramming the sand into the mould.<br>
+        <b>Trowel:</b> Used for smoothening the surfaces of the mould.<br>
+        <b>Sprue Pin:</b> A conical wooden pin used to create an opening to pour molten material.<br>
+        <b>Vent Rod:</b> Used for making small holes to permit gases to escape.<br>
+        <b>Draw Spike:</b> Used for drawing patterns from the sand.<br>
+        <b>Moulding Boxes (Flasks):</b> Rigid frames made of iron or wood. The top is called the <b>cope</b> and the bottom is the <b>drag</b>. A middle section, if used, is called the <b>cheek</b>.</p>
+    </section>
+
+    <section id="procedure">
+        <h2>3.5 Procedure for Making a Mould</h2>
+        <p>Making a mould starts with placing the drag being used on a moulding board, and one half of the pattern is placed in the drag on the moulding board as shown in Fig. 3.2(a). Parting sand is spread over the pattern and the moulding sand is then pierced in to cover the pattern. The sand is pressed around the pattern with fingers and then the drag is completely filled with sand. For small moulds, the sand is tightly packed in the drag by a hand rammer. Once the ramming has been completed, the excess sand is leveled off with a strike rod and trowels. Vent holes are made with a vent rod.</p>
+        
+        <p>The drag is then turned over. Parting sand is applied, and the cope is placed on top. The second half of the pattern is positioned, and a sprue pin is placed nearby. After ramming the cope, the pattern and sprue pin are removed. A gate is cut to connect the sprue opening to the cavity. Finally, the cope is placed back onto the drag to close the mould.</p>
+
+        <div class="image-container">
+            
+            <img src="images/mem/lesson4/Procedure.jpg" alt="Procedure for making a mould">
+            <span class="image-caption">Fig. 3.2 Procedure for making a mould</span>
+        </div>
+    </section>
+
+    <section id="core">
+        <h2>3.6 Core</h2>
+        <p>To get holes or other internal cavities in castings, cores are used. A core may be defined as a sand shape or form, which makes the contour of a casting for which no provision has been made in the pattern. Core is like an obstruction placed and positioned in the mould shown in Fig. 3.3. Naturally, it does not permit the molten poured metal to fill up the space occupied by the core. In this way, a core produces hollow casting.</p>
+
+        <div class="image-container">
+            
+            <img src="images/mem/lesson4/CoreBox.jpg" alt="Section of core box with ore in place">
+            <span class="image-caption">Fig. 3.3 Section of core box with ore in place</span>
+        </div>
+
+        <p><b>Core Making:</b> Cores are made of clay-free silica sand mixed with binders (linseed oil, resin). The mix is packed into a <b>core box</b>. The process involves sand preparation and <b>core baking</b> to remove moisture and impart strength.</p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit2lesson2.html" title="Casting Process: Pattern Making">⏮ Lecture 2</a>
+        <a href="Unit2lesson4.html" title="Casting Process: Cupola Furnace">Lecture 4 ⏭</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a></p>
+</footer>
+
+</body>
+</html>

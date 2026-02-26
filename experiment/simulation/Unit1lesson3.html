@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: General Shop Safety | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+            --alert-bg: #fff3cd;
+            --alert-text: #856404;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        .toc a { color: var(--secondary); text-decoration: none; font-weight: 500; display: block; margin-bottom: 5px; }
+        .toc a:hover { text-decoration: underline; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid var(--border); padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; font-size: 1rem; background-color: #f0f4f8; padding: 5px 10px; border-radius: 4px; }
+
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Table Styles */
+        table.styled-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        table.styled-table th, table.styled-table td {
+            border: 1px solid var(--border);
+            padding: 12px;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        table.styled-table th { background: var(--primary); color: white; }
+        table.styled-table tr:nth-child(even) { background-color: #f2f2f2; }
+
+        .safety-alert {
+            background-color: var(--alert-bg);
+            color: var(--alert-text);
+            padding: 15px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: General Shop Safety</h1>
+        <a href="MEM103/Unit1/Lesson3/Unit1Lesson3.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <div>
+                <a href="#safety">4.0 Safety in Mechanical Workshops</a>
+                <a href="#general">4.1 General Safety Precautions</a>
+                <a href="#equipment">4.2 Clothing and Safety Equipment</a>
+                <a href="#guidelines">4.3 Safety Guidelines for Hand Tools</a>
+                <a href="#practices">4.4 Dimensional Measurement Safety</a>
+            </div>
+            <div>
+                <a href="#transfer">4.5 Layout and Transfer Measuring Tools</a>
+                <a href="#ppe">4.5.1 - 4.5.7 PPE Details</a>
+                <a href="#comments">4.6 DIY Safety Comments & First Aid</a>
+            </div>
+        </div>
+        <div style="margin-top: 15px; border-top: 1px dashed #ccc; padding-top: 10px;">
+            <b>Supplementary Material:</b> 
+            <a href="Unit1lesson3faq.html" style="display:inline;">Frequently Asked questions</a>
+        </div>
+    </div>
+
+    <section id="safety">
+        <h2>4.0 Safety in Mechanical Workshops</h2>
+        <p>Mechanical workshops can be very dangerous places especially for the untrained and inexperienced. The safety and safe working habits must be inculcated from day one in students and workers and their importance must not be ignored. Safety rules must be carefully studied and applied. Everyone must cultivate the "safety-first" habit. An accident may occur due to worker's own fault, due to unsafe equipment or due to unsafe working conditions. Machines and tools are designed with many safety features. Safety is also linked to the equipment. No equipment is completely safe, no matter how carefully it is designed, constructed and used. Safety is ensured only when the equipment is properly maintained, operated and used under stated conditions.</p>
+        
+        
+
+        <p>Safety may be defined as a judgment of the acceptability of danger, where danger is the combination of hazard and risk. Thus the safety of a workplace depends on the hazard and risk involved with the process or machine operation. Hazard is defined, as an injury that might occur.<br>
+        Sharp cutting edges, high-temperatures, explosive gases, electric sparks, power-driven machines, parts, or tools, rotating or reciprocating at high speeds etc. are frequently encountered in manufacturing industry. All these are potential sources of causing injury to human beings or damage to equipment.<br>
+        The workshop supervisor is responsible for ensuring that the required safety equipment is available, and that anyone granted permission to use the facilities is conversant with the safe operation of the equipment, tools and machinery. The user must be warned of any special hazards, restrictions imposed in advance.</p>
+    </section>
+
+    <section id="general">
+        <h2>4.1 General Safety Precautions for the Mechanical Workshop</h2>
+        <ol>
+            <li>Always wear <b>Safety glasses</b> in the shop.</li>
+            <li>Check tools before use to assure they are safe to use.</li>
+            <li>Use the proper tool for the job. Many cuts in the shop occur because a wrench slips and the hand hits a sharp cutting tool.</li>
+            <li>Do not set up or operate any machinery unless an instructor is in the shop.</li>
+            <li>Do not operate any machine unless authorized to do so by an instructor.</li>
+            <li>Do not leave tools or work on the table of a machine even if the machine is not running. Tools or work may fall off and cause a toe or foot injury.</li>
+            <li>Never handle chips with your hands or fingers. Chips are extremely sharp and can easily cause cuts.</li>
+            <li>Use a brush to remove chips-not hands, fingers.</li>
+            <li>Never wear gloves to clean the work piece or any part of a machine that is running. Rotating tools or parts can grab gloves and pull you into the machine.</li>
+            <li>Get first aid immediately for any injury.</li>
+            <li>Get help for handling large, long, or heavy pieces of material.</li>
+            <li>Follow safe lifting practices; lift with your leg muscles, not your back. If you do not know how to lift safely, ask an instructor to show you.</li>
+            <li>Be sure you have sufficient light to see clearly.</li>
+            <li>Put tools away when not in use.</li>
+            <li>Place all scrap pieces in the correct containers.</li>
+            <li>Store materials in such a way that they cannot become tripping hazards.</li>
+            <li>Keep floor free of oil, grease, or any other type of liquid. Clean up spilled liquids immediately; they are slipping hazards.</li>
+            <li>Loose clothing or long sleeves should not be worn in the shop. Machines can easily grab loose clothing in rotating parts.</li>
+            <li>All set-screws should be of the flush or recessed type. If they are not, move with caution when near them. Projecting set-screws are very dangerous because they may catch on sleeves or clothing.</li>
+            <li>Never use compressed air to clean any machine, your clothes or yourself.</li>
+            <li>If using compressed air to clean a part, point the air hose down and away from yourself and other persons.</li>
+            <li>Passageways should be clear at all times to avoid tripping or other accidents.</li>
+            <li>Do not run in the shop; there should be no "fooling around" in the shop at any time.</li>
+            <li>Do not walk behind a person operating a machine; you may bump him by accident or surprise them and cause an accident.</li>
+        </ol>
+    </section>
+
+    <section id="equipment">
+        <h2>4.2 Clothing and Safety Equipment for the Mechanical Workshop</h2>
+        <ol>
+            <li>Always wear safety glasses, safety goggles, or face shields designed for the type of work being done when operating any machine or doing any work in the shop.</li>
+            <li>Wear shirts with short sleeves, sleeves cut off or rolled up above the elbows.</li>
+            <li>Wear shoes with thick penetration resistant leather soles-safety shoes or boots, if required.</li>
+            <li>Always remove gloves before turning on or operating any machine. If material is rough or sharp and gloves must be worn, place or handle material with the machine turned off.</li>
+            <li>Protect long hair by Wearing a suitable hat or welding cap.</li>
+        </ol>
+
+        <div class="safety-alert">
+            <b>Do not wear:</b>
+            <ul>
+                <li>Tennis shoes (wear thick soled leather shoes, which provide some protection for the feet).</li>
+                <li>Sandals</li>
+                <li>Shorts, cutoffs, Bermuda or short-shorts</li>
+                <li>Tank tops, muscle shirts, etc.</li>
+                <li>Neckties, loose or torn clothing</li>
+                <li>Rings, watches, bracelets, or other jewelry that could get caught in moving machinery.</li>
+                <li>Loose clothing or long sleeves (machines can easily grab loose clothing in rotating parts)</li>
+            </ul>
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/1.jpg" alt="Correct dress">
+            <span class="image-caption">Fig. 1: Correct dress</span>
+        </div>
+    </section>
+
+    <section id="guidelines">
+        <h2>4.3 Safety Guidelines for Hand Tools</h2>
+        
+        <h4>Handsaws</h4>
+        <ol>
+            <li>Use slow, careful, downward strokes to help the saw cut directly across material.</li>
+            <li>Do not crowd or force a saw through the cut because the saw may buckle or fly out.</li>
+            <li>Keep the saw sharp, properly set, and free of cracks and broken teeth.</li>
+            <li>Replace saw blades as soon as they begin to stick in the cut.</li>
+            <li>Carry saws with the blades covered do not carry them on your shoulder.</li>
+            <li>Do not hand a saw overhead on hooks or leave it on the floor.</li>
+            <li>To prevent scrapes and cuts, do not allow it to protrude from the end or edge of a bench.</li>
+        </ol>
+
+        <h4>Hammers</h4>
+        <ol>
+            <li>Check that the head of the hammer is fixed securely at 90 degrees to the handle and that the handle and head are not damaged.</li>
+            <li>Check that the handles are free from splits and roughness and that the heads are not burred or split.</li>
+            <li>Keep the head and handle clean to avoid the tool slipping out of your hand or off the work.</li>
+            <li>Grasp handle firmly at the end while keeping eyes on the point to be struck.</li>
+            <li>While using heavy hammers, holding the handle firmly at the end with one hand, slide the other hand down the handle until the head strikes the work, all the time keeping your back as straight as possible.</li>
+            <li>Do not use hammers for extracting nails.</li>
+            <li>Do not store or leave a hammer above head height.</li>
+            <li>Make sure that nobody else is within at least three handles lengths of where you are working.</li>
+            <li>Always wear a helmet when using mells and sledge hammers.</li>
+        </ol>
+
+        <h4>Crowbars</h4>
+        <ol>
+            <li>These are heavy tools-keep your back straight and bend your legs when lifting or using.</li>
+            <li>Stop work if you become tired-a crowbar flying from your exhausted fingers can be very dangerous.</li>
+            <li>When using a crowbar as a lever, do not jump on the free end or use other tools to hammer on the crowbar. Remember that crowbars can bend.</li>
+            <li>Carry a crowbar down by your side at the point of balance.</li>
+            <li>To prevent slips, place a block of wood under the head of the crowbar.</li>
+        </ol>
+
+        <h4>Axes</h4>
+        <ol>
+            <li>Keep axes sharp for faster chopping and greater safety.</li>
+            <li>Check that handles are smooth and not split or damaged.</li>
+            <li>Ensure that axe heads are firmly wedged onto handles.</li>
+            <li>Check that there is no damage to the back of axe heads.</li>
+            <li>Use only a thin-bladed narrow axe for hard wood, and a thick-bladed wide axe for soft wood.</li>
+            <li>Always wear gloves when sharpening and move sharpening stones away from the edge, not into it.</li>
+            <li>Always cut away from yourself.</li>
+            <li>Make sure there is a clear circle in which to swing an axe.</li>
+            <li>Keep axes protected by sheaths or metal guards when not in use.</li>
+        </ol>
+
+        <h4>Files</h4>
+        <ol>
+            <li>When using a file, have secure footing before applying pressure.</li>
+            <li>Grasp the file with one hand and guide the point of the file with the thumb and forefinger of the other hand.</li>
+            <li>Use a vice to secure the material being filed and position the workpiece to avoid awkward filing postures.</li>
+            <li>Do not use oil since this will cause the file to slide across the work preventing fast cutting.</li>
+        </ol>
+
+        <h4>Jack Planes</h4>
+        <ol>
+            <li>Store all planes in a rack designed to protect the cutting edges from damage and workers from injuries.</li>
+            <li>Always keep the cutting edge sharp.</li>
+            <li>Hold material being planed securely in a vise, clamp or other holding device.</li>
+        </ol>
+
+        <h4>Scraper</h4>
+        <ol>
+            <li>Only experienced workers may use scrapers.</li>
+            <li>Keep scrapers sharp and in good condition.</li>
+            <li>Store them in special racks to protect the edges and other workers.</li>
+            <li>Keep work, scraper and hands free from grease and oil when using a scraper.</li>
+        </ol>
+
+        <h4>Cutters</h4>
+        <ol>
+            <li>Use heavy-duty cutters when cutting heavy wire.</li>
+            <li>It is unsafe to overload a light tool.</li>
+            <li>Apply force at a right angle to the cutting edge, not at a slant.</li>
+            <li>Never use cutters near live electrical circuits.</li>
+            <li>When using cutters on bolts or reinforcing rods, hold the portion to be cut in one hand or cover it with a glove to keep it from flying.</li>
+            <li>Never tamper with the adjustment on the cutter jaws.</li>
+        </ol>
+
+        <h4>Wood chisels</h4>
+        <ol>
+            <li>Always drive a wood chisel by hand in an outward direction, away from the body.</li>
+            <li>Before using a wood chisel, remove nails and metal from the piece of work or drive them into the material.</li>
+            <li>Protect the sharp edges of chisels and store them in a rack, workbench or slotted section of a tool box.</li>
+            <li>Safety hazards result if chisels are left on shelves or bench tops where they can roll off.</li>
+        </ol>
+
+        <h4>Awls</h4>
+        <ol>
+            <li>Holding an awl at a right angle to the surface of the work will prevent injury-causing slips.</li>
+            <li>To make a hole with an awl, turn it to the right and to the left as it begins piercing the material.</li>
+            <li>Never carry an awl in a pocket because the sharp point may cause an injury.</li>
+        </ol>
+
+        <h4>Screwdriver</h4>
+        <ol>
+            <li>Handle the screwdriver carefully.</li>
+            <li>Use the right sized screwdriver for the job.</li>
+            <li>Keep the blade clean.</li>
+            <li>Do not carry a screwdriver in your pocket unless it has a pocket.</li>
+            <li>Never use a screwdriver for prying or chiseling operations.</li>
+            <li>When difficulty is encountered in driving or removing screws that are hard to turn, do not use pliers to turn the screwdriver.</li>
+        </ol>
+
+        <h4>Hand drilling machine</h4>
+        <ol>
+            <li>Clamp down the work to be drilled.</li>
+            <li>Hold the brace or hand drill vertically.</li>
+            <li>If you feel it is necessary - wear goggles.</li>
+            <li>Do not drill too quickly, take your time.</li>
+        </ol>
+
+        <h4>Hand shears, bench shears and shearing machines</h4>
+        <ol>
+            <li>Keep fingers away from the cutting edges of all hand tools in general and keep hands and other parts of the body clear of the cutting edges of bench shears, the shearing machine hand shears and nippers.</li>
+            <li>Do not carry shears, nippers or pincers in your pocket and do not wave them around.</li>
+            <li>After use be sure to hand them or store them so that they will not cut anyone coming in contact with them.</li>
+            <li>Always steady the work that is about to be cut to prevent the tool from slipping.</li>
+            <li>Guillotines both power and treadle, should be fitted with appropriate guarding to ensure that the fingers etc. of the operator cannot come into contact with the shearing blades.</li>
+            <li>Lever shears should always be fitted with a locking arm to prevent the lever from being accidentally operated when not in use.</li>
+        </ol>
+
+        <h4>Clamping devices</h4>
+        <ol>
+            <li>When closing the jaw of a vice or clamp, avoid getting any portion of your hands or body between the jaws or between one jaw and the work.</li>
+            <li>Use care to keep from being pinched between the end of the handle and the screw.</li>
+            <li>When holding heavy work in a vice, place a block of wood under work as a prop to prevent it from sliding down and failing on your foot.</li>
+            <li>Do not open the jaws of a vice beyond their capacity, as the movable jaw will drop off, causing personal injury and possible damage to the jaw.</li>
+        </ol>
+
+        <h4>Anvils and smithy tools</h4>
+        <ol>
+            <li>Use extreme care when using these tools to prevent metal chips from flying around and to prevent hot sparks from causing personal injury or fires.</li>
+            <li>When hot metal is to be forged, wear goggles to protect the eyes.</li>
+        </ol>
+
+        <h3>Machine Operation Safety</h3>
+        
+        <h4>General Safety Checklist while operating machines</h4>
+        <ol>
+            <li>Do not attempt to operate any machinery until you are sure you know how to use it.</li>
+            <li>Ensure that you know how to stop the machine before starting it.</li>
+            <li>Ensure that all appropriate guards are in position before starting the machine.</li>
+            <li>Check, where appropriate that the direction of rotation of the workpiece or cutter is correct.</li>
+            <li>Ensure that any feed mechanisms are in neutral before starting the machine.</li>
+            <li>Ensure that all tools, workpieces, etc. are secure before starting the machine.</li>
+            <li>Do not walk away and leave the machine running.</li>
+            <li>Wear appropriate personal protection - safety glasses, shoes, etc.</li>
+            <li>Do not remove swarf with bare hands - wear gloves and use a rake or brush.</li>
+            <li>Do not wear gloves near rotating machinery.</li>
+            <li>Always use clamps to hold a workpiece in the drilling machine table.</li>
+            <li>Do not attempt to hold the workpiece by hand.</li>
+            <li>Wear appropriate eye protection as abrasive grindwheels can cause serious eye injuries due to grit being thrown from the grindwheel.</li>
+        </ol>
+
+        
+
+        <h4>Lathes</h4>
+        <ol>
+            <li>Correct clothing is important, i.e. remove rings and watches, roll sleeves above elbows.</li>
+            <li>Always stop the lathe machine before making adjustments.</li>
+            <li>Do not change spindle speeds until the lathe comes to a complete stop.</li>
+            <li>Never attempt to measure work while it is turning.</li>
+            <li>Remove chuck keys and wrenches before operating.</li>
+            <li>Know where the emergency stop is before operating the lathe.</li>
+            <li>Never lay tools directly on the guide ways.</li>
+            <li>Protect the lathe guide ways when grinding or filing.</li>
+            <li>Use two hands when sanding the workpiece. Do not wrap sand paper or emery cloth around the workpiece.</li>
+            <li>Never lean on the lathe.</li>
+        </ol>
+
+        <h4>Shapers/Planers</h4>
+        <ol>
+            <li>Check the speed and stroke length before starting.</li>
+            <li>Check that the clutch is disengaged before starting the drive motor.</li>
+            <li>Check that the workpiece is securely fastened and if using a vice that this is also secure before starting.</li>
+            <li>Do not use excessive stroke length.</li>
+            <li>Use guards, where possible, to stop or deflect chips into a collecting tray.</li>
+            <li>Check that the space occupied by the ram on its return stroke is clear.</li>
+            <li>Keep the hands away from the workpiece even when using a very low ram speed.</li>
+            <li>Always stop the ram before gauging the workpiece.</li>
+        </ol>
+
+        <h4>Milling Machines</h4>
+        <ol>
+            <li>Ensure that the feed mechanism is disengaged before starting the machine.</li>
+            <li>Position guards to deflect chips to a safe area.</li>
+            <li>Do not use cracked or damaged cutters.</li>
+            <li>Do not attempt climb milling unless the machine is designed for that purpose.</li>
+            <li>Do not touch revolving cutters.</li>
+            <li>Do not attempt to clear swarf from the cutter area while it is rotating.</li>
+        </ol>
+
+        <h4>Band saw</h4>
+        <ol>
+            <li>Keep your fingers away from the moving blade.</li>
+            <li>Keep the table clear of stock and scraps so your work will not catch as you push it along.</li>
+            <li>Keep the upper guide just above the work, not excessively high.</li>
+            <li>Don't use cracked blades.</li>
+            <li>If the saw blade breaks, the operator should shut off the power immediately and not attempt to remove any part of the saw blade until the machine is completely stopped.</li>
+            <li>If the work binds or pinches on the blade, the operator should never attempt to back the work away from the blade while the saw is in motion since this may break the blade. The operator should always see that the blade is working freely through the cut.</li>
+        </ol>
+
+        
+
+        <h4>Welding - Electric Arc</h4>
+        <ol>
+            <li>Exposure of the naked skin to the heat and light radiation from an electric arc should be avoided.</li>
+            <li>Screens must be used to protect bystanders from electric arc flashes.</li>
+            <li>Protective clothing should give cover from the throat to the knees.</li>
+            <li>Goggles or a face shield must be used when using a chipping hammer to remove slag and spatter.</li>
+            <li>Hoses and leads must be kept clear of hazards - sharp edges, hot metal.</li>
+            <li>Welding return leads must be securely connected by bolting or clamping to prevent contact resistance.</li>
+        </ol>
+
+        <h4>Welding - Gas</h4>
+        <ol>
+            <li>Cylinders must be handled with care.</li>
+            <li>Cylinders must be used in an upright position and secured to prevent them falling or being knocked over.</li>
+            <li>When turning on a cylinder, the valve should be opened very slowly.</li>
+            <li>Oil or grease must not be allowed to come into contact with the cylinder valves or fittings, especially on oxygen cylinders.</li>
+            <li>Hoses must be kept in good condition. They should be kept away from sharp edges and hot metal.</li>
+        </ol>
+
+        <h4>Guidelines for Handling</h4>
+        <ol>
+            <li>Avoid the need for manual handling where possible.</li>
+            <li>Avoid heavy lifting and pulling movements.</li>
+            <li>Use mechanical lifting aids and automate processes where possible.</li>
+            <li>Store timber so that it can be easily retrieved.</li>
+        </ol>
+
+        <h4>Guidelines for Carrying Tools</h4>
+        <p>Always carry tools:</p>
+        <ol>
+            <li>Down by your side.</li>
+            <li>At their point of balance.</li>
+            <li>With the business end where you can see it.</li>
+            <li>So that one can easily drop it if needed.</li>
+        </ol>
+
+        <h4>Guidelines for Storing Tools</h4>
+        <p>If you are not using a tool, make sure:</p>
+        <ol>
+            <li>It is stored so nobody can trip over it.</li>
+            <li>It is stored so it cannot fall on anybody.</li>
+            <li>It is not buried in the undergrowth. This reduces the risk of someone walking into it accidentally, and means that it will not be forgotten at the end of the day.</li>
+        </ol>
+    </section>
+
+    <section id="practices">
+        <h2>4.4 Safe Practices in Dimensional Measurement</h2>
+        <ol>
+            <li>Remove burrs from a workpiece. Burrs cause inaccuracies in measurement and unsafe handling conditions. Burrs also affect the accurate fitting and movement of mating parts.</li>
+            <li>Recheck all precision measurements.</li>
+            <li>Consider the possibility of inaccurate measurement readings. These may result from observational, manipulative, and worker bias errors.</li>
+            <li>Make it a practice to check and clean measuring tools and the workpiece surface before taking a measurement.</li>
+        </ol>
+    </section>
+
+    <section id="transfer">
+        <h2>4.5 Safe Practices in using Layout and Transfer Measuring Tools</h2>
+        <ol>
+            <li>Examine the workpiece, layout tools and measuring instruments. Each item should be free of burrs.</li>
+            <li>Use a wiping cloth to clean the workpiece and layout and measuring tools. All chips and foreign matter should be removed.</li>
+            <li>Handle all tools and parts carefully. Avoid hitting tools or parts together or scraping them against each other.</li>
+            <li>Recheck each layout and measurement before cutting or forming. Each dimension should meet the drawing or other technical specification.</li>
+            <li>Use a light touch to feel the accuracy of a measurement at the line of measurement. Force applied to a layout or measuring tool may cause the legs to spread. This produces an inaccurate measurement.</li>
+            <li>Replace each layout and measurement tool in a protective container or storage area.</li>
+        </ol>
+    </section>
+
+    <section id="ppe">
+        <h3>4.5.1 Safety Helmet</h3>
+        <p>The main purpose of the helmet is to protect the head. A one piece moulded, impact resistant helmet protects the wearer against an accidental blow to the head. It is made up of fiberglass and plastic. The safety helmet is fitted with a webbing harness which fits the head, leaving a gap between the helmet and the head to cushion any impact. Never wear a helmet without the harness.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/2.jpg" alt="Safety helmet">
+            <span class="image-caption">Fig. 2: Safety helmet</span>
+        </div>
+
+        <h3>4.5.2 Ear protectors</h3>
+        <p>The main purpose of ear protectors is to protect the ears against high frequency noise. Ear protectors are foam filled plastic cups, which fit snugly lover each ear. A padded spring steel head band holds the cups against the ears. Each cup is lined with soft foam pads to seal against the side of the head. Ear protectors can be worn under a safety helmet. Plastic or rubber plugs, which fit into the ear are quite efficient protectors and can be worn along with the ear muffs for added protection.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/3.jpg" alt="Ear protectors">
+            <span class="image-caption">Fig. 3: Ear protectors</span>
+        </div>
+
+        <h3>4.5.3 Face mask</h3>
+        <p>The main purpose of face mask is to prevent the inhalation of dust or sprayed paint. The face mask is made from a pad of cotton gauze faced with thin aluminium sheet, which is easily shaped to fit the wearer's face. It has elastic straps which hold the mask against the nose and mouth, preventing inhalation of the dust particles and paint-laden air produced by spraying. The face mask will not protect you against toxic fumes for which respirators incorporating appropriate filters must be worn.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/4.jpg" alt="Face mask">
+            <span class="image-caption">Fig. 4: Face mask</span>
+        </div>
+
+        <h3>4.5.4 Eye protectors</h3>
+        <p>The main purpose of eye protectors is to protect the eyes against flying debris and harmful liquids. They are made of plastic and toughened glass when grinding, chiseling or doing any job that generates flying debris, it is essential to protect the eyes. Lightweight, clear spectacles are available with toughened, impact-resistant lens. They are comfortable to wear, even for prolonged periods. Choose a model with side screens or wraparound lens. Goggles provide even more protection as they fit flush against the face and some can be worn over normal spectacles. They are more suitable where liquids are involved or when working in dust-laden air. Some goggles are ventilated to reduce perspiration and condensation. For complete protection, use a clear face screen which covers the whole wrapping around the sides. It is attached to a spark or splash deflector, which protects the forehead and is fitted with an adjustable harness to fit any size.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/5.jpg" alt="Eye protectors">
+            <span class="image-caption">Fig. 5: Eye protectors</span>
+        </div>
+
+        <h3>4.5.5 Welder's Face Mask</h3>
+        <p>During the welding process the eyes must be protected against the intense light by a dark lens. The material used for manufacturing is fiberglass and resin impregnated fiber. This lens is expensive and is therefore protected from breakage and weld spatter by clear glass. The lens may be incorporated in goggles, a hand screen or head screen. The hand screen provides complete face protection being held with one hand while the work is carried on with the other. Its main advantage lies in the fact that it is easily removed for inspection of the work. Alternatively, a head screen which is attached to an adjustable harness can be worn, leaving both hands free. The screen itself hinges upward so you can easily move it to view the work. Some welders wear clear goggles under the screen for protection while chipping.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/6.jpg" alt="Welder’s Face Mask">
+            <span class="image-caption">Fig. 6: Welder’s Face Mask</span>
+        </div>
+
+        <h3>4.5.6 Gloves and Gauntlets</h3>
+        <p>Gloves and Gauntlets are used to protect the hands against burns. General purpose gloves protect the hands when handling rough or sharp materials. They are sometimes, are entirely of leather or may be backed with cotton twill to improve the ventilation.<br>
+        The cuffs may be elasticated or extended to protect the wrists. Some gloves are armoured with steel staples for added protection. Heavy rubber gloves which extend over the wrists protect the hands from chemicals. Most heat-resistant welder's gloves or gauntlets are made of heavy leather or canvas and felt-lined asbestos.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/7.jpg" alt="Gloves and Gauntlets">
+            <span class="image-caption">Fig. 7: Gloves and Gauntlets</span>
+        </div>
+
+        <h3>4.5.7 Welder's Apron</h3>
+        <p>It is made up of leather. It is used to protect the welder against flying sparks and molten metal.</p>
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/8.jpg" alt="Welder’s Apron">
+            <span class="image-caption">Fig. 8: Welder’s Apron</span>
+        </div>
+    </section>
+
+    <section id="comments">
+        <h2>4.6 General do it yourself Safety Comments</h2>
+        
+        <div class="safety-alert">
+            <b>Safety Do's:</b>
+            <ol>
+                <li>Always be aware and alert!</li>
+                <li>Always keep safety in mind before you do any activity, use caution, care, and good judgment.</li>
+                <li>Always read the labels on cans containing paints, solvents, and other products; AND always follow the guidelines and any other warnings.</li>
+                <li>Always read the manufacturer's instructions (especially the warnings) before using any tool, especially power tools with cutting blades/bits.</li>
+                <li>Always pay deliberate attention to how a tool works, if you understand it's operation, you are less likely to cause injury.</li>
+                <li>Always know and accept the limitations of your tools - use the appropriate tool for the task. Do not try to use a tool for anything it is not designed to do.</li>
+                <li>Always keep your body (especially hands) away from the business ends of power tools using blades, cutters, and bits.</li>
+                <li>Always be sure that the electrical supply is safe before using it; do not overload any circuit. Make sure all power tools, extension cables and electrical outlets are serviceable and undamaged. Do not use power tools in wet conditions.</li>
+                <li>Always clamp small workpieces firmly to a bench or other work surface when using a power tool on them.</li>
+                <li>Always use both hands where a tool is designed to be used two handed.</li>
+                <li>Always check ladders and steps before use, make sure the rungs and sides are undamaged.</li>
+            </ol>
+        </div>
+
+        <h3>Accidents – what to do:</h3>
+        
+        
+
+[Image of first aid recovery position diagram]
+
+
+        <table class="styled-table">
+            <thead>
+                <tr>
+                    <th width="20%">Accident</th>
+                    <th width="25%">Symptoms</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bruises</td>
+                    <td></td>
+                    <td>Apply cloth pad soaked in cold water. Stomach bruises need medical attention.</td>
+                </tr>
+                <tr>
+                    <td>Burns</td>
+                    <td></td>
+                    <td>Cool by immersion in cold water. Do NOT open blisters. Do NOT remove stuck clothing. Protect from infection with clean, dry dressing. Expose surrounding area to the air.</td>
+                </tr>
+                <tr>
+                    <td>Cuts (deep)</td>
+                    <td></td>
+                    <td>Lay patient down. Raise any affected limb. Apply pressure directly on cut to stop bleeding. Bandage firmly. If blood soaks through bandage, cover with another. Treat for shock (see below) if necessary.</td>
+                </tr>
+                <tr>
+                    <td>Cuts (minor)</td>
+                    <td></td>
+                    <td>Wash with soap and clean water. Dab with disinfectant. Allow to dry. Cover with a clean dressing.</td>
+                </tr>
+                <tr>
+                    <td>Dislocations</td>
+                    <td>Distortion around joint</td>
+                    <td>Avoid movement of patient. Treat for shock (see below). Make patient comfortable by supporting the joint. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Electric Shocks</td>
+                    <td>Muscular paralysis</td>
+                    <td>Dry your own hands if wet. Disconnect electricity by switching off or pulling out Plug. If this is impossible, stand on rubber mat and use Piece of dry timber to push victim clear of source. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Eye injuries</td>
+                    <td></td>
+                    <td>Do NOT rub. If injury is from a foreign body, allow natural watering of eye to wash it away. If this fails to remove the object, and it can be seen, pull down lower lid and remove foreign body with corner of clean, damp handkerchief. Wash eye with tepid or cold water.</td>
+                </tr>
+                <tr>
+                    <td>Fainting</td>
+                    <td></td>
+                    <td>Lay patient flat on back. Raise legs above level of head. Loosen tight clothing about neck, chest and waist. Make sure patient has plenty of air.</td>
+                </tr>
+                <tr>
+                    <td>Fractures</td>
+                    <td></td>
+                    <td>Treat as for dislocations (see above). Support limb with sling or cushion. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Gas poisoning</td>
+                    <td>Breathing has stopped (Possible)</td>
+                    <td>Crawl into room with mouth and nose covered and with head as low to floor as possible. Open all windows. Turn off gas supply. Remove patient into fresh air. Lay patient face downward, with head sideways and arms out stretched, but if patient is not breathing, give kiss of life immediately. Treat for shock (see below). Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Haemorrhage</td>
+                    <td>Restlessness, deep Breathing, paleness</td>
+                    <td>Treat for shock (see below). Do NOT give liquids or food. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Head injuries</td>
+                    <td>Loss of consciousness</td>
+                    <td>Rest patient, in dark if possible. Turn head to one side. (Vomiting may occur in initial recovery.) Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Nose bleed</td>
+                    <td></td>
+                    <td>Sit patient down. Pinch patient's nose for ten minutes while patient breathes through mouth. Apply pad soaked kin cold water to nose. If bleeding persists, call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Poisoning</td>
+                    <td>Pain in mouth and Stomach, vomiting, Cramp in legs</td>
+                    <td>If patient is conscious and can swallow, no burns on mouth, tickle throat to cause vomiting. Give patient drink of half a tumbler of warm water With dessert-spoon of mustard dissolved in it. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Poisoning</td>
+                    <td>Discoloration of lips and Mouth, difficulty in Speaking and swallowing</td>
+                    <td>Give patient milk or raw eggs beaten in cold water. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Shock</td>
+                    <td>Coldness, paleness, Giddiness, weakness, Nausea.</td>
+                    <td>Lay victim down with limbs higher than head. Cover with warm blankets, but do not overheat. Allay victim's anxiety. Call a doctor.</td>
+                </tr>
+                <tr>
+                    <td>Sprains</td>
+                    <td>Bruising and swelling Around joint</td>
+                    <td>Cover affected area with a thick layer of cotton wool; Wrap firmly with bandage. Rest the limb. Relieve pain with pads soaked in cold water.</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="image-container">
+            <img src="images/mem/Unit3/Lesson4/9.jpg" alt="Complete Safe Dressing">
+            <span class="image-caption">Fig. 9: Complete Safe Dressing</span>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit1lesson2.html" title="Properties of Materials">&laquo; Lecture 3</a>
+        <a href="Unit1lesson4.html" title="Body Protection Products">Lecture 5 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank">(www.dei.ac.in)</a> - <a href="../ajay/index.html" target="_blank">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Resistance Welding | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; font-size: 1.05rem; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-grid-item {
+            text-align: center;
+        }
+        
+        .image-grid-item img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .formula-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .formula-container img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        .equation-text {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: var(--indigo-light);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+            font-weight: bold;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Callout / Note blocks */
+        .note-block {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 15px 20px;
+            border-left: 4px solid #ffc107;
+            border-radius: 4px;
+            margin: 20px 0;
+        }
+
+        .note-block b {
+            color: #856404;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: Resistance Welding</h1>
+        <a href="MEM103/Unit4/Unit4Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#introduction">4.0 Introduction</a>
+            <a href="#elements">4.1 Principal Elements of Resistance Welding Machines</a>
+            <a href="#characteristics">4.2 Characteristics of Resistance Welding</a>
+            <a href="#types">4.3 Types of Resistance Welding</a>
+            <div style="padding-left: 15px;">
+                <a href="#types">4.3.1 Spot Welding</a>
+                <a href="#types">4.3.2 Seam Welding</a>
+                <a href="#types">4.3.3 Projection Welding</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>4.0 Introduction</h2>
+        <p>In resistance welding, coalescence is produced by localized heat generated through a resistance to the flow of electric current through the two members to be joined. This is accomplished by clamping two or more sheets of metal between copper electrodes and then passing an electrical current through them. The assembly heats up, and forging pressure is applied by the clamping setup through the electrodes. No fluxes or filler metals are used.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson4/1.jpg" alt="The basic resistance welding circuit">
+            <span class="image-caption">Figure 1: The basic resistance welding circuit</span>
+            <br><br>
+            <img src="images/mem/Unit4/Lesson4/2.jpg" alt="The desired temperature distribution across the electrodes and workpieces during resistance welding">
+            <span class="image-caption">Figure 2: The desired temperature distribution across the electrodes and workpieces during resistance welding</span>
+        </div>
+        
+
+        <p>Concept of resistance welding can be explained in following manner. High current at a low voltage flows through the circuit and is in accordance with Ohm's law that is given by:</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit4/Lesson4/f.jpg" alt="Ohm's Law Formula">
+        </div>
+
+        <p>Where, I is the current in amperes, E is the voltage in volts, and R is the resistance of the material in ohms.<br>
+        The total energy is expressed by the formula:</p>
+        
+        <div class="equation-text">H = I &times; E &times; T</div>
+        
+        <p>Where, H is heat energy, T is the time in seconds during which current flows in the circuit.<br>
+        Combining above two equations gives:</p>
+        
+        <div class="equation-text">H = I<sup>2</sup> &times; R &times; T</div>
+        
+        <p>For practical reasons a factor, which relates to heat losses should be included; therefore, the actual resistance welding formula is:</p>
+        
+        <div class="equation-text">H = I<sup>2</sup> &times; R &times; T &times; K</div>
+        
+        <p>Where, I is current squared in amperes, R is the resistance of the work in ohms, T is the time of current flow in seconds, and K represents the heat losses through radiation and conduction.</p>
+
+        <div class="note-block">
+            <p><b>Note</b>: <i>From the above formulation it can be concluded that welding heat is proportional to the square of the welding current. If the current is doubled, the heat generated is quadrupled. Welding heat is proportional to the total time of current flow, thus, if current is doubled, the time can be reduced considerably. The welding heat generated is directly proportional to the resistance and is related to the material being welded and the pressure applied.</i></p>
+        </div>
+    </section>
+
+    <section id="elements">
+        <h2>4.1 Principal Elements of Resistance Welding Machines</h2>
+        <p>A resistance-welding machine has three principal elements:</p>
+        <ol>
+            <li>An electrical circuit with a welding transformer and a current regulator, and a secondary circuit, including the electrodes that conduct the welding current to the work.</li>
+            <li>A mechanical system consisting of a machine frame and associated mechanisms to hold the work and apply the welding force.</li>
+            <li>The control equipment (timing devices) to initiate the time and duration of the current flow. This equipment may also control the current magnitude, as well as the sequence and the time of other parts of the welding cycle.</li>
+        </ol>
+    </section>
+
+    <section id="characteristics">
+        <h2>4.2 Characteristics of Resistance Welding</h2>
+        <ul>
+            <li>a. No filler material or flux is used.</li>
+            <li>b. It uses non-consumable, low resistance copper alloy electrodes.</li>
+            <li>c. Both heat and pressure are utilized.</li>
+            <li>d. Pressure applied initially to hold the work piece.</li>
+            <li>e. Pressure increased when the proper temperature has been obtained.</li>
+            <li>f. Process control can be mechanized / computerized for mass production.</li>
+            <li>g. The magnitude of the current in resistance welding may be as high as 10,0000A but the voltage is in the range of 0.5V to 10V.</li>
+        </ul>
+
+        <h4>Resistance welding process depends on following three factors</h4>
+        <ul>
+            <li>a. Amount of current that passes through the two members to be joined.</li>
+            <li>b. The pressure that the electrodes transfer to the two members to be joined.</li>
+            <li>c. The time the current flows through the two members to be joined.</li>
+        </ul>
+
+        <h4>Advantages resistance welding process</h4>
+        <ul>
+            <li>a. Welds made by this process are made very quickly as resistance welding operations are automatic.</li>
+            <li>b. Produce a high volume of work at high speeds.</li>
+            <li>c. Does not require filler materials.</li>
+            <li>d. There are no limitations on welding position.</li>
+            <li>e. This process works well with robotics.</li>
+        </ul>
+
+        <h4>Disadvantages resistance welding process</h4>
+        <ul>
+            <li>a. Difficulties may be encountered when welding certain metals in thicker sections. Some metals require heat treatment after welding for satisfactory mechanical properties.</li>
+            <li>b. Metals that have a lower resistivity but a higher thermal conductivity will be slightly more difficult to weld.</li>
+            <li>c. The process requires special fixtures and automatic handling equipment.</li>
+        </ul>
+
+        <h4>Applications of resistance welding process</h4>
+        <ul>
+            <li>a. The automotive industry is the major user of the resistance welding processes, followed by the appliance industry.</li>
+            <li>b. Resistance welding is used by many industries manufacturing a variety of products made of thinner gauge metals.</li>
+            <li>c. Resistance welding is also used in the steel industry for manufacturing pipe, tubing and smaller structural sections.</li>
+            <li>d. Resistance welding is used primarily in the mass production industries where long production runs and consistent conditions can be maintained.</li>
+        </ul>
+    </section>
+
+    <section id="types">
+        <h2>4.3 Types of resistance welding</h2>
+
+        <h3>4.3.1 Spot welding</h3>
+        <p>In spot welding, the tips of the two solid cylindrical electrodes are placed on either side of the lap joint of two sheet metals to be joined, and a high current is passed across the point of contact. The heat generated at the point of contact will melt the metals locally at the point of contact. After the current is switched off, the melt is allowed to solidify under the pressure applied by the electrode tip forming the joint, which creates a small circular weld. Spot welding is primarily used for joining parts that normally upto 3 mm thickness. Spot-weld diameters range from 3mm to 12.5mm in diameter. The current ranges from 3000A to 40,000A.</p>
+
+        
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson4/3.jpg" alt="Spot welding setup" style="max-width: 600px;">
+            <span class="image-caption">Figure 3: Spot welding setup</span>
+            <br><br>
+            <img src="images/mem/Unit4/Lesson4/4.jpg" alt="Sample shapes joined by spot welding setup">
+            <span class="image-caption">Figure 4: Sample shapes joined by spot welding setup</span>
+        </div>
+
+        <h4>Advantages of spot welding</h4>
+        <ul>
+            <li>High speed process and capable of automation for mass production of sheet metal assemblies</li>
+            <li>Process can be incorporated in assembly line</li>
+            <li>Needs less skill</li>
+            <li>Less warping and distortion in welded parts</li>
+            <li>Welded products are uniform</li>
+        </ul>
+
+        <h4>Disadvantages of spot welding</h4>
+        <ul>
+            <li>Parts once spot welded can not be disassembled</li>
+            <li>Setup is quite costly</li>
+            <li>Spot welds have less tensile strength</li>
+            <li>High power requirement</li>
+        </ul>
+
+        <h4>Applications of spot welding</h4>
+        <p>Spot welding is especially useful in fabricating sheet metal parts especially in automobile and aircraft industry.</p>
+
+        <h3>4.3.2 Seam welding</h3>
+        <p>In seam welding the cylindrical electrodes of spot welding are replaced by electrode wheels. The process is shown in Figure below. The metals to be welded are drawn between the rollers. The resulting weld is a series of overlapping spot welds made progressively along a joint. With a continuous AC power supply, the electrically conducting electrode wheels produce continuous of the two parts whenever the current reaches sufficiently high level in the ac cycle, resulting spot welds at regular intervals.</p>
+
+        
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson4/5.jpg" alt="Seam welding setup">
+            <span class="image-caption">Figure 5: Seam welding setup</span>
+            <br><br>
+            <img src="images/mem/Unit4/Lesson4/6.jpg" alt="Fabrication of tube from sheet metal by seam welding">
+            <span class="image-caption">Figures 6: Fabrication of tube from sheet metal by seam welding</span>
+        </div>
+
+        <h4>Characteristics of seam welding</h4>
+        <ul>
+            <li>A series of overlapping spot welds.</li>
+            <li>High frequency current heats the adjoining surfaces of metal workpieces.</li>
+            <li>Heated surfaces pressed together to form a welded joint</li>
+            <li>Used extensively in producing pipes</li>
+        </ul>
+
+        <h4>Advantages of seam welding</h4>
+        <ul>
+            <li>Gas tight joints can be obtained</li>
+            <li>A single weld or multiple parallel seams can be produced.</li>
+            <li>Needs no edge preparation</li>
+        </ul>
+
+        <h4>Disadvantages of seam welding</h4>
+        <ul>
+            <li>Seam welding can only be performed along a straight or uniformly curved line.</li>
+            <li>Thickness of more then 3 mm is difficult to weld.</li>
+            <li>Strength of seam welded lap joints is lower than those of fusion welded butt joints.</li>
+        </ul>
+
+        <h4>Application of seam welding</h4>
+        <p>Lapped and flanged joints in cans, buckets, tanks, mufflers, exhaust systems, drip-mouldings on car body shells are commonly welded by this process.</p>
+
+        <h3>4.3.3 Projection welding</h3>
+        <p>In this process coalescence is produced by the heat obtained from resistance to the flow of electric current through the workpieces, which are held together under pressure by electrodes. The resulting welds are localized at predetermined points by the design of the parts to be welded. This localization is usually accomplished by projections, embossments, or intersections.</p>
+
+        
+        <div class="image-container">
+            <img src="images/mem/Unit4/Lesson4/7.jpg" alt="Projection Welding">
+            <span class="image-caption">Figure 7: Projection Welding</span>
+        </div>
+
+        <h4>Advantages of projection welding</h4>
+        <ul>
+            <li>Number of weld can be made simultaneously in one cycle</li>
+            <li>A better heat balance can be obtained by this process.</li>
+            <li>Less chance of shrinkage and distortion around the weld zone</li>
+            <li>Less overlap and closer weld spacing are possible.</li>
+            <li>Projection welds can be made in thick work pieces which can not be accomplished by spot welding</li>
+        </ul>
+
+        <h4>Disadvantages of projection welding</h4>
+        <ul>
+            <li>Needs precise alignment of the welding dies to equalize the electrode force and welding current</li>
+            <li>For multiple wells higher capacity equipment is needed.</li>
+        </ul>
+
+        <h4>Applications of projection welding</h4>
+        <p>Projection welding is carried for steel radiator coupling elements, brake shoes, tin-plate tank handles.</p>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit5lesson3.html" title="Electric Arc Welding Process">&laquo; Lecture 3</a>
+        <a href="Unit5lesson5.html" title="Welding Defects">Lecture 5 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
+

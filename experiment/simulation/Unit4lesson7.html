@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 7: Drilling | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .formula-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 4px;
+            border: 1px dashed var(--border);
+        }
+
+        .formula-container img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        .equation-text {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: var(--indigo-light);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Example Problem Block */
+        .example-block {
+            background-color: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .example-block b {
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .solution-math {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 15px 0;
+            line-height: 1.8;
+            background: #fff;
+            padding: 10px;
+            border-radius: 4px;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: flex-start;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 7: Drilling</h1>
+        <a href="MEM103/Unit5/Unit5Lesson7.pdf" target="_blank" class="download-link">📥 Lesson 7 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#introduction">7.0 Introduction</a>
+            <a href="#machines">7.1 Drilling machines</a>
+            <a href="#operation">7.2 Drilling operation</a>
+            <a href="#drill">7.3 Drill</a>
+            <a href="#conditions">7.4 Operating conditions in Drilling</a>
+            <a href="#mrr">7.5 Material Removal Rate</a>
+            <a href="#time">7.6 Machining time in Drilling</a>
+        </div>
+    </div>
+
+    <section id="introduction">
+        <h2>7.0 Drilling</h2>
+        <p>A majority of components have one or more cylindrical holes in them. Holes are needed for most common fasteners such as bolts and screws. Drilling is a process of producing round holes in a solid material or enlarging existing holes with the use of multi-tooth cutting tools called drills or drill bits. Various cutting tools are available for drilling, but the most common is the twist drill.</p>
+    </section>
+
+    <section id="machines">
+        <h2>7.1 Drilling Machines</h2>
+        <p>The machine tool used for drilling is the drilling machine, which is also called drill press. Schematics of two common types of drilling machines are shown in Figure 1; the drill press in Figure 1(a) and a radial drilling machine in Figure 1(b).</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson7/1.jpg" alt="Two types of common drilling machines">
+            <span class="image-caption">Figure 1: Two types of common drilling machines</span>
+        </div>
+
+        <p>The drill press is relatively easy to use and set up whereas a radial drilling machine is more versatile and suitable to drill multiple holes in a heavy job. The major components of the drilling machines are shown in the figure. The size of drilling machine is usually specified by the largest diameter of the hole that can be drilled on it.</p>
+    </section>
+
+    <section id="operation">
+        <h2>7.2 Drilling Operation</h2>
+        <p>The workpiece is placed on the adjustable table, and is clamped firmly both for safety and accuracy to overcome the high drilling torque. The cutting tool, twist drill, is fastened to the end of the vertical spindle, which is rotated at the desired speed. In drilling the workpiece remains stationary and tool is rotated as well as fed into the workpiece. The rotating drill is fed against a stationary workpiece either by hand feed or by power feed. The vertical motion of the drill is the feed in drilling operations.</p>
+        
+        <p>Generally, the holes produced by drilling are large than the drill diameter, this you can notice by observing that a drill can be removed easily from the hole it has just produced. The amount of oversize will depend on the quality of drill, the equipment used, and the practices employed. The surface finish of the hole produced by drilling is also poor. For these reasons, the drilled holes are subjected to other operations for better surface finish and dimensional accuracy, such as boring and reaming.</p>
+    </section>
+
+    <section id="drill">
+        <h2>7.3 Drill</h2>
+        <p>The tool employed to drill holes is called drill which has two symmetrical opposite cutting edges, each removing part of the material in the form of chip. A typical drill and its important features are shown in Figure 2. A drill consists of the body, point, neck and shank. The shank is for holding or fixing the drill in the drilling machine, it is either taper or straight. The two cutting edges are at the point forming the pointangle and chisel edge angle. The metal cutting takes place at the drill tip by the two cutting edges. Drills usually have large length to diameter ratio. The chips that are produced within the workpiece have to move in the direction opposite to the axial movement of the drill and the cutting fluid has to reach the cutting edges at the end of drill. Hence, chip disposal and the effectiveness of cutting fluids aresignificant problems in drilling. Generally, two spiral grooves or helical flutes with a specific helix angle run the length of the drill body. The chips produced are guided upward through these flutes and the coolant reaches the cutting edges through them. In some drills these flutes are straight, thus, drill are classified as twist or flat drills.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson7/2.jpg" alt="Geometry of the twist drills">
+            <span class="image-caption">Figure 2: Geometry of the twist drills</span>
+        </div>
+
+        <p>The two cutting edges make an angle called point angle of the drill. The point angle is selected to suit the hardness and brittleness of the material being drilled. The point angle varies from 60&deg; to 180&deg; for different materials. Normally a point angle of 116&deg; is used for harder materials and 140&deg; for softer materials. Twist drills are made from high carbon and high-speed steels and also with diamond or carbide tips. Twist drills are commonly available in a size range from 0.25 mm to 80 mm.</p>
+        
+        
+    </section>
+
+    <section id="conditions">
+        <h2>7.4 Operating conditions in Drilling</h2>
+        <p>The cutting speed v in drilling is the peripheral speed of the drill. The cutting speed that should be used in drilling depends on number of factors properties of material being drilled, drill material, drill diameter, rate of feed, coolant use.<br/>
+        The feed f is the movement of the drill along its axis. It is usually specified in millimeters per revolution of the drill.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson7/3.jpg" alt="Basics of drilling operation">
+            <span class="image-caption">Figure 3: Basics of drilling operation</span>
+        </div>
+        
+        <p>The depth of cut (d) in drilling is not a significant parameter. It may be defined as the distance from the machined surface to the drill axis. That is</p>
+        
+        <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+            <img src="images/mem/Unit5/Lesson7/f1.jpg" alt="Depth of cut formula">
+        </div>
+        
+        <p>where D is the diameter of the drill.<br/>
+        The choice of operating conditions in drilling operations becomes more critical with an increase in the hole depth. As the depth of hole increases (i) the chip ejection becomes more difficult, and (ii) fresh cutting fluid is not able to reach to the cutting zone. These factors lead to overheating of the drill andshorten its life. Hence, for machining lengthy holes reduced feed rates are used. For machining holes of very large length a special type of drilling process known as gun drilling is used. By using this process, it is possible to machine the holes having length greater than 300 times the diameter.</p>
+    </section>
+
+    <section id="mrr">
+        <h2>7.5 Material Removal Rate</h2>
+        <p>The cutting speed v decides the speed of rotation of the drill N based on the diameter of the drill D. The cutting speed is given by</p>
+        
+        <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+            <img src="images/mem/Unit5/Lesson7/f2.jpg" alt="Cutting speed formula"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(1)
+        </div>
+        
+        <p>where D is in mm, N is in rev/min or rpm, and v is in m/min.<br/>
+        The material removal rate (MRR) in drilling is the volume of material removed by drill per unit time. For a drill with a diameter D, the cross-sectional area of the drilled hole is &pi;D<sup>2</sup>/4. The material removal rate is the product of cross-sectional area of the drilled hole, feed rate f (in mm/rev) and the rotational speed N of the drill. That is,</p>
+        
+        <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+            <img src="images/mem/Unit5/Lesson7/f3.jpg" alt="MRR formula"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(2)
+        </div>
+        
+        <p>You can check the dimensional consistency of this equation in the same way as we did for the MRR equation of the lathe.</p>
+    </section>
+
+    <section id="time">
+        <h2>7.6 Machining time in drilling</h2>
+        <p>The machining time for drilling a hole depends upon the length of the hole to be drilled L, rpm of the drill N and feed f. If t is time required to drill a hole, then</p>
+        
+        <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+            <img src="images/mem/Unit5/Lesson7/f4.jpg" alt="Machining time formula"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(3)
+        </div>
+        
+        <p>where L is in mm, f is in mm/rev and N is in rpm.<br/>
+        In order to drill a through hole, the drill must pass through the thickness of workpiece. This means the travel of the drill is more than the length of hole. Thus, in actual practice, for the hole length Lj we add length of approach (or approach) L1 and length of recess (or over travel) L2 for the calculation of time t. These are illustrated in Figure 4.</p>
+        
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson7/4.jpg" alt="Length of approach and length of recess">
+            <span class="image-caption">Figure 4: Length of approach and length of recess</span>
+        </div>
+
+        <h3>Various drilling and reaming operations</h3>
+        <p><b>Drilling</b> is used to drill a round blind or through hole in a solid material. If the hole is larger than ~30 mm, its a good idea to drill a smaller pilot hole before core drilling the final one. For holes larger than ~50 mm, three-step drilling is recommended;</p>
+        
+        <p><b>Core drilling</b> is used to increase the diameter of an existing hole;</p>
+        
+        <p><b>Step drilling</b> is used to drill a stepped (multi-diameter) hole in a solid material;</p>
+        
+        <p><b>Counter boring</b> provides a stepped hole again but with flat and perpendicular relative to hole axis face. The hole is used to seat internal hexagonal bolt heads;</p>
+        
+        <p><b>Countersinking</b> is similar to counter boring, except that the step is conical for flat head screws;</p>
+        
+        <p><b>Reaming</b> provides a better tolerance and surface finish to an initially drilled hole. Reaming slightly increases the hole diameter. The tool is called reamer;</p>
+        
+        <p><b>Center drilling</b> is used to drill a starting hole to precisely define the location for subsequent drilling. The tool is called center drill. A center drill has a thick shaft and very short flutes. It is therefore very stiff and will not walk as the hole is getting started;</p>
+        
+        <p><b>Gun drilling</b> is a specific operation to drill holes with very large length-to-diameter ratio up to L/D ~300. There are several modifications of this operation but in all cases cutting fluid is delivered directly to the cutting zone internally through the drill to cool and lubricate the cutting edges, and to remove the chips;</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson7/5.jpg" alt="Various drilling and reaming operations">
+            <span class="image-caption">Figure 5: Various drilling and reaming operations</span>
+        </div>
+
+        <div class="example-block">
+            <p><b>Example 1</b>: A hole is being drilled in block of magnesium alloy with a 10 mm drill at a feed of 0.2 mm/rev. The spindle is running at 800 rpm. Calculate the MRR.</p>
+            <p><b>Solution</b>:<br/>
+            Given data: D = 10 mm, f = 0.2 mm/rev, N = 800 rpm<br/>
+            Substituting the values in Equation (2), we get</p>
+            <div class="formula-container" style="background:transparent; border:none; box-shadow:none; padding:0;">
+                <img src="images/mem/Unit5/Lesson7/f5.jpg" alt="MRR Calculation">
+            </div>
+        </div>
+
+        <div class="example-block">
+            <p><b>Example 2</b>: Calculate the time required to drill a 25 mm diameter hole in a workpiece having thickness of 60 mm to the complete depth. The cutting speed is 14 m/min. and feed is 0.3 mm/rev. Assume length of approach and over travel as 5 mm.</p>
+            <p><b>Solution</b>:<br/>
+            Given data: D = 25 mm (Note: correction from original text which mistakenly said 20), L<sub>j</sub> = 60 mm, v = 14 m/min, f = 0.3 mm/ rev. with usual notations.<br/>
+            Substituting the data in the Equation (1), we calculate the drill rotational speed, that is</p>
+            <div class="solution-math">
+                v = &pi; x 25 x N/1000<br/>
+                or <br/> 
+                N = 178 rpm.
+            </div>
+            <p>Length of tool travel = L<sub>j</sub> + Length of approach and over travel.</p>
+            <div class="solution-math">
+                = 60 + 5 = 65 mm
+            </div>
+            <p>Substituting the values of f, L and N in Equation (3), we get</p>
+            <div class="solution-math">
+                t = 65 / (0.3 x 178)<br/>
+                = 1.21 minute.
+            </div>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson6.html" title="Shaping, Planing & Slotting Operations">&laquo; Lecture 6</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>

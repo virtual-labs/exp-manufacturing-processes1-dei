@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 4: Operations on Lathe | MEM-103</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3f51b5;
+            --accent: #ff0066;
+            --bg-light: #f8f9fa;
+            --text-dark: #333;
+            --white: #ffffff;
+            --border: #e0e0e0;
+            --indigo-light: #e8eaf6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            color: var(--white);
+            padding: 1.5rem 0;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 20px auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        .lesson-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+
+        .download-link {
+            background: var(--secondary);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .toc {
+            background: var(--indigo-light);
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+
+        .toc h3 { margin-top: 0; color: var(--primary); font-size: 1.1rem; }
+        
+        .toc-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 10px;
+        }
+
+        .toc a { 
+            color: var(--secondary); 
+            text-decoration: none; 
+            font-size: 0.95rem; 
+            display: block; 
+        }
+        .toc a:hover { text-decoration: underline; }
+
+        h2 { color: var(--primary); border-left: 5px solid var(--secondary); padding-left: 15px; margin-top: 40px; }
+        h3 { color: var(--secondary); margin-top: 25px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        h4 { color: #444; margin-top: 20px; font-weight: bold; }
+        
+        p { margin-bottom: 15px; text-align: justify; }
+        ul, ol { margin-bottom: 15px; padding-left: 30px; }
+        li { margin-bottom: 5px; }
+
+        /* Images and Formula containers */
+        .image-container {
+            text-align: center;
+            margin: 30px 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .image-grid-item {
+            text-align: center;
+        }
+        
+        .image-grid-item img {
+            max-width: 100%;
+            border-radius: 4px;
+        }
+
+        .formula-container {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: #fff;
+            border-radius: 4px;
+        }
+
+        .formula-container img {
+            vertical-align: middle;
+            max-width: 100%;
+        }
+
+        .equation-text {
+            text-align: center;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 1.1rem;
+            background: var(--indigo-light);
+            padding: 10px;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+
+        .image-caption {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        /* Example Problem Block */
+        .example-block {
+            background-color: #f0f4f8;
+            padding: 25px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent);
+            margin-top: 40px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .example-block b {
+            color: var(--primary);
+            font-size: 1.05rem;
+        }
+
+        .footer-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            font-weight: bold;
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+        }
+        
+        .footer-nav a { color: var(--secondary); text-decoration: none; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #777;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>MEM-103 Manufacturing Processes-I</h1>
+</header>
+
+<div class="container">
+    <div class="lesson-header">
+        <h1 style="margin:0; color: var(--primary); font-size: 1.8rem;">Lesson 4: Operations on Lathe</h1>
+        <a href="MEM103/Unit5/Unit5Lesson4.pdf" target="_blank" class="download-link">📥 Lesson 4 Download</a>
+    </div>
+
+    <div class="toc">
+        <h3>Table of Contents</h3>
+        <div class="toc-grid">
+            <a href="#operations">4.1 Operations on Lathe</a>
+            <div style="padding-left: 15px;">
+                <a href="#operations">4.1.1 Turning</a>
+                <a href="#operations">4.1.2 Facing</a>
+                <a href="#operations">4.1.3 Knurling</a>
+                <a href="#operations">4.1.4 Grooving</a>
+                <a href="#operations">4.1.5 Parting</a>
+                <a href="#operations">4.1.6 Chamfering</a>
+                <a href="#operations">4.1.7 Eccentric Turning</a>
+                <a href="#operations">4.1.8 Taper Turning</a>
+                <div style="padding-left: 15px;">
+                    <a href="#operations">4.1.8.1 Taper Turning using form tool</a>
+                    <a href="#operations">4.1.8.2 Taper Turning by swiveling the compound rest</a>
+                    <a href="#operations">4.1.8.3 Off-set tail stock</a>
+                </div>
+                <a href="#operations">4.1.9 Drilling</a>
+                <a href="#operations">4.1.10 Thread Cutting</a>
+            </div>
+            <a href="#process">4.2 Process Sequence</a>
+        </div>
+    </div>
+
+    <section id="operations">
+        <h2>4.1 Operations on Lathe</h2>
+        <p>Though lathe is used for producing cylindrical jobs, with special accessories and attachments, it can be used for machining of non-cylindrical jobs. The different operations that can be done on cylindrical job include turning, facing, knurling,grooving, form turning, parting, chamfering, eccentric turning, taper turning, taper turning and drilling. These operations are described briefly in the following sections.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/1.jpg" alt="Various operations that can be performed on lathe">
+            <span class="image-caption">Figure 1: Various operations that can be performed on lathe</span>
+        </div>
+
+        <h3>4.1.1 Turning</h3>
+        <p>Turning is a machining process to produce parts round in shape by a single point tool on lathes. The tool is fed either linearly in the direction parallel or perpendicular to the axis of rotation of the workpiece. The primary motion of cutting in turning is therotation of the workpiece, and the secondary motion of cutting is the feed motion. The operation in Figure-1 is the turning operation. This operation is used to reduce the diameter of a part to a desired dimension for the desired length of job. The resultingmachined surface is cylindrical. The reduction in diameter of the job depends upon the depth of cut chosen. For example, if the depth of cut is 2 mm it will reduce the job diameter by 4 mm. The tool used for the turning operation is called turning tool.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="margin: 0; display: inline-grid;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/2.jpg" alt="Turning operation diagram"></div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/3.jpg" alt="Turning operation photo"></div>
+            </div>
+            <span class="image-caption">Figure 2: Turning operation</span>
+        </div>
+
+        <h3>4.1.2 Facing</h3>
+        <p>Facing is the operation of machining the end or face of the job. Facing is used for reducing the length of the workpiece by machining or cutting the end face of workpiece. Facing operation is carried out by using a turning tool. The operationinvolves feeding the tool perpendicular to the axis of rotation of the workpiece from outer surface to centre. Note that in case of facing operation, the length of tool travel is equal to half the diameter of the job. The depth of cut is along the axis of the job.The facing operation is shown in Figure 3. Facing produces a flat surface.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/4.jpg" alt="Facing operation diagram">
+            <span class="image-caption">Figure 3: Facing operation</span>
+        </div>
+
+        <h3>4.1.3 Knurling</h3>
+        <p>This is not a machining operation at all, because it does not involve material removal. Instead, it is a metal forming operation used to produce a regular crosshatched pattern in the work surface. It is done on certain components for effective gripping toprevent it from slipping while handling it, example is thumbscrews, etc. The knurling process is shown in Figure 3. The knurling tool consists of a set of hardened steel rollers in a holder with the teeth cut on their surface in a definitepattern. The tool is held rigidly on the tool post and the rollers are pressed against the revolving workpiece to squeeze the metal against the multiple edges. The speed used during knurling should be very low and plenty of lubricant should be used.</p>
+
+        <div class="image-container">
+            <div class="image-grid" style="margin: 0; display: inline-grid;">
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/5.jpg" alt="Knurling operation diagram"></div>
+                <div class="image-grid-item" style="box-shadow: none; border: none; padding: 0;"><img src="images/mem/Unit5/Lesson4/6.jpg" alt="Knurling pattern"></div>
+            </div>
+            <span class="image-caption">Figure 4: The knurling operation</span>
+        </div>
+
+        <h3>4.1.4 Grooving</h3>
+        <p>Grooving or groove cutting is the process of producing a narrow groove on the surface of a cylindrical job. The diameter of the workpiece is reduced slightly from the surface over a narrow width. The process of grooving is shown in Figure 5. The job isrevolved at slow speed and a grooving tool is fed straight into the work by rotating the cross slide screw. Note that this is the depth of cut given to the tool. There is no feed in the grooving operation.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/7.jpg" alt="Grooving operations diagram">
+            <span class="image-caption">Figure 5: Grooving operations</span>
+        </div>
+
+        <p>Depending on the shape of the tool, it is possible to have square, round, beveled or any other shape grooves. In grooving operation, the shape of the tool is reproduced on the workpiece; hence, this process is also known as form turning operation.</p>
+
+        <h3>4.1.5 Parting</h3>
+        <p>As the name itself indicates, parting is the operation of cutting a workpiece into two.The operation is carried out with a tool called parting tool. The parting operation is shown in Figure 6. For parting operations, the workpiece is rotated at a low speed and the parting tool is fed in a direction normal to the axis of rotation of the job. Ample amount of feed should be employed to provide a continuous chip. If slow feed is used, the tool will not cut continuously but will ride on the surface for a revolution ortwo, and then bite in suddenly. This phenomenon is known as hogging, and is undesirable. Since, high feed rates are used, to compensate for the heat generated during the operation an abundant supply of coolant should be used.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/8.jpg" alt="Parting operation diagram">
+            <span class="image-caption">Figure: 6</span>
+        </div>
+
+        <h3>4.1.6 Chamfering</h3>
+        <p>Chamfering is the operation of beveling the sharp ends of a workpiece to avoid any injuries to the persons using the finished product. Chamfering is similar to form turning and is done with a chamfering toolthat has its cutting edge at the desired chamfer angle, usually 45<sup>o</sup>. Chamfer is provided for better look, to enable nut to start freely on threaded workpiece, to remove burrs as well as to protect the end of the workpiece from being damaged.</p>
+
+        <h3>4.1.7 Eccentric Turning</h3>
+        <p>If the turning operation is carried out at certain distance away from the centre of the workpiece, it is called eccentric turning. Figure 7 shows the turning of a typical component, which is eccentric. For eccentric turning operation, job is held in a four-jaw chuck.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/9.jpg" alt="Eccentric turning diagram">
+            <span class="image-caption">Figure 7: Eccentric turning</span>
+        </div>
+
+        <h3>4.1.8 Taper Turning</h3>
+        <p>A tapered job is one whose diameter decreases or increases gradually so that it assumes a conical shape. A tapered job is shown in Figure 8. Given major and minodiameters of the taper and its length, taper angle can be found. From the geometry of the figure 8 the taper angle &alpha; can be found by using the simple geometric relationship:</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson4/f1.jpg" alt="Formula for taper angle">
+        </div>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/10.jpg" alt="A tapered job showing taper angle">
+            <span class="image-caption">Figure 8: A tapered job showing taper angle</span>
+        </div>
+        
+        <p>where &alpha; is angle of taper, D<sub>1</sub> is larger diameter in mm; D2 is smaller diameter in mm, and L is length of taper in mm. The conicity K of a taper is defined as:</p>
+        
+        <div class="formula-container">
+            <img src="images/mem/Unit5/Lesson4/f2.jpg" alt="Formula for conicity">
+        </div>
+
+        <p>Accurate external tapers can be machined on a lathe by several methods viz.<br>
+        1. Using a form tool,<br>
+        2. Swivelling compound rest,<br>
+        3. Off-Set Tail Stock, and<br>
+        4. Simultaneous longitudinal and cross feeds.</p>
+
+        <h4>4.1.8.1 Taper turning using a form tool</h4>
+        <p>The form tool has a straight cutting edge set at the desired taper angle. Form tool is a replica of the taper to be produced i.e. the angle between the straight cutting edge and the rotational axis of the job equals taper angel a or one half the included angle of the taper. The tool is fed against arotating job. The shape of the tool is reproduced on the workpiece. This method is limited only for short length tapers. Figure 9 shows taper turning using a form tool.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/11.jpg" alt="Taper production using form tool">
+            <span class="image-caption">Figure 9: Taper production using form tool</span>
+        </div>
+
+        <h4>4.1.8.2 Taper turning by swivelling the compound rest</h4>
+        <p>The compound rest has a circular base graduated in degrees, which can be swivelled at any angle. While turning a taper, the base of compound rest is swivelled through an angle equal to taper angle. The tool is then fed by hand. This method can be used for producing short and steep tapers. Figure 10 shows the taper turning by swivelling the compound rest.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/12.jpg" alt="Taper production by swiveling the compound rest">
+            <span class="image-caption">Figure 10: Taper production by swiveling the compound rest</span>
+        </div>
+
+        <h4>4.1.8.3 Off-Set Tail Stock</h4>
+        <p>In this method the normal rotating part of the lathe still drives the workpiece (mounted between centres), but the centre at the tailstock is offset towards/away from the cutting tool. Then, as the cutting tool passes over, thepart is cut in a conical shape. This method is limited to small tapers over long lengths. The tailstock offset h is defined by:</p>
+        <div class="equation-text">h = L sin&alpha;</div>
+        <p>where, L is the length of workpiece, and &alpha; is the half of the taper angle.</p>
+        <div class="equation-text">or<br>h = [(D-d)/2]*(L/l)</div>
+        <p>Where, D is major diameter, d is minor diameter, L is total length of job, l is tapered length of job.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/13.jpg" alt="Taper turning by offsetting tailstock diagram">
+            <span class="image-caption">Figure 10(a) : taper turning by offsetting tailstock</span>
+        </div>
+
+        <h3>4.1.9 Drilling</h3>
+        <p>Drilling is the operation of production of holes in a workpiece. Figure 11 shows how drilling operation is performed on a lathe.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/14.jpg" alt="Drilling operation on a lathe diagram">
+            <span class="image-caption">Figure 11: Drilling operation on a lathe</span>
+        </div>
+
+        <p>While doing the drilling operation on a lathe, the workpiece is held in a chuck or on a faceplate. The drill (the cutting tool) is held in the tailstock and is positioned near the workpiece by moving the tailstock along the guideways. The tool is fed against theworkpiece (the feed motion) by rotating the handle of the tailstock in clockwise direction,. Once the hole is drilled, the tool is withdrawn by rotating the tailstock handle in the anti clockwise direction. It should be noted that in drilling on lathe the job is rotating while the tool remains stationary.</p>
+        
+        
+
+        <h3>4.1.10 Thread Cutting</h3>
+        <p>Thread cutting is the operation of producing a helical groove of specific shape on a cylindrical surface. Figure 12 shows the setup of a lathe for thread cutting. Thread cutting operation is done using a single point tool called thread cutting tool. Threads are cut using lathes by advancing the cutting tool at a feed exactly equal to thethread pitch. For producing threads of pitch p mm, the tool must travel a distance equal to p mm as the workpiece makes one complete rotation. The single-point cutting tool cuts in a helical band, which is actually a thread. In FPS system, threads are specified as threads per inch or TPI. For example, if a workpiece is having fourthreads per inch then the pitch of the thread is equal to &frac14; inch. The definite relative rotary and linear motion between the workpiece and tool is achieved by locking or engaging the carriage with the lead screw through a screw and nut mechanism and fixing a gear ratio between the head stock spindle and lead screw. This is done by using change gear mechanism or a gearbox between the spindle and lead screw.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/15.jpg" alt="Lathe set up for thread cutting operation diagram">
+            <span class="image-caption">Figure 12: Lathe set up for thread cutting operation</span>
+            <br><br>
+            <img src="images/mem/Unit5/Lesson4/16.jpg" alt="Thread cutting operation close up">
+            <span class="image-caption">Figure 12a: Thread cutting operation</span>
+        </div>
+
+        <p>To cut the threads the tool is brought to the start of the workpiece and a small depth of cut is given to the tool using cross slide. The carriage is engaged with the lead screw, the cut is made on the entire surface and at the end of workpiece, carriage isdisengaged. The tool is pulled out of the job and brought back to starting position. The process is repeated until the full depth threads are obtained. The helix is restarted at the same location each time if multiple passes are required to cut theentire depth of thread. The tool point must be ground so that it has the same profile as the thread to be cut.</p>
+    </section>
+
+    <section id="process">
+        <h2>4.2 Process Sequence</h2>
+        <p>The process sequence implies the order in which the operations are to be carried out to complete the machining of a job. This is like, to wear the shoes, you have to wear the socks first. This sequence to be adopted depends upon the operations to be performed on theworkpiece. This is illustrated with an example. Imagine that you are asked to produce the component shown in Figure 13 from the stock (raw material) of size 30 mm diameter and 45 mm length.</p>
+
+        <div class="image-container">
+            <img src="images/mem/Unit5/Lesson4/17.jpg" alt="Component to be produced example">
+            <span class="image-caption">Figure 13: Component to be produced</span>
+        </div>
+
+        <p>To produce this component, one has to do turning to get desired diameter of 20 mm (reduce from 30 mm to 20 mm), do facing to reduce length from 45 mm to 40 mm and do knurling for the 15 mm length.<br>
+        A possible sequence for the component could be (1) turning, (2) facing, and (3) knurling. It is also possible to produce the component by first facing, then turning and knurling in the last. Another sequence is also possible, but the knurling cannot be done first. It is obvious thatthere can exist more than one possible sequence for producing the same component. The general steps when turning external workpart hold in a chuck should follow the next sequence,</p>
+        <ol>
+            <li>First rough cuts are applied on all surfaces, starting with the cylindrical surfaces (largest diameters first) and then proceeding with all faces;</li>
+            <li>Special operations such as knurling and grooving (if any) are applied;</li>
+            <li>Diameters are finished first, then the faces.</li>
+            <li>External threads (if any) are cut.</li>
+        </ol>
+
+        <div class="example-block">
+            <p><b>Example</b>: Write the process sequence to be used for manufacturing the component shown in Figure 14 from raw material of 175 mm length and 60 mm diameter.</p>
+            
+            <div class="image-container" style="background: transparent; border: none; padding: 0; box-shadow: none;">
+                <img src="images/mem/Unit5/Lesson4/18.jpg" alt="Figure for Example">
+                <span class="image-caption">Figure 14: Figure for Example</span>
+            </div>
+            
+            <p><b>Solution</b>: To write the process sequence, first list the operations to be performed. The raw material is having size of 175 mm length and 60 mm diameter. The component shown in Figure-14 is having major diameter of 50 mm, step diameter of 40 mm, groove of 20 mm andthreading for a length of 50 mm. The total length of job is 160 mm. Hence, the list of operations to be carried out on the job are turning, facing, thread cutting, grooving and step turning.</p>
+            <p>A possible sequence for producing the component would be:</p>
+            <ol>
+                <li>Turning (reducing completely to 50 mm)</li>
+                <li>Facing (to reduce the length to 160 mm)</li>
+                <li>Step turning (reducing from 50 mm to 40 mm for a length of 110 mm)</li>
+                <li>Grooving and</li>
+                <li>Thread cutting</li>
+            </ol>
+            <p>Here it is assumed that facing is done on only one side of the workpiece.</p>
+        </div>
+    </section>
+
+    <div class="footer-nav">
+        <a href="Unit4lesson3.html" title="Operating conditions on Lathe">&laquo; Lecture 3</a>
+        <a href="Unit4lesson5.html" title="Work-Holding devices used on Lathe">Lecture 5 &raquo;</a>
+    </div>
+
+</div>
+
+<footer>
+    &copy; MEM103 - Dayalbagh Educational Institute <a href="https://www.dei.ac.in" target="_blank" title="DEI">(www.dei.ac.in)</a>&nbsp;-&nbsp;<a href="../ajay/index.html" target="_blank" title="Profile">Ajay Kant Upadhyay</a>
+</footer>
+
+</body>
+</html>
